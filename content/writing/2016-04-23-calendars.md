@@ -1,0 +1,121 @@
+---
+title: Calendars
+date: "2016-04-23"
+excerpt: I've found myself becoming increasingly dissatisfied with calendar applications. Fundamentally, I think they're solving the wrong problem. They should focus how to best spend your time, what’s the most optimal arrangement of these events for my productivity and well-being? 
+tags: 
+  - Ideas
+image: '/public/ideas/calendars.png'
+---
+
+I've found myself becoming increasingly dissatisfied with calendar applications.
+Fundamentally, I think they're solving the wrong problem.
+
+With all calendar apps you manage exactly when you do what, and add those events
+to your calendar. You decide when to go to the movies, and fill out the time,
+and title, and perhaps the location if you want traffic alerts. This has gotten
+a lot easier due to calendar apps accepting Natural Language additions to the
+calendar, and then parsing those results.
+
+However, Calendar apps aren't the best answer to the questions people ask their
+calendars. People ask their calendars:
+
+- What do I have to do in the immediate future?
+- What do I have to do now, in order to prepare for the future?
+
+The core of these questions gets at the notion of how to best spend your time.
+What's the most optimal arrangement of these events for my productivity and
+well-being?
+
+## How do Calendar Apps stack up?
+
+Before looking at alternatives, lets see how current calendar apps address the
+questions outlined above.
+
+### Common Features
+
+No surprise that all of them offer both a view over upcoming events (Temporal
+View) and tasks to be completed (Agenda View). Some of the other distinctions
+are smart event adding, if you receive an email with ticket confirmations it
+will automatically be added. If you get an email with a date in plain text, you
+can generally also add that fairly seamlessly by clicking on the date.
+
+Google Calendar has recently announced a feature called [Google goals][goals].
+The idea is to make it easier to plan time for habits that you want to work
+towards. For example you might set a goal to meditate in the morning, or go for
+runs in the evenings. Goals is the closest any product has come to selecting the
+time for an event, but it could go much further.
+
+Fantastical and Google Calendar both allow for Natural Language additions to the
+calendar, while the Apple stock apps only do so for desktop. These additions are
+excellent, but we're still missing something.
+
+The primary driver of these features, is that [people don't really add things to
+their calendar.][the-sweet-setup] This makes a whole lot of sense, when you add
+something to the calendar you have to fill out all sorts of fields in order to
+make the most of your calendar. If you want Travel Alerts, you have to fill out
+the location information and match it to an actual location. The same thing
+occurs if you want to send an invite to a friend, you have to fill out that
+field too. To this end Natural Language Interaction has helped users enter that
+information.
+
+I think that people have difficulty entering this information for other reasons.
+It's not that they don't want to spend a few more seconds to enter more content,
+but that they don't know exactly when to complete a specific task. **How do you
+enter an event if you don't know when it starts?** Google's Calendar has an
+interesting solution to this problem. It allows you to view reminders added from
+inbox or calendar while looking at your daily agenda. But this solution doesn't
+help people manage their time, it you to see both a to-do list, and your
+calendar at the same time, but this is a sub-optimal solution. Items on a to-do
+list take time, they don't exist in their own isolated world.
+
+These calendars do an excellent job of showing us what we have to do next. They
+manage fixed events -- Meetings, Appointments, Classes -- very well, but do not
+do well with general tasks or items in which the time allocation is flexible.
+They fundamentally don't answer the question of how I can best spend my time.
+
+## What would a better calendar look like?
+
+In order to empower people to make the most of their time, we have to allow them
+to make flexible events that rely upon other constraints. I'd like to be able to
+tell my calendar that I want to complete an paper by March 22nd, and that I like
+writing in the morning. It'll then allocate time in the morning to complete the
+paper.
+
+Of course, this solution requires the system to know how much time to allocate
+in total. You could approach this from two directions, the first being letting
+people define a total duration, the second being looking at past events and
+assuming a specific duration among other settings. The calendar would then
+allocate that time in the most efficient way according to my preferences.
+
+The key shift here is that the user is no longer required to plan everything out
+specifically, the calendar becomes a place in which you can specify some things --
+appointments and meetings -- and leave the other outside variables up to the
+system to allocate. People can add a whole bunch of tasks to the calendar and
+not have to worry about scheduling them, they just need to provide due dates.
+
+It would also be beneficial to be able to include more complex constraints: **On
+Friday, I'm going to go see a movie, then get food afterwards with John, Katie
+and Jessica**. The system ought to be able to add those events in order, at
+times that everyone is available, and there is a showing. This is really a
+constraint problem, and constraint problems are ones we can solve
+computationally.
+
+Most tasks don't exist in isolation, they depend on each other. Only after you
+select a guest list can you mail invitations. But modern calendar apps don't
+account for such events, the user has to explicitly decide the order, and when
+everything should be completed. If the user provides an ordering of dependencies
+then the calendar ought to be able to schedule things effectively.Instead people
+use task apps, which isn't really a full solution either.
+
+Allowing the calendar to schedule tasks opens up more time for us work instead
+of plan. The parts needed aren't outside the realm of possibility either,
+constraint solvers are very well understood, as well as the machine learning to
+find your preferences for specific types of tasks.
+
+Such a system helps us assess what we need to do right now, as it dynamically
+allocates time for the most pressing tasks, and works around your other events.
+Allowing us to more organically plan how to spend our time in the future. It
+answers the right question: Whats the best way to spend my time?
+
+[the-sweet-setup]: http://thesweetsetup.com/apps/best-calendar-app-iphone/
+[goals]: https://googleblog.blogspot.com/2016/04/find-time-goals-google-calendar.html

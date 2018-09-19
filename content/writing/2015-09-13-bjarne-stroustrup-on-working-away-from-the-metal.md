@@ -1,0 +1,31 @@
+---
+title: Mental Models
+date: '2015-09-13 01:52'
+tags:
+    - Programming
+excerpt: I recently had the pleasure of seeing Bjarne Stroustrup speak at an event at NYU. The talk focused on the role of C++ and his role at Morgan Stanley, but what was far more interesting was the manner in which he thought about programming concepts.
+layout: 'post'
+---
+
+I recently had the pleasure of seeing [Bjarne Stroustrup][1] speak at an event at NYU. The talk focused on the role of C++ and his role at Morgan Stanley, but what was far more interesting was the manner in which he thought about programming concepts.
+
+I asked him at the end of the talk what other languages he was fond of and what ideas made them special. He dodged the question, and responded with the following, and of course, I'm paraphrasing here:
+
+> There are a lot of interesting languages, and they all generally do what they intended to do fairly well. I wont single any specific language out, but its important to take their ideas, and see if they may make sense in another system. That's whats more important.
+
+The important ideas in programming languages aren't really the languages themselves, but rather the manner in which they deal with fundamental problems. Beyond just its syntax, developer support, or libraries, the language is about a certain manner in which to do computations, which is much more fundamental. Applying those key ideas to other unrelated problems allows you to make links between those concepts, and eventually produce better programs.
+
+[Charlie Munger][2] works in a similar manner, he says the following on the subject:
+
+>When I urge a multidisciplinary approach- that you’ve got to have the main models from a broad array of disciplines and you’ve got to use them all – I’m really asking you to ignore jurisdictional boundaries. If you want to be a good thinker, you must develop a mind that can jump these boundaries. You don’t have to know it all. Just take in the best big ideas from all these disciplines. And it’s not that hard to do.
+
+Munger is able to pull an incredible number of fundamental models in, and leverage them to solve new problems and analyze new opportunities. This is not a difficult approach, as you dont have to get into the nitty gritty aspects of a specific model. However the difficulty lies in constructing the connections between models, and therefore making them far more useful then if they stood alone.
+
+### Working away from the metal
+
+Another well put concept was that of working away from the metal, which is the fundamental goal of programming. You want to deal in higher and higher levels of abstraction. Instead of working with pointers and bytes, we want to create the logical relationships behind how those things work and operate in the system we've created.
+
+Some systems, like Object Oriented Systems, do so by use of classes which specify what a specific type of object is, and what it does. Other systems work away from the metal in terms of process, lisp style macros work in this manner. They - for the most part - ignore any notion of static type checking and the programmer therefore makes data guarantees - that is, that the function will have the proper arguments passed to it - by insulating the data inside the flow of the program. Doing so, in some ways makes the system much more complicated, but also makes functions more modular and therefore makes them much easier to compose.
+
+[1]: http://www.stroustrup.com/
+[2]: https://en.wikipedia.org/wiki/Charlie_Munger

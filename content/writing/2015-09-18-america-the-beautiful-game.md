@@ -1,0 +1,36 @@
+---
+title: 'America and The Beautiful Game'
+date: '2015-09-18 00:40'
+tags:
+    - Culture
+excerpt: I can't help but think that American's have a hard time understanding soccer. American sports emphasize the notion of an individual play, in which specific actions and therefore the entire play can be said to be good or bad. Part of the reason American's - in general - have a harder time understanding the dynamics of soccer.
+layout: 'post'
+---
+
+I can't help but think that American's have a hard time understanding soccer.
+
+American sports emphasize the notion of an individual play, in which specific
+actions and therefore the entire play can be said to be good or bad. Part of the
+reason American's - in general - have a harder time understanding the dynamics
+of soccer. Soccer doesn't really have the notion of a play built into the way
+the game works. In baseball you have people coming up to bat and once they
+finish batting either by making a hit and getting on base, or striking out the
+play can be said to be over, and the process is repeated. Football has an even
+more precise definition of a play, and the same goes for basketball.
+
+Soccer on the other hand lacks this concept, and as a result it becomes much
+more difficult for Americans to judge what's going on in the game. In order to
+make a proper assessment you have to focus on the soft qualities of the sport,
+which are generally ball possession, chances on goal, pass completion and so on.
+The game becomes less and less about individual players, and the moves they make
+but instead how the team interacts and works together. It seems like teams from
+other nations know this, and spend more time focusing on the soft skills, while
+American children spend time focusing on the footwork and skill moves, and
+ignoring the other boring skills that are not as important if you analyze the
+game in terms of plays.
+
+It's interesting to wonder how this focus manifests itself in how Americans view
+the world, politics and if it plays a role in how we purchase. Either way the
+focus on small aspects of the bigger picture is not never beneficial. Its
+important to remember the soft skills that make a group or a country great and
+not so much the dazzling tricks.

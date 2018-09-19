@@ -1,0 +1,23 @@
+---
+title: 'Hololens and Implications'
+category: Tech
+tags:
+  - Augemented Reality
+  - Predictions
+date: 2015-01-21T00:00:00.000Z
+excerpt: For those of you who haven’t heard, Microsoft has just released a new augmented reality device called the Hololens. This is very exciting, primarily because it is the first product that seems to do a good job of merging our reality with a virtual one. Google Glass attempted this, but the feature set seemed rather lacking and the concept of always having an AR device on didn’t really appeal to most. Hololens is going after something different entirely, and that is a more rich merger of the digital and physical, to the point where you are no longer overlaying a screen into the peripheral vision but instead augmenting your surroundings.
+layout: 'post'
+---
+
+For those of you who haven't heard, Microsoft has just released a new augmented reality device called the [Hololens](http://www.wired.com/2015/01/microsoft-hands-on/#x). This is very exciting, primarily because it is the first product that seems to do a good job of merging our reality with a virtual one. Google Glass attempted this, but the feature set seemed rather lacking and the concept of always having an AR device on didn't really appeal to most. Hololens is going after something different entirely, and that is a more rich merger of the digital and physical, to the point where you are no longer overlaying a screen into the peripheral vision but instead augmenting your surroundings.
+
+This is a huge shift, and it will be very exciting to see how the web changes when you no longer visit websites and content is pushed to you in a 3-dimensional format. This also opens up millions of new potential applications and apps that allow for richer insights and better data representation on the web. The biggest issue is the focus on applications (e.g. something you install) as opposed to something you browse.
+
+The rise of the app was and is beneficial for specific applications, mostly intensive graphical applications. However a weather app shouldn't be something you install, the same goes for a twitter app or search, notes, or reading applications. The rise the application encourages developers to ignore the mobile browser in favor of having an application, the issue is that users get pinned to a specific frame of reference or a specific ecosystem. instead of focusing on the content itself, the service takes the front seat.
+
+## What does this mean for users?
+The biggest issue is that the focus has shifted, instead of technology augmenting our daily life; it becomes our daily life. People keep up with everything on every different service; they go to Twitter for their news, Snapchat to chat up with friends and probably a few others along the way. Instead, it would be better it seems if the web became an ecosystem, as opposed to a collection of apps. Instead of technology helping us find what we want, or communicate with who we want to we focus on the medium of the interaction, not the result.
+
+For the Hololen's to succeed it has to break down those barriers, and Microsoft has begun with the concept of a universal app across their ecosystem. Which is more or less what the web should be. In order for the Hololens to go beyond a neat gadget it has to create a more seamless computing experience, one defined by the goals, not the services used to get to them.
+
+By far the biggest issue here is how content is organized and located, but that's a post for another day. In the meantime let's marvel at AR's capabilities for shaping how we interact with the world around us, as opposed to the digital world or the physical one.

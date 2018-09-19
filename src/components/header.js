@@ -1,33 +1,32 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import icon from '../images/icon'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
+const Header = ({ links }) => {
+  const linkContent = links.map(l => (
+    <Link
+      class="link underline black dim fw5 f6 f5-ns dib mr3"
+      href="{{l.url}}"
+      title="{{l.title}}"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      {l.title}
+    </Link>
+  ))
+
+  return (
+    <div class="bb b--black-10">
+      <div class="mw8 center pa3">
+        <nav class="black-70 flex flex-row justify-between items-center">
+          <div class="w2 h2 ma1">
+            <Link class="link pointer" href="/">
+              {icon}
+            </Link>
+          </div>
+          <div>{linkContent}</div>
+        </nav>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Header

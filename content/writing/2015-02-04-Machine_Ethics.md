@@ -1,0 +1,28 @@
+---
+title: What machine ethics should look like
+category: Machine Intelligence
+date: 2015-02-04
+excerpt: There’s a discussion going on over at USV regarding ethical algorithms. I can help but feel that a lot of these posts are missing the crux of the issue; which in this case isn’t really about applications of algorithms’ or differing value systems but rather the implications of having actors which lack values of their own making moral choices'
+layout: 'post'
+tags:
+  - Machine Intelligence
+  - Machine Ethics
+---
+
+There's a [discussion][1] going on over at USV regarding ethical algorithms. I can help but feel that a lot of these posts are missing the crux of the issue; which in this case isn't really about applications of algorithms' or differing value systems but rather the implications of having actors which lack values of their own making moral choices.
+
+We don't wonder about the priorities of humans who are driving, we don't question their ethics or why they chose to swerve in one direction or another. We assume that they made a calculation based on some reasonable metric. Some people will drive more cautiously; others will make choices with their kids in mind and so on. Those choices that you made, and the frameworks that you used ought to be available to the tool you're using. This sort of system calls for manufacturer reasonable operating limits but beyond that, people ought to decide what the tools they are using value, especially if those tools are intelligent.
+1. Veer left - Driver is killed
+2. Veer right - Pedestrians are killed
+
+These dilemmas will always exist, and they aren't a new thing to grapple with. [The Trolley Problems][2] do an excellent job describing this predicament. The problem isn't in machine ethics, but rather the idea of having a one algorithmic solution as opposed to the ethical spectrum that humans have.
+
+Furthermore, these predicaments will become exceedingly rare, as vehicles become exceedingly more connected these issues will fade into the background as both actors (e.g. cars) can make decisions in unison to prevent loss of life.
+
+# In practice
+The result is personalized machine ethics, the manufacturer or company producing the product sets reasonable operating limits and beyond that the user has the flexibility to decide what is ethical and what isn't. You avoid the implications of having a unifying framework (which forces companies to be hyper ethically aware) and still give the user the flexibility to control their own experience.
+
+There is a turning point here but, I don't think we're there yet. Rather, the much larger issue is how we react to having more complicated decisions being made for us as opposed to them forcing us to reason through them. The implications here are much more severe (e.g. people not stopping to thinking about major issues or ethical principles), but much more subtle and, also, more dangerous. We'll just have to wait to see how humanity reacts.
+
+[1]: https://www.usv.com/topic/the-ethics-of-algorithms
+[2]: http://en.wikipedia.org/wiki/Trolley_problem

@@ -1,0 +1,72 @@
+---
+title: Changefiles
+date: "2016-05-27"
+excerpt: "Changefiles are an interesting way to approach thinking about updating a piece of software. Allowing for more productive programmers and better libraries that can be tuned for a specific use case."
+tags: 
+  - Ideas
+image: '/public/ideas/changefiles.png'
+---
+
+Peter Siebel has an excellent interview with Donald Knuth in his book [Coders at
+Work](http://www.codersatwork.com/). Among other things they go into a bit of
+detail on the work Knuth did on literate programming with WEB and CWEB. The core
+idea is that the program is written in a manner that explains itself to you with
+documentation in a much more natural manner. While this is interesting, what I
+found a little more intriguing is the manner by which updates in CWEB or WEB
+were made.
+
+Essentially they were done through changefiles. Which is a list of deltas from
+what ever version you're on to the latest version. If you apply all those
+changes then your code is up to date and synced with the latest release.
+
+Normally how updates are done is just wiping the old module and replacing it
+with the new one, then only time in which that isn't done is if you're working
+with a particularly large application and re downloading would be expensive.
+
+The beauty of a change file is not that it saves space alone, although that is
+one nice property. More importantly you can update a file and ignore changes
+that the user has made. This may seem like a somewhat particular use case, but I
+think it has some far flung consequences.
+
+Consider the situation in which you're working with a third party library. It
+almost does exactly what you need but there's a few things here or there that
+you wish you could change to made the code more specific to your problem.
+Perhaps you need to specify a different comparator but you want to compare
+across types, or you want to apply some changes in the new release, but
+integrate other ones later.
+
+If individual changes were released as changefiles you could have all those
+benefits, and if you don't care about a specific release and want to apply the
+new version you can do that too.
+
+What I have in mind is a little more expansive than just forking a project and
+modifying code. More specifically you ought to be able to take any third party
+function and modify arbitrary parts of the functions or class and have those
+changes apply in a specific scope. It could either be a change for a specific
+file, or for the whole project.
+
+One of the great things about this is that it would mean more cohesion among
+developers trying to solve the same problem. Instead of dividing their efforts
+across multiple projects that have subtle differences they could work on the
+same source and tweak what they needed to change.
+
+## Objections
+
+This of course will not change the differences between libraries that take a
+fundamentally difference approach. You would not try to take a library that has
+made certain architectural choices in its core runtime. In part because that
+would require an excessive amount of work and any changes made the the original
+would probably not apply to the other. Similarly, there is an issue here in that
+some functions and files would rely upon other ones. What happens if you change
+one, and if you do, have you broken the whole system?
+
+In many ways the git model seems to do a decent job covering some of these use
+cases. Individuals can make modifications and keep things in sync for the most
+part. You can sync forks with other upstream branches and so on.
+
+I think the benefit here isn't so much being able to sync things, but rather
+being free to modify with very little overhead. The result is a bunch of custom
+tuned libraries that do a really good job with your use case. Installing these
+custom additions could also be done inline with other code, rather than having
+to install from a dedicated repo. All in all, the git model does most of this
+already, and this probably isn't worth pursuing.

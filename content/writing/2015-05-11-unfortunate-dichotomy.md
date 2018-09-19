@@ -1,0 +1,23 @@
+---
+title: A Unfortunate Dichotomy
+categories: 
+  - Philosophy
+tags:
+  - Cognitive Science
+date: 2015-05-11
+layout: 'post'
+---
+
+The majority of cognitive science is curious about the framework of how you work; That is, how your beliefs and  intentions are formed, how data points on the retina are translated into thought or how representations about the  world get from out there to in here. This is all well and good, but at the end of this quest we arrive at an  understanding of how we work in its entirety, that is a complete understanding of how you work and operate, how you  walk, talk and move about your world. At that point what you thought makes you you is no longer you, because you are  now a system, and moreover a system that can be understood.
+
+At this point that special aspect that makes you who you are and not someone else is known, we can point to it and say that's you, right there. That thing that we point at, may be very small. It may be determined by our bodies, or our experiences. Or a host of other things (One can speculate infinitely on the matter). With this knowledge comes a great deal of anguish, for you are not longer much different from someone else.
+
+* Imagine further that with the knowledge of how a mind works, comes knowledge of how to recreate a mind. This becomes even more unsettling. You can now be recreated, there can be an infinite number of yous, not just the one you. You become in a sense disposable, one of many. It does not matter if you die, for its possible to create another you. One issue here however is that there is no way to know if the consciousness of past you will awake in new you, and there is no way to determine for certain either way, which is terrifying.
+
+* Imagine further that with the knowledge of how a mind works, comes knowledge of how to manipulate the mind. You now can longer truly trust the senses that you have. You never know with any certainty what time-line you are on, or how you got there. In a sense the world is constantly shifting underneath your feet. One thing to note however, is that this could already be the case.
+
+* One of the most deeply seeded issues here however is not the above two, but rather a crisis of self. You know with  great accuracy what makes you who you are, but that is no consolation. For with that accuracy comes doubts, doubts of who is in charge, doubts of what you are doing and why you are doing it. Is it really you who decided to sit in the park, or was it some lower system that made that decision for you? We would like to think that we decided, but what if we don't? Perhaps for the most part we are passengers along for the ride, and not in the drivers seat after all?
+
+It becomes very difficult to say with any certainty that this is the right thing to do. Perhaps we are merely passengers, but perhaps we are individual actors in the fullest sense of the term. Philosophy and especially Philosophy of the Mind does not have the luxury of doing undeniably morally good work. The question then is: "Is it  worth it?"
+
+Ignorance is without a doubt the safest option, and perhaps the happiest, but our thirst for knowledge is infinite and shows no signs of subsiding.

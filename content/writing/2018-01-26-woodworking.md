@@ -1,0 +1,110 @@
+---
+title: Woodworking for Quality
+date: '2018-01-26 10:53:00 -0400'
+excerpt: "How woodworking also applies to software. As with
+woodworking the goal of software is not to produce a piece of software, but
+rather to produce a quality piece of software. Approaching software as a craft
+improves how we think about software development."
+category: Philosophy
+tag:
+  - Philosophy
+layout: 'post'
+---
+
+Why does a woodworker make a piece of furniture, boat or anything else for that
+matter? A avid woodworker may produce many examples of each category, to what
+end to they take upon this endeavor?
+
+Perhaps every chair they make has a slightly improved design, maybe they execute
+an old design better then they could before or they may use different materials.
+
+With every new chair comes increased understanding. A different back on chair
+#4, or a different joint on chair #6. As more chairs are produced the woodworker
+converges on *Quality*. Each chair becomes a better experience for those who
+have the pleasure of experiencing it.
+
+A woodworker works both to increase the Quality of the objects they produce, and
+because they relish the act of making something from raw materials.  The goal is
+almost never to create a specific chair of a specific level of Quality, but
+rather to make the next chair even better than the last. If each chair can be
+better then the last, then there are always small tweaks to be made that make a
+specific chair better for its context.
+
+Architects make similar choices, the trade offs they make change how people
+experience the space. The question becomes: What tools do we have at our disposal
+to elicit a specific experience and what experience do we want people to have?
+
+Quality woodworking does not rely only upon the technical skills of carving or
+making a sturdy join. It's also about knowing what to carve, and understanding
+the context of where a piece will reside.
+
+Traditionally a young Woodworker would increase their skills by taking an
+apprenticeship with a master woodworker. The quicker the young woodworker
+improves the more time they spend making objects of Quality.  The young
+woodworker doesn't only learn how to build a chair, but rather learns how to
+craft a chair of Quality. One that people enjoy using and tell their family,
+friends and colleagues about.
+
+This way of approaching woodworking also applies to software. As with
+woodworking the goal of software is not to produce a piece of software, but
+rather to produce a quality piece of software.
+
+Similar to a young woodworker, my goal is to improve the quality of software I
+create. The best way to do that is to find the steepest learning curve possible.
+I want to help build things that I'm proud of, and that others value.
+
+In the past Architecture or Woodworking would have been the best places to apply
+an interest in Quality design. Now the best place is software. The best place to
+make an impact in the modern world is increasingly software.
+
+There's a quotation from Bret Victor that I like to refer back to on occasion.
+
+> People turn to software to learn the meaning of words, learn which countries
+> were bombed today, and learn to cook a paella. They decide which music to
+> play, which photos to print, and what to do tonight, tomorrow, and Tuesday at
+> 2:00. They keep track of a dozen simultaneous conversations in private
+> correspondence, and maybe hundreds in public arenas. They browse for a book
+> for Mom, a coat for Dad, and a car for Junior. They look for an apartment to
+> live in, and a bed for that apartment, and perhaps a companion for the bed.
+> They ask when the movie is playing, and how to drive to the theater, and where
+> to eat before the movie, and where to get cash before they eat. They ask for
+> numbers, from simple sums to financial projections. They ask about money, from
+> stock quote histories to bank account balances. They ask why their car isn’t
+> working and how to fix it, why their child is sick and how to fix her. They no
+> longer sit on the porch speculating about the weather—they ask software.
+
+Bret's quotation illustrates the impact software has, and the responsibility of
+software engineers to design software of *Quality*.
+
+With producing Quality the focus of a software developer, what applications of Quality
+software are the most impact full?
+
+It seems like focusing on one sector or another is less value then focusing on
+the specific application. The key question for any given application is how well
+the piece of software aligns with the users mental model. Broadly speaking
+the interaction between humans and software can be split into three distinct
+segments.
+
+* **Communication:**
+    When a user communicates with another user through a software interaction.
+* **Manipulation:**
+    When a user manipulates an object they have a mental model of inside a
+    computer.
+* **Education:**
+    When a user uses software to probe the world and understand their
+    surroundings.
+
+I am less interested in designing interactions between machines, and more
+focused on what a person and computer can do together. How do we make those
+interactions more empowering, expressive and productive?
+
+Infused in this question is a question of representation. I care about how the
+representation is presented to the computer as well as how it is represented to
+the user. The representation to the computer seems more impact full and scalable
+to me.
+
+If you know of places that think about software in a similar manner, produce
+software of high quality and would be a good place to learn the ways of the bits
+please let me know.
+
+[Email](mailto:devin@devinmcgloin.com) or [@devinmcgloin](https://twitter.com/devinmcgloin)

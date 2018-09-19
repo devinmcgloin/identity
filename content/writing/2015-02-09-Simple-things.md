@@ -1,0 +1,31 @@
+---
+title: Simple things are most impressive
+category: Philosophy
+tags:
+  - Philosophy
+date: 2015-02-09
+layout: 'post'
+---
+
+It seems as though the simple things, those we take for granted, are
+always the most complex and impressive. It's quite incredible to know
+that I am breathing right now, not just because breathing is
+incredible (it is) but beyond that that I recognize myself. That's
+incredible. I know who I am physically, and where I am. I know what it
+feels like to touch sandpaper or cold tile. I know what it means to
+feel sadness and joy, I know what heat feels like. I can see objects
+in front of me and touch them.
+
+I can walk. I can amble around on two feet, over slippery ice, or
+different gradients and surfaces. I know what it's like to feel my own
+face, to have an identity and to change the world around me.
+
+I can think, I know information and can do things with it. If I want
+to learn something I can, and beyond that I can want! What does that
+even mean? It's so inexplicable and we almost **never** stop to think
+about it.
+
+All these super feats are largely unnoticed. This may be a good thing,
+allowing us to transcend the simplistic and reach for the
+sophisticated. But at the same time its nice to revisit the incredible
+powers of being human.
