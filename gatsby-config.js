@@ -2,6 +2,11 @@ module.exports = {
   siteMetadata: {
     title: 'Devin McGloin',
     siteUrl: `https://devinmcgloin.com`,
+    headerLinks: [
+      { slug: '/writing', title: 'Writing' },
+      { slug: '/experiments', title: 'Experiments' },
+      { slug: '/projects', title: 'Projects' },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',

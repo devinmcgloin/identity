@@ -1,25 +1,26 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import icon from '../images/icon'
+import Logo from './logo'
 
 const Header = ({ links }) => {
   const linkContent = links.map(l => (
     <Link
-      class="link underline black dim fw5 f6 f5-ns dib mr3"
-      href="{{l.url}}"
-      title="{{l.title}}"
+      className="link underline black dim fw5 f6 f5-ns dib mr3"
+      to={l.slug}
+      title={l.title}
+      key={l.slug}
     >
       {l.title}
     </Link>
   ))
 
   return (
-    <div class="bb b--black-10">
-      <div class="mw8 center pa3">
-        <nav class="black-70 flex flex-row justify-between items-center">
-          <div class="w2 h2 ma1">
-            <Link class="link pointer" href="/">
-              {icon}
+    <div className="bb b--black-10">
+      <div className="mw8 center pa3">
+        <nav className="black-70 flex flex-row justify-between items-center">
+          <div className="w2 h2 ma1">
+            <Link className="link pointer" to="/">
+              <Logo />
             </Link>
           </div>
           <div>{linkContent}</div>

@@ -37,9 +37,21 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        let templatePath
+        switch (node.fields.slug.split('/')[1]) {
+          case 'writing':
+            templatePath = './src/templates/writing.js'
+            break
+          case 'projects':
+            templatePath = './src/templates/project.js'
+            break
+          case 'experiments':
+            templatePath = './src/templates/experiments.js'
+            break
+        }
         createPage({
           path: node.fields.slug,
-          component: path.resolve(`./src/templates/writing.js`),
+          component: path.resolve(templatePath),
           context: {
             // Data passed to context is available
             // in page queries as GraphQL variables.
