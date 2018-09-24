@@ -3,9 +3,9 @@ module.exports = {
     title: 'Devin McGloin',
     siteUrl: `https://devinmcgloin.com`,
     headerLinks: [
-      { slug: '/writing', title: 'Writing' },
-      { slug: '/experiments', title: 'Experiments' },
       { slug: '/projects', title: 'Projects' },
+      { slug: '/experiments', title: 'Experiments' },
+      { slug: '/writing', title: 'Writing' },
     ],
   },
   plugins: [
