@@ -1,13 +1,16 @@
 import React from 'react'
-
+import { ProjectLayout } from '../components/layout'
+import moment from 'moment'
 export default ({ data }) => {
   const post = data.markdownRemark
 
   return (
-    <div>
-      <div>{post.frontmatter.title}</div>
+    <ProjectLayout
+      title={post.frontmatter.title}
+      publishedAt={moment(Date.parse(post.frontmatter.date))}
+    >
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+    </ProjectLayout>
   )
 }
 
@@ -17,6 +20,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
       }
     }
   }

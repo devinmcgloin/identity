@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { HeaderLayout } from '../components/layout'
 
-const SecondPage = () => (
-  <React.Fragment>
+const About = () => (
+  <HeaderLayout title="About">
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
-  </React.Fragment>
+  </HeaderLayout>
 )
 
-export default SecondPage
+export default About

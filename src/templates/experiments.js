@@ -1,4 +1,5 @@
 import React from 'react'
+import { HeaderLayout } from '../components/layout'
 
 export default ({ data }) => {
   const post = data.markdownRemark
