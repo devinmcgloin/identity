@@ -4,9 +4,9 @@ author: Douglass Engelbart
 title: Augmenting Human Intellect
 source: 'http://www.dougengelbart.org/pubs/augment-3906.html'
 excerpt: If you have not had the pleasure of reading Douglass Engelbart’s Augmenting Human Intellect take the time to browse through the concepts he presents, you won’t be disappointed. As in most papers the abstract is the most information dense. Engelbart’s goal is not to develop frameworks for a specific domain on human endeavor, but rather to make a fundamental shift in how individuals see the world, represent their problems and work towards solutions.
-image: '/public/papers/englebart.jpg'
+image: './englebart.jpg'
 category: paper
-tags: 
+tags:
   - Augmenting Human Intellect
 date: '2017-12-23'
 ---

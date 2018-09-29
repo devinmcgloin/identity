@@ -5,7 +5,7 @@ permalink: /parking/
 excerpt: "Parking is a live art piece in which users claim a parking spot and
 hopefully make a human connection."
 date: "2018-01-18"
-image: /public/projects/parking.png
+image: ./parking.png
 ---
 
 [Parking][1] is a take on the common API design problem of creating a parking garage.
@@ -15,7 +15,7 @@ live art / human connection piece.
 Users claim their parking spot by hovering their cursor over the spot, if they
 stop hovering they loose the spot. As a result of this if a spot is occupied,
 you (the viewer) knows exactly what another person is doing right at this
-second. 
+second.
 
 You don't know their gender, location or political affiliation. You just know
 what a fellow human being is doing at this very second.

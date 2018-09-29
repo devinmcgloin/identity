@@ -66,14 +66,14 @@ blockquote p {
     font-size: 1.3rem;
 }
 
-.gatsby-highlight {
+#post .gatsby-highlight {
     margin: 0;
     line-height: 1.5;
     position: relative;
 }
 
 @media (min-width: 45em) {
-    .gatsby-highlight {
+    #post .gatsby-highlight {
         width: 42em;
         left: -4em;
     }

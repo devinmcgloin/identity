@@ -1,6 +1,6 @@
 ---
 title: Designing for a use case
-date: '2016-01-29 17:28'
+date: '2016-01-29'
 tags:
     - Software Design
     - Programming

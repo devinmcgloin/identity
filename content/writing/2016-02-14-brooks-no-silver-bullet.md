@@ -2,12 +2,12 @@
 layout: paper
 author: Fred Brooks
 category: paper
-date: '2016-02-14 11:39'
+date: '2016-02-14'
 title: No Silver Bullet
 source: 'http://papers.devinmcgloin.com/worrydream/Brooks-NoSilverBullet.pdf'
 year: 1986
 excerpt: Programming, Brooks argues, can be separated into distinct tasks. The first is dealing with incidental complexity, and the second managing essential complexity. Brooks asks, How do we approach incedental complexity, and do those approaches have limits? What is the way forward to make the essential logic easier to manage?
-image: '/public/papers/brooks.jpg'
+image: './brooks.jpg'
 tags:
   - Management
   - Software Engineering

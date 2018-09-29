@@ -1,6 +1,6 @@
 ---
 title: Beyond Purpose
-date: '2015-11-14 12:15'
+date: '2015-11-14'
 tags:
     - Philosophy
 layout: 'post'

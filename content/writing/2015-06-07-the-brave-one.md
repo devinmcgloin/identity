@@ -6,7 +6,7 @@ categories:
 tags:
     - Karive
     - Short Fiction
-date: '2015-06-07 15:22'
+date: '2015-06-07'
 layout: 'post'
 ---
 

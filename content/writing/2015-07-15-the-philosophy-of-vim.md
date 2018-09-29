@@ -1,6 +1,6 @@
 ---
 title: The Philosophy of vim
-date: '2015-07-15 03:26'
+date: '2015-07-15'
 tags:
   - Human Computer Interaction
   - Software Design

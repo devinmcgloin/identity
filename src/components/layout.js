@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
-
+import Helmet from 'react-helmet'
 import { Github } from './icons'
 
 const StandardLayout = ({ children }) => (
@@ -109,4 +109,44 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
   </StandardLayout>
 )
 
-export { StandardLayout, HeaderLayout, PostLayout, ProjectLayout }
+const ExperimentLayout = ({ title, instructions, datgui, children }) => (
+  <div className="webgl-container">
+    <Helmet>
+      {datgui && (
+        <React.Fragment>
+          <script async src="/public/js/dat.gui.min.js" />
+          <link rel="stylesheet" href="/public/css/gui-theme.css" />
+        </React.Fragment>
+      )}
+      <script async src="/public/js/webgl-bindings.js" />
+    </Helmet>
+    <div className="details-container">
+      {instructions ? (
+        <React.Fragment>
+          <h1 className="smaller">{title}</h1>
+          <div className="instructions">{instructions}</div>
+        </React.Fragment>
+      ) : (
+        <h1>{title}</h1>
+      )}
+
+      <div className="nav">
+        <a href="/">devinmcgloin.com</a>
+        <span className="nav-sep">&middot;</span>
+        <a href="/experiments/">Experiments</a>
+        <span className="nav-sep">&middot;</span>
+        <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+      </div>
+    </div>
+    <textArea className="webgl-editor" id="textArea" />
+    <canvas className="webgl-sketch" id="canvas" /> {children}
+  </div>
+)
+
+export {
+  StandardLayout,
+  HeaderLayout,
+  PostLayout,
+  ProjectLayout,
+  ExperimentLayout,
+}

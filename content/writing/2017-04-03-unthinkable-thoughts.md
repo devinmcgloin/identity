@@ -1,6 +1,6 @@
 ---
 title: Unthinkable Thoughts
-date: '2017-4-03 10:53:00 -0400'
+date: '2017-04-03'
 excerpt: "Traditionally we create tools to augment our own faculties. We wanted to fell
 trees, so we created the saw. We wanted to combine pieces of wood,
 so we created the hammer. However, we can also augment how we approach those

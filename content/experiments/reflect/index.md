@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Reflect
-image: "reflect.jpeg"
+featuredImage: "./feature.jpeg"
 webgl: true
 datgui: true
 date: 2017-02-18

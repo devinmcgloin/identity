@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Editable Splines
-image: "splines.jpeg"
+featuredImage: "./feature.jpeg"
 date: 2017-04-13
 excerpt: Made with Canvas
 datgui: true

@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Mesh
-image: "mesh.jpeg"
+featuredImage: "./feature.jpeg"
 date: 2017-03-27
 excerpt: Made with Canvas and Parametric Surfaces
 datgui: true

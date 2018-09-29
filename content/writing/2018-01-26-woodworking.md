@@ -1,6 +1,6 @@
 ---
 title: Woodworking for Quality
-date: '2018-01-26 10:53:00 -0400'
+date: '2018-01-26'
 excerpt: "How woodworking also applies to software. As with
 woodworking the goal of software is not to produce a piece of software, but
 rather to produce a quality piece of software. Approaching software as a craft

@@ -1,6 +1,6 @@
 ---
 title: Mental Models
-date: '2015-09-13 01:52'
+date: '2015-09-13'
 tags:
     - Programming
 excerpt: I recently had the pleasure of seeing Bjarne Stroustrup speak at an event at NYU. The talk focused on the role of C++ and his role at Morgan Stanley, but what was far more interesting was the manner in which he thought about programming concepts.

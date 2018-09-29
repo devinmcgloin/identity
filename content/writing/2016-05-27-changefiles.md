@@ -2,9 +2,9 @@
 title: Changefiles
 date: "2016-05-27"
 excerpt: "Changefiles are an interesting way to approach thinking about updating a piece of software. Allowing for more productive programmers and better libraries that can be tuned for a specific use case."
-tags: 
+tags:
   - Ideas
-image: '/public/ideas/changefiles.png'
+image: './changefiles.png'
 ---
 
 Peter Siebel has an excellent interview with Donald Knuth in his book [Coders at

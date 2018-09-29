@@ -1,6 +1,6 @@
 ---
 title: Reframing Goals
-date: '2018-01-29 10:53:00 -0400'
+date: '2018-01-29'
 excerpt:
 category: Career
 tag:

@@ -1,8 +1,8 @@
 ---
 layout: webgl
-title: Boids
-image: "boids.jpeg"
-date: 2017-05-11
+title: Fermat's Spirals
+featuredImage: "./feature.png"
+date: 2017-08-11
 excerpt: Made with Canvas
 datgui: true
 ---
@@ -14,8 +14,6 @@ datgui: true
 </style>
 
 <script>
-{% include boids.js %}
-
 var startTime = Date.now() / 1000,
     time = startTime;
 
@@ -79,57 +77,82 @@ function drawCanvases(canvases) {
                 context.clearRect(0, 0, canvas.width, canvas.height);
                 canvas.update(context);
             }
-    }, 30);
+    }, 90);
 }
 
-var boids, gui;
+function p2c(r, theta) {
+    return [r * Math.cos(theta), r * Math.sin(theta), 0]
+}
+var d2r = function(theta) {
+    return theta * Math.PI / 180;
+}
+
+function pixeltocord(p) {
+    var w = canvas.width,
+        h = canvas.height,
+        x = p[0],
+        y = p[1],
+        z = p[2],
+        fl = 5;
+    x = (2 * x) / w - 1;
+    y = (h - 2 * y) / w;
+    x = x - (x * z) / fl;
+    y = y - (y * z) / fl;
+    return [x, y, 0];
+}
+
+function cordtopixel(c) {
+    var w = canvas.width,
+        h = canvas.height,
+        x = c[0],
+        y = c[1],
+        z = c[2],
+        fl = 5;
+
+    x *= fl / (fl - z);
+    y *= fl / (fl - z);
+
+    x = w * x * 0.5 + 0.5 * w;
+    y = -w * y * 0.5 + 0.5 * h;
+    return [x, y, 0]
+
+
+}
+
+var boids, gui, params;
+
+function renderCircle(ctx, r, theta, s) {
+    var p = cordtopixel(p2c(r, theta));
+    ctx.beginPath();
+    ctx.arc(p[0], p[1], s, 0, Math.PI * 2, true);
+    ctx.fill();
+}
+
+function render(ctx) {
+    ctx.fillStyle = params.color;
+    for (var i = 0; i < params.count; i++) {
+        let r = params.scaling_factor * Math.sqrt(i);
+        let theta = i * params.angle;
+        renderCircle(ctx, r, d2r(theta), params.size);
+    }
+}
 
 window.onload = function() {
+    params = {
+        size: 2,
+        color: '#e23232',
+        scaling_factor: 0.004,
+        angle: 137.508,
+        count: 10000
+    }
     defineCanvasProperties(canvas);
-    boids = new Swarm(canvas.getContext("2d"));
     gui = new dat.GUI();
-    gui.addColor(boids, 'background');
-    gui.add(boids, 'numBoids', 10, 1000).step(1);
-
-
-    var yellow = gui.addFolder('Yellow Swarm'),
-        salmon= gui.addFolder('Salmon Swarm'),
-        pred = gui.addFolder('Predator');
-
-
-    var controllers = [];
-    controllers.push(yellow.addColor(boids.config.yellow, 'fillStyle'));
-    controllers.push(yellow.add(boids.config.yellow, 'radius', 1, 15));
-    controllers.push(yellow.add(boids.config.yellow, 'radialSpeed', .00005, .3));
-    controllers.push(yellow.add(boids.config.yellow, 'speed', 1, 10));
-    controllers.push(yellow.add(boids.config.yellow, 'vision', 10, 200));
-    controllers.push(salmon.addColor(boids.config.salmon , 'fillStyle'));
-    controllers.push(salmon.add(boids.config.salmon, 'radius', 1, 15));
-    controllers.push(salmon.add(boids.config.salmon, 'radialSpeed', .00005, .3));
-    controllers.push(salmon.add(boids.config.salmon, 'speed', 1, 10));
-    controllers.push(salmon.add(boids.config.salmon, 'vision', 10, 200));
-    for (var i = 0; i < controllers.length; i++)
-        controllers[i].onChange(function(value) {
-            boids.update();
-        });
-
-    controllers = [];
-    pred.add(boids, 'activePred');
-    controllers.push(pred.add(boids.config.pred, 'radius', 1, 15));
-    controllers.push(pred.add(boids.config.pred, 'radialSpeed', .00005, .3));
-    controllers.push(pred.add(boids.config.pred, 'speed', 1, 10));
-    controllers.push(pred.add(boids.config.pred, 'vision', 10, 200));
-    controllers.push(pred.addColor(boids.config.pred, 'fillStyle'));
-     for (var i = 0; i < controllers.length; i++)
-        controllers[i].onChange(function(value) {
-            boids.updatePred();
-        });
-
-
-    boids.id = setInterval(boids.animate, 50);
-    boids.animate();
-    boids.clear();
-    boids.createBoids(600);
+    gui.add(params, 'size', 1, 10);
+    gui.add(params, 'scaling_factor', 0.001, 0.02);
+    gui.add(params, 'angle', 0, 180);
+    gui.add(params, 'count', 1, 20000);
+    gui.addColor(params, 'color');
+    canvas.update = render;
+    drawCanvases([canvas]);
 }
-
 </script>

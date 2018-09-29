@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Devin McGloin',
-    siteUrl: `https://devinmcgloin.com`,
+    siteUrl: 'https://devinmcgloin.com',
     headerLinks: [
       { slug: '/projects', title: 'Projects' },
       { slug: '/experiments', title: 'Experiments' },
@@ -21,25 +21,26 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    'gatsby-remark-copy-linked-files',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 850,
               withWebp: true,
               linkImagesToOriginal: true,
             },
           },
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          'gatsby-plugin-sharp',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-prismjs',
             options: {
               showLineNumbers: true,
             },
@@ -47,16 +48,16 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-sitemap',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `content`,
-        path: `${__dirname}/content/`,
+        name: 'content',
+        path: `${__dirname}/content`,
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'YOUR_GOOGLE_ANALYTICS_TRACKING_ID',
         // Puts tracking script in the head instead of the body
@@ -70,9 +71,8 @@ module.exports = {
         // Any additional create only fields (optional)
       },
     },
-
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'gatsby-starter-default',
         short_name: 'devin-mcgloin',

@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Bézier
-image: "bezier.jpeg"
+featuredImage: "./feature.jpeg"
 date: 2017-04-06
 excerpt: Made with Canvas
 datgui: true

@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Additive Splines
-image: "additive-splines.jpeg"
+featuredImage: "./feature.png"
 date: 2017-05-13
 excerpt: Made with Canvas
 datgui: true

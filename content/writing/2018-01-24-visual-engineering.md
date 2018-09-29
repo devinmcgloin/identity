@@ -5,10 +5,10 @@ excerpt: "When building some physical product the feedback loop
 between the creation of a new idea and actually testing it is far to high.
 Visual Engineering is a rapid feedback environment for validating hunches and
 answering questions about engineering."
-tags: 
+tags:
   - Ideas
 date: '2018-01-24'
-image: '/public/ideas/visual-engineering.png'
+image: './visual-engineering.png'
 ---
 
 When building some physical product the feedback loop between the creation of a new idea and actually testing it is far to high. 3D printers and other technologies have tightened this loop more, but we could do more to make it easier to test hypothesis, while also making engineering more accessible to laypersons without formal rigourous training.

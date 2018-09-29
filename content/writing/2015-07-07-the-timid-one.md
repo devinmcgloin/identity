@@ -3,10 +3,10 @@ title: The Timid One
 categories:
   - Literature
   - Fiction
-tags: 
+tags:
   - Karive
   - Short Fiction
-date: '2015-07-07 15:24'
+date: '2015-07-07'
 layout: 'post'
 ---
 

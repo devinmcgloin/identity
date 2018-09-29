@@ -1,6 +1,6 @@
 ---
 title: 'America and The Beautiful Game'
-date: '2015-09-18 00:40'
+date: '2015-09-18'
 tags:
     - Culture
 excerpt: I can't help but think that American's have a hard time understanding soccer. American sports emphasize the notion of an individual play, in which specific actions and therefore the entire play can be said to be good or bad. Part of the reason American's - in general - have a harder time understanding the dynamics of soccer.

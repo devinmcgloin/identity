@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
         { type: 'title', description: 'Title' },
         { type: 'excerpt', description: 'Description' },
       ]}
-      rows={data.projects.edges.map(e => flatten(e.node)).slice(0, 5)}
+      rows={data.projects.edges.map(e => flatten(e.node))}
       color="dark"
       title="Projects"
       link="/projects"
@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
     <Carousel
       title="Experiments"
       link="/experiments"
-      cards={data.experiments.edges.map(e => flatten(e.node)).slice(0, 4)}
+      cards={data.experiments.edges.map(e => flatten(e.node))}
     />
     <Table
       columns={[
@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => (
           dateFormatter: 'dddd, MMMM Do 0YYYY',
         },
       ]}
-      rows={data.writing.edges.map(e => flatten(e.node)).slice(0, 5)}
+      rows={data.writing.edges.map(e => flatten(e.node))}
       color="dark"
       title="Writing"
       link="/writing"
@@ -50,6 +50,7 @@ export const query = graphql`
     experiments: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/experiments/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
+      limit: 4
     ) {
       edges {
         node {
@@ -57,7 +58,13 @@ export const query = graphql`
             title
             categories
             excerpt
-            image
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug
@@ -68,6 +75,7 @@ export const query = graphql`
     writing: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
+      limit: 5
     ) {
       edges {
         node {
@@ -75,7 +83,7 @@ export const query = graphql`
             title
             categories
             excerpt
-            date
+            date(formatString: "D MMMM 0YYYY")
           }
           fields {
             slug
@@ -86,6 +94,7 @@ export const query = graphql`
     projects: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
+      limit: 5
     ) {
       edges {
         node {

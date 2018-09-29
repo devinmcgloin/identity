@@ -46,48 +46,58 @@ deployed on [Heroku](https://heroku.com). Source is available on
 
 ## Usage
 
-```
-You are standing at the end of a road before a small brick building.
-```
+<div class="ph3">
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">You are standing at the end of a road before a small brick building.</dd>
+  </dl>
 
-```
-Around you is a forest.
-```
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">Around you is a forest.</dd>
+  </dl>
 
-```
-A small stream flows out of the building and down a gully.
-```
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">A small stream flows out of the building and down a gully.</dd>
+  </dl>
 
+  <dl class="lh-title mv2">
+    <dt class="dib b">You:</dt>
+    <dd class="dib ml0 gray">building</dd>
+  </dl>
 
-building
-{: .right}
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">You are inside a building, a well house for a large spring.</dd>
+  </dl>
 
-```
-You are inside a building, a well house for a large spring.
-```
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">There are some keys on the ground here.</dd>
+  </dl>
 
-```
-There are some keys on the ground here.
-```
-
-```
-There is a shiny brass lamp nearby.
-```
-
-```
-There is food here.
-```
-
-```
-There is a bottle of water here.
-```
-
-get keys
-{: .right}
-
-```
-Ok.
-```
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">There is a shiny brass lamp nearby.</dd>
+  </dl>
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">There is food here.</dd>
+  </dl>
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">There is a bottle of water here.</dd>
+  </dl>
+  <dl class="lh-title mv2">
+    <dt class="dib b">You:</dt>
+    <dd class="dib ml0 gray">get keys</dd>
+  </dl>
+  <dl class="lh-title mv2">
+    <dt class="dib b">Advent:</dt>
+    <dd class="dib ml0 gray">Ok</dd>
+  </dl>
+</div>
 
 ## Contributions
 

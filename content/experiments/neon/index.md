@@ -1,8 +1,8 @@
 ---
 layout: webgl
-title: Hexagons
-image: "hexagons.jpeg"
-date: 2017-03-23
+title: Neon
+featuredImage: "./feature.jpeg"
+date: 2017-03-07
 excerpt: Made with Canvas
 ---
 
@@ -13,8 +13,6 @@ excerpt: Made with Canvas
 </style>
 
 <script>
-
-{% include matrix.js %}
 var startTime = Date.now() / 1000,
     time = startTime;
 
@@ -82,107 +80,47 @@ function trackCursor(canvas) {
 
 canvas.update = function(g) {
 
-    function drawCurve(c, shd, strk) {
-        var i, cv, x, y, z, fl = 5,
-            w = canvas.width,
-            h = canvas.height;
-
-        cv = [];
-        for (i = 0; i < c.length; i++) {
-
-            // RETRIEVE COORDINATES FROM CURVE POINT
-
-            x = c[i][0];
-            y = c[i][1];
-            z = c[i][2];
-
-            // DO PERSPECTIVE TRANSFORM
-
-            x *= fl / (fl - z);
-            y *= fl / (fl - z);
-
-            // DO VIEWPORT TRANSFORM
-
-            x = w * x * .5 + .5 * w;
-            y = -w * y * .5 + .5 * h;
-            cv.push([x, y, 0]);
-        }
-
-        // DRAW THE PROJECTED CURVE ONTO THE CANVAS.
+    var d = function(x1, y1, x2, y2, shd, strk) {
         g.lineWidth = 15;
         g.lineCap = 'round';
         g.lineJoin = 'round';
         g.shadowBlur = 20;
         g.shadowColor = shd;
         g.strokeStyle = strk;
-
         g.beginPath();
-        g.moveTo(cv[0][0], cv[0][1]);
-        for (i = 1; i < c.length; i++)
-            g.lineTo(cv[i][0], cv[i][1]);
+        g.moveTo(x1, y1);
+        g.lineTo(x2, y2);
         g.stroke();
+        g.closePath();
     }
-
-    var p2c = function(r, theta) {
-        return [r * Math.cos(theta), r * Math.sin(theta), 0]
-    }
-
-    var d2r = function(theta) {
-        return theta * Math.PI / 180;
-    }
-
-    var hexagon = function(c) {
-        var p = [
-            p2c(c, d2r(60)),
-            p2c(c, d2r(120)),
-            p2c(c, d2r(180)),
-            p2c(c, d2r(240)),
-            p2c(c, d2r(300)),
-            p2c(c, d2r(360)),
-            p2c(c, d2r(60))
-        ];
-        return p;
-    }
-
-
 
     var centerX = canvas.width / 2,
         centerY = canvas.height / 2,
         offset = 300,
-        shadowLum = Math.floor(Math.abs(225 * Math.sin(Math.pow(time, time)))),
+        shadowLum = Math.floor(Math.abs(225 * Math.sin(Math.pow(time,time)))),
         colorLum = Math.max(Math.floor(Math.abs(255 * Math.sin(time))), 100),
         alphaLum = Math.abs(Math.sin(time)),
         rShd = 'rgba(' + shadowLum + ', 20, 20,' + alphaLum + ')',
-        rCol = 'rgba( 255 , 20, 20, .9)',
+        rCol = 'rgba(' + colorLum  + ', 20, 20,' + alphaLum + ')',
         yShd = 'rgba(' + shadowLum + ',' + shadowLum + ', 20,' + alphaLum + ')',
-        yCol = 'rgba(255, 255, 20, 0.9)';
+        yCol = 'rgba(' + colorLum  + ',' + colorLum  + ', 20,' + (alphaLum + 0.01)
+        +')';
 
-        m = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    d(centerX - offset, centerY,
+      centerX + offset, centerY, rShd, rCol);
 
-    var drawHex = function(size, speed, rX, rY, shd, col){
-        var h = hexagon(size);
-
-        // TRANSFORM THE CUBE FOR THIS ANIMATION FRAME.
-        M.identity(m);
-        M.rotateY(m, time * speed);
-        M.rotateX(m, time * speed * 2);
-        M.rotateX(m, rX);
-        M.rotateY(m, rY);
-        M.scale(m, .3);
-        // TRANSFORM THE POINTS OF THE CURVE.
-
-        for (i = 0; i < h.length; i++)
-            h[i] = M.transform(m, h[i]);
-
-        // DRAW THE CURVE.
-        drawCurve(h, shd, col);
-
+    for(var i = 1; i < 5; i++){
+        d(centerX - offset, centerY - i*35,
+          centerX + offset, centerY - i*35,
+          rShd, rCol);
+        if(i === 2){
+            d(centerX + (offset - 100), centerY - 5*35, centerX - (offset - 100), centerY + 5*35, yShd, yCol);
+        }
+        d(centerX - offset, centerY + i*35,
+          centerX + offset, centerY + i*35,
+          rShd, rCol);
     }
 
-    drawHex(1, .9, 180, 0, rShd, rCol);
-    drawHex(1, .9, 0  , 0, rShd, rCol);
-    drawHex(1, .9, 90,  0, rShd, rCol);
-    drawHex(1, .9, 90,  90, rShd, rCol);
 }
 
 draw2DCanvases([canvas]);

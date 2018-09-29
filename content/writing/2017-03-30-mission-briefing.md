@@ -1,6 +1,6 @@
 ---
 title: Mission Briefing
-date: '2017-3-30 00:16:00 -0400'
+date: '2017-03-30'
 excerpt: "What I'd like to do here is
 give a sense of my own direction and focus. I've gone into this a little bit in
 my about page, but I'd like to expand a bit on the core themes, explain their

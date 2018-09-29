@@ -12,7 +12,6 @@ const IndexPage = ({ data }) => (
         {
           type: 'date',
           description: 'Date',
-          dateFormatter: 'dddd, MMMM Do 0YYYY',
         },
       ]}
       rows={data.allMarkdownRemark.edges.map(e => flatten(e.node))}
@@ -33,7 +32,7 @@ export const query = graphql`
             title
             categories
             excerpt
-            date
+            date(formatString: "dddd, MMMM Do 0YYYY")
           }
           fields {
             slug

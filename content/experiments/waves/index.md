@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Waves
-image: "waves.jpeg"
+featuredImage: "./feature.jpeg"
 webgl: true
 date: 2017-01-27
 excerpt: Made with WebGL

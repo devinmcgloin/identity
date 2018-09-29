@@ -1,6 +1,6 @@
 ---
 title: Symbol Manipulation
-date: '2015-12-12 18:03'
+date: '2015-12-12'
 tags:
     - Philosophy
     - Theory of Mind

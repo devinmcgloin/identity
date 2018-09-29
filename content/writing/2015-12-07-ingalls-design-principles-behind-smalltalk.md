@@ -2,13 +2,13 @@
 layout: paper
 author: Dan Ingalls
 category: paper
-date: '2015-12-07 11:39'
+date: '2015-12-07'
 title: Design Principles
     Behind Smalltalk
 source: 'http://papers.devinmcgloin.com/smalltalk/Design-Principles-Behind-Smalltalk.pdf'
 year: 1981
 excerpt: Ingalls describes Smalltalk, a language that “Provides Computer support for the create spirit in everyone”. I love how the paper starts off with the describing the purpose of a language as communicating models between the user to the compuer, the goal is to develop an expressive yet simple language that that empowers its users. Ingalls goes over 17 principles that all languges ought to follow.
-image: '/public/papers/smalltalk.jpg'
+image: './smalltalk.jpg'
 tags:
   - Smalltalk
   - Programming Languages

@@ -1,10 +1,10 @@
 ---
 title: Calendars
 date: "2016-04-23"
-excerpt: I've found myself becoming increasingly dissatisfied with calendar applications. Fundamentally, I think they're solving the wrong problem. They should focus how to best spend your time, what’s the most optimal arrangement of these events for my productivity and well-being? 
-tags: 
+excerpt: I've found myself becoming increasingly dissatisfied with calendar applications. Fundamentally, I think they're solving the wrong problem. They should focus how to best spend your time, what’s the most optimal arrangement of these events for my productivity and well-being?
+tags:
   - Ideas
-image: '/public/ideas/calendars.png'
+image: './calendars.png'
 ---
 
 I've found myself becoming increasingly dissatisfied with calendar applications.

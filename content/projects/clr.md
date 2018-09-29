@@ -4,7 +4,7 @@ title: clr
 permalink: /clr/
 excerpt: "clr is a go library to manage different color spaces, convert between them and compare colors."
 date: "2017-06-29"
-image: /public/projects/clr.png
+image: ./clr.png
 repo: devinmcgloin/clr
 license: MIT
 ---
@@ -42,7 +42,7 @@ clr is based on two primitives `Color` and `ColorTable`. `Color` has three
 backing types currently, Hex, RGB, and HSV. You can add your own types by
 implementing the `Color` interface.
 
-```golang
+```go
 type Color interface {
 	Valid() bool
 	RGB() (uint8, uint8, uint8)
@@ -62,7 +62,7 @@ clr also contains functionality for finding the closest color name to a given
 color. This requires an instance of ColorTable, which provides the possible
 color matches. clr matches to the closest color in CIELAB.
 
-```golang
+```go
 type ColorTable interface {
 	Iterate() []Color
 	Lookup(hexCode string) ColorSpace

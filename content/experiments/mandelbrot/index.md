@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Mandelbrot
-image: "mandelbrot.jpeg"
+featuredImage: "./feature.jpeg"
 webgl: true
 datgui: true
 date: 2017-04-01

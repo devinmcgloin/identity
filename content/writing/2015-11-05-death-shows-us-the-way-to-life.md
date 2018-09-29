@@ -1,6 +1,6 @@
 ---
 title: Death shows us the way to life
-date: '2015-11-05 01:10'
+date: '2015-11-05'
 excerpt: "I've spent the past few months obsessing over purpose, legacy and meaning. In Job's quotation I gain a glimmer of understanding, which is comforting. Death drives us to ask the hard questions, it forces us out of our complacency. It's ironic that in this way, death is what gives us life, and not the other way round."
 tags:
   - Philosophy
