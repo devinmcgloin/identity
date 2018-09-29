@@ -36,6 +36,14 @@ module.exports = {
               linkImagesToOriginal: true,
             },
           },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true,
+            },
+          },
         ],
       },
     },

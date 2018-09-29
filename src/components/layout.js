@@ -76,7 +76,7 @@ const PostLayout = ({ title, publishedAt, children }) => (
 
 const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
   <StandardLayout>
-    <div className="center pa3 measure-wide">
+    <div className="center pa3 mw7">
       <article className="pv4">
         <header className="w-100 pr4-ns">
           <div className="dt w-100">
@@ -108,19 +108,5 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
     </div>
   </StandardLayout>
 )
-
-// const PostLayout = ({title, publishedAt, children}) => <div className="pa3 measure-wide center">
-// <article className="pv4">
-//     <header className="w-100 pr4-ns ">
-//         <h1 className="f2 f1-ns black-90 fw6 mb2 i garamond">{title}</h1>
-//         <time className="f6 ttu tracked gray">{publishedAt}</time>
-//     </header>
-//     <div className="w-100">
-//         <div className="lh-copy mt4 mt0-ns post-body">
-//             {children}
-//         </div>
-//     </div>
-// </article>
-// </div>
 
 export { StandardLayout, HeaderLayout, PostLayout, ProjectLayout }

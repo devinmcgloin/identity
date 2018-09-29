@@ -53,8 +53,8 @@ blockquote {
 
 @media (min-width: 45em) {
     blockquote {
-        width: 40em;
-        left: -5em;
+        width: 42em;
+        left: -4em;
     }
 }
 
@@ -66,11 +66,17 @@ blockquote p {
     font-size: 1.3rem;
 }
 
-pre {
-    background: #ededed;
-    padding: 16px;
-    border-radius: 0.25rem;
-    white-space: pre-wrap;
+.gatsby-highlight {
+    margin: 0;
+    line-height: 1.5;
+    position: relative;
+}
+
+@media (min-width: 45em) {
+    .gatsby-highlight {
+        width: 42em;
+        left: -4em;
+    }
 }
 
 p code {
@@ -334,7 +340,7 @@ body .dg.main.taller-than-window .close-button {
 body .dg.main .close-button {
     background-color: #fff;
 }
- 
+
 body .dg.main .close-button:hover {
     background-color: #eee;
 }
@@ -351,12 +357,12 @@ body .dg.main::-webkit-scrollbar {
 body .dg.main::-webkit-scrollbar-thumb {
     background: #bbb;
 }
- 
+
 body .dg li:not(.folder) {
     background: #fafafa;
     border-bottom: 1px solid #ddd;
 }
- 
+
 body .dg li.save-row .button {
     text-shadow: none !important;
 }
@@ -373,20 +379,20 @@ body .dg .cr.function:hover,
 body .dg .cr.boolean:hover {
     background: #fff;
 }
- 
+
 body .dg .c input[type=text] {
     background: #e9e9e9;
 }
- 
+
 body .dg .c input[type=text]:hover {
     background: #eee;
 }
- 
+
 body .dg .c input[type=text]:focus {
     background: #eee;
     color: #555;
 }
- 
+
 body .dg .c .slider {
     background: #e9e9e9;
 }

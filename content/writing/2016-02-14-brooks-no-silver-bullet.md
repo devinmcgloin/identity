@@ -1,14 +1,14 @@
 ---
 layout: paper
 author: Fred Brooks
-category: paper 
+category: paper
 date: '2016-02-14 11:39'
 title: No Silver Bullet
 source: 'http://papers.devinmcgloin.com/worrydream/Brooks-NoSilverBullet.pdf'
 year: 1986
 excerpt: Programming, Brooks argues, can be separated into distinct tasks. The first is dealing with incidental complexity, and the second managing essential complexity. Brooks asks, How do we approach incedental complexity, and do those approaches have limits? What is the way forward to make the essential logic easier to manage?
 image: '/public/papers/brooks.jpg'
-tags: 
+tags:
   - Management
   - Software Engineering
 ---
@@ -167,6 +167,7 @@ considers if those solutions address incidental or essential complexity. I'm not
 going to go into all these approaches, but if one piques your interest take a
 look at the full text.
 
+|     |                       |                        |
 |:----|:----------------------|:-----------------------|
 | OOP | Automatic Programming | Environments and Tools |
 | AI  | Graphical Programming | Workstations           |
@@ -222,13 +223,13 @@ like. Take this table from _No Silver Bullet_ showing languages that were
 designed vs those done by committee.
 
 | Designer  | Committee |
-|:----------------------|
+|:----------|-----------|
 | Unix      | Cobol     |
 | APL       | PL/1      |
 | Pascal    | Algol     |
 | Lisp      | MVS/370   |
 | Smalltalk | MS-DOS    |
-| Fortran               |
+| Fortran   |           |
 
 Languages with great designers have a certain clarity to them, its something we
 all should aim to have within our own programs.
