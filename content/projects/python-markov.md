@@ -4,7 +4,7 @@ title: python-markov
 permalink: /python-markov/
 excerpt: "Python Markov is a simple interface in python to create and use Markov Chains."
 date: "2016-04-01"
-github: devinmcgloin/python-markov
+repo: devinmcgloin/python-markov
 license: MIT
 ---
 

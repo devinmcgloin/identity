@@ -5,7 +5,7 @@ permalink: /clr/
 excerpt: "clr is a go library to manage different color spaces, convert between them and compare colors."
 date: "2017-06-29"
 image: /public/projects/clr.png
-github: devinmcgloin/clr
+repo: devinmcgloin/clr
 license: MIT
 ---
 

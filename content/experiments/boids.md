@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Boids
-image: /public/experiments/boids.jpeg
+image: "boids.jpeg"
 date: 2017-05-11
 excerpt: Made with Canvas
 datgui: true
@@ -87,7 +87,7 @@ var boids, gui;
 window.onload = function() {
     defineCanvasProperties(canvas);
     boids = new Swarm(canvas.getContext("2d"));
-    gui = new dat.GUI();    
+    gui = new dat.GUI();
     gui.addColor(boids, 'background');
     gui.add(boids, 'numBoids', 10, 1000).step(1);
 

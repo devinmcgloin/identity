@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Reflect
-image: /public/experiments/reflect.jpeg
+image: "reflect.jpeg"
 webgl: true
 datgui: true
 date: 2017-02-18

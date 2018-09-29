@@ -7,6 +7,17 @@ module.exports = {
       { slug: '/experiments', title: 'Experiments' },
       { slug: '/writing', title: 'Writing' },
     ],
+    social: {
+      name: 'Devin McGloin',
+      email: 'devin@devinmcgloin.com',
+      github: 'devinmcgloin',
+      twitter: 'devinmcgloin',
+      unsplash: 'devinmcgloin',
+      linkedin: 'devinmcgloin',
+      angelslist: 'devinmcgloin',
+      fokal: 'devinmcgloin',
+      city: 'New York, NY',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',

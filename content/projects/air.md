@@ -4,7 +4,7 @@ title: AIR
 permalink: /air/
 date: "2016-03-23"
 excerpt: "AIR is a system for semantic representations of the world."
-github: devinmcgloin/air
+repo: devinmcgloin/air
 ---
 
 

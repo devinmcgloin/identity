@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { HeaderLayout } from '../components/layout'
 
 const IndexPage = () => (

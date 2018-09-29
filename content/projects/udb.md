@@ -4,7 +4,7 @@ title: UDB
 permalink: '/udb/'
 date: "2016-02-23"
 excerpt: UDB is a universal data structure system that dynamically optimizes abstract collections.
-github: devinmcgloin/udb
+repo: devinmcgloin/udb
 license: MIT
 ---
 

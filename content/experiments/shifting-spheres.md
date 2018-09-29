@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Shifting Spheres
-image: /public/experiments/shifting-spheres.jpeg
+image: "shifting-spheres.jpeg"
 webgl: true
 datgui: true
 date: 2017-02-08

@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Orbiting Ring
-image: /public/experiments/orbiting-ring.jpeg
+image: "orbiting-ring.jpeg"
 date: 2017-04-20
 excerpt: Made with Parametric Surfaces and WebGL
 ---

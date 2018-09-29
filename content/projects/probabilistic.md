@@ -4,7 +4,7 @@ title: Probabilistic
 permalink: /Probabilistic/
 excerpt: "Golang implementations of Bloom Filters, Min Sketch Count and Min Hashing."
 date: "2018-02-01"
-github: devinmcgloin/probabilistic
+repo: devinmcgloin/probabilistic
 license: MIT
 ---
 

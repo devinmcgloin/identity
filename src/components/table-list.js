@@ -30,7 +30,6 @@ const TableLink = ({ title, url, color }) => (
   </td>
 )
 const TableDate = ({ date, formatter, color }) => {
-  debugger
   return (
     <td class={`pv3 pr3 bb ${colorMap[color].text}`}>
       {date.format(formatter)}
@@ -44,7 +43,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
       {columns.map(c => {
         switch (c.type) {
           case 'title':
-            return <TableLink title={d[c.type]} url={d.url} color={color} />
+            return <TableLink title={d[c.type]} url={d.slug} color={color} />
           case 'date':
             return (
               <TableDate

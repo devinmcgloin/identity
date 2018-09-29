@@ -7,7 +7,7 @@ custom-media-dir: advent
 gradient: "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)"
 permalink: "/advent/"
 date: "2016-05-23"
-github: devinmcgloin/advent
+repo: devinmcgloin/advent
 license: MIT
 ---
 

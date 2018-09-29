@@ -1,7 +1,7 @@
 ---
 layout: webgl
-title: Mandelbrot 
-image: /public/experiments/mandelbrot.jpeg
+title: Mandelbrot
+image: "mandelbrot.jpeg"
 webgl: true
 datgui: true
 date: 2017-04-01
@@ -20,7 +20,7 @@ excerpt: Made with WebGL
 <script id='fs_script' type='x-shader/x-fragment'>
 varying vec3 vPos;       // Pixel position
 uniform float uTime;     // Time
-uniform float uAspc; 
+uniform float uAspc;
 
 uniform int u_iterations;
 uniform float u_variation;
@@ -36,7 +36,7 @@ vec3 simple_mandelbrot(vec2 p){
     for(int i = 0 ; i < 1000000; i++)
     {
         z = vec2( z.x*z.x - z.y*z.y, 2.0*z.x*z.y ) + p;
-        if( dot(z,z) > u_threshold) 
+        if( dot(z,z) > u_threshold)
         {
             c += 0.5 + 0.5 * cos(l * u_variation + u_color);
             break;
@@ -47,7 +47,7 @@ vec3 simple_mandelbrot(vec2 p){
         }
         l += 1.0;
     }
-    return c; 
+    return c;
 }
 
 vec3 smooth_mandelbrot(vec2 p){
@@ -57,7 +57,7 @@ vec3 smooth_mandelbrot(vec2 p){
     for(int i = 0 ; i < 1000000; i++)
     {
         z = vec2( z.x*z.x - z.y*z.y, 2.0*z.x*z.y ) + p;
-        if( dot(z,z) > u_threshold) 
+        if( dot(z,z) > u_threshold)
         {
             float modulus = sqrt(dot(z, z));
             float mu = l - (log(log(modulus))) / log(2.0);
@@ -70,7 +70,7 @@ vec3 smooth_mandelbrot(vec2 p){
         }
         l += 1.0;
     }
-    return c; 
+    return c;
 }
 void main() {
     vec3 nvPos = vPos;
@@ -113,7 +113,7 @@ window.onload = function(){
             this.iterations = Math.random() * 100 + 1;
             this.variation = Math.random();
             this.threshold = Math.random() * 95 + 5;
-            this.color = [Math.random() * 255, Math.random() * 255, Math.random() * 255]; 
+            this.color = [Math.random() * 255, Math.random() * 255, Math.random() * 255];
             this.smooth_coloring = Math.random() > 0.5 ? true : false;
         }
     };
@@ -127,6 +127,6 @@ window.onload = function(){
     gui.add(text, 'random');
 
 
-    gl_start(canvas, vs, fs, text); 
+    gl_start(canvas, vs, fs, text);
 };
 </script>

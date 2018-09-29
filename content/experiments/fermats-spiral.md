@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Fermat's Spirals
-image: /public/experiments/fermat-spiral.jpeg
+image: "fermat-spiral.jpeg"
 date: 2017-08-11
 excerpt: Made with Canvas
 datgui: true

@@ -6,7 +6,7 @@ custom-media: true
 custom-media-dir: python-smooch
 excerpt: "python-smooch is a python wrapper for the Smooch API"
 date: "2016-05-23"
-github: devinmcgloin/python-smooch
+repo: devinmcgloin/python-smooch
 license: MIT
 ---
 

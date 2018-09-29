@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Mesh
-image: /public/experiments/mesh.jpeg
+image: "mesh.jpeg"
 date: 2017-03-27
 excerpt: Made with Canvas and Parametric Surfaces
 datgui: true
@@ -94,7 +94,7 @@ window.onload = function(){
     c1.nu = 20;
     c1.nv = 20;
     console.log(c1);
-    gui.add(c1, 'Type', ["Sphere", "Hemisphere", "Cone", "Torus", "Plane", "Paraboloid", "Tube"]); 
+    gui.add(c1, 'Type', ["Sphere", "Hemisphere", "Cone", "Torus", "Plane", "Paraboloid", "Tube"]);
     gui.add(c1, 'lineWidth', 1, 10);
     gui.add(c1, 'scale', 0.1, 2);
     gui.add(c1, 'nv', 1, 100);

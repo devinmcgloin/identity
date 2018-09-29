@@ -1,7 +1,7 @@
 ---
 layout: webgl
-title: Bézier 
-image: /public/experiments/bezier.jpeg
+title: Bézier
+image: "bezier.jpeg"
 date: 2017-04-06
 excerpt: Made with Canvas
 datgui: true

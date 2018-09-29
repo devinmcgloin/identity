@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Green and Orange
-image: /public/experiments/green-orange.jpeg
+image: "green-orange.jpeg"
 webgl: true
 date: 2017-03-01
 excerpt: Made with WebGL

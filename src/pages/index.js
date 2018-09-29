@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Header from '../components/header'
 import { Splash } from '../components/splash'
 import 'tachyons/css/tachyons.css'
 import '../style/identity.css'
@@ -8,6 +6,8 @@ import Currently from '../components/currently'
 import Table from '../components/table-list'
 import { StandardLayout } from '../components/layout'
 import { flatten } from '../transformation'
+import Carousel from '../components/carousel'
+import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => (
   <StandardLayout>
@@ -23,7 +23,11 @@ const IndexPage = ({ data }) => (
       title="Projects"
       link="/projects"
     />
-
+    <Carousel
+      title="Experiments"
+      link="/experiments"
+      cards={data.experiments.edges.map(e => flatten(e.node)).slice(0, 4)}
+    />
     <Table
       columns={[
         { type: 'title', description: 'Title' },
@@ -45,6 +49,7 @@ export const query = graphql`
   {
     experiments: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/experiments/(.)+/" } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {
@@ -52,6 +57,7 @@ export const query = graphql`
             title
             categories
             excerpt
+            image
           }
           fields {
             slug
@@ -61,6 +67,7 @@ export const query = graphql`
     }
     writing: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {
@@ -78,6 +85,7 @@ export const query = graphql`
     }
     projects: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {

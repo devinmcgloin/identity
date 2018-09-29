@@ -1,6 +1,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Header from '../components/header'
+import Header from './header'
+import Footer from './footer'
+
+import { Github } from './icons'
 
 const StandardLayout = ({ children }) => (
   <StaticQuery
@@ -12,6 +15,17 @@ const StandardLayout = ({ children }) => (
               slug
               title
             }
+            social {
+              name
+              email
+              github
+              twitter
+              unsplash
+              linkedin
+              angelslist
+              fokal
+              city
+            }
           }
         }
       }
@@ -20,6 +34,7 @@ const StandardLayout = ({ children }) => (
       <div className="sans-serif">
         <Header links={data.site.siteMetadata.headerLinks} />
         {children}
+        <Footer {...data.site.siteMetadata.social} />
       </div>
     )}
   />
@@ -68,7 +83,7 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
             <h1 className="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i garamond">
               {title}
             </h1>
-            {/* {github || <Github repo={repo} />} */}
+            {repo && <Github repo={repo} />}
           </div>
 
           <time className="f6 ttu tracked gray">
@@ -77,7 +92,7 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
         </header>
         <div className="w-100">
           <div className="lh-copy mt4 mt0-ns">{children}</div>
-          {license == 'MIT' || (
+          {license === 'MIT' || (
             <React.Fragment>
               <h2>License</h2>
               <a
@@ -93,5 +108,19 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
     </div>
   </StandardLayout>
 )
+
+// const PostLayout = ({title, publishedAt, children}) => <div className="pa3 measure-wide center">
+// <article className="pv4">
+//     <header className="w-100 pr4-ns ">
+//         <h1 className="f2 f1-ns black-90 fw6 mb2 i garamond">{title}</h1>
+//         <time className="f6 ttu tracked gray">{publishedAt}</time>
+//     </header>
+//     <div className="w-100">
+//         <div className="lh-copy mt4 mt0-ns post-body">
+//             {children}
+//         </div>
+//     </div>
+// </article>
+// </div>
 
 export { StandardLayout, HeaderLayout, PostLayout, ProjectLayout }

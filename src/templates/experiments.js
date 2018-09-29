@@ -1,14 +1,14 @@
 import React from 'react'
 import { HeaderLayout } from '../components/layout'
+import { graphql } from 'gatsby'
 
 export default ({ data }) => {
   const post = data.markdownRemark
 
   return (
-    <div>
-      <div>{post.frontmatter.title}</div>
+    <HeaderLayout title={post.frontmatter.title}>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+    </HeaderLayout>
   )
 }
 

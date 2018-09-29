@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Waves
-image: /public/experiments/waves.jpeg
+image: "waves.jpeg"
 webgl: true
 date: 2017-01-27
 excerpt: Made with WebGL
@@ -19,7 +19,7 @@ excerpt: Made with WebGL
 <script id='fs_script' type='x-shader/x-fragment'>
 varying vec3 vPos;       // Pixel position
 uniform float uTime;     // Time
-uniform float uAspc; 
+uniform float uAspc;
 
 float D(vec2 p) {
    return sqrt(dot(sin(p), cos(p)));
@@ -48,6 +48,6 @@ void main() {
 window.onload = function(){
     var vs = vs_script.innerHTML, fs = fs_script.innerHTML;
 
-    gl_start(canvas, vs, fs, undefined); 
+    gl_start(canvas, vs, fs, undefined);
 };
 </script>

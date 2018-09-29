@@ -4,7 +4,7 @@ title: Java Algorithms
 permalink: /java-algorithms/
 excerpt: "An implementation of common algorithms and data structures in Java."
 date: "2015-11-23"
-github: devinmcgloin/Java-Algorithms
+repo: devinmcgloin/Java-Algorithms
 license: MIT
 ---
 

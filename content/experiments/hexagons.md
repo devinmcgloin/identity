@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Hexagons
-image: /public/experiments/hexagons.jpeg
+image: "hexagons.jpeg"
 date: 2017-03-23
 excerpt: Made with Canvas
 ---

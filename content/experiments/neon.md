@@ -1,7 +1,7 @@
 ---
 layout: webgl
 title: Neon
-image: /public/experiments/neon.jpeg
+image: "neon.jpeg"
 date: 2017-03-07
 excerpt: Made with Canvas
 ---
@@ -114,7 +114,7 @@ canvas.update = function(g) {
           centerX + offset, centerY - i*35,
           rShd, rCol);
         if(i === 2){
-            d(centerX + (offset - 100), centerY - 5*35, centerX - (offset - 100), centerY + 5*35, yShd, yCol);    
+            d(centerX + (offset - 100), centerY - 5*35, centerX - (offset - 100), centerY + 5*35, yShd, yCol);
         }
         d(centerX - offset, centerY + i*35,
           centerX + offset, centerY + i*35,

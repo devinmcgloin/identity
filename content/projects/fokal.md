@@ -6,7 +6,7 @@ custom-media: true
 custom-media-dir: fokal
 excerpt: "Fokal is a simple photography site with the goal of getting good images seen."
 date: "2016-08-12"
-github: fokal
+repo: fokal
 ---
 
 I'm currently working on a photosharing site. It's not up and running yet, but you can find some info at [fok.al](https://fok.al).
