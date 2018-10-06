@@ -174,19 +174,7 @@ chatbot space with [Operator](https://www.intercom.com/operator-bot).
 
 ## Others:
 As mentioned earlier, their are loads of interesting companies making fantastic
-products. Here are other compelling ones that I plan on writing about.
-
-<ul class="list ph3 pv2 tc">
-{% assign companies = site.data.companies | sort: 'name' %}
-{% for c in companies %}
-    <li class="dib mr1 mb2">
-        <a href="{{c.url}}" class="f6 f5-ns b db pa2 link dim dark-gray br2 ba b--black-20">
-            {{c.name}}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-
+products. Hopefully I'll get around to writing about most of them.
 
 ## Providing Value
 
