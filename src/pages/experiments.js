@@ -40,13 +40,6 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
           fields {
             slug

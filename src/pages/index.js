@@ -47,31 +47,6 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    experiments: allMarkdownRemark(
-      filter: { fields: { slug: { regex: "/experiments/(.)+/" } } }
-      sort: { order: DESC, fields: frontmatter___date }
-      limit: 4
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            categories
-            excerpt
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          fields {
-            slug
-          }
-        }
-      }
-    }
     writing: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }

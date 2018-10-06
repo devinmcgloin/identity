@@ -45,9 +45,6 @@ exports.createPages = ({ graphql, actions }) => {
           case 'projects':
             templatePath = './src/templates/project.js'
             break
-          case 'experiments':
-            templatePath = './src/templates/experiments.js'
-            break
         }
         createPage({
           path: node.fields.slug,

@@ -3,15 +3,15 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 import Helmet from 'react-helmet'
-import { Github } from './icons'
+import { github } from './icons'
 
-const StandardLayout = ({ children }) => (
-  <StaticQuery
+const standardlayout = ({ children }) => (
+  <staticquery
     query={graphql`
       {
         site {
-          siteMetadata {
-            headerLinks {
+          sitemetadata {
+            headerlinks {
               slug
               title
             }
@@ -31,95 +31,86 @@ const StandardLayout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="sans-serif">
-        <Header links={data.site.siteMetadata.headerLinks} />
+      <div classname="sans-serif">
+        <header links={data.site.sitemetadata.headerlinks} />
         {children}
-        <Footer {...data.site.siteMetadata.social} />
+        <footer {...data.site.sitemetadata.social} />
       </div>
     )}
   />
 )
 
-const HeaderLayout = ({ title, children }) => (
-  <StandardLayout>
-    <div className="pa3 topo bb b--black-10">
-      <div className="mw8 center">
-        <div className="w-100 ">
-          <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
+const headerlayout = ({ title, children }) => (
+  <standardlayout>
+    <div classname="pa3 topo bb b--black-10">
+      <div classname="mw8 center">
+        <div classname="w-100 ">
+          <h1 classname="f1 f-headline-ns black-90 fw6 mb2 i garamond">
             {title}
           </h1>
         </div>
       </div>
     </div>
 
-    <div className="mw8 center pa3">
-      <div className="pv4">{children}</div>
+    <div classname="mw8 center pa3">
+      <div classname="pv4">{children}</div>
     </div>
-  </StandardLayout>
+  </standardlayout>
 )
 
-const PostLayout = ({ title, publishedAt, children }) => (
-  <StandardLayout>
-    <div className="pa3 measure-wide center">
-      <article className="pv4">
-        <header className="w-100 pr4-ns ">
-          <h1 className="f2 f1-ns black-90 fw6 mb2 i garamond">{title}</h1>
-          <time className="f6 ttu tracked gray">{publishedAt}</time>
+const postlayout = ({ title, publishedat, children }) => (
+  <standardlayout>
+    <div classname="pa3 measure-wide center">
+      <article classname="pv4">
+        <header classname="w-100 pr4-ns ">
+          <h1 classname="f2 f1-ns black-90 fw6 mb2 i garamond">{title}</h1>
+          <time classname="f6 ttu tracked gray">{publishedat}</time>
         </header>
-        <div className="w-100">
-          <div className="lh-copy mt4 mt0-ns post-body ">{children}</div>
+        <div classname="w-100">
+          <div classname="lh-copy mt4 mt0-ns post-body ">{children}</div>
         </div>
       </article>
     </div>
-  </StandardLayout>
+  </standardlayout>
 )
 
-const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
-  <StandardLayout>
-    <div className="center pa3 mw7">
-      <article className="pv4">
-        <header className="w-100 pr4-ns">
-          <div className="dt w-100">
-            <h1 className="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i garamond">
+const projectlayout = ({ title, publishedat, repo, license, children }) => (
+  <standardlayout>
+    <div classname="center pa3 mw7">
+      <article classname="pv4">
+        <header classname="w-100 pr4-ns">
+          <div classname="dt w-100">
+            <h1 classname="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i garamond">
               {title}
             </h1>
-            {repo && <Github repo={repo} />}
+            {repo && <github repo={repo} />}
           </div>
 
-          <time className="f6 ttu tracked gray">
-            {publishedAt.format('dddd, MMMM Do 0YYYY')}
+          <time classname="f6 ttu tracked gray">
+            {publishedat.format('dddd, mmmm do 0yyyy')}
           </time>
         </header>
-        <div className="w-100">
-          <div className="lh-copy mt4 mt0-ns">{children}</div>
-          {license === 'MIT' || (
-            <React.Fragment>
-              <h2>License</h2>
+        <div classname="w-100">
+          <div classname="lh-copy mt4 mt0-ns">{children}</div>
+          {license === 'mit' || (
+            <react.fragment>
+              <h2>license</h2>
               <a
-                className="link dim underline black-60"
-                href="https://opensource.org/licenses/MIT"
+                classname="link dim underline black-60"
+                href="https://opensource.org/licenses/mit"
               >
-                MIT License
+                mit license
               </a>
-            </React.Fragment>
+            </react.fragment>
           )}
         </div>
       </article>
     </div>
-  </StandardLayout>
+  </standardlayout>
 )
 
-const ExperimentLayout = ({ title, instructions, datgui, children }) => (
-  <div className="webgl-container">
-    <Helmet>
-      {datgui && (
-        <React.Fragment>
-          <script async src="/public/js/dat.gui.min.js" />
-          <link rel="stylesheet" href="/public/css/gui-theme.css" />
-        </React.Fragment>
-      )}
-      <script async src="/public/js/webgl-bindings.js" />
-    </Helmet>
+const experimentlayout = ({ title, instructions, color, children }) => (
+  <div classname="webgl-container" style={{ backgroundColor: color }}>
     <div className="details-container">
       {instructions ? (
         <React.Fragment>
