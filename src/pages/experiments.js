@@ -6,7 +6,6 @@ const IndexPage = ({ data }) => (
   <HeaderLayout title="Experiments">
     <article className="dib w-100">
       {data.allMarkdownRemark.edges.map(e => {
-        // debugger
         return (
           <Link
             key={e.node.fields.slug}

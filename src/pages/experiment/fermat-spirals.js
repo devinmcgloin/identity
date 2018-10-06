@@ -1,25 +1,26 @@
 import React, { Component } from 'react'
 import { ExperimentLayout } from '../../components/layout'
 import { renderCircle } from '../../shape-rendering'
-import { pixeltocord } from '../../math'
+import { d2r } from '../../math'
+
+import * as dg from 'dis-gui'
 
 class FermatSpirals extends Component {
   state = {
     size: 2,
     color: '#e23232',
-    scaling_factor: 0.004,
+    scaling_factor: 0.009,
     angle: 137.508,
     count: 10000,
   }
 
   componentDidMount = () => {
     let canvas = document.getElementById('canvas')
-    this.setState({ cavnas })
-    this.defineCanvasProperties(canvas)
+    this.setState({ canvas })
+    this.setupCanvas(canvas)
   }
 
-  resize = () => {
-    var { canvas } = this.state
+  resize = canvas => {
     // Lookup the size the browser is displaying the canvas.
     var displayWidth = canvas.parentNode.clientWidth
     var displayHeight = canvas.parentNode.clientHeight
@@ -60,29 +61,92 @@ class FermatSpirals extends Component {
     }
   }
 
-  draw = ctx => {
-    ctx.fillStyle = this.state.color
-    let { count, scaling_factor, angle, size } = this.state
+  draw = (ctx, w, h) => {
+    let { color, count, scaling_factor, angle, size } = this.state
+    ctx.fillStyle = color
     for (var i = 0; i < count; i++) {
       let r = scaling_factor * Math.sqrt(i)
       let theta = i * angle
-      renderCircle(ctx, r, d2r(theta), size)
+      renderCircle(ctx, w, h, r, d2r(theta), size)
     }
   }
 
-  drawCanvas = canvas => {
-    defineCanvasProperties(canvas)
-    setInterval(function() {
-      this.resize()
-      if (canvas.update) {
-        context = canvas.getContext('2d')
-        context.clearRect(0, 0, canvas.width, canvas.height)
-        canvas.update(context)
-      }
-    }, 90)
+  updateCanvas = canvas => {
+    this.resize(canvas)
+    let context = canvas.getContext('2d')
+    context.clearRect(0, 0, canvas.width, canvas.height)
+    this.draw(context, canvas.width, canvas.height)
   }
 
-  render = () => <ExperimentLayout title="Fermat Spirals" color="4499d6" />
+  setupCanvas = canvas => {
+    this.defineCanvasProperties(canvas)
+    setInterval(() => this.updateCanvas(canvas), 90)
+  }
+
+  render = () => {
+    const state = this.state
+    return (
+      <ExperimentLayout title="Fermat Spirals" color="#4499d6">
+        <dg.GUI
+          style={{
+            top: '9px',
+            right: '9px',
+            backgroundColor: '#FFF',
+            lowlight: '#DDD',
+            lowlighterr: '#FBB',
+            highlight: '#444',
+            separator: '1px solid #DDD',
+            label: {
+              fontColor: '#444',
+              fontWeight: 'normal',
+            },
+          }}
+        >
+          <dg.Number
+            path="size"
+            label="Size"
+            value={state.size}
+            min={1}
+            max={10}
+            step={1}
+            onChange={v => this.setState({ size: v })}
+          />
+          <dg.Number
+            path="scaling_factor"
+            label="Scaling Factor"
+            value={state.scaling_factor}
+            min={0.001}
+            max={0.02}
+            onChange={v => this.setState({ scaling_factor: v })}
+          />
+          <dg.Number
+            path="angle"
+            label="Angle"
+            value={state.angle}
+            min={0}
+            max={180}
+            step={1}
+            onChange={v => this.setState({ angle: v })}
+          />
+          <dg.Number
+            path="count"
+            label="Count"
+            value={state.count}
+            min={1}
+            max={20000}
+            step={100}
+            onChange={v => this.setState({ count: v })}
+          />
+          <dg.Color
+            path="color"
+            label="Dot Color"
+            value={state.color}
+            onChange={v => this.setState({ color: v })}
+          />
+        </dg.GUI>
+      </ExperimentLayout>
+    )
+  }
 }
 
 export default FermatSpirals

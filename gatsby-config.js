@@ -48,6 +48,13 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./data/`,
+      },
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',

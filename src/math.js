@@ -2,10 +2,8 @@ const p2c = (r, theta) => [r * Math.cos(theta), r * Math.sin(theta), 0]
 
 const d2r = theta => (theta * Math.PI) / 180
 
-const pixeltocord = p => {
-  var w = canvas.width,
-    h = canvas.height,
-    x = p[0],
+const pixeltocord = (w, h, p) => {
+  var x = p[0],
     y = p[1],
     z = p[2],
     fl = 5
@@ -16,10 +14,8 @@ const pixeltocord = p => {
   return [x, y, 0]
 }
 
-const cordtopixel = c => {
-  var w = canvas.width,
-    h = canvas.height,
-    x = c[0],
+const cordtopixel = (w, h, c) => {
+  var x = c[0],
     y = c[1],
     z = c[2],
     fl = 5
@@ -31,3 +27,5 @@ const cordtopixel = c => {
   y = -w * y * 0.5 + 0.5 * h
   return [x, y, 0]
 }
+
+export { p2c, d2r, pixeltocord, cordtopixel }
