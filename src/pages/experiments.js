@@ -5,20 +5,18 @@ import { graphql, Link } from 'gatsby'
 const IndexPage = ({ data }) => (
   <HeaderLayout title="Experiments">
     <article className="dib w-100">
-      {data.allMarkdownRemark.edges.map(e => {
+      {data.allExperimentsYaml.edges.map(e => {
         return (
           <Link
-            key={e.node.fields.slug}
-            to={e.node.fields.slug}
+            key={e.node.slug}
+            to={e.node.slug}
             className="fl w-50 w-25-l link overflow-hidden pa2"
           >
             <div
               role="img"
               className="grow aspect-ratio--4x6"
               style={{
-                background: `url(${
-                  e.node.frontmatter.featuredImage.childImageSharp.fluid.src
-                }) no-repeat center center`,
+                background: `url() no-repeat center center`,
                 backgroundSize: 'cover',
               }}
             />
@@ -31,18 +29,12 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    allMarkdownRemark(
-      filter: { fields: { slug: { regex: "/experiments/(.)+/" } } }
-      sort: { order: DESC, fields: frontmatter___date }
-    ) {
+    allExperimentsYaml {
       edges {
         node {
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-          }
+          title
+          slug
+          date
         }
       }
     }
