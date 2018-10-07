@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
               role="img"
               className="grow aspect-ratio--4x6"
               style={{
-                background: `url() no-repeat center center`,
+                background: `url(${e.node.image}) no-repeat center center`,
                 backgroundSize: 'cover',
               }}
             />
@@ -35,6 +35,7 @@ export const query = graphql`
           title
           slug
           date
+          image
         }
       }
     }

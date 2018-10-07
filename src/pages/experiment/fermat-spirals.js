@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { ExperimentLayout } from '../../components/layout'
 import { renderCircle } from '../../shape-rendering'
 import { d2r } from '../../math'
-
-import * as dg from 'dis-gui'
+import DatGui, { DatNumber, DatColor } from 'react-dat-gui'
+import 'react-dat-gui/build/react-dat-gui.css'
 
 class FermatSpirals extends Component {
   state = {
@@ -16,9 +16,10 @@ class FermatSpirals extends Component {
 
   componentDidMount = () => {
     let canvas = document.getElementById('canvas')
-    this.setState({ canvas })
     this.setupCanvas(canvas)
   }
+
+  shouldComponentUpdate = () => false
 
   resize = canvas => {
     // Lookup the size the browser is displaying the canvas.
@@ -83,67 +84,31 @@ class FermatSpirals extends Component {
     setInterval(() => this.updateCanvas(canvas), 90)
   }
 
+  update = data => this.setState({ ...data })
+
   render = () => {
     const state = this.state
     return (
       <ExperimentLayout title="Fermat Spirals" color="#4499d6">
-        <dg.GUI
-          style={{
-            top: '9px',
-            right: '9px',
-            backgroundColor: '#FFF',
-            lowlight: '#DDD',
-            lowlighterr: '#FBB',
-            highlight: '#444',
-            separator: '1px solid #DDD',
-            label: {
-              fontColor: '#444',
-              fontWeight: 'normal',
-            },
-          }}
-        >
-          <dg.Number
-            path="size"
-            label="Size"
-            value={state.size}
-            min={1}
-            max={10}
-            step={1}
-            onChange={v => this.setState({ size: v })}
-          />
-          <dg.Number
+        <DatGui data={state} onUpdate={this.update}>
+          <DatNumber path="size" label="Size" min={1} max={10} step={1} />
+          <DatNumber
             path="scaling_factor"
             label="Scaling Factor"
-            value={state.scaling_factor}
             min={0.001}
             max={0.02}
-            onChange={v => this.setState({ scaling_factor: v })}
+            step={0.001}
           />
-          <dg.Number
-            path="angle"
-            label="Angle"
-            value={state.angle}
-            min={0}
-            max={180}
-            step={1}
-            onChange={v => this.setState({ angle: v })}
-          />
-          <dg.Number
+          <DatNumber path="angle" label="Angle" min={0} max={180} step={1} />
+          <DatNumber
             path="count"
             label="Count"
-            value={state.count}
             min={1}
             max={20000}
             step={100}
-            onChange={v => this.setState({ count: v })}
           />
-          <dg.Color
-            path="color"
-            label="Dot Color"
-            value={state.color}
-            onChange={v => this.setState({ color: v })}
-          />
-        </dg.GUI>
+          <DatColor path="color" label="Dot Color" />
+        </DatGui>
       </ExperimentLayout>
     )
   }

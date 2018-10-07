@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Devin McGloin <devin@devinmcgloin.com>",
   "dependencies": {
-    "dis-gui": "^2.1.0",
     "gatsby": "^2.0.0",
     "gatsby-image": "^2.0.12",
     "gatsby-plugin-google-analytics": "^2.0.6",
@@ -24,6 +23,7 @@
     "moment": "^2.22.2",
     "prismjs": "^1.15.0",
     "react": "^16.5.1",
+    "react-dat-gui": "^1.0.2",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "tachyons": "^4.11.1"
