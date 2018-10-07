@@ -47,6 +47,16 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
+    experiments: allExperimentsYaml(sort: { fields: [date], order: DESC }) {
+      edges {
+        node {
+          slug
+          title
+          image
+          date
+        }
+      }
+    }
     writing: allMarkdownRemark(
       filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
