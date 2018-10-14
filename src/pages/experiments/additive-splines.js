@@ -16,7 +16,7 @@ class FermatSpirals extends Component {
   }
 
   componentDidMount = () => {
-    this.datgui = new dat.GUI({ autoPlace: true })
+    this.datgui = new dat.GUI()
     this.datgui.add(this.state, 'size', 1, 10)
     this.datgui.add(this.state, 'scaling_factor', 0.001, 0.02)
     this.datgui.add(this.state, 'angle', 0, 180)
@@ -24,8 +24,6 @@ class FermatSpirals extends Component {
     this.datgui.addColor(this.state, 'color')
 
     let canvas = document.getElementById('canvas')
-    // canvas.appendChild(this.datgui.domElement)
-
     setupCanvas(canvas, this.draw)
   }
 
@@ -40,7 +38,7 @@ class FermatSpirals extends Component {
   }
 
   render = () => {
-    return <ExperimentLayout title="Fermat's Spirals" color="#4499d6" />
+    return <ExperimentLayout title="Fermat Spirals" color="#4499d6" />
   }
 }
 
