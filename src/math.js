@@ -28,4 +28,10 @@ const cordtopixel = (w, h, c) => {
   return [x, y, 0]
 }
 
-export { p2c, d2r, pixeltocord, cordtopixel }
+const randInt = (min, max) => {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min)) + min
+}
+
+export { p2c, d2r, pixeltocord, cordtopixel, randInt }

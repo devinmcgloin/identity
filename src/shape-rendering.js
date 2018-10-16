@@ -6,6 +6,7 @@ const renderCircle = (ctx, w, h, r, theta, s) => {
   ctx.arc(p[0], p[1], s, 0, Math.PI * 2, true)
   ctx.fill()
 }
+
 const BSpline = [
   -1 / 6,
   3 / 6,
@@ -74,4 +75,4 @@ const drawCurves = (ctx, w, h, C) => {
   }
 }
 
-export { renderCircle }
+export { renderCircle, drawCurves, cubic, BSpline }

@@ -1,4 +1,4 @@
-const resize = canvas => {
+const resize = (canvas, onResize) => {
   // Lookup the size the browser is displaying the canvas.
   var displayWidth = canvas.parentNode.clientWidth
   var displayHeight = canvas.parentNode.clientHeight
@@ -11,6 +11,7 @@ const resize = canvas => {
 
     canvas.style.width = displayWidth + 'px'
     canvas.style.height = displayHeight + 'px'
+    if (onResize) onResize()
   }
 
   return displayHeight / displayWidth
@@ -39,16 +40,16 @@ const defineCanvasProperties = canvas => {
   }
 }
 
-const updateCanvas = (canvas, draw) => {
-  resize(canvas)
+const updateCanvas = (canvas, draw, onResize, clear) => {
+  resize(canvas, onResize)
   let context = canvas.getContext('2d')
-  context.clearRect(0, 0, canvas.width, canvas.height)
+  if (clear) context.clearRect(0, 0, canvas.width, canvas.height)
   draw(context, canvas.width, canvas.height)
 }
 
-const setupCanvas = (canvas, draw) => {
+const setupCanvas = (canvas, draw, onResize, clear = true) => {
   defineCanvasProperties(canvas)
-  setInterval(() => updateCanvas(canvas, draw), 90)
+  setInterval(() => updateCanvas(canvas, draw, onResize, clear), 90)
 }
 
 export {

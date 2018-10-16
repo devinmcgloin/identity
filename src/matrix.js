@@ -2,7 +2,6 @@ export default class Matrix {
   constructor() {
     this.stack = []
   }
-
   copy(m, src) {
     for (var i = 0; i < src.length; i++) m[i] = src[i]
     return m
@@ -159,6 +158,4 @@ export default class Matrix {
       x * m[3] + y * m[7] + z * m[11] + w * m[15],
     ]
   }
-
-  return
 }
