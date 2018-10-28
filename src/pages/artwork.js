@@ -18,7 +18,7 @@ export const query = graphql`
       edges {
         node {
           id
-          fluid {
+          fluid(quality: 100) {
             src
             sizes
           }
