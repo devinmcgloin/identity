@@ -4,9 +4,9 @@ import { graphql } from 'gatsby';
 import Grid from '../components/grid';
 
 const IndexPage = ({ data }) => {
-  let images = data.allImageSharp.edges.map(e => e.node.fluid.src);
+  let images = data.allUnsplashPhoto.edges.map(e => e.node.urls.regular);
   return (
-    <HeaderLayout title="Artwork">
+    <HeaderLayout title="Photography">
       <Grid imageURLS={images} />
     </HeaderLayout>
   );
@@ -14,13 +14,11 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allImageSharp(filter: { original: { src: { regex: "/sketch/" } } }) {
+    allUnsplashPhoto {
       edges {
         node {
-          id
-          fluid {
-            src
-            sizes
+          urls {
+            regular
           }
         }
       }

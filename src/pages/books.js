@@ -1,15 +1,16 @@
-import React from 'react'
-import { HeaderLayout } from '../components/layout'
+import React from 'react';
+import { HeaderLayout } from '../components/layout';
+import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
-  let books = data.allBooksYaml.edges
+  let books = data.allBooksYaml.edges;
   let renderedBooks = books.map(edge => edge.node).map(b => (
     <tr>
       <td class="pv3 pr3 bb b--black-20">{b.title}</td>
       <td class="pv3 pr3 bb b--black-20">{b.author}</td>
       <td class="pv3 pr3 bb b--black-20">{b.rating}</td>
     </tr>
-  ))
+  ));
 
   return (
     <HeaderLayout title="Bookshelf">
@@ -28,8 +29,8 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
     </HeaderLayout>
-  )
-}
+  );
+};
 export const query = graphql`
   {
     allBooksYaml {
@@ -42,6 +43,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

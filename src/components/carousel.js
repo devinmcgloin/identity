@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
 const CallToAction = ({ link }) =>
   link && (
@@ -11,14 +11,15 @@ const CallToAction = ({ link }) =>
         View More
       </Link>
     </div>
-  )
+  );
 
 const Title = ({ title }) =>
   title && (
     <div className="center mw8 f3">
       <h2 className="f2 black garamond i">{title}</h2>
     </div>
-  )
+  );
+
 const Carousel = ({ title, link, cards }) => {
   const renderable = (
     <React.Fragment>
@@ -47,13 +48,13 @@ const Carousel = ({ title, link, cards }) => {
           <div
             class="cover pv5 pv6-m pv7-l"
             style={{
-              background: `black url(${cards[3].src}) center`,
+              background: `black url(${cards[2].src}) center`,
             }}
           />
         </Link>
       </div>
     </React.Fragment>
-  )
+  );
 
   return (
     <div className="">
@@ -65,7 +66,7 @@ const Carousel = ({ title, link, cards }) => {
         <CallToAction link={link} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

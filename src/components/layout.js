@@ -1,9 +1,9 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Header from './header'
-import Footer from './footer'
-import Helmet from 'react-helmet'
-import { Github } from './icons'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Header from './header';
+import Footer from './footer';
+import Helmet from 'react-helmet';
+import { Github } from './icons';
 
 const StandardLayout = ({ children }) => (
   <StaticQuery
@@ -38,7 +38,7 @@ const StandardLayout = ({ children }) => (
       </div>
     )}
   />
-)
+);
 
 const HeaderLayout = ({ title, children }) => (
   <StandardLayout>
@@ -56,7 +56,7 @@ const HeaderLayout = ({ title, children }) => (
       <div className="pv4">{children}</div>
     </div>
   </StandardLayout>
-)
+);
 
 const PostLayout = ({ title, publishedAt, children }) => (
   <StandardLayout>
@@ -72,7 +72,7 @@ const PostLayout = ({ title, publishedAt, children }) => (
       </article>
     </div>
   </StandardLayout>
-)
+);
 
 const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
   <StandardLayout>
@@ -107,10 +107,11 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
       </article>
     </div>
   </StandardLayout>
-)
+);
 
 const ExperimentLayout = ({ title, instructions, color, children }) => (
   <div className="webgl-container" style={{ backgroundColor: color }}>
+    <div className="absolute" style={{ right: 0 }} id="dat-gui" />
     <div className="details-container">
       {instructions ? (
         <React.Fragment>
@@ -131,7 +132,7 @@ const ExperimentLayout = ({ title, instructions, color, children }) => (
     </div>
     <canvas className="webgl-sketch" id="canvas" /> {children}
   </div>
-)
+);
 
 export {
   StandardLayout,
@@ -139,4 +140,4 @@ export {
   PostLayout,
   ProjectLayout,
   ExperimentLayout,
-}
+};

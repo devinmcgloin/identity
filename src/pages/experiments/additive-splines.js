@@ -37,7 +37,7 @@ class AdditiveSplines extends Component {
   };
 
   componentDidMount = () => {
-    this.datgui = new dat.GUI();
+    this.datgui = new dat.GUI({ autoPlace: false });
     this.datgui.addColor(this.state, 'color');
     this.datgui.add(this.state, 'maxIterations').step(1);
     this.datgui.add(this.state, 'cursorRadius', 0.2, 0.7);
@@ -45,6 +45,9 @@ class AdditiveSplines extends Component {
     this.datgui.add(this, 'clearCanvas');
     this.datgui.add(this, 'download');
     this.datgui.add(this, 'printColors');
+
+    let dat_gui = document.getElementById('dat-gui');
+    dat_gui.appendChild(this.datgui.domElement);
 
     let canvas = document.getElementById('canvas');
     setupCanvas(canvas, this.draw, this.resetIterations, false);
@@ -57,8 +60,8 @@ class AdditiveSplines extends Component {
   };
 
   vary = path => {
-    var newPoints = [],
-      points = path.points,
+    var newPoints = [];
+    var points = path.points,
       varyPower = this.state.varyPower;
 
     for (var i = 0; i < points.length; i++) {
@@ -71,6 +74,7 @@ class AdditiveSplines extends Component {
     }
 
     path.points = newPoints;
+
     return newPoints;
   };
 
@@ -120,6 +124,7 @@ class AdditiveSplines extends Component {
   addRandom = (n = 5) => {
     for (var i = 0; i < n; i++) {
       let style = this.randomStyle();
+      console.log(style);
       this.state.rings.push(
         new Ring(
           Math.random() * 2 - 1,

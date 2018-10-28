@@ -32,6 +32,22 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `artwork`,
+        path: `${__dirname}/src/images/artwork`,
+      },
+    },
+    {
+      resolve: `gatsby-source-unsplash`,
+      options: {
+        accessKey:
+          '01cab8b60c13c600c6b06727ff46e8153598cc933f782c5e99b48c25b522cebc',
+        secretKey:
+          '1103dd3e8fc70ac5d8220f6eeae39bc3ff4583dbf06f4d325b6f5c44627987fb',
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -99,4 +115,4 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
-}
+};
