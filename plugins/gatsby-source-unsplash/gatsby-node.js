@@ -2,10 +2,10 @@ const Unsplash = require('unsplash-js').default;
 const toJson = require('unsplash-js').toJson;
 const crypto = require('crypto');
 
-exports.sourceNodes = async (
+exports.sourceNodes = async function(
   { actions: { createNode, setPluginStatus }, createNodeId },
   { accessKey, secretKey }
-) => {
+) {
   const unsplash = new Unsplash({
     applicationId: accessKey,
     secret: secretKey,
@@ -22,7 +22,7 @@ exports.sourceNodes = async (
       .photos('devinmcgloin', 1, 50, 'popular', false)
       .then(toJson);
 
-    photos.map(photo => {
+    photos.map(function(photo) {
       createNode({
         ...photo,
         parent: '__SOURCE__',
@@ -37,7 +37,7 @@ exports.sourceNodes = async (
         },
       });
     });
-  } catch {
-    console.log('UNABLE TO FETCH UNSPLASH IMAGES');
+  } catch (e) {
+    console.log(`UNABLE TO FETCH UNSPLASH IMAGES: ${e}`);
   }
 };
