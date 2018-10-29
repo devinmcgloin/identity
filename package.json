@@ -27,7 +27,8 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "tachyons": "^4.11.1",
-    "unsplash": "^4.2.0"
+    "unsplash": "^4.2.0",
+    "unsplash-js": "^4.8.0"
   },
   "keywords": [],
   "scripts": {
