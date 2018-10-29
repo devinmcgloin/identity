@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { ExperimentLayout } from '../../components/layout';
 import { setupCanvas } from '../../components/experiment';
 import Swarm from '../../lib/swarm';
-import '../../style/datgui.css';
 
 class Boids extends Component {
   constructor(props) {
@@ -11,7 +10,6 @@ class Boids extends Component {
   }
 
   mountDatGUI = datgui => {
-    debugger;
     datgui.addColor(this.boids, 'background');
     datgui.add(this.boids, 'numBoids', 10, 1000).step(1);
 

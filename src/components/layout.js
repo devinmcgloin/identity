@@ -4,7 +4,8 @@ import Header from './header';
 import Footer from './footer';
 import Helmet from 'react-helmet';
 import { Github } from './icons';
-import dat from 'dat.gui';
+//import dat from 'dat.gui';
+import '../style/datgui.css';
 
 const StandardLayout = ({ children }) => (
   <StaticQuery

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Github = ({ repo }) => (
   <a
@@ -14,6 +14,6 @@ const Github = ({ repo }) => (
       </svg>
     </span>
   </a>
-)
+);
 
-export { Github }
+export { Github };

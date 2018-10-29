@@ -1,8 +1,8 @@
-import React from 'react'
-import { HeaderLayout } from '../components/layout'
-import Table from '../components/table-list'
-import { flatten } from '../transformation'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { HeaderLayout } from '../components/layout';
+import Table from '../components/table-list';
+import { flatten } from '../transformation';
+import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <HeaderLayout title="Projects">
@@ -15,7 +15,7 @@ const IndexPage = ({ data }) => (
       color="light"
     />
   </HeaderLayout>
-)
+);
 
 export const query = graphql`
   {
@@ -39,5 +39,5 @@ export const query = graphql`
       }
     }
   }
-`
-export default IndexPage
+`;
+export default IndexPage;

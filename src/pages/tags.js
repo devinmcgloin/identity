@@ -1,5 +1,5 @@
-import React from 'react'
-import { HeaderLayout } from '../components/layout'
+import React from 'react';
+import { HeaderLayout } from '../components/layout';
 
 const IndexPage = () => (
   <HeaderLayout title="Tags">
@@ -7,6 +7,6 @@ const IndexPage = () => (
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
   </HeaderLayout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = ({
   email,
@@ -139,5 +139,5 @@ const Footer = ({
       </svg>
     </a>
   </footer>
-)
-export default Footer
+);
+export default Footer;

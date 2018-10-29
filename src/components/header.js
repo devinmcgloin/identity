@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Logo from './logo'
+import React from 'react';
+import { Link } from 'gatsby';
+import Logo from './logo';
 
 const Header = ({ links }) => {
   const linkContent = links.map(l => (
@@ -12,7 +12,7 @@ const Header = ({ links }) => {
     >
       {l.title}
     </Link>
-  ))
+  ));
 
   return (
     <div className="bb b--black-10">
@@ -27,7 +27,7 @@ const Header = ({ links }) => {
         </nav>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

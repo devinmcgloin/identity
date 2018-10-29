@@ -3,7 +3,6 @@ import { ExperimentLayout } from '../../components/layout';
 import { setupCanvas } from '../../components/experiment';
 import { renderCircle } from '../../shape-rendering';
 import { d2r } from '../../math';
-import '../../style/datgui.css';
 
 class FermatSpirals extends Component {
   state = {

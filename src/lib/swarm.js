@@ -295,11 +295,12 @@ class Swarm {
   step = function() {
     var ctx = this.ctx;
 
-    if (ctx.canvas.width !== window.innerWidth)
-      ctx.canvas.width = window.innerWidth;
+    var displayWidth = canvas.parentNode.clientWidth;
+    var displayHeight = canvas.parentNode.clientHeight;
 
-    if (ctx.canvas.height !== window.innerHeight)
-      ctx.canvas.height = window.innerHeight;
+    if (ctx.canvas.width !== displayWidth) ctx.canvas.width = displayWidth;
+
+    if (ctx.canvas.height !== displayHeight) ctx.canvas.height = displayHeight;
 
     this.adjustSize();
 

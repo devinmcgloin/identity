@@ -1,5 +1,5 @@
-import React from 'react'
-import Helmet from 'react-helmet'
+import React from 'react';
+import Helmet from 'react-helmet';
 
 const MetaTags = ({ data }) => (
   <Helmet>
@@ -75,4 +75,4 @@ const MetaTags = ({ data }) => (
 
     <meta name="keywords" content="{{site.keywords}}" />
   </Helmet>
-)
+);

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
+import React from 'react';
+import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 
 const colorMap = {
   dark: {
@@ -19,7 +19,7 @@ const colorMap = {
     buttonHoverColor: 'hover-near-white',
     buttonHoverBg: 'hover-bg-dark-gray',
   },
-}
+};
 
 const TableLink = ({ title, url, color }) => (
   <td className={`pv3 pr3 bb ${colorMap[color].text}`}>
@@ -27,7 +27,7 @@ const TableLink = ({ title, url, color }) => (
       {title}
     </Link>
   </td>
-)
+);
 
 const tableList = ({ columns, rows, color, title, link }) => {
   const tableRows = rows.map(d => (
@@ -42,7 +42,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
                 url={d.slug}
                 color={color}
               />
-            )
+            );
           default:
             return (
               <td
@@ -51,17 +51,17 @@ const tableList = ({ columns, rows, color, title, link }) => {
               >
                 {d[c.type]}
               </td>
-            )
+            );
         }
       })}
     </tr>
-  ))
+  ));
 
   const columnTitles = columns.map(c => (
     <th key={c.type} className={`fw6 bb ${colorMap[color].text} tl pb3 pr3`}>
       {c.description}
     </th>
-  ))
+  ));
 
   const cta = link ? (
     <div className="w-100 mw8 center tc pt4">
@@ -78,7 +78,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
     </div>
   ) : (
     undefined
-  )
+  );
 
   const header = title ? (
     <div className="w-100 center mw8 f3">
@@ -86,7 +86,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
     </div>
   ) : (
     undefined
-  )
+  );
 
   return (
     <div className={`pa4 pb5 ${colorMap[color].bg} ${colorMap[color].text}`}>
@@ -101,8 +101,8 @@ const tableList = ({ columns, rows, color, title, link }) => {
       </div>
       {cta}
     </div>
-  )
-}
+  );
+};
 
 tableList.propTypes = {
   columns: PropTypes.arrayOf(
@@ -116,6 +116,6 @@ tableList.propTypes = {
   color: PropTypes.string.isRequired,
   title: PropTypes.string,
   link: PropTypes.string,
-}
+};
 
-export default tableList
+export default tableList;

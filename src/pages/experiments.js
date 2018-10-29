@@ -1,6 +1,6 @@
-import React from 'react'
-import { HeaderLayout } from '../components/layout'
-import { graphql, Link } from 'gatsby'
+import React from 'react';
+import { HeaderLayout } from '../components/layout';
+import { graphql, Link } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <HeaderLayout title="Experiments">
@@ -21,11 +21,11 @@ const IndexPage = ({ data }) => (
               }}
             />
           </Link>
-        )
+        );
       })}
     </article>
   </HeaderLayout>
-)
+);
 
 export const query = graphql`
   {
@@ -40,6 +40,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

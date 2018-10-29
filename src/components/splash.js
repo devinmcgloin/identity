@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Splash = () => (
   <div className="pv2 cf topo">
@@ -11,7 +11,7 @@ const Splash = () => (
       </header>
     </div>
   </div>
-)
+);
 
 const Lead = title => (
   <div className="pa3 topo bb b--black-10">
@@ -23,6 +23,6 @@ const Lead = title => (
       </div>
     </div>
   </div>
-)
+);
 
-export { Lead, Splash }
+export { Lead, Splash };

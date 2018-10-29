@@ -1,6 +1,6 @@
-import React from 'react'
-import { StandardLayout } from '../components/layout'
-import { Link } from 'gatsby'
+import React from 'react';
+import { StandardLayout } from '../components/layout';
+import { Link } from 'gatsby';
 const NotFoundPage = () => (
   <StandardLayout>
     <div class="topo w-100 vh-75">
@@ -19,6 +19,6 @@ const NotFoundPage = () => (
       </header>
     </div>
   </StandardLayout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

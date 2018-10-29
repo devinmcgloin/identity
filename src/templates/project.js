@@ -1,10 +1,10 @@
-import React from 'react'
-import { ProjectLayout } from '../components/layout'
-import moment from 'moment'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { ProjectLayout } from '../components/layout';
+import moment from 'moment';
+import { graphql } from 'gatsby';
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
 
   return (
     <ProjectLayout
@@ -15,8 +15,8 @@ export default ({ data }) => {
     >
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </ProjectLayout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -30,4 +30,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

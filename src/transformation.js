@@ -1,12 +1,12 @@
 const flatten = obj => {
-  let field = {}
+  let field = {};
 
   Object.entries(obj).forEach(([k, v]) => {
     typeof v === 'object' && v !== null
       ? Object.assign(field, flatten(v))
-      : Object.assign(field, { [k]: v })
-  })
-  return field
-}
+      : Object.assign(field, { [k]: v });
+  });
+  return field;
+};
 
-export { flatten }
+export { flatten };

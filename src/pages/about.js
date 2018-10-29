@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { HeaderLayout } from '../components/layout'
+import React from 'react';
+import { Link } from 'gatsby';
+import { HeaderLayout } from '../components/layout';
 
 const About = () => (
   <HeaderLayout title="About">
@@ -8,6 +8,6 @@ const About = () => (
     <p>Welcome to page 2</p>
     <Link to="/">Go back to the homepage</Link>
   </HeaderLayout>
-)
+);
 
-export default About
+export default About;

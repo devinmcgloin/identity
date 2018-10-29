@@ -1,13 +1,13 @@
-import React from 'react'
-import { Splash } from '../components/splash'
-import 'tachyons/css/tachyons.css'
-import '../style/identity.css'
-import Currently from '../components/currently'
-import Table from '../components/table-list'
-import { StandardLayout } from '../components/layout'
-import { flatten } from '../transformation'
-import Carousel from '../components/carousel'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { Splash } from '../components/splash';
+import 'tachyons/css/tachyons.css';
+import '../style/identity.css';
+import Currently from '../components/currently';
+import Table from '../components/table-list';
+import { StandardLayout } from '../components/layout';
+import { flatten } from '../transformation';
+import Carousel from '../components/carousel';
+import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <StandardLayout>
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => (
       link="/writing"
     />
   </StandardLayout>
-)
+);
 
 export const query = graphql`
   {
@@ -95,6 +95,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

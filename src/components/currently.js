@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const currently = () => (
   <div className="tl pa3 pa5-ns bg-blue near-white">
@@ -76,6 +76,6 @@ const currently = () => (
       </p>
     </div>
   </div>
-)
+);
 
-export default currently
+export default currently;

@@ -23,7 +23,6 @@ exports.sourceNodes = async (
       .then(toJson);
 
     photos.map(photo => {
-      console.log(photo);
       createNode({
         ...photo,
         parent: '__SOURCE__',

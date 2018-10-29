@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Newsletter = () => (
   <div className="tl pa3 pa5-ns near-white topo bb">
@@ -36,6 +36,6 @@ const Newsletter = () => (
       </fieldset>
     </form>
   </div>
-)
+);
 
-export default newsletter
+export default newsletter;

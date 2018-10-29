@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { ExperimentLayout } from '../../components/layout';
 import { setupCanvas } from '../../components/experiment';
 import { BSpline, cubic, drawCurves } from '../../shape-rendering';
-import '../../style/datgui.css';
-import dat from 'dat.gui';
 import Matrix from '../../matrix';
 import { randInt, pixeltocord } from '../../math';
 
