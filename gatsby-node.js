@@ -75,3 +75,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     });
   }
 };
+
+exports.onPreBootstrap = () => {
+  require('isomorphic-fetch');
+};
