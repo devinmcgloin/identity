@@ -4,7 +4,6 @@ import { setupCanvas } from '../../components/experiment';
 import { renderCircle } from '../../shape-rendering';
 import { d2r } from '../../math';
 import '../../style/datgui.css';
-import dat from 'dat.gui';
 
 class FermatSpirals extends Component {
   state = {
@@ -15,17 +14,15 @@ class FermatSpirals extends Component {
     count: 10000,
   };
 
+  mountDatGUI = datgui => {
+    datgui.add(this.state, 'size', 1, 10);
+    datgui.add(this.state, 'scaling_factor', 0.001, 0.02);
+    datgui.add(this.state, 'angle', 0, 180);
+    datgui.add(this.state, 'count', 1, 20000);
+    datgui.addColor(this.state, 'color');
+  };
+
   componentDidMount = () => {
-    this.datgui = new dat.GUI({ autoPlace: false });
-    this.datgui.add(this.state, 'size', 1, 10);
-    this.datgui.add(this.state, 'scaling_factor', 0.001, 0.02);
-    this.datgui.add(this.state, 'angle', 0, 180);
-    this.datgui.add(this.state, 'count', 1, 20000);
-    this.datgui.addColor(this.state, 'color');
-
-    let dat_gui = document.getElementById('dat-gui');
-    dat_gui.appendChild(this.datgui.domElement);
-
     setupCanvas(canvas, this.draw);
   };
 
@@ -40,7 +37,13 @@ class FermatSpirals extends Component {
   };
 
   render = () => {
-    return <ExperimentLayout title="Fermat's Spirals" color="#4499d6" />;
+    return (
+      <ExperimentLayout
+        title="Fermat's Spirals"
+        color="#4499d6"
+        mountDatGUI={this.mountDatGUI}
+      />
+    );
   };
 }
 

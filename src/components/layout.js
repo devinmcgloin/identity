@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Header from './header';
 import Footer from './footer';
 import Helmet from 'react-helmet';
 import { Github } from './icons';
+import dat from 'dat.gui';
 
 const StandardLayout = ({ children }) => (
   <StaticQuery
@@ -109,30 +110,48 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
   </StandardLayout>
 );
 
-const ExperimentLayout = ({ title, instructions, color, children }) => (
-  <div className="webgl-container" style={{ backgroundColor: color }}>
-    <div className="absolute" style={{ right: 0 }} id="dat-gui" />
-    <div className="details-container">
-      {instructions ? (
-        <React.Fragment>
-          <h1 className="smaller">{title}</h1>
-          <div className="instructions">{instructions}</div>
-        </React.Fragment>
-      ) : (
-        <h1>{title}</h1>
-      )}
+class ExperimentLayout extends Component {
+  componentDidMount = () => {
+    const { mountDatGUI } = this.props;
+    if (mountDatGUI) {
+      const datgui = new dat.GUI({ autoPlace: false });
+      const dat_gui = document.getElementById('dat-gui');
+      dat_gui.appendChild(datgui.domElement);
+      mountDatGUI(datgui);
+    }
+  };
 
-      <div className="nav">
-        <a href="/">devinmcgloin.com</a>
-        <span className="nav-sep">&middot;</span>
-        <a href="/experiments/">Experiments</a>
-        <span className="nav-sep">&middot;</span>
-        <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+  render = () => {
+    const { color, instructions, title, mountDatGUI } = this.props;
+
+    return (
+      <div className="webgl-container" style={{ backgroundColor: color }}>
+        {mountDatGUI && (
+          <div className="absolute" style={{ right: 0 }} id="dat-gui" />
+        )}
+        <div className="details-container">
+          {instructions ? (
+            <React.Fragment>
+              <h1 className="smaller">{title}</h1>
+              <div className="instructions">{instructions}</div>
+            </React.Fragment>
+          ) : (
+            <h1>{title}</h1>
+          )}
+
+          <div className="nav">
+            <a href="/">devinmcgloin.com</a>
+            <span className="nav-sep">&middot;</span>
+            <a href="/experiments/">Experiments</a>
+            <span className="nav-sep">&middot;</span>
+            <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+          </div>
+        </div>
+        <canvas className="webgl-sketch" id="canvas" />
       </div>
-    </div>
-    <canvas className="webgl-sketch" id="canvas" /> {children}
-  </div>
-);
+    );
+  };
+}
 
 export {
   StandardLayout,
