@@ -1,7 +1,5 @@
 import React from 'react';
 import { Splash } from '../components/splash';
-import 'tachyons/css/tachyons.css';
-import '../style/identity.css';
 import Currently from '../components/currently';
 import Table from '../components/table-list';
 import { StandardLayout } from '../components/layout';

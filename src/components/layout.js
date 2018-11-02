@@ -6,6 +6,8 @@ import Helmet from 'react-helmet';
 import { Github } from './icons';
 import dat from 'dat.gui';
 import '../style/datgui.css';
+import 'tachyons/css/tachyons.css';
+import '../style/identity.css';
 
 const StandardLayout = ({ children }) => (
   <StaticQuery
