@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { ExperimentLayout } from '../../components/layout';
 import { setupCanvas } from '../../components/experiment';
-import { BSpline, cubic, drawCurves } from '../../shape-rendering';
-import Matrix from '../../matrix';
-import { randInt, pixeltocord } from '../../math';
+import { BSpline, cubic, drawCurves } from '../../lib/shape-rendering';
+import Matrix from '../../lib/matrix';
+import { randInt, pixeltocord } from '../../lib/math';
 
 function Ring(x, y, radius, color) {
   this.x = x;

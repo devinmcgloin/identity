@@ -34,8 +34,8 @@
   },
   "keywords": [],
   "scripts": {
-    "build": "gatsby build",
-    "start": "gatsby develop",
+    "build": "gatsby build --prefix-paths",
+    "start": "gatsby develop --prefix-paths",
     "fmt": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

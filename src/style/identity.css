@@ -47,7 +47,7 @@ blockquote {
     padding: 20px;
     line-height: 1.5;
     background-color: #ffffff;
-    background-image: url("../images/topography.svg");
+    background-image: url("topography.svg");
     position: relative;
 }
 
@@ -309,7 +309,7 @@ td {
     fill-opacity: 0.15;
     fill: #494949;
 
-    background-image: url("../images/topography.svg");
+    background-image: url("topography.svg");
 }
 
 

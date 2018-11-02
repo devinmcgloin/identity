@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/`,
   siteMetadata: {
     title: 'Devin McGloin',
     siteUrl: 'https://devinmcgloin.com',
@@ -24,20 +25,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `artwork`,
-        path: `${__dirname}/src/images/artwork`,
-      },
-    },
     {
       resolve: `gatsby-source-unsplash`,
       options: {
@@ -110,7 +97,7 @@ module.exports = {
         background_color: '#ededed',
         theme_color: '#eee',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png',
+        icon: 'content/images/icon.png',
       },
     },
     'gatsby-plugin-offline',

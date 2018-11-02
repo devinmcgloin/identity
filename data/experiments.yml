@@ -1,56 +1,56 @@
 - title: 'Fermat''s Spirals'
-  image: ./src/images/experiments/fermats-spiral.png
+  image: /experiments/fermat-spiral.png
   date: '2017-08-11T00:00:00.000Z'
   slug: /experiments/fermat-spiral/
 - title: 'Additive Splines'
-  image: ./src/images/experiments/additive-splines.png
+  image: /experiments/additive-splines.png
   date: '2017-05-13T00:00:00.000Z'
   slug: /experiments/additive-splines/
 - title: Boids
-  image: ./src/images/experiments/boids.png
+  image: /experiments/boids.jpeg
   date: '2017-05-11T00:00:00.000Z'
   slug: /experiments/boids/
 - title: 'Orbiting Ring'
-  image: ./src/images/experiments/orbiting-ring.png
+  image: /experiments/orbiting-ring.jpeg
   date: '2017-04-20T00:00:00.000Z'
   slug: /experiments/orbiting-ring/
 - title: 'Editable Splines'
-  image: ./src/images/experiments/splines.png
+  image: /experiments/splines.jpeg
   date: '2017-04-13T00:00:00.000Z'
   slug: /experiments/splines/
 - title: Bézier
-  image: ./src/images/experiments/bezier.png
+  image: /experiments/bezier.jpeg
   date: '2017-04-06T00:00:00.000Z'
   slug: /experiments/bezier/
 - title: Mandelbrot
-  image: ./src/images/experiments/mandelbrot.png
+  image: /experiments/mandelbrot.jpeg
   date: '2017-04-01T00:00:00.000Z'
   slug: /experiments/mandelbrot/
 - title: Mesh
-  image: ./src/images/experiments/mesh.png
+  image: /experiments/mesh.jpeg
   date: '2017-03-27T00:00:00.000Z'
   slug: /experiments/mesh/
 - title: Hexagons
-  image: ./src/images/experiments/hexagons.png
+  image: /experiments/hexagons.jpeg
   date: '2017-03-23T00:00:00.000Z'
   slug: /experiments/hexagons/
 - title: Neon
-  image: ./src/images/experiments/neon.png
+  image: /experiments/neon.jpeg
   date: '2017-03-07T00:00:00.000Z'
   slug: /experiments/neon/
 - title: 'Green and Orange'
-  image: ./src/images/experiments/green-orange.png
+  image: /experiments/green-orange.jpeg
   date: '2017-03-01T00:00:00.000Z'
   slug: /experiments/green-orange/
 - title: Reflect
-  image: ./src/images/experiments/reflect.png
+  image: /experiments/reflect.jpeg
   date: '2017-02-18T00:00:00.000Z'
   slug: /experiments/reflect/
 - title: 'Shifting Spheres'
-  image: ./src/images/experiments/shifting-spheres.png
+  image: /experiments/shifting-spheres.jpeg
   date: '2017-02-08T00:00:00.000Z'
   slug: /experiments/shifting-spheres/
 - title: Waves
-  image: ./src/images/experiments/waves.png
+  image: /experiments/waves.jpeg
   date: '2017-01-27T00:00:00.000Z'
   slug: /experiments/waves/

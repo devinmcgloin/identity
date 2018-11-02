@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link, withPrefix } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <HeaderLayout title="Experiments">
@@ -16,7 +16,9 @@ const IndexPage = ({ data }) => (
               role="img"
               className="grow aspect-ratio--4x6"
               style={{
-                background: `url(${e.node.image}) no-repeat center center`,
+                background: `url(${withPrefix(
+                  e.node.image
+                )}) no-repeat center center`,
                 backgroundSize: 'cover',
               }}
             />

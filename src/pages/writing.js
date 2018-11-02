@@ -1,7 +1,7 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
 import Table from '../components/table-list';
-import { flatten } from '../transformation';
+import { flatten } from '../lib/transformation';
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (

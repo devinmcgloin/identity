@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ExperimentLayout } from '../../components/layout';
 import { setupCanvas } from '../../components/experiment';
-import { renderCircle } from '../../shape-rendering';
-import { d2r } from '../../math';
+import { renderCircle } from '../../lib/shape-rendering';
+import { d2r } from '../../lib/math';
 
 class FermatSpirals extends Component {
   state = {
