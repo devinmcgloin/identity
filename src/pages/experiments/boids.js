@@ -54,7 +54,7 @@ class Boids extends Component {
 
   componentDidMount = () => {
     let canvas = document.getElementById('canvas');
-    setupCanvas(canvas, this.draw, () => {}, false);
+    setupCanvas(canvas, this.draw, () => {}, false, 50);
     this.boids.setContext(canvas.getContext('2d'));
     this.boids.animate();
     this.boids.clear();

@@ -125,7 +125,7 @@ class ExperimentLayout extends Component {
   };
 
   render = () => {
-    const { color, instructions, title, mountDatGUI } = this.props;
+    const { color, instructions, title, mountDatGUI, children } = this.props;
 
     return (
       <div className="webgl-container" style={{ backgroundColor: color }}>
@@ -150,7 +150,7 @@ class ExperimentLayout extends Component {
             <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
           </div>
         </div>
-        <canvas className="webgl-sketch" id="canvas" />
+        {children ? children : <canvas className="webgl-sketch" id="canvas" />}
       </div>
     );
   };

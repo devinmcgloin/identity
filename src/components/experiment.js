@@ -47,9 +47,15 @@ const updateCanvas = (canvas, draw, onResize, clear) => {
   draw(context, canvas.width, canvas.height);
 };
 
-const setupCanvas = (canvas, draw, onResize, clear = true) => {
+const setupCanvas = (
+  canvas,
+  draw,
+  onResize,
+  clear = true,
+  refreshRate = 90
+) => {
   defineCanvasProperties(canvas);
-  setInterval(() => updateCanvas(canvas, draw, onResize, clear), 90);
+  setInterval(() => updateCanvas(canvas, draw, onResize, clear), refreshRate);
 };
 
 export {

@@ -188,7 +188,7 @@ class AdditiveSplines extends Component {
     return (
       <ExperimentLayout
         title="Additive Splines"
-        color="#4499d6"
+        color="#b2b2b2"
         mountDatGUI={this.mountDatGUI}
       />
     );
