@@ -34,29 +34,45 @@ const shaders = Shaders.create({
         gl_FragColor = vec4(sqrt(clr), 1.);
     }
     `,
+    vert: GLSL`
+    attribute vec2 _p;
+    varying vec2 uv;
+    void main() {
+        gl_Position = vec4(_p,0.0,1.0);
+        uv = _p;
+    }`,
   },
 });
+
+const Renderable = ({ shader, time }) => (
+  <Surface width={800} height={400}>
+    <Node
+      shader={shader}
+      sync={true}
+      uniforms={{
+        uTime: time,
+      }}
+    />
+  </Surface>
+);
 
 class Waves extends Component {
   constructor(props) {
     super(props);
-    this.startTime = Date.now();
+    this.state = { startTime: Date.now(), elapsedTime: 0 };
+    setInterval(
+      () =>
+        this.setState({
+          elapsedTime: (Date.now() - this.state.startTime) / 1000,
+        }),
+      30
+    );
   }
-
-  timeElapsed = () => Date.now() - this.startTime;
-  time = () => this.timeElapsed() / 1000;
 
   render = () => {
     return (
       <ExperimentLayout title="Waves" color="#4499d6">
-        <Surface width={800} height={400}>
-          <Node
-            shader={shaders.waves}
-            uniforms={{
-              uTime: this.time(),
-            }}
-          />
-        </Surface>
+        <Renderable shader={shaders.waves} time={this.state.elapsedTime} />
       </ExperimentLayout>
     );
   };
