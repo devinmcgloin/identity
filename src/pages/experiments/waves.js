@@ -16,50 +16,45 @@ const shaders = Shaders.create({
   },
   waves: {
     frag: GLSL`
-    varying vec3 vPos;
-    uniform float64 uTime;
-    uniform float64 uAspc; 
-    
-    float64 D(vec2 p) {
-       return sqrt(dot(sin(p), cos(p)));
-    }
+    precision highp float;
+
+    varying vec2 uv;
+    uniform float uTime;
     
     void main() {
-        float64 a = -2.24;
-        float64 b = -0.65;
-        float64 c = 0.43;
-        float64 d = -2.43;
+        float a = -2.24;
+        float b = -0.65;
+        float c = 0.43;
+        float d = -2.43;
     
-        vec3 mod = vPos * vPos;
-        mod.x = mod.x / uAspc;
-        mod[0] = .1 + cos(uTime) + 1. - sin(a * vPos[1]) - cos(b * vPos[0]);
-        mod[1] = .15 + cos(uTime) * sin(c * vPos[0]) - cos(d * vPos[1]);
-        mod[2] = .2 + cos(uTime) + 2. - sin(c * vPos[0]) - cos(d * vPos[1]);
-        gl_FragColor = vec4(sqrt(mod), 1.);
+        vec3 clr = vec3(0.0, 0.0, 0.0);
+        clr[0] = .1 + cos(uTime) + 1. - sin(a * uv[1]) - cos(b * uv[0]);
+        clr[1] = .15 + cos(uTime) * sin(c * uv[0]) - cos(d * uv[1]);
+        clr[2] = .2 + cos(uTime) + 2. - sin(c * uv[0]) - cos(d * uv[1]);
+        gl_FragColor = vec4(sqrt(clr), 1.);
     }
     `,
-    vertex: GLSL`
-attribute vec3 aPos;
-varying   vec3 vPos;
-void main() {
-   gl_Position = vec4(aPos, 1.0);
-   vPos = aPos;
-}`,
   },
 });
 
 class Waves extends Component {
+  constructor(props) {
+    super(props);
+    this.startTime = Date.now();
+  }
+
+  timeElapsed = () => Date.now() - this.startTime;
+  time = () => this.timeElapsed() / 1000;
+
   render = () => {
     return (
-      <ExperimentLayout
-        title="Fermat's Spirals"
-        color="#4499d6"
-        mountDatGUI={this.mountDatGUI}
-      >
-        <Surface width={700} height={700}>
+      <ExperimentLayout title="Waves" color="#4499d6">
+        <Surface width={800} height={400}>
           <Node
-            shader={shaders.helloRed}
-            uniforms={{ red: Math.cos(1 / 100) }}
+            shader={shaders.waves}
+            uniforms={{
+              uTime: this.time(),
+            }}
           />
         </Surface>
       </ExperimentLayout>
