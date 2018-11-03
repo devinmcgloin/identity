@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 
 const CallToAction = ({ link }) =>
   link && (
@@ -28,7 +28,7 @@ const Carousel = ({ title, link, cards }) => {
           <div
             class="cover pv5 pv6-m pv7-l"
             style={{
-              background: `black url(${cards[0].src}) center`,
+              background: `black url(${withPrefix(cards[0].image)}) center`,
             }}
           />
         </Link>
@@ -38,7 +38,7 @@ const Carousel = ({ title, link, cards }) => {
           <div
             class="cover pv5 pv6-m pv7-l"
             style={{
-              background: `black url(${cards[1].src}) center`,
+              background: `black url(${withPrefix(cards[1].image)}) center`,
             }}
           />
         </Link>
@@ -48,7 +48,7 @@ const Carousel = ({ title, link, cards }) => {
           <div
             class="cover pv5 pv6-m pv7-l"
             style={{
-              background: `black url(${cards[2].src}) center`,
+              background: `black url(${withPrefix(cards[2].image)}) center`,
             }}
           />
         </Link>

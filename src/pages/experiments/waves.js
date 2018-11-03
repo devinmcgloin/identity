@@ -71,7 +71,7 @@ class Waves extends Component {
 
   render = () => {
     return (
-      <ExperimentLayout title="Waves" color="#4499d6">
+      <ExperimentLayout title="Waves" color="#ededed">
         <Renderable shader={shaders.waves} time={this.state.elapsedTime} />
       </ExperimentLayout>
     );
