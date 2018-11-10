@@ -8,6 +8,7 @@ import dat from 'dat.gui';
 import '../style/datgui.css';
 import 'tachyons/css/tachyons.css';
 import '../style/identity.css';
+import Measure from 'react-measure';
 
 const StandardLayout = ({ children }) => (
   <StaticQuery
@@ -114,6 +115,13 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
 );
 
 class ExperimentLayout extends Component {
+  state = {
+    dimensions: {
+      width: -1,
+      height: -1,
+    },
+  };
+
   componentDidMount = () => {
     const { mountDatGUI } = this.props;
     if (mountDatGUI) {
@@ -126,32 +134,50 @@ class ExperimentLayout extends Component {
 
   render = () => {
     const { color, instructions, title, mountDatGUI, children } = this.props;
+    const { width, height } = this.state.dimensions;
 
     return (
-      <div className="webgl-container" style={{ backgroundColor: color }}>
-        {mountDatGUI && (
-          <div className="absolute" style={{ right: 0 }} id="dat-gui" />
-        )}
-        <div className="details-container">
-          {instructions ? (
-            <React.Fragment>
-              <h1 className="smaller">{title}</h1>
-              <div className="instructions">{instructions}</div>
-            </React.Fragment>
-          ) : (
-            <h1>{title}</h1>
-          )}
+      <Measure
+        bounds
+        onResize={contentRect => {
+          this.setState({ dimensions: contentRect.bounds });
+        }}
+      >
+        {({ measureRef }) => (
+          <div
+            ref={measureRef}
+            className="webgl-container"
+            style={{ backgroundColor: color }}
+          >
+            {mountDatGUI && (
+              <div className="absolute" style={{ right: 0 }} id="dat-gui" />
+            )}
+            <div className="details-container">
+              {instructions ? (
+                <React.Fragment>
+                  <h1 className="smaller">{title}</h1>
+                  <div className="instructions">{instructions}</div>
+                </React.Fragment>
+              ) : (
+                <h1>{title}</h1>
+              )}
 
-          <div className="nav">
-            <a href="/">devinmcgloin.com</a>
-            <span className="nav-sep">&middot;</span>
-            <a href="/experiments/">Experiments</a>
-            <span className="nav-sep">&middot;</span>
-            <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+              <div className="nav">
+                <a href="/">devinmcgloin.com</a>
+                <span className="nav-sep">&middot;</span>
+                <a href="/experiments/">Experiments</a>
+                <span className="nav-sep">&middot;</span>
+                <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+              </div>
+            </div>
+            {children ? (
+              React.cloneElement(children, { width: width, height: height })
+            ) : (
+              <canvas className="webgl-sketch" id="canvas" />
+            )}
           </div>
-        </div>
-        {children ? children : <canvas className="webgl-sketch" id="canvas" />}
-      </div>
+        )}
+      </Measure>
     );
   };
 }

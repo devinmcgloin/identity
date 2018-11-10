@@ -10,11 +10,11 @@ const IndexPage = ({ data }) => (
           <Link
             key={e.node.slug}
             to={e.node.slug}
-            className="fl w-50 w-25-l link overflow-hidden pa2"
+            className="fl w-50 w-third-l link overflow-hidden pa2"
           >
             <div
               role="img"
-              className="grow aspect-ratio--4x6"
+              className="grow aspect-ratio--1x1"
               style={{
                 background: `url(${withPrefix(
                   e.node.image

@@ -89,7 +89,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
   );
 
   return (
-    <div className={`pa4 pb5 ${colorMap[color].bg} ${colorMap[color].text}`}>
+    <div className={`pt4 pb5 ${colorMap[color].bg} ${colorMap[color].text}`}>
       {header}
       <div className="overflow-auto">
         <table className="f6 w-100 mw8 center" cellSpacing="0">

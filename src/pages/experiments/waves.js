@@ -44,8 +44,8 @@ const shaders = Shaders.create({
   },
 });
 
-const Renderable = ({ shader, time }) => (
-  <Surface width={800} height={400}>
+const Renderable = ({ shader, time, width, height }) => (
+  <Surface width={width} height={height}>
     <Node
       shader={shader}
       sync={true}
@@ -70,9 +70,15 @@ class Waves extends Component {
   }
 
   render = () => {
+    const { width, height } = this.props;
     return (
       <ExperimentLayout title="Waves" color="#ededed">
-        <Renderable shader={shaders.waves} time={this.state.elapsedTime} />
+        <Renderable
+          shader={shaders.waves}
+          time={this.state.elapsedTime}
+          width={width}
+          height={height}
+        />
       </ExperimentLayout>
     );
   };
