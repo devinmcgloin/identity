@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
-import { Shaders, Node, GLSL } from 'gl-react';
+import { Shaders, Node, GLSL as glsl } from 'gl-react';
 import { Surface } from 'gl-react-dom';
 import { ExperimentLayout } from '../../components/layout';
 
 const shaders = Shaders.create({
-  helloRed: {
-    frag: GLSL`
-    precision highp float;
-    varying vec2 uv;
-    uniform float red;
-    void main() {
-      gl_FragColor = vec4(red, uv.x, uv.y, 1.0);
-    }
-    `,
-  },
   waves: {
-    frag: GLSL`
+    frag: glsl`
     precision highp float;
 
     varying vec2 uv;
@@ -34,7 +24,7 @@ const shaders = Shaders.create({
         gl_FragColor = vec4(sqrt(clr), 1.);
     }
     `,
-    vert: GLSL`
+    vert: glsl`
     attribute vec2 _p;
     varying vec2 uv;
     void main() {
@@ -70,15 +60,9 @@ class Waves extends Component {
   }
 
   render = () => {
-    const { width, height } = this.props;
     return (
       <ExperimentLayout title="Waves" color="#ededed">
-        <Renderable
-          shader={shaders.waves}
-          time={this.state.elapsedTime}
-          width={width}
-          height={height}
-        />
+        <Renderable shader={shaders.waves} time={this.state.elapsedTime} />
       </ExperimentLayout>
     );
   };

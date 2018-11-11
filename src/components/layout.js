@@ -135,6 +135,16 @@ class ExperimentLayout extends Component {
   render = () => {
     const { color, instructions, title, mountDatGUI, children } = this.props;
     const { width, height } = this.state.dimensions;
+    const renderable = children ? (
+      <div className="webgl-sketch">
+        {React.cloneElement(children, {
+          width: width,
+          height: height,
+        })}
+      </div>
+    ) : (
+      <canvas className="webgl-sketch" id="canvas" />
+    );
 
     return (
       <Measure
@@ -150,7 +160,11 @@ class ExperimentLayout extends Component {
             style={{ backgroundColor: color }}
           >
             {mountDatGUI && (
-              <div className="absolute" style={{ right: 0 }} id="dat-gui" />
+              <div
+                className="absolute"
+                style={{ right: 0, zIndex: 1 }}
+                id="dat-gui"
+              />
             )}
             <div className="details-container">
               {instructions ? (
@@ -170,11 +184,7 @@ class ExperimentLayout extends Component {
                 <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
               </div>
             </div>
-            {children ? (
-              React.cloneElement(children, { width: width, height: height })
-            ) : (
-              <canvas className="webgl-sketch" id="canvas" />
-            )}
+            {renderable}
           </div>
         )}
       </Measure>
