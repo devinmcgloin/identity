@@ -47,16 +47,22 @@ const Renderable = ({ shader, time, width, height }) => (
 );
 
 class Waves extends Component {
+  state = { startTime: Date.now(), elapsedTime: 0 };
+
   constructor(props) {
     super(props);
-    this.state = { startTime: Date.now(), elapsedTime: 0 };
-    setInterval(
-      () =>
-        this.setState({
-          elapsedTime: (Date.now() - this.state.startTime) / 1000,
-        }),
-      30
-    );
+  }
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      setInterval(
+        () =>
+          this.setState({
+            elapsedTime: (Date.now() - this.state.startTime) / 1000,
+          }),
+        30
+      );
+    }
   }
 
   render = () => {
