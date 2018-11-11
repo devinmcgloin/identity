@@ -97,27 +97,28 @@ class ShiftingSpheres extends Component {
   };
 
   componentDidMount() {
-    setInterval(
-      () =>
-        this.setState({
-          uTime: (Date.now() - this.state.startTime) / 1000,
-        }),
-      30
-    );
+    if (typeof window !== 'undefined') {
+      setInterval(
+        () =>
+          this.setState({
+            uTime: (Date.now() - this.state.startTime) / 1000,
+          }),
+        30
+      );
+    }
   }
 
-  listen = (dat, key) => {
-    dat.addColor(this.state, key).onChange(v => {
-      console.log(`setting: ${key}: ${v}`);
+  listen = (f, key) => {
+    f(this.state, key).onChange(v => {
       this.setState({ [key]: v });
     });
   };
 
   mountDatGUI = datgui => {
-    this.listen(datgui, 'uBackgroundColor');
-    this.listen(datgui, 'uSphereColor');
-    this.listen(datgui, 'uFirstLightColor');
-    this.listen(datgui, 'uSecondLightColor');
+    this.listen(datgui.addColor, 'uBackgroundColor');
+    this.listen(datgui.addColor, 'uSphereColor');
+    this.listen(datgui.addColor, 'uFirstLightColor');
+    this.listen(datgui.addColor, 'uSecondLightColor');
   };
 
   render = () => {
