@@ -97,13 +97,15 @@ class ShiftingSpheres extends Component {
   };
 
   componentDidMount() {
-    setInterval(
-      () =>
-        this.setState({
-          uTime: (Date.now() - this.state.startTime) / 1000,
-        }),
-      30
-    );
+    if (typeof window !== 'undefined') {
+      setInterval(
+        () =>
+          this.setState({
+            uTime: (Date.now() - this.state.startTime) / 1000,
+          }),
+        30
+      );
+    }
   }
 
   listen = (f, key) => {
