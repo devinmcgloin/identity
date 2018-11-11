@@ -114,12 +114,12 @@ class ShiftingSpheres extends Component {
     });
   };
 
-  mountDatGUI = datgui => {
-    this.listen(datgui.addColor, 'uBackgroundColor');
-    this.listen(datgui.addColor, 'uSphereColor');
-    this.listen(datgui.addColor, 'uFirstLightColor');
-    this.listen(datgui.addColor, 'uSecondLightColor');
-  };
+  // mountDatGUI = datgui => {
+  //   // this.listen(datgui.addColor, 'uBackgroundColor');
+  //   // this.listen(datgui.addColor, 'uSphereColor');
+  //   // this.listen(datgui.addColor, 'uFirstLightColor');
+  //   // this.listen(datgui.addColor, 'uSecondLightColor');
+  // };
 
   render = () => {
     const { startTime, ...shaderUniforms } = this.state;
