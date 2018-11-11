@@ -23,30 +23,30 @@ const Title = ({ title }) =>
 const Carousel = ({ title, link, cards }) => {
   const renderable = (
     <React.Fragment>
-      <div class="fl w-100 w-100-m w-50-l pa2">
+      <div className="fl w-100 w-100-m w-50-l pa2">
         <Link to={cards[0].slug}>
           <div
-            class="cover pv5 pv6-m pv7-l"
+            className="cover pv5 pv6-m pv7-l"
             style={{
               background: `black url(${withPrefix(cards[0].image)}) center`,
             }}
           />
         </Link>
       </div>
-      <div class="fl w-50 w-25-l pa2">
+      <div className="fl w-50 w-25-l pa2">
         <Link to={cards[1].slug}>
           <div
-            class="cover pv5 pv6-m pv7-l"
+            className="cover pv5 pv6-m pv7-l"
             style={{
               background: `black url(${withPrefix(cards[1].image)}) center`,
             }}
           />
         </Link>
       </div>
-      <div class="fl w-50 w-25-l pa2">
+      <div className="fl w-50 w-25-l pa2">
         <Link to={cards[2].slug}>
           <div
-            class="cover pv5 pv6-m pv7-l"
+            className="cover pv5 pv6-m pv7-l"
             style={{
               background: `black url(${withPrefix(cards[2].image)}) center`,
             }}
