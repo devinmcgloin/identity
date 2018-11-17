@@ -82,7 +82,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
 
   const header = title ? (
     <div className="w-100 center mw8 f3">
-      <h2 className={`f2 ${colorMap[color].text} garamond i`}>{title}</h2>
+      <h2 className={`f2 ${colorMap[color].text} proza-libre i`}>{title}</h2>
     </div>
   ) : (
     undefined
