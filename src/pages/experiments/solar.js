@@ -109,12 +109,15 @@ class Solar extends Component {
 
   drawPlanet = (ctx, x, y, size, rotation, sides, color) => {
     ctx.beginPath();
-    ctx.fillStyle = color;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = '#4e4e4e';
+    ctx.lineWidth = 5;
     const sampleRate = 1 / sides;
-    for (let i = 0; i <= sides * sampleRate; i += sampleRate) {
+    for (let i = 0; i <= (sides + 1) * sampleRate; i += sampleRate) {
       let [x_diff, y_diff] = p2c(size, rotation + i * Math.PI * 2);
       ctx.lineTo(x + x_diff, y + y_diff);
     }
+    ctx.stroke();
     ctx.fill();
   };
   render = () => {
