@@ -11,23 +11,22 @@ export default class Matrix {
     return m;
   }
   restore(m) {
-    copy(m, this.stack.pop());
-  }
-  rotateX(m, a) {
-    return this.matrixMultiply(m, this.rotateXMatrix(a), m);
-  }
-  rotateY(m, a) {
-    return this.matrixMultiply(m, this.rotateYMatrix(a), m);
-  }
-  rotateZ(m, a) {
-    return this.matrixMultiply(m, this.rotateZMatrix(a), m);
+    this.copy(m, this.stack.pop());
   }
   save(m) {
-    this.stack.push(copy([], m));
-    return m;
+    this.stack.push(this.copy([], m));
+  }
+  rotateX(m, a) {
+    this.matrixMultiply(m, this.rotateXMatrix(a), m);
+  }
+  rotateY(m, a) {
+    this.matrixMultiply(m, this.rotateYMatrix(a), m);
+  }
+  rotateZ(m, a) {
+    this.matrixMultiply(m, this.rotateZMatrix(a), m);
   }
   scale(m, x, y, z) {
-    return this.matrixMultiply(m, this.scaleMatrix(x, y, z), m);
+    this.matrixMultiply(m, this.scaleMatrix(x, y, z), m);
   }
   translate(m, v) {
     this.matrixMultiply(m, this.translationMatrix(v), m);

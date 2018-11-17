@@ -59,7 +59,7 @@ blockquote {
 }
 
 blockquote p {
-    font-family: garamond, serif;
+    font-family: 'Proza Libre', serif;
     font-style: italic;
     font-weight: 500;
     line-height: 1.5;
@@ -378,3 +378,11 @@ td {
 .css .o,
 .css .o + .nt,
 .css .nt + .nt { color: #999; }
+
+.proza-libre {
+    font-family: 'Proza Libre';
+}
+
+.open-sans {
+    font-family: 'Open Sans'
+}

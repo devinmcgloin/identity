@@ -2,10 +2,10 @@ import React from 'react';
 
 const Github = ({ repo }) => (
   <a
-    class="dtc v-mid w2 h2 pa1 link pointer grow no-underline bn"
+    className="dtc v-mid w2 h2 pa1 link pointer grow no-underline bn"
     href={`https://github.com/${repo}`}
   >
-    <span class="no-underline">
+    <span className="no-underline">
       <svg viewBox="0 0 16 16">
         <path
           fill="#828282"

@@ -1,3 +1,7 @@
+- title: 'Solar'
+  image: /experiments/solar.png
+  date: '2018-11-17T00:00:00.000Z'
+  slug: /experiments/solar/
 - title: 'Fermat''s Spirals'
   image: /experiments/fermat-spiral.png
   date: '2017-08-11T00:00:00.000Z'
