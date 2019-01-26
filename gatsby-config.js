@@ -5,7 +5,7 @@ module.exports = {
     siteUrl: 'https://devinmcgloin.com',
     headerLinks: [
       { slug: '/projects', title: 'Projects' },
-      { slug: '/experiments', title: 'Experiments' },
+      { slug: '/artwork', title: 'Artwork' },
       { slug: '/writing', title: 'Writing' },
     ],
     social: {
