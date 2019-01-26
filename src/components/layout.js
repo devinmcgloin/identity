@@ -50,7 +50,7 @@ const HeaderLayout = ({ title, children }) => (
     <div className="pa3 topo bb b--black-10">
       <div className="mw8 center">
         <div className="w-100 ">
-          <h1 className="f1 f-headline-ns black-90 fw6 mb2 i proza-libre">
+          <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
             {title}
           </h1>
         </div>
@@ -68,7 +68,7 @@ const PostLayout = ({ title, publishedAt, children }) => (
     <div className="pa3 measure-wide center">
       <article className="pv4">
         <header className="w-100 pr4-ns ">
-          <h1 className="f2 f1-ns black-90 fw5 mb2 i proza-libre">{title}</h1>
+          <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
           <time className="f6 ttu tracked gray open-sans">{publishedAt}</time>
         </header>
         <div className="w-100">
@@ -87,7 +87,7 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
       <article className="pv4">
         <header className="w-100 pr4-ns">
           <div className="dt w-100">
-            <h1 className="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i proza-libre">
+            <h1 className="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i garamond">
               {title}
             </h1>
             {repo && <Github repo={repo} />}
@@ -171,11 +171,11 @@ class ExperimentLayout extends Component {
             <div className="details-container">
               {instructions ? (
                 <React.Fragment>
-                  <h1 className="smaller proza-libre">{title}</h1>
+                  <h1 className="smaller garamond">{title}</h1>
                   <div className="instructions">{instructions}</div>
                 </React.Fragment>
               ) : (
-                <h1 className="proza-libre">{title}</h1>
+                <h1 className="garamond">{title}</h1>
               )}
 
               <div className="nav">

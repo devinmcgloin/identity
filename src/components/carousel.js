@@ -16,7 +16,7 @@ const CallToAction = ({ link }) =>
 const Title = ({ title }) =>
   title && (
     <div className="center mw8 f3">
-      <h2 className="f2 black proza-libre i">{title}</h2>
+      <h2 className="f2 black garamond i">{title}</h2>
     </div>
   );
 

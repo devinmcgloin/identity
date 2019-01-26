@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allImageSharp(filter: { original: { src: { regex: "/sketch/" } } }) {
+    allImageSharp(filter: { original: { src: { regex: "/sail/" } } }) {
       edges {
         node {
           id
