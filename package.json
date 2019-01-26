@@ -31,6 +31,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "react-measure": "^2.0.0",
+    "react-photo-gallery": "^6.3.0",
     "tachyons": "^4.11.1",
     "typeface-open-sans": "^0.0.54",
     "unsplash": "^4.2.0",
@@ -40,6 +41,7 @@
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "start": "gatsby develop --prefix-paths",
+    "start-remote": "gatsby develop -H 0.0.0.0 -p 8000",
     "fmt": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
