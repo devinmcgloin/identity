@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   });
   return (
     <HeaderLayout title="Artwork">
-      <Gallery photos={images}/>
+      <Gallery photos={images} />
     </HeaderLayout>
   );
 };

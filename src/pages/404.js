@@ -1,6 +1,7 @@
 import React from 'react';
 import { StandardLayout } from '../components/layout';
 import { Link } from 'gatsby';
+
 const NotFoundPage = () => (
   <StandardLayout>
     <div className="topo w-100 vh-75">
@@ -10,10 +11,10 @@ const NotFoundPage = () => (
         </h1>
         <h2 className="fw5">
           Sorry, we've misplaced that URL or it's pointing to something that
-          doesn't exist.
+          doesn't exist.{' '}
           <Link className="link dim gray underline" to="/">
             Head back home
-          </Link>
+          </Link>{' '}
           to try finding it again.
         </h2>
       </header>
