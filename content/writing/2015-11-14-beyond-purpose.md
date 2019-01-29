@@ -39,7 +39,6 @@ in that adventure. I don’t think anyone would say that that was a bad idea, th
 that wasn’t great. We need more of those things—at least we need some of those
 things.
 
-{: .quote-source}
 Elon Musk
 
 

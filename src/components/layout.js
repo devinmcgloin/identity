@@ -26,10 +26,6 @@ const StandardLayout = ({ children }) => (
               github
               twitter
               unsplash
-              linkedin
-              angelslist
-              fokal
-              city
             }
           }
         }

@@ -9,7 +9,6 @@ layout: 'post'
 
 > Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life.
 
-{: .quote-source}
 Steve Jobs
 
 I had heard this quotation before, I would remember it for a week or maybe

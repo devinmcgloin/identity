@@ -19,7 +19,7 @@ Perhaps every chair they make has a slightly improved design, maybe they execute
 an old design better then they could before or they may use different materials.
 
 With every new chair comes increased understanding. A different back on chair
-#4, or a different joint on chair #6. As more chairs are produced the woodworker
+\#4, or a different joint on chair \#6. As more chairs are produced the woodworker
 converges on *Quality*. Each chair becomes a better experience for those who
 have the pleasure of experiencing it.
 
@@ -106,5 +106,3 @@ to me.
 If you know of places that think about software in a similar manner, produce
 software of high quality and would be a good place to learn the ways of the bits
 please let me know.
-
-[Email](mailto:devin@devinmcgloin.com) or [@devinmcgloin](https://twitter.com/devinmcgloin)
