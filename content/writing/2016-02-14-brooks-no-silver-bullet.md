@@ -24,9 +24,6 @@ topic as software is becoming far more complex and therefore the number of ways
 in which it can fail is also increasing dramatically. We're far past the point
 where a single person can understand the whole environment in which they work.
 
-* TOC
-{: toc}
-
 Programming, Brooks argues, can be separated into distinct tasks. The first is
 dealing with incidental complexity, and the second managing essential
 complexity. We'd like to spend as much time as possible on the essential tasks,

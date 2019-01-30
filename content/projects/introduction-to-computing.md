@@ -12,9 +12,6 @@ Functions, data types, collections and control flow. I will explain why they
 exist in the simplest terms I can, while showing examples of different languages
 and syntaxes. This introduction assumes no knowledge of programming whatsoever.
 
-* TOC
-{:toc}
-
 ## Assignment Operations
 If I say it is going to rain tomorrow, what do you think? Chances are it has
 something to do with the weather, specific the type of weather called rain, and
