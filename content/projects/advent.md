@@ -18,13 +18,13 @@ and Telegram.
 
 <div class="tc w-100 mb2">
     <a href="https://m.me/adventerm" class="bn">
-        <img src="/public/advent/messenger.png"/>
+        <img src="/advent/messenger.png"/>
     </a>
 </div>
 
 <div class="tc w-100">
     <a href="https://telegram.me/cave_adventure_bot" class="bn">
-        <img src="/public/advent/telegram.png"/>
+        <img src="/advent/telegram.png"/>
     </a>
 </div>
 

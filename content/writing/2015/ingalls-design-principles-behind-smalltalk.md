@@ -128,7 +128,7 @@ what man and machine can achieve *together*.
 [3]: http://papers.devinmcgloin.com/comp_sci_fundamentals_and_history/Licklider-IntergalacticNetwork.pdf
 [4]: http://www.rollingstone.com/culture/news/steve-jobs-in-1994-the-rolling-stone-interview-20110117
 [5]: https://www.youtube.com/watch?v=_ahvzDzKdB0&ab_channel=BillPugh
-[Forms of Communication]: /public/ingalls-design-principles-behind-smalltalk/forms-of-communication.jpg
+[Forms of Communication]: /ingalls-design-principles-behind-smalltalk/forms-of-communication.jpg
 [6]: http://www.yearofcode.org/
 [7]: https://code.org
 [8]: http://www.yeswecode.org

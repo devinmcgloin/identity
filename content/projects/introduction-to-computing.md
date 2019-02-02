@@ -120,7 +120,7 @@ graph is a thing that has `vertices` and `edges`. You can think of a vertex as a
 smaller piece of content, and an edge as a connection between that content. So
 we have a start vertex and a bunch of end vertices.
 
-![A picture of a graph](/public/introduction-to-computing/graph.png)
+![A picture of a graph](/introduction-to-computing/graph.png)
 <small>A diagram of our simple music program</small>
 
 So if we look at our graph, we see that there is a start node that points to two

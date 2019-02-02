@@ -42,10 +42,8 @@ function here is `s.startswith("g") or s.startswith("&")`, we can see here that
 it returns true from `&!!` to `&~~` and  `g!!` to `g~~`. Great thats exactly
 what we wanted.
 
-{:.tc}
-![Simple Demo]({{baseurl}}/public/vtest/simple.png)
+![Simple Demo](/vtest/simple.png)
 
 This obviously works for math as well. Here's `x^3/3`
 
-{:.tc}
-![Math Demo]({{baseurl}}/public/vtest/math.png)
+![Math Demo](/vtest/math.png)
