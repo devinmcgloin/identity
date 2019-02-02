@@ -33,10 +33,9 @@ const BaseLayout = ({ children }) => (
   />
 );
 
-const StandardMetadata = ({ title, description, locale, siteUrl, social }) => (
-  <Helmet>
+const StandardMetadata = ({ title, description, siteUrl, social }) => (
+  <Helmet titleTemplate={`%s - ${title}`} defaultTitle={title}>
     <meta charSet="utf-8" />
-    <title>{title}</title>
     <link rel="shortcut icon" href="/public/favicon.ico" />
     <link
       rel="alternate"
@@ -77,7 +76,7 @@ const StandardMetadata = ({ title, description, locale, siteUrl, social }) => (
     <meta property="og:description" content={description} />
     <meta property="description" content={description} />
     <meta property="og:site_name" content={title} />
-    <meta property="og:locale" content={locale} />
+    <meta property="og:locale" content="en" />
 
     <meta name="author" content={social.name} />
 
@@ -88,4 +87,16 @@ const StandardMetadata = ({ title, description, locale, siteUrl, social }) => (
   </Helmet>
 );
 
-export { BaseLayout, StandardMetadata };
+const CommonMetadata = ({ title, description }) => (
+  <Helmet>
+    <title>{title}</title>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="description" content={description} />
+    <meta property="og:site_name" content={title} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </Helmet>
+);
+
+export { BaseLayout, CommonMetadata };

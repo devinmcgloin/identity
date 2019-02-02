@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import { BaseLayout } from './metadata';
+import { BaseLayout, CommonMetadata } from './metadata';
 import Header from './header';
 import Footer from './footer';
 import { Github } from './icons';
@@ -45,6 +45,7 @@ const StandardLayout = ({ children }) => (
 
 const HeaderLayout = ({ title, children }) => (
   <StandardLayout>
+    <CommonMetadata title={title} />
     <div className="pa3 topo bb b--black-10">
       <div className="mw8 center">
         <div className="w-100 ">
@@ -63,6 +64,7 @@ const HeaderLayout = ({ title, children }) => (
 
 const PostLayout = ({ title, publishedAt, children }) => (
   <StandardLayout>
+    <CommonMetadata title={title} />
     <div className="pa3 measure-wide center">
       <article className="pv4">
         <header className="w-100 pr4-ns ">
@@ -81,6 +83,8 @@ const PostLayout = ({ title, publishedAt, children }) => (
 
 const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
   <StandardLayout>
+    <CommonMetadata title={title} />
+
     <div className="center pa3 mw7">
       <article className="pv4">
         <header className="w-100 pr4-ns">
@@ -148,6 +152,8 @@ class ExperimentLayout extends Component {
 
     return (
       <BaseLayout>
+        <CommonMetadata title={title} />
+
         <Measure
           bounds
           onResize={contentRect => {
