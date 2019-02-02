@@ -57,14 +57,12 @@ const Carousel = ({ title, link, cards }) => {
   );
 
   return (
-    <div className="">
-      <div className="center">
-        <Title title={title} />
-        <section className="w-100 ph2 cf helvetica dark-gray bg-white">
-          {renderable}
-        </section>
-        <CallToAction link={link} />
-      </div>
+    <div className="ph3 center">
+      <Title title={title} />
+      <section className="w-100 cf helvetica dark-gray bg-white">
+        {renderable}
+      </section>
+      <CallToAction link={link} />
     </div>
   );
 };

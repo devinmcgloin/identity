@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
       <tr>
         <td className="pv3 pr3 bb b--black-20">{b.title}</td>
         <td className="pv3 pr3 bb b--black-20">{b.author}</td>
-        <td className="pv3 pr3 bb b--black-20">{b.rating}</td>
+        <td className="pv3 pr3 bb b--black-20">{b.rating}/3</td>
       </tr>
     ));
 
