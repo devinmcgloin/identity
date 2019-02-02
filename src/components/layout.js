@@ -8,6 +8,8 @@ import dat from 'dat.gui';
 import '../style/datgui.css';
 import 'tachyons/css/tachyons.css';
 import '../style/identity.css';
+import '../style/prism-theme.css';
+
 import Measure from 'react-measure';
 
 const StandardLayout = ({ children }) => (

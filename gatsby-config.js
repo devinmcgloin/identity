@@ -2,6 +2,7 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: 'Devin McGloin',
+    description: 'Converging on quality',
     siteUrl: 'https://devinmcgloin.com',
     headerLinks: [
       { slug: '/projects', title: 'Projects' },
@@ -19,9 +20,11 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-feed',
     {
       resolve: `gatsby-source-unsplash`,
       options: {
