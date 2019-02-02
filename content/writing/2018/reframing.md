@@ -10,7 +10,7 @@ layout: 'post'
 ---
 
 I last wrote about my goals in [Mission
-Briefing](/2017/03/mission-briefing/) back in March of 2017. It's time to
+Briefing](/writing/2017/mission-briefing/) back in March of 2017. It's time to
 reframe that post, with more detail and view the same problems outlined there at
 a lower altitude.
 
