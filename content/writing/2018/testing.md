@@ -94,11 +94,12 @@ Besides hoping something clicks in the mind of the programmer, I'm not sure what
 Of course the simple fix for our problem is as follows:
 ```python
 class Record:
+    """Given bounds on a <= 99999, b <= 99, and c <= 99"""
     def __init__(self, a, b, c):
         self.a = a
         self.b = b
         self.c = c
 
     def __hash__(self):
-        return int("{}|{}|{}".format(self.a, self.b, self.c))
+        return int("{:5d}{:2d}{:2d}".format(self.a, self.b, self.c))
 ```
