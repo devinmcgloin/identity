@@ -36,7 +36,7 @@ const BaseLayout = ({ children }) => (
 const StandardMetadata = ({ title, description, siteUrl, social }) => (
   <Helmet titleTemplate={`%s - ${title}`} defaultTitle={title}>
     <meta charSet="utf-8" />
-    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -45,26 +45,10 @@ const StandardMetadata = ({ title, description, siteUrl, social }) => (
     />
     <link rel="canonical" href={siteUrl} />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="/public/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/public/favicon-16x16.png"
-      sizes="16x16"
-    />
-    <meta
-      name="twitter:image"
-      content="https://devinmcgloin.com/public/icon.png"
-    />
-    <meta
-      property="og:image"
-      content="https://devinmcgloin.com/public/icon.png"
-    />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <meta name="twitter:image" content="https://devinmcgloin.com/icon.png" />
+    <meta property="og:image" content="https://devinmcgloin.com/icon.png" />
 
     <meta property="og:image:height" content="550" />
     <meta property="og:image:width" content="550" />
