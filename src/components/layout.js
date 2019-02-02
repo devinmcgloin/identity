@@ -176,7 +176,10 @@ class ExperimentLayout extends Component {
                   <h1 className="garamond">{title}</h1>
                 )}
 
-                <div className="nav">
+                <div
+                  className="nav"
+                  style={{ display: 'flex', flexWrap: 'wrap' }}
+                >
                   <a href="/">devinmcgloin.com</a>
                   <span className="nav-sep">&middot;</span>
                   <a href="/experiments/">Experiments</a>
