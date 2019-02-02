@@ -22,13 +22,6 @@ const StandardLayout = ({ children }) => (
               slug
               title
             }
-            social {
-              name
-              email
-              github
-              twitter
-              unsplash
-            }
           }
         }
       }
@@ -37,7 +30,7 @@ const StandardLayout = ({ children }) => (
       <BaseLayout>
         <Header links={data.site.siteMetadata.headerLinks} />
         {children}
-        <Footer {...data.site.siteMetadata.social} />
+        <Footer />
       </BaseLayout>
     )}
   />
