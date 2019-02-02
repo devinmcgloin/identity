@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
         { type: 'excerpt', description: 'Description' },
       ]}
       rows={data.projects.edges.map(e => flatten(e.node))}
-      color="dark"
+      color="light"
       title="Projects"
       link="/projects"
     />
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
         },
       ]}
       rows={data.writing.edges.map(e => flatten(e.node))}
-      color="dark"
+      color="light"
       title="Writing"
       link="/writing"
     />
