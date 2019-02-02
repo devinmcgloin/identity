@@ -2,6 +2,7 @@ import React from 'react';
 import { ProjectLayout } from '../components/layout';
 import moment from 'moment';
 import { graphql } from 'gatsby';
+import { CommonMetadata } from '../components/metadata';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -13,6 +14,10 @@ export default ({ data }) => {
       repo={post.frontmatter.repo}
       license={post.frontmatter.license}
     >
+      <CommonMetadata
+        title={post.frontmatter.title}
+        description={post.frontmatter.excerpt}
+      />
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </ProjectLayout>
   );
@@ -27,6 +32,7 @@ export const query = graphql`
         date
         repo
         license
+        excerpt
       }
     }
   }
