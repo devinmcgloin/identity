@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import { BaseLayout } from './metadata';
 import Header from './header';
 import Footer from './footer';
-import Helmet from 'react-helmet';
 import { Github } from './icons';
 import dat from 'dat.gui';
 import '../style/datgui.css';
@@ -34,11 +34,11 @@ const StandardLayout = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="sans-serif">
+      <BaseLayout>
         <Header links={data.site.siteMetadata.headerLinks} />
         {children}
         <Footer {...data.site.siteMetadata.social} />
-      </div>
+      </BaseLayout>
     )}
   />
 );
@@ -147,47 +147,49 @@ class ExperimentLayout extends Component {
     );
 
     return (
-      <Measure
-        bounds
-        onResize={contentRect => {
-          this.setState({ dimensions: contentRect.bounds });
-        }}
-      >
-        {({ measureRef }) => (
-          <div
-            ref={measureRef}
-            className="webgl-container"
-            style={{ backgroundColor: color }}
-          >
-            {mountDatGUI && (
-              <div
-                className="absolute"
-                style={{ right: 0, zIndex: 1 }}
-                id="dat-gui"
-              />
-            )}
-            <div className="details-container">
-              {instructions ? (
-                <React.Fragment>
-                  <h1 className="smaller garamond">{title}</h1>
-                  <div className="instructions">{instructions}</div>
-                </React.Fragment>
-              ) : (
-                <h1 className="garamond">{title}</h1>
+      <BaseLayout>
+        <Measure
+          bounds
+          onResize={contentRect => {
+            this.setState({ dimensions: contentRect.bounds });
+          }}
+        >
+          {({ measureRef }) => (
+            <div
+              ref={measureRef}
+              className="webgl-container"
+              style={{ backgroundColor: color }}
+            >
+              {mountDatGUI && (
+                <div
+                  className="absolute"
+                  style={{ right: 0, zIndex: 1 }}
+                  id="dat-gui"
+                />
               )}
+              <div className="details-container">
+                {instructions ? (
+                  <React.Fragment>
+                    <h1 className="smaller garamond">{title}</h1>
+                    <div className="instructions">{instructions}</div>
+                  </React.Fragment>
+                ) : (
+                  <h1 className="garamond">{title}</h1>
+                )}
 
-              <div className="nav">
-                <a href="/">devinmcgloin.com</a>
-                <span className="nav-sep">&middot;</span>
-                <a href="/experiments/">Experiments</a>
-                <span className="nav-sep">&middot;</span>
-                <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+                <div className="nav">
+                  <a href="/">devinmcgloin.com</a>
+                  <span className="nav-sep">&middot;</span>
+                  <a href="/experiments/">Experiments</a>
+                  <span className="nav-sep">&middot;</span>
+                  <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
+                </div>
               </div>
+              {renderable}
             </div>
-            {renderable}
-          </div>
-        )}
-      </Measure>
+          )}
+        </Measure>
+      </BaseLayout>
     );
   };
 }
