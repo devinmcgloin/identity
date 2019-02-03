@@ -89,7 +89,7 @@ module.exports = {
         start_url: '/',
         background_color: '#ededed',
         theme_color: '#eee',
-        display: 'minimal-ui',
+        display: 'browser',
         icon: 'content/images/icon.png',
       },
     },
