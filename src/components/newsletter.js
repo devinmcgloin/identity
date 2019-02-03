@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Newsletter = () => (
-  <div className="tl pa3 pa5-ns near-white topo bb">
+  <div className="tl pa3 pa5-ns near-white feature-bg bb">
     <form
       className="mw6 center bg-near-white pa4 ba b--black-50 br2"
       method="POST"
@@ -16,7 +16,7 @@ const Newsletter = () => (
           I'll send you posts, new experiments or artwork.
         </legend>
         <div className="cf">
-          <label className="clip" for="email-address">
+          <label className="clip" htmlFor="email-address">
             Email Address
           </label>
           <input
@@ -38,4 +38,4 @@ const Newsletter = () => (
   </div>
 );
 
-export default newsletter;
+export default Newsletter;

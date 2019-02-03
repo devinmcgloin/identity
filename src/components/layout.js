@@ -39,7 +39,7 @@ const StandardLayout = ({ children }) => (
 const HeaderLayout = ({ title, children }) => (
   <StandardLayout>
     <CommonMetadata title={title} />
-    <div className="pa3 topo bb b--black-10">
+    <div className="pa3 feature-bg bb b--black-10">
       <div className="mw8 center">
         <div className="w-100 ">
           <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
