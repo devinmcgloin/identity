@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Splash = () => (
-  <div className="pv2 cf feature-bg">
-    <div className="mw8 center pa2">
-      <header className="fl w-100 w-50-l pv4-l pa3 mb3 mb5-l">
+  <div className="cf feature-bg pa3">
+    <div className="mw8 center">
+      <header className="fl w-two-thirds pa3 ma3 ma5-l">
         <h2 className="lh-title f1-ns f2 b mt0 garamond i">
           I make products that help people to understand the world around them,
           and think of new solutions to difficult problems.
