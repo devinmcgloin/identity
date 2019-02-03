@@ -1,16 +1,16 @@
 - title: 'Solar'
-  image: /experiments/solar.png
+  image: /interactive/solar.png
   date: '2018-11-17T00:00:00.000Z'
-  slug: /experiments/solar/
+  slug: /interactive/solar/
 - title: 'Fermat''s Spirals'
-  image: /experiments/fermat-spiral.png
+  image: /interactive/fermat-spiral.png
   date: '2017-08-11T00:00:00.000Z'
-  slug: /experiments/fermat-spiral/
+  slug: /interactive/fermat-spiral/
 - title: 'Additive Splines'
-  image: /experiments/additive-splines.png
+  image: /interactive/additive-splines.png
   date: '2017-05-13T00:00:00.000Z'
-  slug: /experiments/additive-splines/
+  slug: /interactive/additive-splines/
 - title: Boids
-  image: /experiments/boids.jpeg
+  image: /interactive/boids.jpeg
   date: '2017-05-11T00:00:00.000Z'
-  slug: /experiments/boids/
+  slug: /interactive/boids/

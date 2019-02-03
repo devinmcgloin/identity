@@ -182,7 +182,7 @@ class ExperimentLayout extends Component {
                 >
                   <a href="/">devinmcgloin.com</a>
                   <span className="nav-sep">&middot;</span>
-                  <a href="/experiments/">Experiments</a>
+                  <a href="/artwork/">Artwork</a>
                   <span className="nav-sep">&middot;</span>
                   <a href="https://twitter.com/devinmcgloin">@devinmcgloin</a>
                 </div>
