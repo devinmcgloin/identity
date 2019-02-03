@@ -39,10 +39,9 @@ a:active {
 
 blockquote {
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     line-height: 1.5;
     background-color: #ffffff;
-    background-image: url("topography.svg");
     position: relative;
 }
 
