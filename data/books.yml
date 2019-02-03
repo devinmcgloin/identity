@@ -8,14 +8,14 @@
   comment: Sasha takes you on a fantastic historical and theoretical journey through the most impactful Computer Science algorithms.
 - title: The Code Book
   author: Simon Singh
-  rating: 2
+  rating: 3
   comment:
 - title: Zen and the Art of Motorcycle Maintenance
   author: Robert Pirsig
   rating: 3
   comment:
 - title: 2BRO2B
-  author: Kurt vonnegut
+  author: Kurt Vonnegut
   rating: 2
   comment:
 - title: The Innovators
@@ -32,5 +32,25 @@
   comment:
 - title: The Illustrated Man
   author: Ray Bradbury
+  rating: 2
+  comment:
+- title: The Dream Machine
+  author: M. Mitchell Waldrop
+  rating: 3
+  comment:
+- title: The Four
+  author: Scott Galloway
+  rating: 2
+  comment:
+- title: Life In Code
+  author: Ellen Ullman
+  rating: 2
+  comment:
+- title: Ubik
+  author: Philip K Dick
+  rating: 3
+  comment:
+- title: Mindstorms
+  author: Seymour Papert
   rating: 2
   comment:

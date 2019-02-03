@@ -37,6 +37,7 @@ const IndexPage = ({ data }) => {
     </HeaderLayout>
   );
 };
+
 export const query = graphql`
   {
     allBooksYaml {
