@@ -1,7 +1,7 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
 import { graphql } from 'gatsby';
-import Gallery from 'react-photo-gallery';
+import Gallery from '../components/gallery';
 
 const IndexPage = ({ data }) => {
   let images = data.allUnsplashPhoto.edges.map(e => {
@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => {
   });
   return (
     <HeaderLayout title="Photography">
-      <Gallery margin={5} photos={images} />
+      <Gallery images={images} />
     </HeaderLayout>
   );
 };
