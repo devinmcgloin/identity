@@ -22,8 +22,8 @@ const IndexPage = ({ data }) => (
       link="/projects"
     />
     <Carousel
-      title="Experiments"
-      link="/experiments"
+      title="Artwork"
+      link="/artwork"
       cards={data.experiments.edges.map(e => flatten(e.node))}
     />
     <Table
