@@ -99,6 +99,7 @@ const Footer = () => (
             <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
               {projects.map(p => (
                 <a
+                  key={p.slug}
                   className="f6 db fw5 pv1 black-70 link dim"
                   title={p.title}
                   href={p.slug}
@@ -110,11 +111,12 @@ const Footer = () => (
             <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
               {experiments.map(p => (
                 <a
+                  key={p.slug}
                   className="f6 db fw5 pv1 black-70 link dim"
                   title={p.title}
                   href={p.slug}
                 >
-                  <span className="black-50">experiment</span>/{p.title}
+                  <span className="black-50">interactive</span>/{p.title}
                 </a>
               ))}
             </article>
