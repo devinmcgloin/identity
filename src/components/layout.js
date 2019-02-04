@@ -94,17 +94,6 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
         </header>
         <div className="w-100 open-sans">
           <div className="lh-copy mt4 mt0-ns">{children}</div>
-          {license === 'MIT' && (
-            <React.Fragment>
-              <h2>License</h2>
-              <a
-                className="link dim underline black-60"
-                href="https://opensource.org/licenses/MIT"
-              >
-                MIT License
-              </a>
-            </React.Fragment>
-          )}
         </div>
       </article>
     </div>
