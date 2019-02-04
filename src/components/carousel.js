@@ -57,7 +57,7 @@ const Carousel = ({ title, link, cards }) => {
   );
 
   return (
-    <div className="ph3 center">
+    <div className="center">
       <Title title={title} />
       <section className="w-100 cf helvetica dark-gray bg-white">
         {renderable}

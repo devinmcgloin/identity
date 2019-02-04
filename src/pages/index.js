@@ -11,35 +11,37 @@ const IndexPage = ({ data }) => (
   <StandardLayout>
     <Splash />
     <Currently />
-    <Table
-      columns={[
-        { type: 'title', description: 'Title' },
-        { type: 'excerpt', description: 'Description' },
-      ]}
-      rows={data.projects.edges.map(e => flatten(e.node))}
-      color="light"
-      title="Projects"
-      link="/projects"
-    />
-    <Carousel
-      title="Artwork"
-      link="/artwork"
-      cards={data.experiments.edges.map(e => flatten(e.node))}
-    />
-    <Table
-      columns={[
-        { type: 'title', description: 'Title' },
-        {
-          type: 'date',
-          description: 'Date',
-          dateFormatter: 'dddd, MMMM Do 0YYYY',
-        },
-      ]}
-      rows={data.writing.edges.map(e => flatten(e.node))}
-      color="light"
-      title="Writing"
-      link="/writing"
-    />
+    <div className="ph3">
+      <Table
+        columns={[
+          { type: 'title', description: 'Title' },
+          { type: 'excerpt', description: 'Description' },
+        ]}
+        rows={data.projects.edges.map(e => flatten(e.node))}
+        color="light"
+        title="Projects"
+        link="/projects"
+      />
+      <Carousel
+        title="Artwork"
+        link="/artwork"
+        cards={data.experiments.edges.map(e => flatten(e.node))}
+      />
+      <Table
+        columns={[
+          { type: 'title', description: 'Title' },
+          {
+            type: 'date',
+            description: 'Date',
+            dateFormatter: 'dddd, MMMM Do 0YYYY',
+          },
+        ]}
+        rows={data.writing.edges.map(e => flatten(e.node))}
+        color="light"
+        title="Writing"
+        link="/writing"
+      />
+    </div>
   </StandardLayout>
 );
 
