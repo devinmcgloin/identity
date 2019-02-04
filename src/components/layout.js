@@ -94,7 +94,7 @@ const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
         </header>
         <div className="w-100 open-sans">
           <div className="lh-copy mt4 mt0-ns">{children}</div>
-          {license === 'MIT' || (
+          {license === 'MIT' && (
             <React.Fragment>
               <h2>License</h2>
               <a
