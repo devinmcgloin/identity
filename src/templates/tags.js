@@ -12,16 +12,30 @@ export default ({ pageContext, data }) => {
   return (
     <HeaderLayout title={header}>
       <CommonMetadata title={header} />
-      {edges.map(({ node }) => {
-        const { title } = node.frontmatter;
-        const { slug } = node.fields;
-        return (
-          <li key={slug}>
-            <Link to={slug}>{title}</Link>
-          </li>
-        );
-      })}
-      <Link to="/tags"> View all tags</Link>
+      <ul className="list pl0">
+        {edges.map(({ node }) => {
+          const { title, excerpt } = node.frontmatter;
+          const { slug } = node.fields;
+          return (
+            <Link key={slug} to={slug} className="no-underline">
+              <li className="pa3 pa4-ns">
+                <b className="db f3 mb1 garamond underline">{title}</b>
+                <span className="f5 db lh-copy">{excerpt}</span>
+              </li>
+            </Link>
+          );
+        })}
+      </ul>
+      <div className="w-100 mw8 center tc pt4">
+        <Link
+          className={
+            'f6 br2 ba ph3 pv2 mb2 dib bg-animate no-underline index-button'
+          }
+          to={'/tags'}
+        >
+          View All Tags
+        </Link>
+      </div>
     </HeaderLayout>
   );
 };
@@ -41,6 +55,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            excerpt
           }
         }
       }

@@ -98,9 +98,9 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.onPreBootstrap = () => {
   require('isomorphic-fetch');
 };
-
 const slugify = str =>
   str
     .toLowerCase()
     .replace(/ /g, '-')
     .replace(/[^\w-]+/g, '');
+
