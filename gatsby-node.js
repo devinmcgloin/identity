@@ -31,6 +31,9 @@ exports.createPages = ({ graphql, actions }) => {
               fields {
                 slug
               }
+              frontmatter {
+                tags
+              }
             }
           }
         }
@@ -50,12 +53,28 @@ exports.createPages = ({ graphql, actions }) => {
           path: node.fields.slug,
           component: path.resolve(templatePath),
           context: {
-            // Data passed to context is available
-            // in page queries as GraphQL variables.
             slug: node.fields.slug,
           },
         });
       });
+
+      let tags = [];
+      result.data.allMarkdownRemark.edges.forEach(
+        ({ node }) => (tags = tags.concat(node.frontmatter.tags))
+      );
+
+      [...new Set(tags)]
+        .filter(t => t !== null)
+        .forEach(tag => {
+          createPage({
+            path: `/tags/${slugify(tag)}`,
+            component: path.resolve('./src/templates/tags.js'),
+            context: {
+              tag,
+            },
+          });
+        });
+
       resolve();
     });
   });
@@ -79,3 +98,9 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.onPreBootstrap = () => {
   require('isomorphic-fetch');
 };
+const slugify = str =>
+  str
+    .toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]+/g, '');
+
