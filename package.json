@@ -44,6 +44,7 @@
   "keywords": [],
   "scripts": {
     "build": "gatsby build --prefix-paths",
+    "now-build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "start": "gatsby develop --prefix-paths",
     "start-remote": "gatsby develop -H 0.0.0.0 -p 8000",
