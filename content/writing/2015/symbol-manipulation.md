@@ -14,16 +14,16 @@ inputs in English furthermore Searle has no previous knowledge of
 Chinese or its grammatical structures. Suppose that Searle and the
 programmers who are giving him instructions get so good at their
 respective tasks that Searle’s Chinese outputs become
-indistinguishable from those of a native Chinese speaker.[^fn-searle]
+indistinguishable from those of a native Chinese speaker.[^1]
 
 Searle’s argument goes as follows:
 
-1.	In the Chinese Room Experiment Searle uses the formal properties
+1. In the Chinese Room Experiment Searle uses the formal properties
       of symbols to produce output symbols, but this does not generate
       understanding.
-2.	There is nothing more that a computer program has than what Searle
+2. There is nothing more that a computer program has than what Searle
       has inside the room.
-3.	So a computer program doesn’t understand what the symbols mean and
+3. So a computer program doesn’t understand what the symbols mean and
       therefore does not have a mind.
 
 One would intuitively conclude that even though Searle can respond to
@@ -39,7 +39,7 @@ understand and is not a mind.
 
 The first objection to Searle’s Argument is from Robert Abelson, who’s
 response is titled “Searle’s argument is just a set of Chinese
-symbols”[^fn-abelson], I have to agree with Abelson, we express the
+symbols”[^3], I have to agree with Abelson, we express the
 vast majority of our thoughts to the world through the manipulation of
 formal symbols, both in Speech and Writing. For the most part we
 accept the symbolic and formal definitions of objects in our world and
@@ -70,15 +70,12 @@ intentionality in virtue of their use case. (Searle, 1980, p. 419)
 However we must examine the root of understanding in order to
 determine that what it means to be a mind resides in a much more
 fundamental process. Take for example Lewis Carroll’s “What the
-Tortoise Said to Achilles”[^fn-carrol], in which a tortoise presents
+Tortoise Said to Achilles”[^2], in which a tortoise presents
 the following argument:
 
->A: "Things that are equal to the same are equal to each other”
-
->B: "The two sides of this triangle are things that are equal to the
->same"
-
->Therefore Z: "The two sides of this triangle are equal to each other"
+* A: "Things that are equal to the same are equal to each other”
+* B: "The two sides of this triangle are things that are equal to the same"
+* Therefore Z: "The two sides of this triangle are equal to each other"
 
 The tortoise then asks Achilles if the conclusion logically follows
 from the premises, Achilles agrees. The tortoise then asks if a reader
@@ -88,7 +85,7 @@ premises and but reject the conclusion. Achilles says such a reader
 might exist, and the tortoise asks Achilles to prove the argument
 valid to such a reader. Achilles then adds the premise,
 
->C: “If A and B are true, then Z must be true”.
+* C: “If A and B are true, then Z must be true”.
 
 The tortoise agrees to this new premise but still rejects the
 conclusion. Such a reader could never be convinced of the argument, as
@@ -148,6 +145,6 @@ connectives are needed. Luckily they are the one things computers can
 be said to truly understand in virtue their physical nature.
 
 ### References
-[^fn-searle]: Searle, John R. (1980), ["Minds, brains, and programs"](http://papers.devinmcgloin.com/machine_minds/Searle%20_1980_%20Minds,%20Brains,%20and%20Programs.pdf), *Society for Philosophy and Psychology*
-[^fn-carrol]: Carroll, Lewis (1995), [What the Tourtise said to Achilles](http://papers.devinmcgloin.com/machine_minds/achilles.pdf), *Mind*
-[^fn-abelson]: Abelson, Robert (1980), ["Searle's argument is just a set of Chinese symbols"](http://papers.devinmcgloin.com/machine_minds/Searle%20_1980_%20Minds,%20Brains,%20and%20Programs.pdf), Page 424, *Society for Philosophy and Psychology*
+[^1]: Searle, John R. (1980), ["Minds, brains, and programs"](http://papers.devinmcgloin.com/machine_minds/Searle%20_1980_%20Minds,%20Brains,%20and%20Programs.pdf), *Society for Philosophy and Psychology*
+[^2]: Carroll, Lewis (1995), [What the Tourtise said to Achilles](http://papers.devinmcgloin.com/machine_minds/achilles.pdf), *Mind*
+[^3]: Abelson, Robert (1980), ["Searle's argument is just a set of Chinese symbols"](http://papers.devinmcgloin.com/machine_minds/Searle%20_1980_%20Minds,%20Brains,%20and%20Programs.pdf), Page 424, *Society for Philosophy and Psychology*
