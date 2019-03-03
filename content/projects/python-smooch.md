@@ -44,33 +44,32 @@ from [Smooch](http://docs.smooch.io/rest).
 
 ### Messages
 
-| Function         | Arguments                                                                   | Notes                                                    |
-|:-----------------|:----------------------------------------------------------------------------|:---------------------------------------------------------|
-| send_message     | user_id:string, plain_text:string, sent_by_maker=true                       |                                                          |
-| get_conversation | user_id:string                                                              |                                                          |
-| send_links       | user_id:string, message_text:string, options:[(tag, uri)]                   |                                                          |
-| send_postbacks   | user_id:string, message_text:string, options:[(tag, postback payload)]      |                                                          |
-| request_payment  | user_id:string, message_text:string, options:[(tag, price in cents)]        | Note [stripe](https://stripe.com) must be enabled.       |
-| send_buttons     | user_id:string, message_text:string, options:[(message_text, kind, result)] | This allows you to mix button types in the same message. |
+| Function           | Arguments                                                                         | Notes                                                      |
+| :----------------- | :----------------------------------------------------------------------------     | :--------------------------------------------------------- |
+| `send_message`     | `user_id:string`, `plain_text:string`, `sent_by_maker=true`                       |                                                            |
+| `get_conversation` | `user_id:string`                                                                  |                                                            |
+| `send_links`       | `user_id:string`, `message_text:string`, `options:[(tag, uri)]`                   |                                                            |
+| `send_postbacks`   | `user_id:string`, `message_text:string`, `options:[(tag, postback payload)]`      |                                                            |
+| `request_payment`  | `user_id:string`, `message_text:string`, `options:[(tag, price in cents)]`        | Note [stripe](https://stripe.com) must be enabled.         |
+| `send_buttons`     | `user_id:string`, `message_text:string`, `options:[(message_text, kind, result)]` | This allows you to mix button types in the same message.   |
 
 ### Users
 
-| Function        | Arguments                          | Notes |
-|:----------------|:-----------------------------------|:------|
-| pre_create_user | user_id:string                     |       |
-| get_user        | user_id:string                     |       |
-| update_user     | user_id:string, data:map           |       |
-| init_user       | device:string, user_id:string=None |       |
+| Function          | Arguments                              | Notes   |
+| :---------------- | :-----------------------------------   | :------ |
+| `pre_create_user` | `user_id:string`                       |         |
+| `get_user`        | `user_id:string`                       |         |
+| `update_user`     | `user_id:string`, `data:map`           |         |
+| `init_user`       | `device:string`, `user_id:string=None` |         |
 
 ### Webhooks
 
-| Function             | Arguments                                        | Notes                                |
-|:---------------------|:-------------------------------------------------|:-------------------------------------|
-| get_webhook          | webhook_id:string                                |                                      |
-| create_webhook       | target:uri, triggers:[string]                    | trigger types are defined by smooch. |
-| list_webhooks        |                                                  |                                      |
-| ensure_webhook_exist | target:uri, triggers:[string]                    | trigger types are defined by smooch. |
-| delete_webhook       | webhook_id:string                                |                                      |
-| delete_all_webhooks  |                                                  |                                      |
-| update_webhook       | webhook_id:string, target:uri, triggers:[string] |                                      |
-
+| Function               | Arguments                                              | Notes                                  |
+| :--------------------- | :-------------------------------------------------     | :------------------------------------- |
+| `get_webhook`          | `webhook_id:string`                                    |                                        |
+| `create_webhook`       | `target:uri`, `triggers:[string]`                      | trigger types are defined by smooch.   |
+| `list_webhooks`        |                                                        |                                        |
+| `ensure_webhook_exist` | `target:uri`, `triggers:[string]`                      | trigger types are defined by smooch.   |
+| `delete_webhook`       | `webhook_id:string`                                    |                                        |
+| `delete_all_webhooks`  |                                                        |                                        |
+| `update_webhook`       | `webhook_id:string`, `target:uri`, `triggers:[string]` |                                        |
