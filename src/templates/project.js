@@ -10,14 +10,11 @@ export default ({ data }) => {
   return (
     <ProjectLayout
       title={post.frontmatter.title}
+      description={post.frontmatter.excerpt}
       publishedAt={moment(Date.parse(post.frontmatter.date))}
       repo={post.frontmatter.repo}
       license={post.frontmatter.license}
     >
-      <CommonMetadata
-        title={post.frontmatter.title}
-        description={post.frontmatter.excerpt}
-      />
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </ProjectLayout>
   );

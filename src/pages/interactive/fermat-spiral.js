@@ -39,6 +39,7 @@ class FermatSpirals extends Component {
     return (
       <ExperimentLayout
         title="Fermat's Spirals"
+        description="See Fermat's spiral fill the screen, or tweak the angle to create your own spiral."
         color="#4499d6"
         mountDatGUI={this.mountDatGUI}
       />

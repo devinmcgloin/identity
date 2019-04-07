@@ -188,6 +188,7 @@ class AdditiveSplines extends Component {
     return (
       <ExperimentLayout
         title="Additive Splines"
+        description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
         color="#b2b2b2"
         mountDatGUI={this.mountDatGUI}
       />

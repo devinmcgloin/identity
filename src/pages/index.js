@@ -1,14 +1,16 @@
 import React from 'react';
-import { Splash } from '../components/splash';
+import { Splash, CallToAction } from '../components/splash';
 import Currently from '../components/currently';
 import Table from '../components/table-list';
 import { StandardLayout } from '../components/layout';
+import { CommonMetadata } from '../components/metadata';
 import { flatten } from '../lib/transformation';
 import Carousel from '../components/carousel';
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
   <StandardLayout>
+    <CommonMetadata description={CallToAction} />
     <Splash />
     <Currently />
     <div className="ph3">

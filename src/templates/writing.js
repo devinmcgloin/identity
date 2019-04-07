@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { PostLayout } from '../components/layout';
-import { CommonMetadata } from '../components/metadata';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
@@ -10,12 +9,8 @@ export default ({ data }) => {
     <PostLayout
       title={post.frontmatter.title}
       publishedAt={post.frontmatter.date}
+      description={post.frontmatter.excerpt}
     >
-      <CommonMetadata
-        title={post.frontmatter.title}
-        description={post.frontmatter.excerpt}
-      />
-
       <div id="post" dangerouslySetInnerHTML={{ __html: post.html }} />
     </PostLayout>
   );

@@ -69,6 +69,7 @@ class Boids extends Component {
     return (
       <ExperimentLayout
         title="Boids"
+        description="These boids are based on common flocking patterns, and attempt to create a digital Koi Pond from above."
         color="#4499d6"
         mountDatGUI={this.mountDatGUI}
       />

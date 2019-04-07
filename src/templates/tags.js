@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
 import { Link, graphql } from 'gatsby';
-import { CommonMetadata } from '../components/metadata';
 
 export default ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -10,8 +9,10 @@ export default ({ pageContext, data }) => {
   const header = `On ${tag}`;
 
   return (
-    <HeaderLayout title={header}>
-      <CommonMetadata title={header} />
+    <HeaderLayout
+      title={header}
+      description={`Various thoughts on ${tag} and other musings`}
+    >
       <ul className="list pl0">
         {edges.map(({ node }) => {
           const { title, excerpt } = node.frontmatter;

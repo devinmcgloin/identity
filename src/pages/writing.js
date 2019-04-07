@@ -5,7 +5,10 @@ import { flatten } from '../lib/transformation';
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => (
-  <HeaderLayout title="Writing">
+  <HeaderLayout
+    title="Writing"
+    description="Thoughts from behind the screen, added to every so often."
+  >
     <Table
       columns={[
         { type: 'title', description: 'Title' },
