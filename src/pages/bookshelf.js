@@ -6,6 +6,7 @@ const IndexPage = ({ data }) => {
   let books = data.allBooksYaml.edges;
   let renderedBooks = books
     .map(edge => edge.node)
+    .sort((a, b) => a.rating > b.rating)
     .map(b => (
       <tr>
         <td className="pv3 pr3 bb b--black-20">{b.title}</td>
@@ -15,7 +16,10 @@ const IndexPage = ({ data }) => {
     ));
 
   return (
-    <HeaderLayout title="Bookshelf">
+    <HeaderLayout
+      title="Bookshelf"
+      description="Books I've read, along with ratings."
+    >
       <div className="pa2">
         <div className="overflow-auto">
           <table className="f6 w-100 mw8 center" cellSpacing="0">

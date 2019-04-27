@@ -124,6 +124,7 @@ class Solar extends Component {
     return (
       <ExperimentLayout
         title="Solar"
+        description="A two dimensional solar system, simple rotations in 2d space."
         color="#4e4e4e"
         // mountDatGUI={this.mountDatGUI}
       />

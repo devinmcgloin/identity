@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
     };
   });
   return (
-    <HeaderLayout title="Artwork">
+    <HeaderLayout title="Artwork" description="Personal artwork I've created, both interactive and static">
       <h2 className="f3 pl2 ttu tracked lh-copy black-60">Interactive</h2>
       <article className="dib w-100">
         {data.allExperimentsYaml.edges.map(e => {

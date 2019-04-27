@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
@@ -71,16 +72,23 @@ const StandardMetadata = ({ title, description, siteUrl, social }) => (
   </Helmet>
 );
 
-const CommonMetadata = ({ title, description }) => (
-  <Helmet>
-    <title>{title}</title>
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="description" content={description} />
-    <meta property="og:site_name" content={title} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-  </Helmet>
-);
+const CommonMetadata = ({ title, description }) => {
+  return (
+    <Helmet>
+      {title && <title>{title}</title>}
+      {title && <meta property="og:title" content={title} />}
+      {title && <meta property="og:site_name" content={title} />}
+      {title && <meta name="twitter:title" content={title} />}
+      {description && <meta property="og:description" content={description} />}
+      {description && <meta property="description" content={description} />}
+      {description && <meta name="twitter:description" content={description} />}
+    </Helmet>
+  );
+};
+
+CommonMetadata.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
 
 export { BaseLayout, CommonMetadata };

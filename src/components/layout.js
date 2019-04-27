@@ -12,7 +12,7 @@ import '../style/prism-theme.css';
 
 import Measure from 'react-measure';
 
-const StandardLayout = ({ children }) => (
+const StandardLayout = ({ title, description, children }) => (
   <StaticQuery
     query={graphql`
       {
@@ -28,6 +28,7 @@ const StandardLayout = ({ children }) => (
     `}
     render={data => (
       <BaseLayout>
+        <CommonMetadata title={title} description={description} />
         <Header links={data.site.siteMetadata.headerLinks} />
         {children}
         <Footer />
@@ -36,9 +37,8 @@ const StandardLayout = ({ children }) => (
   />
 );
 
-const HeaderLayout = ({ title, children }) => (
-  <StandardLayout>
-    <CommonMetadata title={title} />
+const HeaderLayout = ({ title, description, children }) => (
+  <StandardLayout title={title} description={description}>
     <div className="feature-bg bb b--black-10">
       <div className="mw8 center pa3">
         <div className="w-100 ">
@@ -55,9 +55,8 @@ const HeaderLayout = ({ title, children }) => (
   </StandardLayout>
 );
 
-const PostLayout = ({ title, publishedAt, children }) => (
-  <StandardLayout>
-    <CommonMetadata title={title} />
+const PostLayout = ({ title, description, publishedAt, children }) => (
+  <StandardLayout title={title} description={description}>
     <div className="pa3 measure-wide center">
       <article className="pv4">
         <header className="w-100 pr4-ns ">
@@ -74,10 +73,15 @@ const PostLayout = ({ title, publishedAt, children }) => (
   </StandardLayout>
 );
 
-const ProjectLayout = ({ title, publishedAt, repo, license, children }) => (
-  <StandardLayout>
-    <CommonMetadata title={title} />
-
+const ProjectLayout = ({
+  title,
+  description,
+  publishedAt,
+  repo,
+  license,
+  children,
+}) => (
+  <StandardLayout title={title} description={description}>
     <div className="center pa3 mw7">
       <article className="pv4">
         <header className="w-100 pr4-ns">
@@ -119,7 +123,14 @@ class ExperimentLayout extends Component {
   };
 
   render = () => {
-    const { color, instructions, title, mountDatGUI, children } = this.props;
+    const {
+      color,
+      instructions,
+      title,
+      description,
+      mountDatGUI,
+      children,
+    } = this.props;
     const { width, height } = this.state.dimensions;
     const renderable = children ? (
       <div className="webgl-sketch">
@@ -134,7 +145,7 @@ class ExperimentLayout extends Component {
 
     return (
       <BaseLayout>
-        <CommonMetadata title={title} />
+        <CommonMetadata title={title} description={description} />
 
         <Measure
           bounds
