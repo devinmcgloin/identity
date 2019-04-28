@@ -1,7 +1,7 @@
 import React from 'react';
 
 const currently = () => (
-  <div className="tl pa3 pa5-ns bg-blue near-white">
+  <div className="tl pa3 pa5-ns">
     <div className="mw8 center">
       <section className="lh-copy">
         <article className="pv2 w-100 ph2">
