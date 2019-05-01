@@ -5,7 +5,7 @@ const currently = () => (
     <div className="mw8 center">
       <section className="lh-copy">
         <article className="pv2 w-100 ph2">
-          <h2 className="f2 f1-ns fw6 mb2">
+          <h2 className="garamond f2 f1-ns fw6 mb2">
             What I'm ( doing / thinking ) about
           </h2>
           <p className="f5 f4-ns lh-copy mt0">
@@ -18,7 +18,7 @@ const currently = () => (
 
         <section style={{ display: 'flex', flexWrap: 'wrap' }}>
           <article className="fl pv2 w-100 w-third-l w-50-m ph2">
-            <h2 className="f5 f4-ns fw6 mb0">Knowing Quality</h2>
+            <h2 className="garamond f5 f4-ns fw6 mb0">Knowing Quality</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Assessing quality is both a question of what Quality is, and how
               to get there. That said, it's one of the most meaningful item to
@@ -26,7 +26,7 @@ const currently = () => (
             </p>
           </article>
           <article className="pv2 fl w-100 w-third-l w-50-m ph2">
-            <h2 className="f5 f4-ns fw6 mb0">Generative Artwork</h2>
+            <h2 className="garamond f5 f4-ns fw6 mb0">Generative Artwork</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Computer Generated artwork is an exciting mix between computing
               and creativity in a medium without limits. I'll be publishing more
@@ -34,7 +34,7 @@ const currently = () => (
             </p>
           </article>
           <article className="pv2 fl w-100 w-third-l w-50-m ph2">
-            <h2 className="f5 f4-ns fw6 mb0">Cycling & Backpacking</h2>
+            <h2 className="garamond f5 f4-ns fw6 mb0">Cycling & Backpacking</h2>
             <p className="f6 f5-ns lh-copy mt0">
               These are both fantastic ways to see things you wouldn't be able
               to otherwise, not to mention how calming it is to be present in
@@ -43,7 +43,7 @@ const currently = () => (
             </p>
           </article>
           <article className="pv2 fl w-100 w-third-l w-50-m ph2">
-            <h2 className="f5 f4-ns fw6 mb0">Understanding Context</h2>
+            <h2 className="garamond f5 f4-ns fw6 mb0">Understanding Context</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Understanding the context swirling around what you're working
               towards helps massively in knowing what you ought to focus on. I'm
@@ -52,7 +52,7 @@ const currently = () => (
             </p>
           </article>
           <article className="pv2 fl w-100 w-third-l w-50-m ph2">
-            <h2 className="f5 f4-ns fw6 mb0">Distilling Ideas</h2>
+            <h2 className="garamond f5 f4-ns fw6 mb0">Distilling Ideas</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Communicating ideas is incredibly important, as is distilling
               rough ideas to their core fundamentals. I'm interested in honing
@@ -60,7 +60,7 @@ const currently = () => (
             </p>
           </article>
           <article className="pv2 fl w-100 w-third-l w-50-m ph2">
-            <h2 className="f5 f4-ns fw6 mb0">History of Computing</h2>
+            <h2 className="garamond f5 f4-ns fw6 mb0">History of Computing</h2>
             <p className="f6 f5-ns lh-copy mt0">
               I'm enamored with where we've been in computing. The history of
               this relatively young field is bright with unique and powerful
