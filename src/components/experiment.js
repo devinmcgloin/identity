@@ -59,7 +59,6 @@ const setupCanvas = (
 };
 
 export {
-  setupComponent,
   resize,
   defineCanvasProperties,
   updateCanvas,
