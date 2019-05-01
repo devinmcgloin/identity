@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => {
     .map(edge => edge.node)
     .sort((a, b) => a.rating > b.rating)
     .map(b => (
-      <tr>
+      <tr key={b.title}>
         <td className="pv3 pr3 bb b--black-20">{b.title}</td>
         <td className="pv3 pr3 bb b--black-20">{b.author}</td>
         <td className="pv3 pr3 bb b--black-20">{b.rating}/3</td>
