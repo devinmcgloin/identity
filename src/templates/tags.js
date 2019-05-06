@@ -2,9 +2,9 @@ import React from 'react';
 import { HeaderLayout } from '../components/layout';
 import { Link, graphql } from 'gatsby';
 
-export default ({ pageContext, data }) => {
+const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
 
   const header = `On ${tag}`;
 
@@ -43,7 +43,7 @@ export default ({ pageContext, data }) => {
 
 export const query = graphql`
   query($tag: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
@@ -63,3 +63,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default TagTemplate;

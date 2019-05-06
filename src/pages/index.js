@@ -59,7 +59,7 @@ export const query = graphql`
         }
       }
     }
-    writing: allMarkdownRemark(
+    writing: allMdx(
       filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
       limit: 5
@@ -78,7 +78,7 @@ export const query = graphql`
         }
       }
     }
-    projects: allMarkdownRemark(
+    projects: allMdx(
       filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
       limit: 5

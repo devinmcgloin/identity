@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
           description: 'Date',
         },
       ]}
-      rows={data.allMarkdownRemark.edges.map(e => flatten(e.node))}
+      rows={data.allMdx.edges.map(e => flatten(e.node))}
       color="light"
     />
   </HeaderLayout>
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    allMarkdownRemark(
+    allMdx(
       filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
     ) {

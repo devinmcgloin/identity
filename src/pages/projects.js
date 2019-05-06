@@ -4,25 +4,28 @@ import Table from '../components/table-list';
 import { flatten } from '../lib/transformation';
 import { graphql } from 'gatsby';
 
-const IndexPage = ({ data }) => (
-  <HeaderLayout
-    title="Projects"
-    description="Porjects I've worked on, both current and past."
-  >
-    <Table
-      columns={[
-        { type: 'title', description: 'Title' },
-        { type: 'excerpt', description: 'Description' },
-      ]}
-      rows={data.allMarkdownRemark.edges.map(e => flatten(e.node))}
-      color="light"
-    />
-  </HeaderLayout>
-);
+const IndexPage = ({ data }) => {
+  debugger;
+  return (
+    <HeaderLayout
+      title="Projects"
+      description="Porjects I've worked on, both current and past."
+    >
+      <Table
+        columns={[
+          { type: 'title', description: 'Title' },
+          { type: 'excerpt', description: 'Description' },
+        ]}
+        rows={data.allMdx.edges.map(e => flatten(e.node))}
+        color="light"
+      />
+    </HeaderLayout>
+  );
+};
 
 export const query = graphql`
   {
-    allMarkdownRemark(
+    allMdx(
       filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
     ) {
