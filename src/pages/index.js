@@ -13,7 +13,7 @@ const IndexPage = ({ data }) => (
     <CommonMetadata description={CallToAction} />
     <Splash />
     <Currently />
-    <div className="ph3">
+    <div className="ph3 ph5-ns">
       <Table
         columns={[
           { type: 'title', description: 'Title' },

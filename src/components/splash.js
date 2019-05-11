@@ -8,7 +8,7 @@ const Splash = () => {
     <div className="cf feature-bg pa3 ma2 br2">
       <div className="mw8 center">
         <header className="w-100 w-two-thirds-l pa3 pa5-ns">
-          <h2 className="lh-title f1-ns f2 b ma0 garamond i">{CallToAction}</h2>
+          <h2 className="lh-title f1-ns f3 b ma0 garamond i">{CallToAction}</h2>
         </header>
       </div>
     </div>

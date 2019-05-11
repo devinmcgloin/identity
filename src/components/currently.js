@@ -5,7 +5,7 @@ const currently = () => (
     <div className="mw8 center">
       <section className="lh-copy">
         <article className="pv2 w-100 ph2">
-          <h2 className="garamond f2 f1-ns fw6 mb2">
+          <h2 className="garamond f3 f2-ns fw7 mb2">
             What I'm ( doing / thinking ) about
           </h2>
           <p className="f5 f4-ns lh-copy mt0">
