@@ -103,4 +103,3 @@ const slugify = str =>
     .toLowerCase()
     .replace(/ /g, '-')
     .replace(/[^\w-]+/g, '');
-

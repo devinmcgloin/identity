@@ -12,7 +12,10 @@ const IndexPage = ({ data }) => {
     };
   });
   return (
-    <HeaderLayout title="Photography" description="Various photos I'm proud of. Taken across the world and stored on Unsplash.">
+    <HeaderLayout
+      title="Photography"
+      description="Various photos I'm proud of. Taken across the world and stored on Unsplash."
+    >
       <Gallery images={images} />
     </HeaderLayout>
   );

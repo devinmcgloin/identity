@@ -13,7 +13,10 @@ const Tags = ({
     allMarkdownRemark: { group },
   },
 }) => (
-  <HeaderLayout title={'Tags'} description="Want to find something specific? This will help you get there.">
+  <HeaderLayout
+    title={'Tags'}
+    description="Want to find something specific? This will help you get there."
+  >
     <ul>
       {group.map(tag => (
         <li className="dib mr1 mb2" key={tag.fieldValue}>
