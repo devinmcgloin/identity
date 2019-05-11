@@ -12,7 +12,10 @@ const IndexPage = ({ data }) => {
     };
   });
   return (
-    <HeaderLayout title="Artwork" description="Personal artwork I've created, both interactive and static">
+    <HeaderLayout
+      title="Artwork"
+      description="Personal artwork I've created, both interactive and static"
+    >
       <h2 className="f3 pl2 ttu tracked lh-copy black-60">Interactive</h2>
       <article className="dib w-100">
         {data.allExperimentsYaml.edges.map(e => {
@@ -20,11 +23,11 @@ const IndexPage = ({ data }) => {
             <Link
               key={e.node.slug}
               to={e.node.slug}
-              className="fl w-50 w-third-l overflow-hidden pa2"
+              className="fl w-50 w-25-l overflow-hidden pa2"
             >
               <div
                 role="img"
-                className="aspect-ratio--1x1"
+                className="aspect-ratio--9x16 br2"
                 style={{
                   background: `url(${withPrefix(
                     e.node.image
