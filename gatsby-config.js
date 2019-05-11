@@ -85,13 +85,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'devin-mcgloin',
+        name: 'Devin McGloin',
+        short_name: 'devinmcgloin',
         start_url: '/',
         background_color: '#B3C6C4',
         theme_color: '#B3C6C4',
         display: 'browser',
-        icon: 'content/images/icon.png',
+        icon: 'static/icon.png',
       },
     },
     'gatsby-plugin-offline',
