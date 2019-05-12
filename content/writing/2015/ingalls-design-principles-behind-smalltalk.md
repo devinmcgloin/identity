@@ -4,7 +4,7 @@ author: Dan Ingalls
 category: paper
 date: '2015-12-07'
 title: Design Principles
-    Behind Smalltalk
+  Behind Smalltalk
 source: 'http://papers.devinmcgloin.com/smalltalk/Design-Principles-Behind-Smalltalk.pdf'
 year: 1981
 excerpt: Ingalls describes Smalltalk, a language that “Provides Computer support for the create spirit in everyone”. I love how the paper starts off with the describing the purpose of a language as communicating models between the user to the compuer, the goal is to develop an expressive yet simple language that that empowers its users. Ingalls goes over 17 principles that all languges ought to follow.
@@ -40,9 +40,8 @@ and have it be understood in the manner it was intend. Ingalls terms this
 initial knowledge to be implicit communication, and the model itself as explicit
 communication.
 
-{:.tc}
-![Figure 1][Forms of Communication]
-<br><small>*Figure 1, Design Principles Behind Smalltalk*</small>
+![Figure 1][forms of communication]
+<br><small>_Figure 1, Design Principles Behind Smalltalk_</small>
 
 Most of human language is built upon the implicit communication, in fact Ingalls
 notes that "Human language is built upon allusion". Part of the work I've been
@@ -56,11 +55,11 @@ One of the legacies from the Smalltalk system is Object Oriented Programming
 (OOP). Steve Jobs does an excellent job of explaining OOP with the following
 from [Rolling Stone's 1994 Interview of Jobs][4]:
 
->Objects are like people. They're living, breathing things that have knowledge inside them about how to do things and have memory inside them so they can remember things. And rather than interacting with them at a very low level, you interact with them at a very high level of abstraction, like we're doing right here.
+> Objects are like people. They're living, breathing things that have knowledge inside them about how to do things and have memory inside them so they can remember things. And rather than interacting with them at a very low level, you interact with them at a very high level of abstraction, like we're doing right here.
 >
->Here's an example: If I'm your laundry object, you can give me your dirty clothes and send me a message that says, "Can you get my clothes laundered, please." I happen to know where the best laundry place in San Francisco is. And I speak English, and I have dollars in my pockets. So I go out and hail a taxicab and tell the driver to take me to this place in San Francisco. I go get your clothes laundered, I jump back in the cab, I get back here. I give you your clean clothes and say, "Here are your clean clothes."
+> Here's an example: If I'm your laundry object, you can give me your dirty clothes and send me a message that says, "Can you get my clothes laundered, please." I happen to know where the best laundry place in San Francisco is. And I speak English, and I have dollars in my pockets. So I go out and hail a taxicab and tell the driver to take me to this place in San Francisco. I go get your clothes laundered, I jump back in the cab, I get back here. I give you your clean clothes and say, "Here are your clean clothes."
 >
->You have no idea how I did that. You have no knowledge of the laundry place. Maybe you speak French, and you can't even hail a taxi. You can't pay for one, you don't have dollars in your pocket. Yet I knew how to do all of that. And you didn't have to know any of it. All that complexity was hidden inside of me, and we were able to interact at a very high level of abstraction. That's what objects are. They encapsulate complexity, and the interfaces to that complexity are high level.
+> You have no idea how I did that. You have no knowledge of the laundry place. Maybe you speak French, and you can't even hail a taxi. You can't pay for one, you don't have dollars in your pocket. Yet I knew how to do all of that. And you didn't have to know any of it. All that complexity was hidden inside of me, and we were able to interact at a very high level of abstraction. That's what objects are. They encapsulate complexity, and the interfaces to that complexity are high level.
 
 Guy Steele talks about how Java embodied similar ideas in [Growing a
 language][5] at the 1998 OOPSLA Conference. Steele begins by limiting his
@@ -119,16 +118,14 @@ and code is 10x more important than small increases in efficiency.
 
 The more adaptable the system, the empowering it is. If they can transmit the
 model in their heads, to a model in the machine, there would be no bounds in
-what man and machine can achieve *together*.
-
-
+what man and machine can achieve _together_.
 
 [1]: http://papers.devinmcgloin.com/smalltalk/Design-Principles-Behind-Smalltalk.pdf
 [2]: https://en.wikipedia.org/wiki/Smalltalk
 [3]: http://papers.devinmcgloin.com/comp_sci_fundamentals_and_history/Licklider-IntergalacticNetwork.pdf
 [4]: http://www.rollingstone.com/culture/news/steve-jobs-in-1994-the-rolling-stone-interview-20110117
 [5]: https://www.youtube.com/watch?v=_ahvzDzKdB0&ab_channel=BillPugh
-[Forms of Communication]: /ingalls-design-principles-behind-smalltalk/forms-of-communication.jpg
+[forms of communication]: /ingalls-design-principles-behind-smalltalk/forms-of-communication.jpg
 [6]: http://www.yearofcode.org/
 [7]: https://code.org
 [8]: http://www.yeswecode.org
