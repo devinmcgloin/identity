@@ -49,7 +49,7 @@ const HeaderLayout = ({ title, description, children }) => (
       </div>
     </div>
 
-    <div className="mw8 center pa3 open-sans">
+    <div className="mw8 center open-sans">
       <div className="pv4">{children}</div>
     </div>
   </StandardLayout>
