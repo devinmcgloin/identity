@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
             >
               <div
                 role="img"
-                className="aspect-ratio--9x16 br2"
+                className="aspect-ratio--1x1 br2"
                 style={{
                   background: `url(${withPrefix(
                     e.node.image
