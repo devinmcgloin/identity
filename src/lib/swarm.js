@@ -295,7 +295,6 @@ class Swarm {
   step = function() {
     var ctx = this.ctx;
 
-    debugger;
     var displayWidth = ctx.canvas.parentNode.clientWidth;
     var displayHeight = ctx.canvas.parentNode.clientHeight;
 
