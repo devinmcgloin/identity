@@ -39,13 +39,13 @@ const StandardLayout = ({ title, description, children }) => (
 
 const HeaderLayout = ({ title, description, children }) => (
   <StandardLayout title={title} description={description}>
-    <div className="feature-bg ma2 br2 pb2">
-      <div className="mw8 center pa3">
-        <div className="w-100">
+    <div className="pb2 ph3">
+      <div className="mw8 center feature-bg br2">
+        <header className="w-100 mw7 pv3 ph4">
           <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
             {title}
           </h1>
-        </div>
+        </header>
       </div>
     </div>
 

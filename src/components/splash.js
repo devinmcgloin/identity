@@ -5,10 +5,10 @@ const CallToAction =
 
 const Splash = () => {
   return (
-    <div className="cf feature-bg pa3 ma2 br2">
-      <div className="mw8 center">
-        <header className="w-100 w-two-thirds-l pa3 pa5-ns">
-          <h2 className="lh-title f1-ns f3 b ma0 garamond i">{CallToAction}</h2>
+    <div className="cf ph3 pb2">
+      <div className="mw8 center feature-bg br2">
+        <header className="w-100 mw7 pv3 ph4 pa5-ns">
+          <h2 className="lh-title f1-ns f2 b ma0 garamond i">{CallToAction}</h2>
         </header>
       </div>
     </div>
@@ -16,13 +16,9 @@ const Splash = () => {
 };
 
 const Lead = title => (
-  <div className="pa3 feature-bg bb b--black-10">
-    <div className="mw8 center">
-      <div className="w-100 ">
-        <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
-          {title}
-        </h1>
-      </div>
+  <div className="mw8 center pa3 feature-bg">
+    <div className="w-100 ">
+      <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">{title}</h1>
     </div>
   </div>
 );
