@@ -2,8 +2,8 @@
 layout: project
 title: Introduction to Computing
 permalink: /intro-to-computing/
-date: "2016-02-23"
-excerpt: "An introduction to programming from the ground up."
+date: '2016-02-23'
+excerpt: 'An introduction to programming from the ground up.'
 ---
 
 Programming languages at their core are very simple. There are at most about 6
@@ -13,6 +13,7 @@ exist in the simplest terms I can, while showing examples of different languages
 and syntaxes. This introduction assumes no knowledge of programming whatsoever.
 
 ## Assignment Operations
+
 If I say it is going to rain tomorrow, what do you think? Chances are it has
 something to do with the weather, specific the type of weather called rain, and
 also has something to do with tomorrow. If you believe me, perhaps I'm
@@ -54,13 +55,14 @@ by name we know we have the contents of that symbol, but we do not know if it is
 what we expect it to be.
 
 ## Control Flow
+
 Control Flow is all about making decisions. If it rains tomorrow, you should
 bring an umbrella, is an example of control flow. We have a if key word that
 lets you know the structure of the sentence, followed by a statement that can
 either be true or false, and then some action that should be performed if the
 statement is true. Here is what that would look like in Lisp.
 
-```cl
+```lisp
 (if (rain? tomorrow)
     (bring umbrella))
 ;; the english version would be the following
@@ -197,8 +199,8 @@ raspPi.turnOn();
 raspPi.runProgram("Music Manager")
 ```
 
-
 ## Data Types
+
 Now that we know what functions are we would like to know what types of things
 those functions can take as arguments. Languages handle this issue in different
 ways, dynamically typed languages infer the type you mean, based upon its
@@ -218,21 +220,21 @@ struct car{
 }
 ```
 
-They char * might be a little confusing, it just points to the first char in the
+They char \* might be a little confusing, it just points to the first char in the
 total string. The key thing to note is that each of these items in the structure
 have specific types. The same general idea applies to object oriented
 programming, but in OOP each type has associated methods.
 
 Clojure and other dynamic languages take a different approach.
 
-```clj
+```clojure
 (defstruct car :make :model :year ...)
 ```
 
 You can think of this as a table, in which each key corresponds to a value.
 
 | key    | val     |
-|:-------|:--------|
+| :----- | :------ |
 | :make  | Porsche |
 | :model | 911     |
 | :year  | 1973    |
@@ -240,6 +242,7 @@ You can think of this as a table, in which each key corresponds to a value.
 The key thing to note is that each of these keys do not have an associated type.
 
 ## Collections
+
 Collections are groups of specific types. It makes assignment easier as you
 don't have to think of each item as a separate thing, but rather part of a large
 collection. Here's an example of what python would look like without
@@ -281,6 +284,7 @@ way. They vary dramatically, but it's important to remember that each data
 structure is optimizing specific access patterns.
 
 ## Iteration
+
 Suppose you have a collection of things. I'm going to assume you choose cars,
 because that is going to be the running example through out this post, feel free
 to replace car with a type of thing of your choice. Imagine further that your
@@ -338,5 +342,6 @@ As you can see `foreach` loops iterate over every member in the collection, whil
 Lets unpack `(int i = 0; i < 100; i++)` a bit more an get an understanding of what each of the terms means. In english it would be `(do this at the start; loop while this is true; do this after every loop)`
 
 ---
+
 If you found this useful or useless I'd love to hear from you about ways to
 improve this introduction. You can email [devin@devinmcgloin](mailto:devin@devinmcgloin.com).
