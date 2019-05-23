@@ -40,7 +40,7 @@ export default class CustomGallery extends Component {
         <Gallery
           photos={this.props.images}
           onClick={this.openLightbox}
-          ImageComponent={SelectedImage}
+          renderImage={SelectedImage}
           margin={5}
         />
         <Lightbox
