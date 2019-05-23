@@ -43,7 +43,7 @@
     "tachyons": "^4.11.1",
     "typeface-open-sans": "^0.0.54",
     "unsplash": "^4.2.0",
-    "unsplash-js": "^4.8.0"
+    "unsplash-js": "^5.0.0"
   },
   "keywords": [],
   "scripts": {
