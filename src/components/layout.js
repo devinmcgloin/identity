@@ -41,7 +41,7 @@ const HeaderLayout = ({ title, description, children }) => (
   <StandardLayout title={title} description={description}>
     <div className="pb2 ph3">
       <div className="mw8 center feature-bg br2">
-        <header className="w-100 mw7 pv3 ph4">
+        <header className="w-100 measure-wide pv3 ph4">
           <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
             {title}
           </h1>
@@ -82,7 +82,7 @@ const ProjectLayout = ({
   children,
 }) => (
   <StandardLayout title={title} description={description}>
-    <div className="center pa3 mw7">
+    <div className="center pa3 measure-wide">
       <article className="pv4">
         <header className="w-100 pr4-ns">
           <div className="dt w-100">

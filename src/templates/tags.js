@@ -15,13 +15,13 @@ const TagTemplate = ({ pageContext, data }) => {
     >
       <ul className="list pl0">
         {edges.map(({ node }) => {
-          const { title, excerpt } = node.frontmatter;
+          const { title } = node.frontmatter;
           const { slug } = node.fields;
           return (
             <Link key={slug} to={slug} className="no-underline">
               <li className="pa3 pa4-ns">
                 <b className="db f3 mb1 garamond underline">{title}</b>
-                <span className="f5 db lh-copy">{excerpt}</span>
+                <span className="f5 db lh-copy">{node.excerpt}</span>
               </li>
             </Link>
           );
@@ -51,13 +51,15 @@ export const query = graphql`
       totalCount
       edges {
         node {
+          frontmatter {
+            title
+            categories
+            date(formatString: "dddd, MMMM Do 0YYYY")
+          }
           fields {
             slug
           }
-          frontmatter {
-            title
-            excerpt
-          }
+          excerpt(pruneLength: 200)
         }
       }
     }

@@ -34,12 +34,12 @@ export const query = graphql`
           frontmatter {
             title
             categories
-            excerpt
             date(formatString: "dddd, MMMM Do 0YYYY")
           }
           fields {
             slug
           }
+          excerpt
         }
       }
     }

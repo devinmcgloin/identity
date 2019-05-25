@@ -2,7 +2,7 @@ import React from 'react';
 import { ProjectLayout } from '../components/layout';
 import moment from 'moment';
 import { graphql } from 'gatsby';
-import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 
 const ProjectTemplate = ({ data }) => {
   const post = data.mdx;
@@ -10,7 +10,7 @@ const ProjectTemplate = ({ data }) => {
   return (
     <ProjectLayout
       title={post.frontmatter.title}
-      description={post.frontmatter.excerpt}
+      description={post.excerpt}
       publishedAt={moment(Date.parse(post.frontmatter.date))}
       repo={post.frontmatter.repo}
       license={post.frontmatter.license}
@@ -28,11 +28,11 @@ export const query = graphql`
         date
         repo
         license
-        excerpt
       }
       code {
         body
       }
+      excerpt
     }
   }
 `;
