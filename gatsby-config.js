@@ -1,3 +1,5 @@
+const mdxFeed = require('gatsby-mdx/feed');
+
 module.exports = {
   siteMetadata: {
     title: 'Devin McGloin',
@@ -46,7 +48,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-feed',
+    { resolve: 'gatsby-plugin-feed', options: mdxFeed },
     {
       resolve: `gatsby-source-unsplash`,
       options: {
