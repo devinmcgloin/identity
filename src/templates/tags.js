@@ -2,9 +2,9 @@ import React from 'react';
 import { HeaderLayout } from '../components/layout';
 import { Link, graphql } from 'gatsby';
 
-export default ({ pageContext, data }) => {
+const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
 
   const header = `On ${tag}`;
 
@@ -15,13 +15,13 @@ export default ({ pageContext, data }) => {
     >
       <ul className="list pl0">
         {edges.map(({ node }) => {
-          const { title, excerpt } = node.frontmatter;
+          const { title } = node.frontmatter;
           const { slug } = node.fields;
           return (
             <Link key={slug} to={slug} className="no-underline">
               <li className="pa3 pa4-ns">
                 <b className="db f3 mb1 garamond underline">{title}</b>
-                <span className="f5 db lh-copy">{excerpt}</span>
+                <span className="f5 db lh-copy">{node.excerpt}</span>
               </li>
             </Link>
           );
@@ -43,7 +43,7 @@ export default ({ pageContext, data }) => {
 
 export const query = graphql`
   query($tag: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
@@ -51,15 +51,19 @@ export const query = graphql`
       totalCount
       edges {
         node {
+          frontmatter {
+            title
+            categories
+            date(formatString: "dddd, MMMM Do 0YYYY")
+          }
           fields {
             slug
           }
-          frontmatter {
-            title
-            excerpt
-          }
+          excerpt(pruneLength: 200)
         }
       }
     }
   }
 `;
+
+export default TagTemplate;

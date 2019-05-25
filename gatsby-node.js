@@ -10,7 +10,7 @@ const path = require('path');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` });
     createNodeField({
       node,
@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     graphql(`
       {
-        allMarkdownRemark {
+        allMdx {
           edges {
             node {
               fields {
@@ -39,7 +39,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      result.data.allMdx.edges.forEach(({ node }) => {
         let templatePath;
         switch (node.fields.slug.split('/')[1]) {
           case 'writing':
@@ -59,7 +59,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
 
       let tags = [];
-      result.data.allMarkdownRemark.edges.forEach(
+      result.data.allMdx.edges.forEach(
         ({ node }) => (tags = tags.concat(node.frontmatter.tags))
       );
 

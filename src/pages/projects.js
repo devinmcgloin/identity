@@ -7,14 +7,14 @@ import { graphql } from 'gatsby';
 const IndexPage = ({ data }) => (
   <HeaderLayout
     title="Projects"
-    description="Porjects I've worked on, both current and past."
+    description="Projects I've worked on, both current and past."
   >
     <Table
       columns={[
         { type: 'title', description: 'Title' },
         { type: 'excerpt', description: 'Description' },
       ]}
-      rows={data.allMarkdownRemark.edges.map(e => flatten(e.node))}
+      rows={data.allMdx.edges.map(e => flatten(e.node))}
       color="light"
     />
   </HeaderLayout>
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    allMarkdownRemark(
+    allMdx(
       filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
       sort: { order: DESC, fields: frontmatter___date }
     ) {
@@ -31,13 +31,14 @@ export const query = graphql`
           frontmatter {
             title
             categories
-            excerpt
+
             repo
             date
           }
           fields {
             slug
           }
+          excerpt
         }
       }
     }

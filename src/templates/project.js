@@ -2,35 +2,39 @@ import React from 'react';
 import { ProjectLayout } from '../components/layout';
 import moment from 'moment';
 import { graphql } from 'gatsby';
-import { CommonMetadata } from '../components/metadata';
+import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 
-export default ({ data }) => {
-  const post = data.markdownRemark;
+const ProjectTemplate = ({ data }) => {
+  const post = data.mdx;
 
   return (
     <ProjectLayout
       title={post.frontmatter.title}
-      description={post.frontmatter.excerpt}
+      description={post.excerpt}
       publishedAt={moment(Date.parse(post.frontmatter.date))}
       repo={post.frontmatter.repo}
       license={post.frontmatter.license}
     >
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
     </ProjectLayout>
   );
 };
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
         date
         repo
         license
-        excerpt
       }
+      code {
+        body
+      }
+      excerpt
     }
   }
 `;
+
+export default ProjectTemplate;

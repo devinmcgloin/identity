@@ -1,3 +1,5 @@
+const mdxFeed = require('gatsby-mdx/feed');
+
 module.exports = {
   siteMetadata: {
     title: 'Devin McGloin',
@@ -18,13 +20,35 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-mdx',
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ],
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-feed',
+    { resolve: 'gatsby-plugin-feed', options: mdxFeed },
     {
       resolve: `gatsby-source-unsplash`,
       options: {

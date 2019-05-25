@@ -24,7 +24,7 @@ const Footer = () => (
             }
           }
         }
-        allMarkdownRemark(
+        allMdx(
           filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
           sort: { order: DESC, fields: frontmatter___date }
           limit: 5
@@ -50,7 +50,7 @@ const Footer = () => (
         unsplash,
       } = data.site.siteMetadata.social;
 
-      const projects = data.allMarkdownRemark.edges.map(e => {
+      const projects = data.allMdx.edges.map(e => {
         return {
           title: e.node.frontmatter.title,
           slug: e.node.fields.slug,

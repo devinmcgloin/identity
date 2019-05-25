@@ -10,7 +10,7 @@ const slugify = str =>
 
 const Tags = ({
   data: {
-    allMarkdownRemark: { group },
+    allMdx: { group },
   },
 }) => (
   <HeaderLayout
@@ -41,7 +41,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 2000) {
+    allMdx(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
