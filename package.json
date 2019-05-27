@@ -5,7 +5,7 @@
   "author": "Devin McGloin <devin@devinmcgloin.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.0.20",
-    "@mdx-js/react": "^1.0.0-rc.5",
+    "@mdx-js/react": "^1.0.20",
     "@mdx-js/tag": "^0.20.3",
     "dat.gui": "^0.7.3",
     "eslint-plugin-react": "^7.12.4",
