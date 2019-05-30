@@ -5,9 +5,18 @@ import Header from './header';
 
 describe('Header', () => {
   const links = [
-    { title: 'Artwork', slug: '/artwork' },
-    { title: 'Projects', slug: '/projects' },
-    { title: 'Writing', slug: '/writing' },
+    {
+      slug: '/projects',
+      title: 'Projects',
+    },
+    {
+      slug: '/artwork',
+      title: 'Artwork',
+    },
+    {
+      slug: '/writing',
+      title: 'Writing',
+    },
   ];
 
   it('renders correctly', () => {

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Gallery renders correctly 1`] = `
+<div>
+  <div>
+     
+  </div>
+</div>
+`;
