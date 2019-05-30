@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="pa4 pa5-l black-70 bt b--black-10 mw8 center"
+>
+  <div
+    className="mb4-l"
+  >
+    <article
+      className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4"
+    >
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="mailto:devin@devinmcgloin.com"
+        title="Email"
+      >
+        devin@devinmcgloin.com
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="https://twitter.com/devinmcgloin"
+        title="Email"
+      >
+        <span
+          className="black-50"
+        >
+          twitter
+        </span>
+        /
+        devinmcgloin
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="https://github.com/devinmcgloin"
+        title="Email"
+      >
+        <span
+          className="black-50"
+        >
+          github
+        </span>
+        /
+        devinmcgloin
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="https://unsplash.com/devinmcgloin"
+        title="Email"
+      >
+        <span
+          className="black-50"
+        >
+          unsplash
+        </span>
+        /
+        devinmcgloin
+      </a>
+    </article>
+    <article
+      className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4"
+    >
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/projects/sail/"
+        title="Sail"
+      >
+        <span
+          className="black-50"
+        >
+          project
+        </span>
+        /
+        Sail
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/projects/probabilistic/"
+        title="Probabilistic"
+      >
+        <span
+          className="black-50"
+        >
+          project
+        </span>
+        /
+        Probabilistic
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/projects/parking/"
+        title="Parking"
+      >
+        <span
+          className="black-50"
+        >
+          project
+        </span>
+        /
+        Parking
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/projects/clr/"
+        title="clr"
+      >
+        <span
+          className="black-50"
+        >
+          project
+        </span>
+        /
+        clr
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/projects/fokal/"
+        title="Fokal"
+      >
+        <span
+          className="black-50"
+        >
+          project
+        </span>
+        /
+        Fokal
+      </a>
+    </article>
+    <article
+      className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4"
+    >
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/interactive/solar/"
+        title="Solar"
+      >
+        <span
+          className="black-50"
+        >
+          interactive
+        </span>
+        /
+        Solar
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/interactive/fermat-spiral/"
+        title="Fermat's Spirals"
+      >
+        <span
+          className="black-50"
+        >
+          interactive
+        </span>
+        /
+        Fermat's Spirals
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/interactive/additive-splines/"
+        title="Additive Splines"
+      >
+        <span
+          className="black-50"
+        >
+          interactive
+        </span>
+        /
+        Additive Splines
+      </a>
+      <a
+        className="f6 db fw5 pv1 black-70 link dim"
+        href="/interactive/boids/"
+        title="Boids"
+      >
+        <span
+          className="black-50"
+        >
+          interactive
+        </span>
+        /
+        Boids
+      </a>
+    </article>
+  </div>
+</footer>
+`;

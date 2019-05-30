@@ -45,17 +45,17 @@ exports[`Header renders correctly 1`] = `
     >
       <a
         className="link black-70 dim fw5 f6 f5-ns dib"
-        href="/artwork"
-        title="Artwork"
-      >
-        Artwork
-      </a>
-      <a
-        className="link black-70 dim fw5 f6 f5-ns dib"
         href="/projects"
         title="Projects"
       >
         Projects
+      </a>
+      <a
+        className="link black-70 dim fw5 f6 f5-ns dib"
+        href="/artwork"
+        title="Artwork"
+      >
+        Artwork
       </a>
       <a
         className="link black-70 dim fw5 f6 f5-ns dib"
