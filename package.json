@@ -7,6 +7,8 @@
     "@mdx-js/mdx": "^1.0.20",
     "@mdx-js/react": "^1.0.20",
     "@mdx-js/tag": "^0.20.3",
+    "babel-jest": "^24.8.0",
+    "babel-preset-gatsby": "^0.1.11",
     "dat.gui": "^0.7.3",
     "eslint-plugin-react": "^7.12.4",
     "gatsby": "^2.7.3",
@@ -30,7 +32,9 @@
     "gatsby-transformer-yaml": "^2.1.1",
     "gl-react": "^3.15.0",
     "gl-react-dom": "^3.15.0",
+    "identity-obj-proxy": "^3.0.0",
     "isomorphic-fetch": "^2.2.1",
+    "jest": "^24.8.0",
     "mdx": "^0.3.1",
     "moment": "^2.22.2",
     "prismjs": "^1.15.0",
@@ -41,6 +45,7 @@
     "react-measure": "^2.0.0",
     "react-photo-gallery": "^7.0.2",
     "react-player": "^1.11.0",
+    "react-test-renderer": "^16.8.6",
     "tachyons": "^4.11.1",
     "typeface-open-sans": "^0.0.54",
     "unsplash": "^4.2.0",
@@ -52,7 +57,8 @@
     "serve": "gatsby serve",
     "start": "gatsby develop",
     "fmt": "prettier --write '**/*.js'",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "jest"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
