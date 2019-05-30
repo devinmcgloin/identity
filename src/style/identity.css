@@ -296,6 +296,16 @@ td {
   background-color: rgb(244, 221, 192);
 }
 
+::selection {
+  background-color: #fffad3;
+  color: #333;
+}
+
+::-moz-selection {
+  background-color: #fffad3;
+  color: #333;
+}
+
 .highlight .hll {
   background-color: #ffc;
 }
