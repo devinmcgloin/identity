@@ -2,9 +2,7 @@
 title: Haskell Pattern Matching
 date: '2015-07-07'
 tags:
-  - Functional Programming
-  - Programming Languages
-categories:
+  - Programming
 layout: 'post'
 ---
 
@@ -75,15 +73,12 @@ intersperse sep (x:xs) = x ++ [sep] ++ intersperse sep xs
 ```
 
 In a sense, the patterns here are doing what if statements would do in
-other languages. You can read the first pattern as follows: `ignore
-the first variable, if the second is an empty list return an empty
-list`. Simple right! The biggest reason for the patterns is ease of
+other languages. You can read the first pattern as follows: `ignore the first variable, if the second is an empty list return an empty list`. Simple right! The biggest reason for the patterns is ease of
 use when it comes to recursive function calls. If you look at the
 `intersperse` function defined above you can start to get a sense of
 the benefits. Guards which were shown in the `ackermann` function are
 closer to the `if` statements that you've probably seen before or
-`case` statements. You can read `m == 0 = n + 1` as `if m is equal to
-0 then return n + 1`, in the `ackermann` function this case is the
+`case` statements. You can read `m == 0 = n + 1` as `if m is equal to 0 then return n + 1`, in the `ackermann` function this case is the
 base case, meaning the case that terminates the recursive calls. With
 the ackermann function this can take quite a while but you can see the
 same thing in a simple implementation of the map function.

@@ -15,20 +15,7 @@
 }
 
 a {
-  color: #494949;
-  opacity: 1;
-  transition: opacity 0.15s ease-in;
-}
-
-a:hover,
-a:focus {
-  opacity: 0.5;
-  transition: opacity 0.15s ease-in;
-}
-
-a:active {
-  opacity: 0.8;
-  transition: opacity 0.15s ease-out;
+  color: #357edd;
 }
 
 blockquote {
@@ -293,7 +280,7 @@ td {
 }
 
 .feature-bg {
-  background-color: rgb(179, 198, 196);
+  background-color: #f3f8ff;
 }
 
 ::selection {

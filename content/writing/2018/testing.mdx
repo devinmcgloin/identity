@@ -1,11 +1,11 @@
 ---
 title: What Testing Gets You
 date: '2018-08-25'
-excerpt: "Often times testing is viewed as a guaranteed way to ensure your function behaves as you expect it to. However this is far from what is actually happening. A excellent example of this occurred a few years back and I want to take a look at the problem and see what standard testing practices would get you and the best way to approach the problem."
+excerpt: 'Often times testing is viewed as a guaranteed way to ensure your function behaves as you expect it to. However this is far from what is actually happening. A excellent example of this occurred a few years back and I want to take a look at the problem and see what standard testing practices would get you and the best way to approach the problem.'
 category: Programming
 tags:
-    - Programming
-    - Testing
+  - Programming
+  - Testing
 layout: 'post'
 ---
 
@@ -40,9 +40,11 @@ def test_hash():
 We can keep on creating more test cases, but before we do lets shed some light
 on a fatal flaw for our simple hash function. All of the following assertions
 are true with the simple hash.
+
 ```python
 assert hash(Record(11,21,3)) == hash(Record(11,2,13))
 ```
+
 The question is how could we have caught that bug before shipping it into production?
 
 ## Unit Testing
@@ -52,6 +54,7 @@ Consider the case in which a programmer wrote unit tests and had an insight to t
 ## Property Based Testing
 
 Consider a programmer who realizes that our unit tests only cover a small section of the input space, it would be good to assert behavior across a broader set of that space. We can write the following:
+
 ```python
 @given(
     a=integers(max_value=100, min_value=1),
@@ -75,6 +78,7 @@ def test_hash(a, b, c, d, e, f):
     if hash_equal:
         assert true_equal
 ```
+
 In order for this bug to be caught with property based testing a number of preconditions must be met.
 
 Given input `a`, `b`, `c`, one of these inputs have to be greater than 10. But more importantly for any two inputs, we have to randomly select 2 specific numbers which are set to either `d`, `e`, `f`. The probability of randomly stumbling across this bug with a property based tester is around one in a million. When we add in one of those inputs needs to be larger than 10 we're left with 1 in 10 million. Needless to say those aren't very good odds.
@@ -92,6 +96,7 @@ Besides hoping something clicks in the mind of the programmer, I'm not sure what
 ---
 
 Of course the simple fix for our problem is as follows:
+
 ```python
 class Record:
     """Given bounds on a <= 99999, b <= 99, and c <= 99"""

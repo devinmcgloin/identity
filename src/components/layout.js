@@ -9,6 +9,7 @@ import '../style/datgui.css';
 import 'tachyons/css/tachyons.css';
 import '../style/identity.css';
 import '../style/prism-theme.css';
+import TagButton from './tag';
 
 import Measure from 'react-measure';
 
@@ -55,23 +56,32 @@ const HeaderLayout = ({ title, description, children }) => (
   </StandardLayout>
 );
 
-const PostLayout = ({ title, description, publishedAt, children }) => (
-  <StandardLayout title={title} description={description}>
-    <div className="pa3 measure-wide center">
-      <article className="pv4">
-        <header className="w-100 pr4-ns ">
-          <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
-          <time className="f6 ttu tracked gray open-sans">{publishedAt}</time>
-        </header>
-        <div className="w-100">
-          <div className="lh-copy mt4 mt0-ns post-body open-sans">
-            {children}
+const PostLayout = ({ title, description, publishedAt, tags, children }) => {
+  const tagButtons = Array.isArray(tags)
+    ? tags.map(t => {
+        return <TagButton key={t} tag={t} />;
+      })
+    : [];
+
+  return (
+    <StandardLayout title={title} description={description}>
+      <div className="pa3 measure-wide center">
+        <article className="pv4">
+          <header className="w-100 pr4-ns">
+            <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
+            <time className="f5 gray">{publishedAt}</time>
+            <span className="db mt3">{tagButtons}</span>
+          </header>
+          <div className="w-100">
+            <div className="lh-copy mt4 mt0-ns post-body open-sans">
+              {children}
+            </div>
           </div>
-        </div>
-      </article>
-    </div>
-  </StandardLayout>
-);
+        </article>
+      </div>
+    </StandardLayout>
+  );
+};
 
 const ProjectLayout = ({
   title,

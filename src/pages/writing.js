@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
-import Table from '../components/table-list';
+import PostList from '../components/post-list';
 import { flatten } from '../lib/transformation';
 import { graphql } from 'gatsby';
 
@@ -9,17 +9,7 @@ const IndexPage = ({ data }) => (
     title="Writing"
     description="Thoughts from behind the screen, added to every so often."
   >
-    <Table
-      columns={[
-        { type: 'title', description: 'Title' },
-        {
-          type: 'date',
-          description: 'Date',
-        },
-      ]}
-      rows={data.allMdx.edges.map(e => flatten(e.node))}
-      color="light"
-    />
+    <PostList entries={data.allMdx.edges.map(e => flatten(e.node))} />
   </HeaderLayout>
 );
 
@@ -33,13 +23,14 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            categories
             date(formatString: "dddd, MMMM Do 0YYYY")
+            tags
           }
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 270)
+          timeToRead
         }
       }
     }
