@@ -7,13 +7,14 @@ goal is to show you the absence of bugs, in order to do this, the functions
 being tested have to be pure, and testing may be slow for functions that take
 complex objects."
 tags:
-    - ideas
+    - Ideas
+    - Programming
 date: '2015-11-25'
 image: './vtest.png'
 ---
 
 > Program testing can be a very effective way to show the presence of bugs, but
-it is hopelessly inadequate for showing their absence.
+> it is hopelessly inadequate for showing their absence.
 
 Edsger Dijkstra - The Humble Programmer (1972)
 
@@ -39,7 +40,7 @@ Here we're looking at the python function `startswith`. Yes, this is incredibly
 simplistic. 1 represents truth and 0 falsity. We're testing the function on all
 possible 3 length strings, in order to see how it behaves. The particular
 function here is `s.startswith("g") or s.startswith("&")`, we can see here that
-it returns true from `&!!` to `&~~` and  `g!!` to `g~~`. Great thats exactly
+it returns true from `&!!` to `&~~` and `g!!` to `g~~`. Great thats exactly
 what we wanted.
 
 ![Simple Demo](/vtest/simple.png)

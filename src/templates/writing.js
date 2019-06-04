@@ -10,6 +10,7 @@ const PostTemplate = ({ data }) => {
     <PostLayout
       title={post.frontmatter.title}
       publishedAt={post.frontmatter.date}
+      tags={post.frontmatter.tags}
       description={post.excerpt}
     >
       <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
@@ -26,6 +27,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "dddd, MMMM Do 0YYYY")
+        tags
       }
       excerpt
     }

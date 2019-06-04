@@ -1,6 +1,8 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
 import { Link, graphql } from 'gatsby';
+import PostList from '../components/post-list';
+import { flatten } from '../lib/transformation';
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -13,24 +15,11 @@ const TagTemplate = ({ pageContext, data }) => {
       title={header}
       description={`Various thoughts on ${tag} and other musings`}
     >
-      <ul className="list pl0">
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter;
-          const { slug } = node.fields;
-          return (
-            <Link key={slug} to={slug} className="no-underline">
-              <li className="pa3 pa4-ns">
-                <b className="db f3 mb1 garamond underline">{title}</b>
-                <span className="f5 db lh-copy">{node.excerpt}</span>
-              </li>
-            </Link>
-          );
-        })}
-      </ul>
+      <PostList entries={edges.map(e => flatten(e.node))} />
       <div className="w-100 mw8 center tc pt4">
         <Link
           className={
-            'f6 br2 ba ph3 pv2 mb2 dib bg-animate no-underline index-button'
+            'f6 br2 ba ph3 pv2 mb2 dib bg-animate no-underline index-button black'
           }
           to={'/tags'}
         >
@@ -53,13 +42,13 @@ export const query = graphql`
         node {
           frontmatter {
             title
-            categories
             date(formatString: "dddd, MMMM Do 0YYYY")
+            tags
           }
           fields {
             slug
           }
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 270)
         }
       }
     }

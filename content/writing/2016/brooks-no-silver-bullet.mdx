@@ -38,6 +38,7 @@ complexity. Brooks argues that:
 > richly detailed.
 
 ## Does it have to be hard?
+
 The hard part about software is figuring out how these concepts relate, not the
 actual act of programming. It's fundamentally about getting the relationships
 between complex items right. This is what Brooks considers to be the essential
@@ -46,6 +47,7 @@ acts of programming.
 Brooks focuses on a few aspects that make programming especially difficult.
 
 ### Complexity
+
 Brooks starts by asserting that software systems are far more complex than any
 other human system. This is compounded by our inability to see their actions, or
 understand the system visually. Common programming principles like
@@ -81,14 +83,15 @@ and
 Brooks wonders how we will combat complexity going forward.
 
 ### Conformity
+
 Unlike physics software objects have no fundamental principles upon which they
 can rest. And therefore, each software artifact must be evaluated in isolation.
 This makes each evaluation many times more difficult, as you cannot treat any
 two functions as truly equivalent until they have both been thoroughly
 investigated. As you can imagine, this slows things down enormously.
 
-
 ### Changeability
+
 The fact that software is adapted throughout its life time is another source of
 complexity. Most physical products, argues Brooks, are not changed after
 manufacturing. Software, on the other hand, is guaranteed to require patches,
@@ -109,6 +112,7 @@ This principles allow for small utilities to be pulled together through piping
 the output of one into the input of another.
 
 ### Invisibility
+
 Software is also hard because we can't see it. We have to manipulate everything
 inside our own heads, which leads to mistakes and conceptual errors. There is
 also no easy way to represent the content of a program in space. Object Oriented
@@ -120,10 +124,12 @@ visualize outputs of functions called [vtest](/vtest), but visualizing programs
 is a **hard** problem.
 
 ## Past Gains
+
 Most gains have come from removing artificial barriers, and by their very nature
 these approaches limit themselves.
 
 ### High Level Languages
+
 High level languages abstract away repeated patterns. Chances are you're going
 to have to read in a file more than once, this operation is going to be very
 very similar each time you want to execute that procedure. In this case you
@@ -137,6 +143,7 @@ huge benefit, and increases productivity, according to Brooks estimation, by a
 factor of 5.
 
 ### Time-Sharing
+
 Time-sharing is not appreciated as much as it was during its introduction in the
 early 1960s. [Multics](https://en.wikipedia.org/wiki/Multics) was the first of
 such systems, and if you're not familiar with the concept
@@ -152,6 +159,7 @@ difficult. Brooks expands on time sharing, noting that as the time decreases the
 amount of benefit also decreases.
 
 ### Unified programming environments
+
 Unified programming environments like [Unix](https://en.wikipedia.org/wiki/Unix)
 and [Interlisp](https://en.wikipedia.org/wiki/Interlisp), provided consistent
 metaphors and support for common tasks. This results in decreased computational
@@ -159,23 +167,26 @@ overhead for the programmer, and results in programs that can easily be
 [composed](#changeability).
 
 ## Future Steps
+
 Brooks contemplates future ways in which we can address common issues, and
 considers if those solutions address incidental or essential complexity. I'm not
 going to go into all these approaches, but if one piques your interest take a
 look at the full text.
 
 |     |                       |                        |
-|:----|:----------------------|:-----------------------|
+| :-- | :-------------------- | :--------------------- |
 | OOP | Automatic Programming | Environments and Tools |
 | AI  | Graphical Programming | Workstations           |
 | Ada | Expert Systems        | Program Verification   |
 
 ## Attacks on Essential Complexity
+
 Brooks believes that the conceptual aspects of programming are taking the
 majority of the time. Therefore, he focuses on methodologies to limit either the
 amount of time spent on a task, or how often it has to be accomplished.
 
 ### Buy not Build
+
 Brooks notes that "_The most radical possible solution for constructing software
 is to not construct it at all._" Therefore, when a simple off the shelf solution
 exists, use it! Even if it's not done exactly the way you would like, its better
@@ -190,6 +201,7 @@ workflow. The key is keeping these products small and modular, which allows for
 much easier composition.
 
 ### Rapid prototyping
+
 One of the most difficult tasks when working on a software project is deciding
 what exactly to build, and how the user interacts with it. It's much easier to
 start small in this case, and get feedback quickly.
@@ -200,6 +212,7 @@ that the users can interact with. This gives excellent feedback to keep the
 software in light with the goals of the users.
 
 ### Incremental Growing, not building.
+
 Brooks argues that software should be _grown_ organically.
 
 > I still remember the jolt I felt in 1958 when I first heard a friend talk
@@ -213,6 +226,7 @@ a very simple program is up and running, developers are much more enthusiastic
 about the progress.
 
 ### Great Designers
+
 In order to develop better systems, we must have better designers. It's not
 surprising that great designers produce software that is elegant, simple and
 cohesive. Great designers have a vision regarding what computation should look
@@ -220,7 +234,7 @@ like. Take this table from _No Silver Bullet_ showing languages that were
 designed vs those done by committee.
 
 | Designer  | Committee |
-|:----------|-----------|
+| :-------- | --------- |
 | Unix      | Cobol     |
 | APL       | PL/1      |
 | Pascal    | Algol     |
