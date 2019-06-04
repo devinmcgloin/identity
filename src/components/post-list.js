@@ -29,7 +29,7 @@ const PostList = ({ entries }) => {
         </div>
         <Link
           to={entry.slug}
-          className="w-100 w-two-thirds-ns f5 pv3 lh-copy pl2-ns db no-underline dark-gray"
+          className="w-100 w-two-thirds-ns f5 pb3 lh-copy pl2-ns db no-underline dark-gray"
         >
           {entry.excerpt}
         </Link>

@@ -73,7 +73,7 @@ const PostLayout = ({ title, description, publishedAt, tags, children }) => {
             <span className="db mt3">{tagButtons}</span>
           </header>
           <div className="w-100">
-            <div className="lh-copy mt4 mt0-ns post-body open-sans">
+            <div className="lh-copy mt2 mt0-ns post-body open-sans">
               {children}
             </div>
           </div>
