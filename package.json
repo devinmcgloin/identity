@@ -49,9 +49,7 @@
     "react-player": "^1.11.0",
     "react-test-renderer": "^16.8.6",
     "tachyons": "^4.11.1",
-    "typeface-open-sans": "^0.0.54",
-    "unsplash": "^4.2.0",
-    "unsplash-js": "^5.0.0"
+    "typeface-open-sans": "^0.0.54"
   },
   "keywords": [],
   "scripts": {
