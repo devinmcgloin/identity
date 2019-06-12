@@ -3,6 +3,7 @@
   "description": "Virtual Identity",
   "version": "1.0.0",
   "author": "Devin McGloin <devin@devinmcgloin.com>",
+  "private": true,
   "dependencies": {
     "@mdx-js/mdx": "^1.0.20",
     "@mdx-js/react": "^1.0.20",
@@ -68,5 +69,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/devinmcgloin/identity"
-  }
+  },
+  "workspaces": [
+    "plugins/*"
+  ]
 }
