@@ -1,5 +1,7 @@
 const mdxFeed = require('gatsby-mdx/feed');
 
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'Devin McGloin',
@@ -52,10 +54,8 @@ module.exports = {
     {
       resolve: `gatsby-source-unsplash`,
       options: {
-        accessKey:
-          '01cab8b60c13c600c6b06727ff46e8153598cc933f782c5e99b48c25b522cebc',
-        secretKey:
-          '1103dd3e8fc70ac5d8220f6eeae39bc3ff4583dbf06f4d325b6f5c44627987fb',
+        accessKey: process.env.UNSPLASH_ACCESS_KEY,
+        secretKey: process.env.UNSPLASH_SECRET_KEY,
       },
     },
     {
@@ -100,7 +100,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-12359332-14',
+        trackingId: process.env.GA_TRACKING_ID,
         head: true,
         respectDNT: true,
       },

@@ -10,6 +10,7 @@
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.1.11",
     "dat.gui": "^0.7.3",
+    "dotenv": "^8.0.0",
     "eslint-plugin-react": "^7.12.4",
     "gatsby": "^2.9.0",
     "gatsby-cli": "^2.4.4",
