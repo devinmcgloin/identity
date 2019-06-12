@@ -9157,6 +9157,11 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
+node-fetch@^2.2.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+
 node-forge@0.7.5:
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.5.tgz#6c152c345ce11c52f465c2abd957e8639cd674df"
@@ -13414,11 +13419,6 @@ unsplash-js@^5.0.0:
     lodash.get "4.4.2"
     querystring "0.2.0"
     url-parse "1.4.4"
-
-unsplash@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/unsplash/-/unsplash-4.2.0.tgz#8977670cc9e1f7aaeb7c49e6a0793a1bc49a05c5"
-  integrity sha512-my8CaFhNomFTc/vfUypnLQd52WEXDwnMxu9e7GTxExtib+aH/y7RWmsJPi16f1CT/B0A9oTm9qAFTCEDnpwOfg==
 
 unzip-response@^2.0.1:
   version "2.0.1"

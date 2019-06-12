@@ -3,6 +3,7 @@
   "description": "Virtual Identity",
   "version": "1.0.0",
   "author": "Devin McGloin <devin@devinmcgloin.com>",
+  "private": true,
   "dependencies": {
     "@mdx-js/mdx": "^1.0.20",
     "@mdx-js/react": "^1.0.20",
@@ -48,9 +49,7 @@
     "react-player": "^1.11.0",
     "react-test-renderer": "^16.8.6",
     "tachyons": "^4.11.1",
-    "typeface-open-sans": "^0.0.54",
-    "unsplash": "^4.2.0",
-    "unsplash-js": "^5.0.0"
+    "typeface-open-sans": "^0.0.54"
   },
   "keywords": [],
   "scripts": {
@@ -68,5 +67,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/devinmcgloin/identity"
-  }
+  },
+  "workspaces": [
+    "plugins/*"
+  ]
 }
