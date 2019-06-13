@@ -66,11 +66,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
   const cta = link ? (
     <div className="w-100 mw8 center tc pt4">
       <Link
-        className={`f6 br2 ba ph3 pv2 mb2 dib ${colorMap[color].buttonColor} ${
-          colorMap[color].buttonHoverColor
-        } bg-animate ${
-          colorMap[color].buttonHoverBg
-        } no-underline index-button`}
+        className={`f6 br2 ba ph3 pv2 mb2 dib ${colorMap[color].buttonColor} ${colorMap[color].buttonHoverColor} bg-animate ${colorMap[color].buttonHoverBg} no-underline index-button`}
         to={link}
       >
         View More
@@ -92,9 +88,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
 
   return (
     <div
-      className={`pt4 pb5 ${colorMap[color].bg} ${
-        colorMap[color].text
-      } ma2 br2`}
+      className={`pt4 pb5 ${colorMap[color].bg} ${colorMap[color].text} ma2 br2`}
     >
       {header}
       <div className="overflow-auto">
