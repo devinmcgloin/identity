@@ -54,7 +54,7 @@
     "start": "gatsby develop",
     "fmt": "prettier --write '**/*.js'",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "devDependencies": {
     "eslint": "^5.6.1",
