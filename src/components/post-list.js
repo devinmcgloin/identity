@@ -15,9 +15,9 @@ const PostList = ({ entries }) => {
     return (
       <div
         key={entry.slug}
-        className={`flex flex-wrap justify-between items-start w-100 ${bottomBorder} pa3`}
+        className={`flex flex-wrap justify-between items-start w-100 ${bottomBorder} pa4`}
       >
-        <div className="w-100 w-third-ns pv3 pr2-ns">
+        <div className="w-100 w-third-ns pr4-ns">
           <Link
             to={entry.slug}
             className="f3 fw8 garamond mt0 lh-title db no-underline dark-gray"

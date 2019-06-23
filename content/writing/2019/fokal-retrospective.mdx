@@ -1,0 +1,33 @@
+---
+title: 'Fokal: A Retrospective'
+date: '2019-06-23'
+tags:
+  - Side Projects
+  - Making
+layout: 'post'
+---
+
+I started Fokal with the intention of making it easier to to find specific photos you’re looking for while also making it easier to have your own photos be found. It all started when I published this image to Unsplash.
+
+![](https://images.unsplash.com/photo-1431542535025-608d7b779625?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb)
+
+While it’s a good photograph, I don’t think it’s that impressive, and certainly not more so than some of the other photos I’ve taken. It took off to receive a little over 2 Million views and 10 thousand downloads, mostly because it was featured in some collections focused on images from or about Toronto.
+
+This realization made me curious, are there other bits of metadata that are equally important as the location the image was taken? Perhaps people want to see real world photos from a camera they’re interested in purchasing, or a lens they might want to buy. These all seemed like somewhat valuable use cases, so I went to work building a system that could handle these sorts of queries and a front end to match.
+
+The tricky thing is building a community around such a platform. I had the basic tech working fairly quickly, but I had no strategy to get people to use the thing that seemed like it could have any chance of working. This leads my to the biggest problem with Fokal, How to jump start the platform?
+
+## Jump starting the platform
+
+I knew from the get go that the platform was useless for searching without any images, and without people coming to search there was little incentive for people to publish their photos. I considered pulling images from other sites to pad out the content, but that felt fundamentally wrong and would discourage people from joining the platform if I’d scraped their images without their consent.
+
+I mulled this problem over for a while, built some other things and then joined Intercom and ended up deciding that it wasn’t worth spending time on.
+
+This jump starting the platform / social graph problem isn’t an easy one, and I knew it wasn’t going to be solved with part time effort. Despite Fokal not reaching the ambitions or vision I set out with, I still enjoyed working on it and learned a fair amount.
+
+## Lessons
+
+1. The technology determines what’s possible, but other people determine what actually happens.
+2. Write interfaces between systems. I ended up switching from using MySQL as my primary data store, to Mongo, and eventually switching to PostgreSQL. The switching costs for the first transition were high, but later on I had cleaner interfaces between the storage layer which made those changes much easier.
+3. Start small. I kicked things off with a fully working site, there was no sense of an MVP and I spent time building out analytics and social graph features that probably weren’t all that important to my core value offering.
+4. Spend time thinking about the general business approach / feasibility before diving into the technology that will power it. This depends almost entirely on the type of problem you’re attempting to solve, but for simple things this lesson holds.
