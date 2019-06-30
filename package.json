@@ -1,7 +1,7 @@
 {
   "name": "identity",
   "description": "Virtual Identity",
-  "version": "1.0.0",
+  "version": "1.17.0",
   "author": "Devin McGloin <devin@devinmcgloin.com>",
   "private": true,
   "dependencies": {
