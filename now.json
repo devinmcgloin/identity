@@ -7,5 +7,10 @@
       "use": "@now/static-build",
       "config": { "distDir": "public" }
     }
-  ]
+  ],
+  "env": {
+    "GA_ANALYTICS_ID": "@ga-analytics-id",
+    "UNSPLASH_SECRET_KEY": "@unsplash-secret-key",
+    "UNSPLASH_ACCESS_KEY": "@unsplash-access-key"
+  }
 }
