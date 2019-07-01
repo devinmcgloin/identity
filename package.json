@@ -44,7 +44,7 @@
     "react-helmet": "^5.2.0",
     "react-images": "^0.5.19",
     "react-measure": "^2.0.0",
-    "react-photo-gallery": "^7.0.2",
+    "react-photo-gallery": "^8.0.0",
     "react-player": "^1.11.0",
     "react-test-renderer": "^16.8.6",
     "tachyons": "^4.11.1",
