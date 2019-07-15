@@ -24,7 +24,7 @@ const PostList = ({ entries }) => {
           >
             {entry.title}
           </Link>
-          <span className="mt2 db gray">{entry.date}</span>
+          <span className="mt2 db gray code">{entry.date}</span>
           <span className="mt3 db">{tags}</span>
         </div>
         <Link

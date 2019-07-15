@@ -69,7 +69,7 @@ const PostLayout = ({ title, description, publishedAt, tags, children }) => {
         <article className="pv4">
           <header className="w-100 pr4-ns">
             <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
-            <time className="f5 gray">{publishedAt}</time>
+            <time className="f5 gray code">{publishedAt}</time>
             <span className="db mt3">{tagButtons}</span>
           </header>
           <div className="w-100">
