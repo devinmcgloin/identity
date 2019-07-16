@@ -25,7 +25,7 @@ export const query = graphql`
         node {
           id
           fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
