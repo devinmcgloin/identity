@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
       title="Photography"
       description="Various photos I'm proud of. Taken across the world and stored on Unsplash."
     >
-      <Gallery images={images} />
+      <Gallery images={images} maxHeight={4050} />
     </HeaderLayout>
   );
 };
