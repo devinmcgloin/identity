@@ -48,6 +48,9 @@ exports.createPages = ({ graphql, actions }) => {
           case 'projects':
             templatePath = './src/templates/project.js';
             break;
+          case 'interactive':
+            templatePath = './src/templates/interactive.js';
+            break;
         }
         createPage({
           path: node.fields.slug,
@@ -93,6 +96,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       },
     });
   }
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'node_modules'),
+      ],
+    },
+  });
 };
 
 exports.onPreBootstrap = () => {

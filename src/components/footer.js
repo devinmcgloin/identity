@@ -2,19 +2,19 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 const PureFooter = ({ data }) => {
-  const { email, twitter, github, unsplash } = data.site.siteMetadata.social;
+  const { email, twitter, github, unsplash } = data.social.siteMetadata.social;
 
-  const projects = data.allMdx.edges.map(e => {
+  const projects = data.projects.edges.map(e => {
     return {
       title: e.node.frontmatter.title,
       slug: e.node.fields.slug,
     };
   });
 
-  const experiments = data.allExperimentsYaml.edges.map(e => {
+  const artwork = data.artwork.edges.map(e => {
     return {
-      title: e.node.title,
-      slug: e.node.slug,
+      title: e.node.frontmatter.title,
+      slug: e.node.fields.slug,
     };
   });
   return (
@@ -63,7 +63,7 @@ const PureFooter = ({ data }) => {
           ))}
         </article>
         <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
-          {experiments.map(p => (
+          {artwork.map(p => (
             <a
               key={p.slug}
               className="f6 db fw5 pv1 black-70 link dim"
@@ -83,7 +83,7 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       {
-        site {
+        social: site {
           siteMetadata {
             social {
               name
@@ -94,15 +94,23 @@ const Footer = () => (
             }
           }
         }
-        allExperimentsYaml(limit: 5) {
+        artwork: allMdx(
+          filter: { fields: { slug: { regex: "/interactive/(.)+/" } } }
+          sort: { order: DESC, fields: frontmatter___date }
+          limit: 5
+        ) {
           edges {
             node {
-              title
-              slug
+              frontmatter {
+                title
+              }
+              fields {
+                slug
+              }
             }
           }
         }
-        allMdx(
+        projects: allMdx(
           filter: { fields: { slug: { regex: "/projects/(.)+/" } } }
           sort: { order: DESC, fields: frontmatter___date }
           limit: 5

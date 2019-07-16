@@ -4,13 +4,8 @@ import { graphql } from 'gatsby';
 import Gallery from '../components/gallery';
 
 const IndexPage = ({ data }) => {
-  let images = data.allUnsplashPhoto.edges.map(e => {
-    return {
-      src: e.node.urls.regular,
-      width: e.node.width,
-      height: e.node.height,
-    };
-  });
+  let images = data.photos.edges.map(e => e.node.fluid);
+
   return (
     <HeaderLayout
       title="Photography"
@@ -23,13 +18,14 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allUnsplashPhoto {
+    photos: allImageSharp(
+      filter: { original: { src: { regex: "/photography/" } } }
+    ) {
       edges {
         node {
-          width
-          height
-          urls {
-            regular
+          id
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
