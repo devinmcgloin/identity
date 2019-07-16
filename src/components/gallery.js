@@ -4,7 +4,7 @@ import Lightbox from 'react-images';
 import Measure from 'react-measure';
 
 const Gallery = ({ images }) => {
-  const [width, setWidth] = useState(1);
+  const [width, setWidth] = useState(1500);
 
   let widthFactor;
   if (width >= 945) widthFactor = 0.33;
