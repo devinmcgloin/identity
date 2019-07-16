@@ -13,9 +13,13 @@ const IndexPage = ({ data }) => {
       description="Personal artwork I've created, both interactive and static"
     >
       <h2 className="f3 pl2 ttu tracked lh-copy black-60">Interactive</h2>
-      <article className="dib w-100 flex">
+      <article className="w-100 flex flex-wrap">
         {data.interactive.edges.map((edge, index) => (
-          <Link key={index} className="w-33 pa2" to={edge.node.fields.slug}>
+          <Link
+            key={index}
+            className="w-100 w-50-m w-25-l pa2"
+            to={edge.node.fields.slug}
+          >
             <Img
               className="br2"
               fluid={edge.node.frontmatter.image.childImageSharp.fluid}
