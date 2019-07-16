@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => (
       <Carousel
         title="Artwork"
         link="/artwork"
-        cards={data.experiments.edges.map(e => flatten(e.node))}
+        cards={data.artwork.edges.map(e => e.node)}
       />
       <Table
         columns={[
@@ -49,13 +49,26 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   {
-    experiments: allExperimentsYaml(sort: { fields: [date], order: DESC }) {
+    artwork: allMdx(
+      filter: { fields: { slug: { regex: "/interactive/(.)+/" } } }
+      sort: { order: DESC, fields: frontmatter___date }
+      limit: 3
+    ) {
       edges {
         node {
-          slug
-          title
-          image
-          date
+          frontmatter {
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1000, maxHeight: 1000) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+          fields {
+            slug
+          }
         }
       }
     }

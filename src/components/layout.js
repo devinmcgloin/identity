@@ -4,14 +4,17 @@ import { BaseLayout, CommonMetadata } from './metadata';
 import Header from './header';
 import Footer from './footer';
 import { Github } from './icons';
-import dat from 'dat.gui';
 import '../style/datgui.css';
 import 'tachyons/css/tachyons.css';
 import '../style/identity.css';
 import '../style/prism-theme.css';
 import TagButton from './tag';
-
 import Measure from 'react-measure';
+
+let dat = null;
+if (typeof window !== 'undefined') {
+  dat = require('dat.gui');
+}
 
 const StandardLayout = ({ title, description, children }) => (
   <StaticQuery
@@ -124,7 +127,7 @@ class ExperimentLayout extends Component {
 
   componentDidMount = () => {
     const { mountDatGUI } = this.props;
-    if (mountDatGUI) {
+    if (mountDatGUI && typeof window !== 'undefined') {
       const datgui = new dat.GUI({ autoPlace: false });
       const dat_gui = document.getElementById('dat-gui');
       dat_gui.appendChild(datgui.domElement);

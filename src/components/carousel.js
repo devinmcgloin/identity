@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, withPrefix } from 'gatsby';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 const CallToAction = ({ link }) =>
   link && (
@@ -21,47 +22,21 @@ const Title = ({ title }) =>
   );
 
 const Carousel = ({ title, link, cards }) => {
-  const renderable = (
-    <React.Fragment>
-      <div className="fl w-100 w-100-m w-50-l pa2">
-        <Link to={cards[0].slug}>
-          <div
-            className="cover pv5 pv6-m pv7-l"
-            style={{
-              background: `black url(${withPrefix(cards[0].image)}) center`,
-            }}
-          />
+  debugger;
+  let renderable = (
+    <div className="w-100 flex">
+      {cards.map((card, index) => (
+        <Link key={index} className="w-33 pa2" to={card.fields.slug}>
+          <Img fluid={card.frontmatter.image.childImageSharp.fluid} />
         </Link>
-      </div>
-      <div className="fl w-50 w-25-l pa2">
-        <Link to={cards[1].slug}>
-          <div
-            className="cover pv5 pv6-m pv7-l"
-            style={{
-              background: `black url(${withPrefix(cards[1].image)}) center`,
-            }}
-          />
-        </Link>
-      </div>
-      <div className="fl w-50 w-25-l pa2">
-        <Link to={cards[2].slug}>
-          <div
-            className="cover pv5 pv6-m pv7-l"
-            style={{
-              background: `black url(${withPrefix(cards[2].image)}) center`,
-            }}
-          />
-        </Link>
-      </div>
-    </React.Fragment>
+      ))}
+    </div>
   );
 
   return (
-    <div className="center">
+    <div className="center mw8">
       <Title title={title} />
-      <section className="w-100 cf helvetica dark-gray bg-white">
-        {renderable}
-      </section>
+      <section>{renderable}</section>
       <CallToAction link={link} />
     </div>
   );
