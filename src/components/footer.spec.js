@@ -4,7 +4,7 @@ import { PureFooter } from './footer';
 
 describe('Footer', () => {
   const data = {
-    site: {
+    social: {
       siteMetadata: {
         social: {
           name: 'Devin McGloin',
@@ -15,35 +15,51 @@ describe('Footer', () => {
         },
       },
     },
-    allExperimentsYaml: {
+    artwork: {
       edges: [
         {
           node: {
-            title: 'Solar',
-            slug: '/interactive/solar/',
+            frontmatter: {
+              title: 'Solar',
+            },
+            fields: {
+              slug: '/interactive/solar/',
+            },
           },
         },
         {
           node: {
-            title: "Fermat's Spirals",
-            slug: '/interactive/fermat-spiral/',
+            frontmatter: {
+              title: "Fermat's Spirals",
+            },
+            fields: {
+              slug: '/interactive/fermat/',
+            },
           },
         },
         {
           node: {
-            title: 'Additive Splines',
-            slug: '/interactive/additive-splines/',
+            frontmatter: {
+              title: 'Additive Splines',
+            },
+            fields: {
+              slug: '/interactive/additive-splines/',
+            },
           },
         },
         {
           node: {
-            title: 'Boids',
-            slug: '/interactive/boids/',
+            frontmatter: {
+              title: 'Boids',
+            },
+            fields: {
+              slug: '/interactive/boids/',
+            },
           },
         },
       ],
     },
-    allMdx: {
+    projects: {
       edges: [
         {
           node: {
