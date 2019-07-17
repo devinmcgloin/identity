@@ -5,7 +5,7 @@ exports[`Gallery renders correctly 1`] = `
   className="flex flex-wrap flex-column mw8 flex-start"
   style={
     Object {
-      "maxHeight": 4129.917932291667,
+      "maxHeight": 4251.386106770834,
     }
   }
 >
