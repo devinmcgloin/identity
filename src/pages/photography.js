@@ -20,6 +20,7 @@ export const query = graphql`
   {
     photos: allImageSharp(
       filter: { original: { src: { regex: "/photography/" } } }
+      sort: { fields: resize___originalName }
     ) {
       edges {
         node {

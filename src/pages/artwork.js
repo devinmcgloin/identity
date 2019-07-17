@@ -60,6 +60,7 @@ export const query = graphql`
     }
     static: allImageSharp(
       filter: { original: { src: { regex: "/sketch/" } } }
+      sort: { fields: resize___originalName }
     ) {
       edges {
         node {

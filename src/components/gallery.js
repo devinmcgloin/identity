@@ -52,7 +52,7 @@ const Gallery = ({ images }) => {
     </div>
   ));
 
-  let maxHeight = totalHeight * (widthFactor + 0.01);
+  let maxHeight = totalHeight * (widthFactor + 0.02);
 
   return (
     <React.Fragment>
