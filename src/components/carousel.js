@@ -22,7 +22,6 @@ const Title = ({ title }) =>
   );
 
 const Carousel = ({ title, link, cards }) => {
-  debugger;
   let renderable = (
     <div className="w-100 flex">
       {cards.map((card, index) => (
