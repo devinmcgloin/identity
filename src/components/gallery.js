@@ -40,7 +40,7 @@ const Gallery = ({ images }) => {
   let renderedImages = images.map((image, i) => (
     <div
       key={i}
-      className={'w-33-l w-50-m w-100 pa2'}
+      className={'w-33-l w-50-m w-100 pa2 pointer dim'}
       onClick={() => {
         setSelectedImage(i);
         setModalVisibility(true);
