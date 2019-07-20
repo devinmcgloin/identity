@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Measure from 'react-measure';
 import Modal from 'react-modal';
@@ -33,7 +34,7 @@ const Gallery = ({ images }) => {
   let columnWidth = widthFactor * width - 80;
 
   let totalHeight = images.reduce(
-    (acc, image) => acc + columnWidth / image.aspectRatio + 80,
+    (acc, image) => acc + columnWidth / image.small.aspectRatio + 80,
     0
   );
 
@@ -47,7 +48,7 @@ const Gallery = ({ images }) => {
       }}
     >
       <div className="pa4 bg-light-gray">
-        <Img className="flex justify-center align-center" fluid={image} />
+        <Img className="flex justify-center align-center" fluid={image.small} />
       </div>
     </div>
   ));
@@ -64,11 +65,11 @@ const Gallery = ({ images }) => {
       >
         <Img
           style={{
-            width: width * images[selectedImage].aspectRatio,
+            width: width * images[selectedImage].detail.aspectRatio,
             maxHeight: '80vh',
             maxWidth: '80vw',
           }}
-          fluid={images[selectedImage]}
+          fluid={images[selectedImage].detail}
         />
       </Modal>
       <Measure
@@ -90,6 +91,19 @@ const Gallery = ({ images }) => {
       </Measure>
     </React.Fragment>
   );
+};
+
+Gallery.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      detail: PropTypes.shape({
+        aspectRatio: PropTypes.number,
+      }),
+      small: PropTypes.shape({
+        aspectRatio: PropTypes.number,
+      }),
+    })
+  ),
 };
 
 export default Gallery;

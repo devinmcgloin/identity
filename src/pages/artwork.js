@@ -5,7 +5,7 @@ import Gallery from '../components/gallery';
 import Img from 'gatsby-image';
 
 const IndexPage = ({ data }) => {
-  let images = data.static.edges.map(e => e.node.fluid);
+  let images = data.static.edges.map(e => e.node);
 
   return (
     <HeaderLayout
@@ -63,7 +63,10 @@ export const query = graphql`
       edges {
         node {
           id
-          fluid(maxWidth: 1200) {
+          small: fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+          detail: fluid(maxWidth: 2000) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
