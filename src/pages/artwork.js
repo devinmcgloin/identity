@@ -15,7 +15,11 @@ const IndexPage = ({ data }) => {
       <h2 className="f3 pl2 ttu tracked lh-copy black-60">Interactive</h2>
       <article className="w-100 flex flex-wrap">
         {data.interactive.edges.map((edge, index) => (
-          <Link key={index} className={'w-50-ns w-100 pa2 pointer dim'}>
+          <Link
+            to={edge.node.fields.slug}
+            key={index}
+            className={'w-50-ns w-100 pa2 pointer dim'}
+          >
             <div className="pa4 bg-light-gray">
               <Img
                 className="flex justify-center align-center"
