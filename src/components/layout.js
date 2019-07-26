@@ -68,7 +68,7 @@ const PostLayout = ({ title, description, publishedAt, tags, children }) => {
 
   return (
     <StandardLayout title={title} description={description}>
-      <div className="pa3 measure-wide center">
+      <div className="pa3 mw7 center">
         <article className="pv4">
           <header className="w-100 pr4-ns">
             <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
@@ -95,7 +95,7 @@ const ProjectLayout = ({
   children,
 }) => (
   <StandardLayout title={title} description={description}>
-    <div className="center pa3 measure-wide">
+    <div className="center pa3 mw7">
       <article className="pv4">
         <header className="w-100 pr4-ns">
           <div className="dt w-100">

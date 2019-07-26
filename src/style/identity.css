@@ -26,12 +26,12 @@ blockquote {
   position: relative;
 }
 
-@media (min-width: 45em) {
+/* @media (min-width: 45em) {
   blockquote {
     width: 42em;
     left: -4em;
   }
-}
+} */
 
 blockquote p {
   font-family: garamond, serif;
@@ -47,12 +47,12 @@ blockquote p {
   position: relative;
 }
 
-@media (min-width: 45em) {
+/* @media (min-width: 45em) {
   .gatsby-highlight {
     width: 42em;
     left: -4em;
   }
-}
+} */
 
 p code {
   border-radius: 0.25rem;
