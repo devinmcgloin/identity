@@ -61,7 +61,7 @@ const Gallery = ({ images }) => {
         isOpen={modalVisible}
         onRequestClose={() => setModalVisibility(false)}
         style={customStyles}
-        contentLabel="Example Modal"
+        contentLabel="Image Lightbox Modal"
       >
         <Img
           style={{
