@@ -42,7 +42,6 @@ class AdditiveSplines extends Component {
     datgui.add(this, 'addRandom');
     datgui.add(this, 'clearCanvas');
     datgui.add(this, 'download');
-    datgui.add(this, 'printColors');
   };
 
   componentDidMount = () => {
@@ -50,10 +49,6 @@ class AdditiveSplines extends Component {
     setupCanvas(canvas, this.draw, this.resetIterations, false);
     this.addRandom();
     this.canvas = canvas;
-  };
-
-  printColors = () => {
-    this.rings.map(r => console.log(r.color));
   };
 
   vary = path => {
