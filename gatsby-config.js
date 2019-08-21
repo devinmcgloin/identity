@@ -51,13 +51,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     { resolve: 'gatsby-plugin-feed', options: mdxFeed },
     {
-      resolve: `gatsby-source-unsplash`,
-      options: {
-        accessKey: process.env.UNSPLASH_ACCESS_KEY,
-        secretKey: process.env.UNSPLASH_SECRET_KEY,
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
