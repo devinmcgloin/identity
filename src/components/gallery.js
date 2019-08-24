@@ -34,7 +34,7 @@ const Gallery = ({ images }) => {
   let columnWidth = widthFactor * width - 80;
 
   let totalHeight = images.reduce(
-    (acc, image) => acc + columnWidth / image.small.aspectRatio + 80,
+    (acc, image) => acc + columnWidth / image.fluid.aspectRatio + 80,
     0
   );
 
@@ -48,7 +48,7 @@ const Gallery = ({ images }) => {
       }}
     >
       <div className="pa4 bg-light-gray">
-        <Img className="flex justify-center align-center" fluid={image.small} />
+        <Img className="flex justify-center align-center" fluid={image.fluid} />
       </div>
     </div>
   ));
@@ -65,11 +65,11 @@ const Gallery = ({ images }) => {
       >
         <Img
           style={{
-            width: width * images[selectedImage].detail.aspectRatio,
+            width: width * images[selectedImage].fluid.aspectRatio,
             maxHeight: '80vh',
             maxWidth: '80vw',
           }}
-          fluid={images[selectedImage].detail}
+          fluid={images[selectedImage].fluid}
         />
       </Modal>
       <Measure
@@ -94,16 +94,7 @@ const Gallery = ({ images }) => {
 };
 
 Gallery.propTypes = {
-  images: PropTypes.arrayOf(
-    PropTypes.shape({
-      detail: PropTypes.shape({
-        aspectRatio: PropTypes.number,
-      }),
-      small: PropTypes.shape({
-        aspectRatio: PropTypes.number,
-      }),
-    })
-  ),
+  images: PropTypes.arrayOf(),
 };
 
 export default Gallery;
