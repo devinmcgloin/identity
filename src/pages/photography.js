@@ -5,6 +5,7 @@ import Gallery from '../components/gallery';
 
 const IndexPage = ({ data }) => {
   let images = data.photos.edges.map(e => e.node);
+
   return (
     <HeaderLayout
       title="Photography"

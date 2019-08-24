@@ -94,7 +94,7 @@ const Gallery = ({ images }) => {
 };
 
 Gallery.propTypes = {
-  images: PropTypes.arrayOf(),
+  images: PropTypes.array,
 };
 
 export default Gallery;
