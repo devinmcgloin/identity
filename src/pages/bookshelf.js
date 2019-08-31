@@ -6,7 +6,7 @@ const IndexPage = ({ data }) => {
   let books = data.allBooksYaml.edges;
   let renderedBooks = books
     .map(edge => edge.node)
-    .sort((a, b) => a.rating > b.rating)
+    .sort((a, b) => a.rating < b.rating)
     .map(b => (
       <tr key={b.title}>
         <td className="pv3 pr3 bb b--black-20">{b.title}</td>
