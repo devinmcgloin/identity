@@ -107,7 +107,7 @@ exports[`TableList renders correctly with dark color 1`] = `
         </tr>
         <tr>
           <td
-            className="pv3 pr3 bb white"
+            className="pv3 pr3 bn white"
           >
             <a
               className="link dim underline white"
@@ -117,7 +117,7 @@ exports[`TableList renders correctly with dark color 1`] = `
             </a>
           </td>
           <td
-            className="pv3 pr3 bb white"
+            className="pv3 pr3 bn white"
           >
             Fokal is a simple photography site with the goal of getting good images seen.
           </td>
@@ -245,7 +245,7 @@ exports[`TableList renders correctly with light color 1`] = `
         </tr>
         <tr>
           <td
-            className="pv3 pr3 bb black"
+            className="pv3 pr3 bn black"
           >
             <a
               className="link dim underline black"
@@ -255,7 +255,7 @@ exports[`TableList renders correctly with light color 1`] = `
             </a>
           </td>
           <td
-            className="pv3 pr3 bb black"
+            className="pv3 pr3 bn black"
           >
             Fokal is a simple photography site with the goal of getting good images seen.
           </td>

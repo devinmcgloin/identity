@@ -33,7 +33,6 @@ const tableList = ({ columns, rows, color, title, link }) => {
   const tableRows = rows.map((d, indx) => (
     <tr key={d.slug}>
       {columns.map(c => {
-        console.log(indx !== rows.length);
         switch (c.type) {
           case 'title':
             return (
@@ -49,9 +48,9 @@ const tableList = ({ columns, rows, color, title, link }) => {
             return (
               <td
                 key={`${d.slug}-${c.type}`}
-                className={`pv3 pr3 ${
-                  indx !== rows.length - 1 ? 'bb' : ' bn '
-                } ${colorMap[color].text}`}
+                className={`pv3 pr3 ${indx !== rows.length - 1 ? 'bb' : 'bn'} ${
+                  colorMap[color].text
+                }`}
               >
                 {d[c.type]}
               </td>

@@ -8,7 +8,6 @@ const IndexPage = ({ data }) => {
     .map(edge => edge.node)
     .sort((a, b) => a.rating < b.rating)
     .map((b, indx) => {
-      console.log(indx !== books.length - 1);
       let css = `pv3 pr3 ${
         indx !== books.length - 1 ? 'bb' : 'bn'
       } b--black-20`;
