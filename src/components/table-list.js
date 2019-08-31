@@ -21,8 +21,8 @@ const colorMap = {
   },
 };
 
-const TableLink = ({ title, url, color }) => (
-  <td className={`pv3 pr3 bb ${colorMap[color].text}`}>
+const TableLink = ({ title, url, color, useBorder }) => (
+  <td className={`pv3 pr3 ${useBorder ? 'bb' : 'bn'} ${colorMap[color].text}`}>
     <Link to={url} className={`link dim underline ${colorMap[color].text}`}>
       {title}
     </Link>
@@ -30,9 +30,10 @@ const TableLink = ({ title, url, color }) => (
 );
 
 const tableList = ({ columns, rows, color, title, link }) => {
-  const tableRows = rows.map(d => (
+  const tableRows = rows.map((d, indx) => (
     <tr key={d.slug}>
       {columns.map(c => {
+        console.log(indx !== rows.length);
         switch (c.type) {
           case 'title':
             return (
@@ -41,13 +42,16 @@ const tableList = ({ columns, rows, color, title, link }) => {
                 title={d[c.type]}
                 url={d.slug}
                 color={color}
+                useBorder={indx !== rows.length - 1}
               />
             );
           default:
             return (
               <td
                 key={`${d.slug}-${c.type}`}
-                className={`pv3 pr3 bb ${colorMap[color].text}`}
+                className={`pv3 pr3 ${
+                  indx !== rows.length - 1 ? 'bb' : ' bn '
+                } ${colorMap[color].text}`}
               >
                 {d[c.type]}
               </td>

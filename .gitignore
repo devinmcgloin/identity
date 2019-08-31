@@ -8,3 +8,6 @@ plugins/*/node_modules
 /public
 .DS_Store
 .env
+
+# vim swap 
+.swp

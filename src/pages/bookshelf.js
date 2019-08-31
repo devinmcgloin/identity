@@ -7,13 +7,19 @@ const IndexPage = ({ data }) => {
   let renderedBooks = books
     .map(edge => edge.node)
     .sort((a, b) => a.rating < b.rating)
-    .map(b => (
-      <tr key={b.title}>
-        <td className="pv3 pr3 bb b--black-20">{b.title}</td>
-        <td className="pv3 pr3 bb b--black-20">{b.author}</td>
-        <td className="pv3 pr3 bb b--black-20">{b.rating}/3</td>
-      </tr>
-    ));
+    .map((b, indx) => {
+      console.log(indx !== books.length - 1);
+      let css = `pv3 pr3 ${
+        indx !== books.length - 1 ? 'bb' : 'bn'
+      } b--black-20`;
+      return (
+        <tr key={b.title}>
+          <td className={css}>{b.title}</td>
+          <td className={css}>{b.author}</td>
+          <td className={css}>{b.rating}/3</td>
+        </tr>
+      );
+    });
 
   return (
     <HeaderLayout
