@@ -10,4 +10,4 @@ plugins/*/node_modules
 .env
 
 # vim swap 
-.swp
+*.swp
