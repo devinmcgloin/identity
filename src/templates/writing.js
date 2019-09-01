@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { PostLayout } from '../components/layout';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const PostTemplate = ({ data }) => {
   const post = data.mdx;
@@ -13,7 +13,7 @@ const PostTemplate = ({ data }) => {
       tags={post.frontmatter.tags}
       description={post.excerpt}
     >
-      <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
+      <MDXRenderer>{post.body}</MDXRenderer>
     </PostLayout>
   );
 };
@@ -21,9 +21,7 @@ const PostTemplate = ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      code {
-        body
-      }
+      body
       frontmatter {
         title
         date(formatString: "dddd, MMMM Do 0YYYY")
