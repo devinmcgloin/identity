@@ -6547,18 +6547,18 @@ gl-react-dom@^3.15.0:
     raf "^3.3.0"
     webgltexture-loader-dom "^0.6.0"
 
-gl-react@^3.15.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/gl-react/-/gl-react-3.15.0.tgz#bd98e8955c61ac5fa466fffd6b146175f839da5a"
-  integrity sha1-vZjolVxhrF+kZv/9axRhdfg52lo=
+gl-react@^3.17.2:
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/gl-react/-/gl-react-3.17.2.tgz#297fc667d0db3d530f81b7220519f59e5959c2ae"
+  integrity sha512-lO582lZltx7uk2mj4+qASKM3SWLbf6CwWHM7KhIFbUlUCPjRv0cGd9LlqGul0iHEYPrfB+CyqGj3c6vL7z5syw==
   dependencies:
     gl-shader "^4.2.1"
-    invariant "^2.2.1"
+    invariant "^2.2.4"
     ndarray "^1.0.18"
-    prop-types "^15.6.1"
+    prop-types "^15.7.2"
     typedarray-pool "^1.1.0"
-    webgltexture-loader "^0.6.0"
-    webgltexture-loader-ndarray "^0.9.0"
+    webgltexture-loader "^0.12.2"
+    webgltexture-loader-ndarray "^0.12.2"
 
 gl-shader@^4.2.1:
   version "4.2.1"
@@ -14658,15 +14658,20 @@ webgltexture-loader-dom@^0.6.0:
     webgltexture-loader-dom-image-url "^0.6.0"
     webgltexture-loader-dom-video "^0.6.0"
 
-webgltexture-loader-ndarray@^0.9.0:
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/webgltexture-loader-ndarray/-/webgltexture-loader-ndarray-0.9.0.tgz#1ea839620ce9413cdd6015f4e17bfa973e973563"
-  integrity sha1-Hqg5YgzpQTzdYBX04Xv6lz6XNWM=
+webgltexture-loader-ndarray@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/webgltexture-loader-ndarray/-/webgltexture-loader-ndarray-0.12.2.tgz#bcc43673bc2936f2b94891e26122d50d5c95a1f2"
+  integrity sha512-DhaL1hcu+P9v7gWiP21sIC34Di1MmRNeEDnPLQNAeyFtLFemteKxrwdCz6ihm8LI8ng7NtAgoTJhcSePtO7b7w==
   dependencies:
     ndarray "^1.0.18"
     ndarray-ops "^1.2.2"
     typedarray-pool "^1.1.0"
-    webgltexture-loader "^0.6.0"
+    webgltexture-loader "^0.12.2"
+
+webgltexture-loader@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/webgltexture-loader/-/webgltexture-loader-0.12.2.tgz#8a511a4aca2c442421d0fda74dfb4929a362748f"
+  integrity sha512-8CuVBLDSKdPY62s2BV6PSrbRmnZt701Huk0NuRLribrVAs+nKiLiU+9vrWiHk3nRI+Bgmi0101wbniYXhiXtNg==
 
 webgltexture-loader@^0.6.0:
   version "0.6.0"
