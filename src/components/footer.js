@@ -19,62 +19,60 @@ const PureFooter = ({ data }) => {
   });
   return (
     <footer className="pa4 pa5-l black-70 bt b--black-10 mw8 center">
-      <div className="mb4-l">
-        <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+      <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+        <a
+          className="f6 db fw5 pv1 black-70 link dim"
+          title="Email"
+          href={`mailto:${email}`}
+        >
+          {email}
+        </a>
+        <a
+          className="f6 db fw5 pv1 black-70 link dim"
+          title="Email"
+          href={`https://twitter.com/${twitter}`}
+        >
+          <span className="black-50">twitter</span>/{twitter}
+        </a>
+        <a
+          className="f6 db fw5 pv1 black-70 link dim"
+          title="Email"
+          href={`https://github.com/${github}`}
+        >
+          <span className="black-50">github</span>/{github}
+        </a>
+        <a
+          className="f6 db fw5 pv1 black-70 link dim"
+          title="Email"
+          href={`https://unsplash.com/${unsplash}`}
+        >
+          <span className="black-50">unsplash</span>/{unsplash}
+        </a>
+      </article>
+      <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+        {projects.map(p => (
           <a
+            key={p.slug}
             className="f6 db fw5 pv1 black-70 link dim"
-            title="Email"
-            href={`mailto:${email}`}
+            title={p.title}
+            href={p.slug}
           >
-            {email}
+            <span className="black-50">project</span>/{p.title}
           </a>
+        ))}
+      </article>
+      <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+        {artwork.map(p => (
           <a
+            key={p.slug}
             className="f6 db fw5 pv1 black-70 link dim"
-            title="Email"
-            href={`https://twitter.com/${twitter}`}
+            title={p.title}
+            href={p.slug}
           >
-            <span className="black-50">twitter</span>/{twitter}
+            <span className="black-50">interactive</span>/{p.title}
           </a>
-          <a
-            className="f6 db fw5 pv1 black-70 link dim"
-            title="Email"
-            href={`https://github.com/${github}`}
-          >
-            <span className="black-50">github</span>/{github}
-          </a>
-          <a
-            className="f6 db fw5 pv1 black-70 link dim"
-            title="Email"
-            href={`https://unsplash.com/${unsplash}`}
-          >
-            <span className="black-50">unsplash</span>/{unsplash}
-          </a>
-        </article>
-        <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
-          {projects.map(p => (
-            <a
-              key={p.slug}
-              className="f6 db fw5 pv1 black-70 link dim"
-              title={p.title}
-              href={p.slug}
-            >
-              <span className="black-50">project</span>/{p.title}
-            </a>
-          ))}
-        </article>
-        <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
-          {artwork.map(p => (
-            <a
-              key={p.slug}
-              className="f6 db fw5 pv1 black-70 link dim"
-              title={p.title}
-              href={p.slug}
-            >
-              <span className="black-50">interactive</span>/{p.title}
-            </a>
-          ))}
-        </article>
-      </div>
+        ))}
+      </article>
     </footer>
   );
 };

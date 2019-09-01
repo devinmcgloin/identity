@@ -109,6 +109,7 @@ const StandardMetadata = ({ title, description, siteUrl, social }) => (
     <meta name="twitter:creator" content={`@${social.twitter}`} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="description" content={description} />
   </Helmet>
 );
 
