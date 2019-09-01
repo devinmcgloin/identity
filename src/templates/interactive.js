@@ -2,11 +2,10 @@ import React from 'react';
 import { ProjectLayout } from '../components/layout';
 import moment from 'moment';
 import { graphql } from 'gatsby';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 const InteractiveTemplate = ({ data }) => {
   const post = data.mdx;
-
   return (
     <ProjectLayout
       title={post.frontmatter.title}
@@ -15,7 +14,7 @@ const InteractiveTemplate = ({ data }) => {
       repo={post.frontmatter.repo}
       license={post.frontmatter.license}
     >
-      <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
+      <MDXRenderer>{post.body}</MDXRenderer>
     </ProjectLayout>
   );
 };
@@ -29,10 +28,7 @@ export const query = graphql`
         repo
         license
       }
-      code {
-        body
-      }
-      excerpt
+      body
     }
   }
 `;

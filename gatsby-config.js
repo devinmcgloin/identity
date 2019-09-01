@@ -1,5 +1,3 @@
-const mdxFeed = require('gatsby-mdx/feed');
-
 require('dotenv').config();
 
 module.exports = {
@@ -22,34 +20,66 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: ['.mdx', '.md'],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1035,
-            },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-            },
-          },
-        ],
-      },
-    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     'gatsby-remark-copy-linked-files',
     'gatsby-transformer-sharp',
-    { resolve: 'gatsby-plugin-feed', options: mdxFeed },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                });
+              });
+            },
+            query: `
+              {
+                allMdx(
+                  filter: { fields: { slug: { regex: "/writing/(.)+/" } } }
+                  sort: { order: DESC, fields: frontmatter___date }
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        title
+                        date(formatString: "dddd, MMMM Do 0YYYY")
+                        tags
+                      }
+                      fields {
+                        slug
+                      }
+                      excerpt(pruneLength: 270)
+                      timeToRead
+                    }
+                  }
+                }
+             }
+            `,
+            output: '/rss.xml',
+            title: "Devin McGloin's RSS Feed",
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -74,7 +104,7 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-yaml`,
+    'gatsby-transformer-yaml',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -87,6 +117,29 @@ module.exports = {
       options: {
         name: 'content',
         path: `${__dirname}/content`,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ],
       },
     },
     {
