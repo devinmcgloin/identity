@@ -18,8 +18,8 @@ const PureFooter = ({ data }) => {
     };
   });
   return (
-    <footer className="pa4 pa5-l black-70 bt b--black-10 mw8 center">
-      <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+    <footer className="flex pa4 pa5-l black-70 bt b--black-10 mw8 center">
+      <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
         <a
           className="f6 db fw5 pv1 black-70 link dim"
           title="Email"
@@ -49,7 +49,7 @@ const PureFooter = ({ data }) => {
           <span className="black-50">unsplash</span>/{unsplash}
         </a>
       </article>
-      <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+      <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
         {projects.map(p => (
           <a
             key={p.slug}
@@ -61,7 +61,7 @@ const PureFooter = ({ data }) => {
           </a>
         ))}
       </article>
-      <article className="fl w-100 dib-ns w-auto-ns mr4-m mr5-l mb4">
+      <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
         {artwork.map(p => (
           <a
             key={p.slug}
