@@ -16,8 +16,13 @@ const currently = () => (
           </p>
         </article>
 
-        <section style={{ display: 'flex', flexWrap: 'wrap' }}>
-          <article className="fl pv2 w-100 w-third-l w-50-m ph2">
+        <section
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+          }}
+        >
+          <article className="pv2 w-100 w-third-l w-50-m ph2">
             <h2 className="garamond f5 f4-ns fw6 mb0">Knowing Quality</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Assessing quality is both a question of what Quality is, and how
@@ -25,7 +30,7 @@ const currently = () => (
               consider when doing <span className="i">anything</span>.
             </p>
           </article>
-          <article className="pv2 fl w-100 w-third-l w-50-m ph2">
+          <article className="pv2 w-100 w-third-l w-50-m ph2">
             <h2 className="garamond f5 f4-ns fw6 mb0">Generative Artwork</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Computer Generated artwork is an exciting mix between computing
@@ -33,7 +38,7 @@ const currently = () => (
               around this in the future.
             </p>
           </article>
-          <article className="pv2 fl w-100 w-third-l w-50-m ph2">
+          <article className="pv2 w-100 w-third-l w-50-m ph2">
             <h2 className="garamond f5 f4-ns fw6 mb0">Cycling & Backpacking</h2>
             <p className="f6 f5-ns lh-copy mt0">
               These are both fantastic ways to see things you wouldn't be able
@@ -42,7 +47,7 @@ const currently = () => (
               future.
             </p>
           </article>
-          <article className="pv2 fl w-100 w-third-l w-50-m ph2">
+          <article className="pv2 w-100 w-third-l w-50-m ph2">
             <h2 className="garamond f5 f4-ns fw6 mb0">Understanding Context</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Understanding the context swirling around what you're working
@@ -51,7 +56,7 @@ const currently = () => (
               work and goals.
             </p>
           </article>
-          <article className="pv2 fl w-100 w-third-l w-50-m ph2">
+          <article className="pv2 w-100 w-third-l w-50-m ph2">
             <h2 className="garamond f5 f4-ns fw6 mb0">Distilling Ideas</h2>
             <p className="f6 f5-ns lh-copy mt0">
               Communicating ideas is incredibly important, as is distilling
@@ -59,7 +64,7 @@ const currently = () => (
               this ability through writing, so keep an eye on my RSS feed.
             </p>
           </article>
-          <article className="pv2 fl w-100 w-third-l w-50-m ph2">
+          <article className="pv2 w-100 w-third-l w-50-m ph2">
             <h2 className="garamond f5 f4-ns fw6 mb0">History of Computing</h2>
             <p className="f6 f5-ns lh-copy mt0">
               I'm enamored with where we've been in computing. The history of
