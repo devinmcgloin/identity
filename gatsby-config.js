@@ -3,7 +3,8 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: 'Devin McGloin',
-    description: 'Converging on quality, Devin McGloin is a Software Engineer living in Dublin Ireland. This site is a collection of ideas, artwork and projects.',
+    description:
+      'Converging on quality, Devin McGloin is a Software Engineer living in Dublin Ireland. This site is a collection of ideas, artwork and projects.',
     siteUrl: 'https://devinmcgloin.com',
     headerLinks: [
       { slug: '/projects', title: 'Projects' },
@@ -131,6 +132,8 @@ module.exports = {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1035,
+              quality: 100,
+              withWebp: true,
             },
           },
           {
