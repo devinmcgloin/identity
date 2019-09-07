@@ -1,12 +1,12 @@
 ---
 layout: project
 title: Adventure
-excerpt: "Adventure is a port of the classic terminal game Colossal Cave Adventure to modern chat clients."
+excerpt: 'Adventure is a port of the classic terminal game Colossal Cave Adventure to modern chat clients.'
 custom-media: true
 custom-media-dir: advent
-gradient: "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)"
-permalink: "/advent/"
-date: "2016-05-23"
+gradient: 'linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)'
+permalink: '/advent/'
+date: '2016-05-23'
 repo: devinmcgloin/advent
 license: MIT
 ---
@@ -16,7 +16,11 @@ Adventure is a port of the classic terminal game
 to modern chat clients. Adventure is available on both FB messenger
 and Telegram.
 
-<div class="flex space-between">
+<div style={{
+  display:"flex",
+  flexDirection: "column",
+  alignItems: "center",
+}}>
 
 [![](/advent/messenger.png)](https://m.me/adventerm)
 
@@ -28,12 +32,12 @@ The content of the game is mostly the same as the original released in
 1976, it even runs off the same data file! I have however made a few
 necessary changes to how a user interacts with the game:
 
- * Messages are sent in true case as opposed to the original uppercase.
- * Messages are spaced out in order to make the game feel more natural
-   in messaging clients.
- * Info and instruction commands have changed in order to allow people
-   to restart the game, and activate other game mechanics that would
-   ordinarily be changed in the terminal.
+- Messages are sent in true case as opposed to the original uppercase.
+- Messages are spaced out in order to make the game feel more natural
+  in messaging clients.
+- Info and instruction commands have changed in order to allow people
+  to restart the game, and activate other game mechanics that would
+  ordinarily be changed in the terminal.
 
 It is built with [Smooch](https://smooch.io) to manage messaging and
 deployed on [Heroku](https://heroku.com). Source is available on
@@ -48,30 +52,34 @@ deployed on [Heroku](https://heroku.com). Source is available on
     <dd class="dib ml0 gray">You are standing at the end of a road before a small brick building.</dd>
   </dl>
 
-  <dl class="lh-title mv2">
-    <dt class="dib b pr1">Advent:</dt>
-    <dd class="dib ml0 gray">Around you is a forest.</dd>
-  </dl>
+<dl class="lh-title mv2">
+  <dt class="dib b pr1">Advent:</dt>
+  <dd class="dib ml0 gray">Around you is a forest.</dd>
+</dl>
 
-  <dl class="lh-title mv2">
-    <dt class="dib b pr1">Advent:</dt>
-    <dd class="dib ml0 gray">A small stream flows out of the building and down a gully.</dd>
-  </dl>
+<dl class="lh-title mv2">
+  <dt class="dib b pr1">Advent:</dt>
+  <dd class="dib ml0 gray">
+    A small stream flows out of the building and down a gully.
+  </dd>
+</dl>
 
-  <dl class="lh-title mv2">
-    <dt class="dib b pr1">You:</dt>
-    <dd class="dib ml0 gray">building</dd>
-  </dl>
+<dl class="lh-title mv2">
+  <dt class="dib b pr1">You:</dt>
+  <dd class="dib ml0 gray">building</dd>
+</dl>
 
-  <dl class="lh-title mv2">
-    <dt class="dib b pr1">Advent:</dt>
-    <dd class="dib ml0 gray">You are inside a building, a well house for a large spring.</dd>
-  </dl>
+<dl class="lh-title mv2">
+  <dt class="dib b pr1">Advent:</dt>
+  <dd class="dib ml0 gray">
+    You are inside a building, a well house for a large spring.
+  </dd>
+</dl>
 
-  <dl class="lh-title mv2">
-    <dt class="dib b pr1">Advent:</dt>
-    <dd class="dib ml0 gray">There are some keys on the ground here.</dd>
-  </dl>
+<dl class="lh-title mv2">
+  <dt class="dib b pr1">Advent:</dt>
+  <dd class="dib ml0 gray">There are some keys on the ground here.</dd>
+</dl>
 
   <dl class="lh-title mv2">
     <dt class="dib b pr1">Advent:</dt>
@@ -97,10 +105,10 @@ deployed on [Heroku](https://heroku.com). Source is available on
 
 ## Contributions
 
-* Willie Crowther for originally developing the game.
-* Don Woods for adding many of the features of the current program.
-* [Brandon Rhodes](http://rhodesmill.org/brandon/) for his
+- Willie Crowther for originally developing the game.
+- Don Woods for adding many of the features of the current program.
+- [Brandon Rhodes](http://rhodesmill.org/brandon/) for his
   implementation of Colossal Cave Adventure. It can be found on PyPI
   and [Github](https://github.com/brandon-rhodes/python-adventure).
-* [Como el buen vino studio](https://thenounproject.com/term/lantern/87141/)
+- [Como el buen vino studio](https://thenounproject.com/term/lantern/87141/)
   in Spain for the lantern logo.
