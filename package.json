@@ -39,8 +39,8 @@
     "mdx": "^0.3.1",
     "moment": "^2.24.0",
     "prismjs": "^1.17.1",
-    "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
     "react-measure": "^2.3.0",
     "react-modal": "^3.10.1",
@@ -52,7 +52,7 @@
     "typeface-open-sans": "^0.0.75"
   },
   "resolutions": {
-    "*/scheduler": "^0.14.0"
+    "*/scheduler": "^0.15.0"
   },
   "keywords": [],
   "scripts": {
