@@ -68,6 +68,19 @@ const PostLayout = ({ title, description, publishedAt, tags, children }) => {
 
   return (
     <StandardLayout title={title} description={description}>
+      <script
+        type="text/javascript"
+        src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js"
+        data-dojo-config="usePlainJson: true, isDebug: false"
+      ></script>
+      {window.dojoRequire(['mojo/signup-forms/Loader'], function(L) {
+        L.start({
+          baseUrl: 'mc.us4.list-manage.com',
+          uuid: '44c547e9cde22b4c3c681f7cc',
+          lid: 'b5cb9163cc',
+          uniqueMethods: true,
+        });
+      })}
       <div className="pa3 mw7 center">
         <article className="pv4">
           <header className="w-100 pr4-ns">

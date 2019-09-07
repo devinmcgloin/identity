@@ -2,25 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Measure from 'react-measure';
-import Modal from 'react-modal';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    background: '#eee',
-    border: 'none',
-    borderRadius: '2px',
-    padding: '32px',
-  },
-  overlay: {
-    background: 'rgba(0, 0, 0, 0.7)',
-  },
-};
+import GalleryModal from './gallery-modal';
 
 const Gallery = ({ images }) => {
   const [width, setWidth] = useState(1100);
@@ -57,21 +39,13 @@ const Gallery = ({ images }) => {
 
   return (
     <React.Fragment>
-      <Modal
-        isOpen={modalVisible}
-        onRequestClose={() => setModalVisibility(false)}
-        style={customStyles}
-        contentLabel="Image Lightbox Modal"
-      >
-        <Img
-          style={{
-            width: width * images[selectedImage].fluid.aspectRatio,
-            maxHeight: '80vh',
-            maxWidth: '80vw',
-          }}
-          fluid={images[selectedImage].fluid}
-        />
-      </Modal>
+      <GalleryModal
+        images={images}
+        selectedImage={selectedImage}
+        setSelectedImage={setSelectedImage}
+        modalVisible={modalVisible}
+        setModalVisibility={setModalVisibility}
+      />
       <Measure
         bounds
         onResize={rect => {
