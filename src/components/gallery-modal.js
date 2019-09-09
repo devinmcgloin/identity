@@ -4,18 +4,6 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import noScroll from 'no-scroll';
 
-const customStyles = {
-  content: {
-    width: '100vw',
-    height: '100vh',
-    background: 'white',
-    position: 'absolute',
-    left: 0,
-    top: 0,
-    padding: 0,
-  },
-};
-
 const CloseButton = styled.div`
   position: absolute;
   top: 30px;
@@ -101,6 +89,24 @@ const GalleryModal = ({
   const setIndex = current => {
     setSelectedImage(Math.max(0, Math.min(current, images.length - 1)));
   };
+  const customStyles = () => {
+    let viewHeight = '100vh';
+    if (typeof window !== 'undefined') {
+      viewHeight = `${window.innerHeight}px`;
+    }
+
+    return {
+      content: {
+        width: '100vw',
+        height: viewHeight,
+        background: 'white',
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        padding: 0,
+      },
+    };
+  };
 
   return (
     <Modal
@@ -109,7 +115,7 @@ const GalleryModal = ({
         setModalVisibility(false);
         noScroll.off();
       }}
-      style={customStyles}
+      style={customStyles()}
       contentLabel="Image Lightbox Modal"
     >
       <div
