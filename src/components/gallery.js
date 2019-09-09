@@ -2,25 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Measure from 'react-measure';
-import Modal from 'react-modal';
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    background: '#eee',
-    border: 'none',
-    borderRadius: '2px',
-    padding: '32px',
-  },
-  overlay: {
-    background: 'rgba(0, 0, 0, 0.7)',
-  },
-};
+import GalleryModal from './gallery-modal';
 
 const Gallery = ({ images }) => {
   const [width, setWidth] = useState(1100);
@@ -41,37 +23,29 @@ const Gallery = ({ images }) => {
   let renderedImages = images.map((image, i) => (
     <div
       key={i}
-      className={'w-33-l w-50-m w-100 pa2 pointer dim'}
+      className={'w-33-l w-50-m w-100 pa2 pointer'}
       onClick={() => {
         setSelectedImage(i);
         setModalVisibility(true);
       }}
     >
-      <div className="pa4 bg-light-gray">
+      <div className="ba b--black-10 pa1">
         <Img className="flex justify-center align-center" fluid={image.fluid} />
       </div>
     </div>
   ));
 
-  let maxHeight = totalHeight * (widthFactor + 0.02);
+  let maxHeight = totalHeight * (widthFactor + 0.03);
 
   return (
     <React.Fragment>
-      <Modal
-        isOpen={modalVisible}
-        onRequestClose={() => setModalVisibility(false)}
-        style={customStyles}
-        contentLabel="Image Lightbox Modal"
-      >
-        <Img
-          style={{
-            width: width * images[selectedImage].fluid.aspectRatio,
-            maxHeight: '80vh',
-            maxWidth: '80vw',
-          }}
-          fluid={images[selectedImage].fluid}
-        />
-      </Modal>
+      <GalleryModal
+        images={images}
+        selectedImage={selectedImage}
+        setSelectedImage={setSelectedImage}
+        modalVisible={modalVisible}
+        setModalVisibility={setModalVisibility}
+      />
       <Measure
         bounds
         onResize={rect => {
