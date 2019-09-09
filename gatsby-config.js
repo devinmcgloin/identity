@@ -9,6 +9,7 @@ module.exports = {
     headerLinks: [
       { slug: '/projects', title: 'Projects' },
       { slug: '/artwork', title: 'Artwork' },
+      { slug: '/photography', title: 'Photography', hide_small: true },
       { slug: '/writing', title: 'Writing' },
     ],
     social: {

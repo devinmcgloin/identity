@@ -25,6 +25,7 @@ const StandardLayout = ({ title, description, children }) => (
             headerLinks {
               slug
               title
+              hide_small
             }
           }
         }

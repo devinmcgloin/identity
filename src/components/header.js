@@ -5,7 +5,9 @@ import Logo from './logo';
 const Header = ({ links }) => {
   const linkContent = links.map(l => (
     <Link
-      className="link black-70 dim fw5 f6 f5-ns dib"
+      className={`link black-70 dim fw5 f6 f5-ns pa2 ${
+        l.hide_small ? 'dn dib-ns' : 'dib'
+      }`}
       to={l.slug}
       title={l.title}
       key={l.slug}
@@ -22,9 +24,7 @@ const Header = ({ links }) => {
             <Logo />
           </Link>
         </div>
-        <div className="flex justify-between" style={{ width: '13em' }}>
-          {linkContent}
-        </div>
+        <div className="flex justify-between">{linkContent}</div>
       </nav>
     </div>
   );
