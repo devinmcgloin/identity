@@ -38,8 +38,8 @@ const CrossBar = styled.div`
   background-color: #333;
 `;
 
-const XDisplay = () => (
-  <CloseButton>
+const XDisplay = props => (
+  <CloseButton {...props}>
     <CrossBar></CrossBar>
     <CrossBar right></CrossBar>
   </CloseButton>
@@ -102,6 +102,7 @@ const GalleryModal = ({
   const setIndex = current => {
     setSelectedImage(Math.max(0, Math.min(current, images.length - 1)));
   };
+
   return (
     <Modal
       isOpen={modalVisible}
@@ -118,9 +119,10 @@ const GalleryModal = ({
       >
         <XDisplay
           onClick={() => {
+            console.log('CLICKED CLOSE BUTTON');
             setModalVisibility(false);
           }}
-        ></XDisplay>
+        />
         <Img
           style={{
             maxWidth: '100%',
