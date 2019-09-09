@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import Measure from 'react-measure';
 import GalleryModal from './gallery-modal';
+import noScroll from 'no-scroll';
 
 const Gallery = ({ images }) => {
   const [width, setWidth] = useState(1100);
@@ -27,6 +28,7 @@ const Gallery = ({ images }) => {
       onClick={() => {
         setSelectedImage(i);
         setModalVisibility(true);
+        noScroll.on();
       }}
     >
       <div className="ba b--black-10 pa1">

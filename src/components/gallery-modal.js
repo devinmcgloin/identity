@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import noScroll from 'no-scroll';
 
 const customStyles = {
   content: {
@@ -104,7 +105,10 @@ const GalleryModal = ({
   return (
     <Modal
       isOpen={modalVisible}
-      onRequestClose={() => setModalVisibility(false)}
+      onRequestClose={() => {
+        setModalVisibility(false);
+        noScroll.off();
+      }}
       style={customStyles}
       contentLabel="Image Lightbox Modal"
     >
@@ -115,7 +119,12 @@ const GalleryModal = ({
           padding: '70px 0px 70px 0px',
         }}
       >
-        <XDisplay onClick={() => setModalVisibility(false)} />
+        <XDisplay
+          onClick={() => {
+            noScroll.off();
+            setModalVisibility(false);
+          }}
+        />
         <Img
           style={{
             maxWidth: '100%',
