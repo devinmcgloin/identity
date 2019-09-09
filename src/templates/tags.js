@@ -8,7 +8,7 @@ const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges } = data.allMdx;
 
-  const header = `On ${tag}`;
+  const header = `#${tag.toLowerCase()}`;
 
   return (
     <HeaderLayout

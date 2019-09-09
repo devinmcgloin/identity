@@ -14,7 +14,11 @@ const TagButton = ({ tag }) => (
       style={{ backgroundColor: 'rgb(243, 248, 255)' }}
       className="f6 f5-ns db pa2 link dim blue"
     >
-      {tag}
+      #
+      {tag
+        .toLowerCase()
+        .split(' ')
+        .join('-')}
     </Link>
   </li>
 );
