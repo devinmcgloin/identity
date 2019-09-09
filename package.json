@@ -51,9 +51,6 @@
     "tachyons": "^4.11.1",
     "typeface-open-sans": "^0.0.75"
   },
-  "resolutions": {
-    "*/scheduler": "^0.15.0"
-  },
   "keywords": [],
   "scripts": {
     "build": "gatsby build",
