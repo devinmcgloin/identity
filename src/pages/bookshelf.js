@@ -4,9 +4,18 @@ import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
   let books = data.allBooksYaml.edges;
+
+  const emojiForRating = rating => {
+    if (rating === 5) return '☺️';
+    if (rating === 4) return '😀';
+    if (rating === 3) return '😑';
+    if (rating === 2) return '😞';
+
+    return '😤';
+  };
   let renderedBooks = books
     .map(edge => edge.node)
-    .sort((a, b) => a.rating < b.rating)
+    .sort((a, b) => b.rating - a.rating)
     .map((b, indx) => {
       let css = `pv3 pr3 ${
         indx !== books.length - 1 ? 'bb' : 'bn'
@@ -15,7 +24,7 @@ const IndexPage = ({ data }) => {
         <tr key={b.title}>
           <td className={css}>{b.title}</td>
           <td className={css}>{b.author}</td>
-          <td className={css}>{b.rating}/3</td>
+          <td className={css + ' f4'}>{emojiForRating(b.rating)}</td>
         </tr>
       );
     });
