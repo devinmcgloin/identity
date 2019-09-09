@@ -23,7 +23,7 @@ const Gallery = ({ images }) => {
   let renderedImages = images.map((image, i) => (
     <div
       key={i}
-      className={'w-33-l w-50-m w-100 pa2 pointer dim'}
+      className={'w-33-l w-50-m w-100 pa2 pointer'}
       onClick={() => {
         setSelectedImage(i);
         setModalVisibility(true);
@@ -35,7 +35,7 @@ const Gallery = ({ images }) => {
     </div>
   ));
 
-  let maxHeight = totalHeight * (widthFactor + 0.02);
+  let maxHeight = totalHeight * (widthFactor + 0.03);
 
   return (
     <React.Fragment>

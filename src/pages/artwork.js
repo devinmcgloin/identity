@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => {
           <Link
             to={edge.node.fields.slug}
             key={index}
-            className={'w-50-ns w-100 pa2 pointer dim'}
+            className={'w-50-ns w-100 pa2 pointer'}
           >
             <div className="ba b--black-10 pa1">
               <Img

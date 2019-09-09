@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
@@ -57,7 +57,7 @@ const PositionDisplay = styled.div`
   margin-left: -50px;
 `;
 
-const LeftArrow = styled.div`
+const ArrowContainer = styled.div`
   font-size: 24px;
   height: 20px;
   width: 20px;
@@ -66,16 +66,14 @@ const LeftArrow = styled.div`
   bottom: 30px;
   right: 80px;
   cursor: pointer;
+  color: ${props => (props.disabled ? '#eee' : '#333')};
 `;
 
-const RightArrow = styled.div`
-  font-size: 24px;
-  height: 20px;
-  width: 20px;
-  display: block;
-  position: absolute;
-  bottom: 30px;
-  cursor: pointer;
+const LeftArrowContainer = styled(ArrowContainer)`
+  right: 80px;
+`;
+
+const RightArrowContainer = styled(ArrowContainer)`
   right: 40px;
 `;
 
@@ -117,12 +115,7 @@ const GalleryModal = ({
           padding: '70px 0px 70px 0px',
         }}
       >
-        <XDisplay
-          onClick={() => {
-            console.log('CLICKED CLOSE BUTTON');
-            setModalVisibility(false);
-          }}
-        />
+        <XDisplay onClick={() => setModalVisibility(false)} />
         <Img
           style={{
             maxWidth: '100%',
@@ -137,12 +130,18 @@ const GalleryModal = ({
         <PositionDisplay>
           {selectedImage + 1} of {images.length}
         </PositionDisplay>
-        <LeftArrow onClick={() => setIndex(selectedImage - 1)}>
+        <LeftArrowContainer
+          onClick={() => setIndex(selectedImage - 1)}
+          disabled={selectedImage === 0}
+        >
           <Arrow></Arrow>
-        </LeftArrow>
-        <RightArrow onClick={() => setIndex(selectedImage + 1)}>
-          <Arrow right> </Arrow>
-        </RightArrow>
+        </LeftArrowContainer>
+        <RightArrowContainer
+          onClick={() => setIndex(selectedImage + 1)}
+          disabled={selectedImage === images.length - 1}
+        >
+          <Arrow right></Arrow>
+        </RightArrowContainer>
       </div>
     </Modal>
   );
