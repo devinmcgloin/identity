@@ -66,7 +66,7 @@ const ArrowContainer = styled.div`
   position: absolute;
   bottom: 30px;
   right: 80px;
-  cursor: pointer;
+  cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
   color: ${props => (props.disabled ? '#eee' : '#333')};
 `;
 
