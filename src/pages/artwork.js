@@ -12,7 +12,6 @@ const IndexPage = ({ data }) => {
       title="Artwork"
       description="Personal artwork I've created, both interactive and static"
     >
-      <h2 className="f3 pl2 ttu tracked lh-copy black-60">Interactive</h2>
       <article className="w-100 flex flex-wrap">
         {data.interactive.edges.map((edge, index) => (
           <Link
@@ -29,8 +28,7 @@ const IndexPage = ({ data }) => {
           </Link>
         ))}
       </article>
-
-      <h2 className="f3 pl2 ttu tracked lh-copy black-60">Static</h2>
+      <hr className="b--black-10 mv3"></hr>
       <Gallery images={images} maxHeight={6000} />
     </HeaderLayout>
   );
