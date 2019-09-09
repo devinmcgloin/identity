@@ -29,7 +29,7 @@ const Gallery = ({ images }) => {
         setModalVisibility(true);
       }}
     >
-      <div className="pa4 bg-light-gray">
+      <div className="ba b--black-10 pa1">
         <Img className="flex justify-center align-center" fluid={image.fluid} />
       </div>
     </div>

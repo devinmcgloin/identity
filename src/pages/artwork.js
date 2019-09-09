@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
             key={index}
             className={'w-50-ns w-100 pa2 pointer dim'}
           >
-            <div className="pa4 bg-light-gray">
+            <div className="ba b--black-10 pa1">
               <Img
                 className="flex justify-center align-center"
                 fluid={edge.node.frontmatter.image.childImageSharp.fluid}
