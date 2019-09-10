@@ -103,17 +103,20 @@ const GalleryModal = ({
   });
 
   const [viewHeight, setViewHeight] = useState('100vh');
-  const handleResize = useCallback(() => {
+  useEffect(() => {
     setViewHeight(window.innerHeight);
   });
+  // const handleResize = useCallback(() => {
+  //   setViewHeight(window.innerHeight);
+  // });
 
   useEffect(() => {
     window.addEventListener('keydown', handleUserKeyPress);
-    window.addEventListener('resize', handleResize);
+    // window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('keydown', handleUserKeyPress);
-      window.removeEventListener('resize', handleResize);
+      // window.removeEventListener('resize', handleResize);
     };
   });
 
