@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Modal from 'react-modal';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
@@ -89,12 +89,35 @@ const GalleryModal = ({
   const setIndex = current => {
     setSelectedImage(Math.max(0, Math.min(current, images.length - 1)));
   };
-  const customStyles = () => {
-    let viewHeight = '100vh';
-    if (typeof window !== 'undefined') {
-      viewHeight = `${window.innerHeight}px`;
-    }
 
+  const handleUserKeyPress = useCallback(event => {
+    const { key } = event;
+    switch (key) {
+      case 'ArrowRight':
+        setIndex(selectedImage + 1);
+        break;
+      case 'ArrowLeft':
+        setIndex(selectedImage - 1);
+        break;
+    }
+  });
+
+  const [viewHeight, setViewHeight] = useState('100vh');
+  const handleResize = useCallback(() => {
+    setViewHeight(window.innerHeight);
+  });
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleUserKeyPress);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress);
+      window.removeEventListener('resize', handleResize);
+    };
+  });
+
+  const customStyles = () => {
     return {
       content: {
         width: '100vw',
