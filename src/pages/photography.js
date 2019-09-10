@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
       title="Photography"
       description="Various photos I'm proud of. Taken across the world and stored on Unsplash."
     >
-      <Gallery images={images} maxHeight={4050} />
+      <Gallery images={images} />
     </HeaderLayout>
   );
 };
@@ -25,7 +25,7 @@ export const query = graphql`
       edges {
         node {
           id
-          fluid(maxWidth: 2500) {
+          fluid(quality: 100, maxWidth: 1800) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
