@@ -6,7 +6,7 @@ const IndexPage = ({ data }) => {
   let books = data.allBooksYaml.edges;
 
   const emojiForRating = rating => {
-    if (rating === 5) return '☺️';
+    if (rating === 5) return '🤩';
     if (rating === 4) return '😀';
     if (rating === 3) return '😑';
     if (rating === 2) return '😞';
