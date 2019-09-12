@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import noScroll from 'no-scroll';
+import { useSwipeable } from 'react-swipeable';
 
 const CloseButton = styled.div`
   position: absolute;
@@ -90,6 +91,13 @@ const GalleryModal = ({
     setSelectedImage(Math.max(0, Math.min(current, images.length - 1)));
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => setIndex(selectedImage - 1),
+    onSwipedRight: () => setIndex(selectedImage + 1),
+
+    preventDefaultTouchmoveEvent: true,
+  });
+
   const handleUserKeyPress = useCallback(event => {
     const { key } = event;
     switch (key) {
@@ -137,9 +145,10 @@ const GalleryModal = ({
         noScroll.off();
       }}
       style={customStyles()}
-      contentLabel="Image Lightbox Modal"
+      contentLabel="Image Modal"
     >
       <div
+        {...handlers}
         style={{
           position: 'relative',
           height: '100%',

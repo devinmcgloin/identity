@@ -21,7 +21,7 @@ const BaseLayout = ({ children }) => (
     `}
     render={data => {
       return (
-        <div className="sans-serif">
+        <div className="sans-serif" id="root">
           <StandardMetadata
             title={data.site.siteMetadata.title}
             description={data.site.siteMetadata.description}
