@@ -96,6 +96,8 @@ const GalleryModal = ({
     onSwipedRight: () => setIndex(selectedImage + 1),
 
     preventDefaultTouchmoveEvent: true,
+    trackTouch: true,
+    trackMouse: true,
   });
 
   const handleUserKeyPress = useCallback(event => {
