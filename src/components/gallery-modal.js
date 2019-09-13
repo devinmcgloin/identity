@@ -97,8 +97,8 @@ const GalleryModal = ({
   };
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => setIndex(selectedImage - 1),
-    onSwipedRight: () => setIndex(selectedImage + 1),
+    onSwipedLeft: () => setIndex(selectedImage + 1),
+    onSwipedRight: () => setIndex(selectedImage - 1),
 
     preventDefaultTouchmoveEvent: true,
     trackTouch: true,
