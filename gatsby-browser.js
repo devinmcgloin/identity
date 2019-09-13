@@ -8,5 +8,11 @@
 require('typeface-open-sans');
 
 export const onServiceWorkerUpdateReady = () => {
-  window.location.reload();
+  const answer = window.confirm(
+    `I've updated my website! Reload to display the latest version?`
+  );
+
+  if (answer === true) {
+    window.location.reload();
+  }
 };
