@@ -144,54 +144,77 @@ const GalleryModal = ({
       isOpen={modalVisible}
       onRequestClose={() => {
         setModalVisibility(false);
-        noScroll.off();
       }}
       style={customStyles()}
       contentLabel="Image Modal"
     >
-      <div
-        {...handlers}
-        style={{
-          position: 'relative',
-          height: '100%',
-          padding: '70px 0px 70px 0px',
-        }}
-      >
-        <XDisplay
-          onClick={() => {
-            noScroll.off();
-            setModalVisibility(false);
-          }}
-        />
-        <Img
-          style={{
-            maxWidth: '100%',
-            height: '100%',
-            display: 'block',
-          }}
-          imgStyle={{
-            objectFit: 'contain',
-          }}
-          fluid={images[selectedImage].fluid}
-        />
-        <PositionDisplay>
-          {selectedImage + 1} of {images.length}
-        </PositionDisplay>
-        <LeftArrowContainer
-          onClick={() => setIndex(selectedImage - 1)}
-          disabled={selectedImage === 0}
-        >
-          <Arrow></Arrow>
-        </LeftArrowContainer>
-        <RightArrowContainer
-          onClick={() => setIndex(selectedImage + 1)}
-          disabled={selectedImage === images.length - 1}
-        >
-          <Arrow right></Arrow>
-        </RightArrowContainer>
-      </div>
+      <ModalBody
+        handlers={handlers}
+        setModalVisibility={setModalVisibility}
+        setIndex={setIndex}
+        image={images[selectedImage]}
+        index={selectedImage}
+        range={images.length}
+      />
     </Modal>
   );
 };
 
+const ModalBody = ({
+  handlers,
+  setModalVisibility,
+  setIndex,
+  image,
+  index,
+  range,
+}) => {
+  useEffect(() => {
+    noScroll.on();
+
+    return () => noScroll.off();
+  }, []);
+
+  return (
+    <div
+      {...handlers}
+      style={{
+        position: 'relative',
+        height: '100%',
+        padding: '70px 0px 70px 0px',
+      }}
+    >
+      <XDisplay
+        onClick={() => {
+          setModalVisibility(false);
+        }}
+      />
+      <Img
+        style={{
+          maxWidth: '100%',
+          height: '100%',
+          display: 'block',
+        }}
+        imgStyle={{
+          objectFit: 'contain',
+        }}
+        fluid={image.fluid}
+      />
+      <PositionDisplay>
+        {index + 1} of {range}
+      </PositionDisplay>
+      <LeftArrowContainer
+        onClick={() => setIndex(index - 1)}
+        disabled={index === 0}
+      >
+        <Arrow></Arrow>
+      </LeftArrowContainer>
+      <RightArrowContainer
+        onClick={() => setIndex(index + 1)}
+        disabled={index === range - 1}
+      >
+        <Arrow right></Arrow>
+      </RightArrowContainer>
+    </div>
+  );
+};
 export default GalleryModal;
