@@ -1,4 +1,9 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, {
+  useLayoutEffect,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
 import Modal from 'react-modal';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
@@ -113,7 +118,7 @@ const GalleryModal = ({
   });
 
   const [viewHeight, setViewHeight] = useState('100vh');
-  useEffect(() => {
+  useLayoutEffect(() => {
     setViewHeight(window.innerHeight);
   });
 
