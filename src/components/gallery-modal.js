@@ -65,11 +65,11 @@ const ArrowContainer = styled.div`
 `;
 
 const LeftArrowContainer = styled(ArrowContainer)`
-  right: 80px;
+  right: 85px;
 `;
 
 const RightArrowContainer = styled(ArrowContainer)`
-  right: 40px;
+  right: 35px;
 `;
 
 const Arrow = styled.div`
@@ -78,7 +78,7 @@ const Arrow = styled.div`
   transform: ${props => (props.right ? 'rotate(45deg)' : 'rotate(-135deg)')};
 
   height: 10px;
-  left: 10px;
+  left: ${props => (props.right ? '0px' : '10px')};
   position: relative;
   top: 5px;
   vertical-align: top;
