@@ -2,22 +2,17 @@
 
 exports[`Gallery renders correctly 1`] = `
 <div
-  className="flex flex-wrap flex-column mw8 flex-start"
-  style={
-    Object {
-      "maxHeight": 4478.257343842735,
-    }
-  }
+  className="sc-gzVnrw ktlrBp"
 >
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -40,7 +35,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -83,7 +78,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -117,14 +112,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -147,7 +142,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -193,7 +188,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -230,14 +225,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -260,7 +255,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -306,7 +301,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -343,14 +338,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -373,7 +368,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -419,7 +414,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -456,14 +451,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -486,7 +481,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -532,7 +527,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -569,14 +564,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -599,7 +594,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -642,7 +637,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -676,14 +671,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -706,7 +701,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -749,7 +744,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -783,14 +778,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -813,7 +808,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -856,7 +851,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -890,14 +885,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -920,7 +915,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -963,7 +958,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -997,14 +992,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1027,7 +1022,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1070,7 +1065,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1104,14 +1099,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1134,7 +1129,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1177,7 +1172,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1211,14 +1206,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1241,7 +1236,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1284,7 +1279,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1318,14 +1313,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1348,7 +1343,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1391,7 +1386,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1425,14 +1420,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1455,7 +1450,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1498,7 +1493,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1532,14 +1527,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1562,7 +1557,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1608,7 +1603,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1645,14 +1640,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1675,7 +1670,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1721,7 +1716,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1758,14 +1753,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1788,7 +1783,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1834,7 +1829,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1871,14 +1866,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -1901,7 +1896,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -1944,7 +1939,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -1978,14 +1973,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2008,7 +2003,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2048,7 +2043,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2079,14 +2074,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2109,7 +2104,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2152,7 +2147,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2186,14 +2181,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2216,7 +2211,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2259,7 +2254,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2293,14 +2288,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2323,7 +2318,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2366,7 +2361,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2400,14 +2395,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2430,7 +2425,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2473,7 +2468,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2507,14 +2502,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2537,7 +2532,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2580,7 +2575,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2614,14 +2609,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2644,7 +2639,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2687,7 +2682,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2721,14 +2716,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2751,7 +2746,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2794,7 +2789,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2828,14 +2823,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2858,7 +2853,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -2901,7 +2896,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -2935,14 +2930,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -2965,7 +2960,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3008,7 +3003,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3042,14 +3037,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3072,7 +3067,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3115,7 +3110,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3149,14 +3144,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3179,7 +3174,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3222,7 +3217,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3256,14 +3251,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3286,7 +3281,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3326,7 +3321,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3357,14 +3352,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3387,7 +3382,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3430,7 +3425,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3464,14 +3459,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3494,7 +3489,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3537,7 +3532,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3571,14 +3566,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3601,7 +3596,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3644,7 +3639,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3678,14 +3673,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3708,7 +3703,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3751,7 +3746,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3785,14 +3780,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3815,7 +3810,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3858,7 +3853,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3892,14 +3887,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -3922,7 +3917,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -3965,7 +3960,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -3999,14 +3994,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -4029,7 +4024,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -4072,7 +4067,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -4106,14 +4101,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -4136,7 +4131,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -4179,7 +4174,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -4213,14 +4208,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -4243,7 +4238,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -4286,7 +4281,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -4320,14 +4315,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -4350,7 +4345,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -4393,7 +4388,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",
@@ -4427,14 +4422,14 @@ exports[`Gallery renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="w-33-l w-50-m w-100 pa2 pointer"
+    className="w-100 pa1 pointer dib"
     onClick={[Function]}
   >
     <div
       className="ba b--black-10 pa1"
     >
       <div
-        className="flex justify-center align-center gatsby-image-wrapper"
+        className=" gatsby-image-wrapper"
         style={
           Object {
             "overflow": "hidden",
@@ -4457,7 +4452,7 @@ exports[`Gallery renders correctly 1`] = `
             Object {
               "height": "100%",
               "left": 0,
-              "objectFit": "cover",
+              "objectFit": "contain",
               "objectPosition": "center",
               "opacity": 1,
               "position": "absolute",
@@ -4500,7 +4495,7 @@ exports[`Gallery renders correctly 1`] = `
               Object {
                 "height": "100%",
                 "left": 0,
-                "objectFit": "cover",
+                "objectFit": "contain",
                 "objectPosition": "center",
                 "opacity": 0,
                 "position": "absolute",

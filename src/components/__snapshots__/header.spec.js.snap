@@ -37,28 +37,23 @@ exports[`Header renders correctly 1`] = `
     </div>
     <div
       className="flex justify-between"
-      style={
-        Object {
-          "width": "13em",
-        }
-      }
     >
       <a
-        className="link black-70 dim fw5 f6 f5-ns dib"
+        className="link black-70 dim fw5 f6 f5-ns pa2 dib"
         href="/projects"
         title="Projects"
       >
         Projects
       </a>
       <a
-        className="link black-70 dim fw5 f6 f5-ns dib"
+        className="link black-70 dim fw5 f6 f5-ns pa2 dib"
         href="/artwork"
         title="Artwork"
       >
         Artwork
       </a>
       <a
-        className="link black-70 dim fw5 f6 f5-ns dib"
+        className="link black-70 dim fw5 f6 f5-ns pa2 dib"
         href="/writing"
         title="Writing"
       >
