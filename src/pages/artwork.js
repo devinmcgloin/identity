@@ -65,7 +65,7 @@ export const query = graphql`
       edges {
         node {
           id
-          fluid(maxWidth: 1800) {
+          fluid(maxWidth: 1000, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
