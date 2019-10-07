@@ -1,6 +1,5 @@
 import React from 'react';
 import { Splash, CallToAction } from '../components/splash';
-import Currently from '../components/currently';
 import Table from '../components/table-list';
 import { StandardLayout } from '../components/layout';
 import { CommonMetadata } from '../components/metadata';
@@ -12,7 +11,6 @@ const IndexPage = ({ data }) => (
   <StandardLayout>
     <CommonMetadata description={CallToAction} />
     <Splash />
-    <Currently />
     <div className="ph3 ph5-ns">
       <Table
         columns={[
