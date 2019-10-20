@@ -5,8 +5,8 @@ const CallToAction =
 
 const Splash = () => {
   return (
-    <div className="cf ph3 pb2">
-      <div className="mw8 center feature-bg br2">
+    <div className="feature-bg cf ph3 pb2">
+      <div className="mw8 center br2">
         <header className="w-100 mw7 pv3 ph4 pa5-ns">
           <h2 className="lh-title f1-ns f2 b ma0 garamond i">{CallToAction}</h2>
         </header>

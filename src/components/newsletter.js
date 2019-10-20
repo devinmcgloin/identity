@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Newsletter = () => (
-  <div className="tl pa3 pa5-ns near-white feature-bg bb">
+  <div className="tl pa3 pa5-ns near-white bb">
     <form
       className="mw6 center bg-near-white pa4 ba b--black-50 br2"
       method="POST"

@@ -10,11 +10,22 @@ import '../style/identity.css';
 import '../style/prism-theme.css';
 import TagButton from './tag';
 import Measure from 'react-measure';
+import styled from 'styled-components';
 
 let dat = null;
 if (typeof window !== 'undefined') {
   dat = require('dat.gui');
 }
+
+const Content = styled.div`
+  flex: 1 0 auto;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
 
 const StandardLayout = ({ title, description, children }) => (
   <StaticQuery
@@ -34,9 +45,14 @@ const StandardLayout = ({ title, description, children }) => (
     render={data => (
       <BaseLayout>
         <CommonMetadata title={title} description={description} />
-        <Header links={data.site.siteMetadata.headerLinks} />
-        {children}
-        <Footer />
+
+        <Container>
+          <Content>
+            <Header links={data.site.siteMetadata.headerLinks} />
+            {children}
+          </Content>
+          <Footer />
+        </Container>
       </BaseLayout>
     )}
   />
@@ -44,8 +60,8 @@ const StandardLayout = ({ title, description, children }) => (
 
 const HeaderLayout = ({ title, description, children }) => (
   <StandardLayout title={title} description={description}>
-    <div className="pb2 ph3">
-      <div className="mw8 center feature-bg br2">
+    <div className="feature-bg pb2 ph3 ">
+      <div className="mw8 center br2">
         <header className="w-100 measure-wide pv3 ph4">
           <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">
             {title}

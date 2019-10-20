@@ -1,5 +1,10 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+
+const FooterContainer = styled.div`
+  flex-shrink: 0;
+`;
 
 const PureFooter = ({ data }) => {
   const { email, twitter, github, unsplash } = data.social.siteMetadata.social;
@@ -18,62 +23,64 @@ const PureFooter = ({ data }) => {
     };
   });
   return (
-    <footer className="flex flex-column flex-row-ns pa4 pa5-l black-70 bt b--black-10 mw8 center">
-      <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
-        <a
-          className="f6 db fw5 pv1 black-70 link dim"
-          title="Email"
-          href={`mailto:${email}`}
-        >
-          {email}
-        </a>
-        <a
-          className="f6 db fw5 pv1 black-70 link dim"
-          title="Email"
-          href={`https://twitter.com/${twitter}`}
-        >
-          <span className="black-50">twitter</span>/{twitter}
-        </a>
-        <a
-          className="f6 db fw5 pv1 black-70 link dim"
-          title="Email"
-          href={`https://github.com/${github}`}
-        >
-          <span className="black-50">github</span>/{github}
-        </a>
-        <a
-          className="f6 db fw5 pv1 black-70 link dim"
-          title="Email"
-          href={`https://unsplash.com/${unsplash}`}
-        >
-          <span className="black-50">unsplash</span>/{unsplash}
-        </a>
-      </article>
-      <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
-        {projects.map(p => (
+    <FooterContainer className="feature-bg">
+      <footer className="flex flex-column flex-row-ns pa4 pa5-l mw8 center">
+        <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
           <a
-            key={p.slug}
             className="f6 db fw5 pv1 black-70 link dim"
-            title={p.title}
-            href={p.slug}
+            title="Email"
+            href={`mailto:${email}`}
           >
-            <span className="black-50">project</span>/{p.title}
+            {email}
           </a>
-        ))}
-      </article>
-      <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
-        {artwork.map(p => (
           <a
-            key={p.slug}
             className="f6 db fw5 pv1 black-70 link dim"
-            title={p.title}
-            href={p.slug}
+            title="Email"
+            href={`https://twitter.com/${twitter}`}
           >
-            <span className="black-50">interactive</span>/{p.title}
+            <span className="black-50">twitter</span>/{twitter}
           </a>
-        ))}
-      </article>
-    </footer>
+          <a
+            className="f6 db fw5 pv1 black-70 link dim"
+            title="Email"
+            href={`https://github.com/${github}`}
+          >
+            <span className="black-50">github</span>/{github}
+          </a>
+          <a
+            className="f6 db fw5 pv1 black-70 link dim"
+            title="Email"
+            href={`https://unsplash.com/${unsplash}`}
+          >
+            <span className="black-50">unsplash</span>/{unsplash}
+          </a>
+        </article>
+        <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
+          {projects.map(p => (
+            <a
+              key={p.slug}
+              className="f6 db fw5 pv1 black-70 link dim"
+              title={p.title}
+              href={p.slug}
+            >
+              <span className="black-50">project</span>/{p.title}
+            </a>
+          ))}
+        </article>
+        <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
+          {artwork.map(p => (
+            <a
+              key={p.slug}
+              className="f6 db fw5 pv1 black-70 link dim"
+              title={p.title}
+              href={p.slug}
+            >
+              <span className="black-50">interactive</span>/{p.title}
+            </a>
+          ))}
+        </article>
+      </footer>
+    </FooterContainer>
   );
 };
 

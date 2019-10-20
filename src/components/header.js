@@ -17,15 +17,17 @@ const Header = ({ links }) => {
   ));
 
   return (
-    <div className="mw8 center pa3">
-      <nav className="black-70 flex flex-row justify-between items-center">
-        <div className="w2 h2 ma1">
-          <Link className="link pointer" to="/">
-            <Logo />
-          </Link>
-        </div>
-        <div className="flex justify-between">{linkContent}</div>
-      </nav>
+    <div className="feature-bg">
+      <div className="mw8 center pa3">
+        <nav className="black-70 flex flex-row justify-between items-center">
+          <div className="w2 h2 ma1">
+            <Link className="link pointer" to="/">
+              <Logo />
+            </Link>
+          </div>
+          <div className="flex justify-between">{linkContent}</div>
+        </nav>
+      </div>
     </div>
   );
 };
