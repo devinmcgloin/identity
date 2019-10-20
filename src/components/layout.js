@@ -85,20 +85,20 @@ const PostLayout = ({ title, description, publishedAt, tags, children }) => {
 
   return (
     <StandardLayout title={title} description={description}>
-      <div className="pa3 mw7 center">
-        <article className="pv4">
-          <header className="w-100 pr4-ns">
-            <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
-            <time className="f5 gray code">{publishedAt}</time>
-            <span className="db mt3">{tagButtons}</span>
-          </header>
-          <div className="w-100">
-            <div className="lh-copy mt2 mt0-ns post-body open-sans">
-              {children}
-            </div>
-          </div>
-        </article>
+      <div className="feature-bg">
+        <header className="pa3 pv4 mw7 center w-100 pr4-ns">
+          <h1 className="f2 f1-ns black-90 fw5 mb2 i garamond">{title}</h1>
+          <time className="f5 gray code">{publishedAt}</time>
+          <span className="db mt3">{tagButtons}</span>
+        </header>
       </div>
+      <article className="pa3 pv4 mw7 center">
+        <div className="w-100">
+          <div className="lh-copy mt2 mt0-ns post-body open-sans">
+            {children}
+          </div>
+        </div>
+      </article>
     </StandardLayout>
   );
 };
@@ -112,25 +112,25 @@ const ProjectLayout = ({
   children,
 }) => (
   <StandardLayout title={title} description={description}>
-    <div className="center pa3 mw7">
-      <article className="pv4">
-        <header className="w-100 pr4-ns">
-          <div className="dt w-100">
-            <h1 className="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i garamond">
-              {title}
-            </h1>
-            {repo && <Github repo={repo} />}
-          </div>
-
-          <time className="f6 ttu tracked gray open-sans">
-            {publishedAt.format('dddd, MMMM Do 0YYYY')}
-          </time>
-        </header>
-        <div className="w-100 open-sans">
-          <div className="lh-copy mt4 mt0-ns">{children}</div>
+    <div className="feature-bg">
+      <header className="center pa3 pv4 mw7 w-100 pr4-ns pb2">
+        <div className="dt w-100">
+          <h1 className="dtc v-mid pr3 f2 f1-ns black-90 fw6 mb3 i garamond">
+            {title}
+          </h1>
+          {repo && <Github repo={repo} />}
         </div>
-      </article>
+
+        <time className="f6 ttu tracked gray open-sans">
+          {publishedAt.format('dddd, MMMM Do 0YYYY')}
+        </time>
+      </header>
     </div>
+    <article className="center pa3 pv4 mw7">
+      <div className="w-100 open-sans">
+        <div className="lh-copy mt4 mt0-ns">{children}</div>
+      </div>
+    </article>
   </StandardLayout>
 );
 

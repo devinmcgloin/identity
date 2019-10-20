@@ -23,7 +23,7 @@ const PureFooter = ({ data }) => {
     };
   });
   return (
-    <FooterContainer className="feature-bg">
+    <FooterContainer>
       <footer className="flex flex-column flex-row-ns pa4 pa5-l mw8 center">
         <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
           <a
