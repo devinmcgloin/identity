@@ -6,12 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: borales/actions-yarn@v2.0.0
+      - name: Set Node.js
+        uses: actions/setup-node@master
         with:
-          cmd: install
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: build
+          node-version: 10.x
+      - name: Lint
+        run: yarn run lint
+      - name: Test
+        run: yarn run test     
+      - name: Build
+        run: yarn run build
