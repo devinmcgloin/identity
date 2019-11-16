@@ -2,7 +2,7 @@ name: Test
 on: [push,pull_request]
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -11,10 +11,7 @@ jobs:
           cmd: install
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: build
-  test:
-    runs-on: ubuntu-latest
-    steps:
+          cmd: test
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: test
+          cmd: build
