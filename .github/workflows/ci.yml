@@ -10,8 +10,8 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 10.x
-      - name: Lint
-        run: yarn run lint
+      - name: Install
+        run: yarn install
       - name: Test
         run: yarn run test     
       - name: Build
