@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
-import Measure from 'react-measure';
 import GalleryModal from './gallery-modal';
 import styled from 'styled-components';
 

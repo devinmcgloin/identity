@@ -16,3 +16,5 @@ parserOptions:
 plugins:
   - react
   - prettier
+rules:
+  react/prop-types: 1

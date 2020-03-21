@@ -126,6 +126,8 @@ class AdditiveSplines extends Component {
   };
 
   download = () => {
+    var canvas = document.getElementById('canvas');
+
     var image = canvas.toDataURL('image/png');
     var link = document.createElement('a');
     link.download =

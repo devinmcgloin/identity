@@ -70,6 +70,7 @@ class Solar extends Component {
         30
       );
     }
+    var canvas = document.getElementById('canvas');
     setupCanvas(canvas, this.draw);
   };
 

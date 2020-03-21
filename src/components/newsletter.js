@@ -13,7 +13,7 @@ const Newsletter = () => (
           Sign up for my newsletter
         </legend>
         <legend className="pa0 f7 f5-ns mb3 black-60">
-          I'll send you posts, new experiments or artwork.
+          I&apos;ll send you posts, new experiments or artwork.
         </legend>
         <div className="cf">
           <label className="clip" htmlFor="email-address">

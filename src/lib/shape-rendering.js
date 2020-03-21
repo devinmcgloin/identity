@@ -33,7 +33,6 @@ const cubic = (A, t) => {
 const drawCurves = (ctx, w, h, C) => {
   var i,
     n,
-    p,
     pix,
     x,
     y,

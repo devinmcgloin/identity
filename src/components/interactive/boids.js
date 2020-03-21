@@ -32,7 +32,7 @@ class Boids extends Component {
     );
     controllers.push(salmon.add(this.boids.config.salmon, 'speed', 1, 10));
     controllers.push(salmon.add(this.boids.config.salmon, 'vision', 10, 200));
-    for (var i = 0; i < controllers.length; i++)
+    for (let i = 0; i < controllers.length; i++)
       controllers[i].onChange(() => {
         this.boids.update();
       });
@@ -46,7 +46,7 @@ class Boids extends Component {
     controllers.push(pred.add(this.boids.config.pred, 'speed', 1, 10));
     controllers.push(pred.add(this.boids.config.pred, 'vision', 10, 200));
     controllers.push(pred.addColor(this.boids.config.pred, 'fillStyle'));
-    for (var i = 0; i < controllers.length; i++)
+    for (let i = 0; i < controllers.length; i++)
       controllers[i].onChange(() => {
         this.boids.updatePred();
       });

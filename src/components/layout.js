@@ -103,14 +103,7 @@ const PostLayout = ({ title, description, publishedAt, tags, children }) => {
   );
 };
 
-const ProjectLayout = ({
-  title,
-  description,
-  publishedAt,
-  repo,
-  license,
-  children,
-}) => (
+const ProjectLayout = ({ title, description, publishedAt, repo, children }) => (
   <StandardLayout title={title} description={description}>
     <div className="feature-bg">
       <header className="center pa3 pv4 mw7 w-100 pr4-ns pb2">

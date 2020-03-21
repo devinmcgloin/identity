@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderLayout } from '../components/layout';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import TagButton from '../components/tag';
 
 const Tags = ({
