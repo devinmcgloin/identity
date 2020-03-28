@@ -28,12 +28,12 @@ const CrossBar = styled.div`
   height: 20px;
   width: 2px;
   transform: rotate(45deg);
-  transform: ${props => (props.right ? 'rotate(45deg)' : 'rotate(-45deg)')};
+  transform: ${(props) => (props.right ? 'rotate(45deg)' : 'rotate(-45deg)')};
 
   background-color: #333;
 `;
 
-const XDisplay = props => (
+const XDisplay = (props) => (
   <CloseButton {...props}>
     <CrossBar></CrossBar>
     <CrossBar right></CrossBar>
@@ -60,8 +60,8 @@ const ArrowContainer = styled.div`
   position: absolute;
   bottom: 30px;
   right: 80px;
-  cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
-  color: ${props => (props.disabled ? '#eee' : '#333')};
+  cursor: ${(props) => (props.disabled ? 'auto' : 'pointer')};
+  color: ${(props) => (props.disabled ? '#eee' : '#333')};
 `;
 
 const LeftArrowContainer = styled(ArrowContainer)`
@@ -75,10 +75,10 @@ const RightArrowContainer = styled(ArrowContainer)`
 const Arrow = styled.div`
   border-style: solid;
   border-width: 2px 2px 0 0;
-  transform: ${props => (props.right ? 'rotate(45deg)' : 'rotate(-135deg)')};
+  transform: ${(props) => (props.right ? 'rotate(45deg)' : 'rotate(-135deg)')};
 
   height: 10px;
-  left: ${props => (props.right ? '0px' : '10px')};
+  left: ${(props) => (props.right ? '0px' : '10px')};
   position: relative;
   top: 5px;
   vertical-align: top;
@@ -92,7 +92,7 @@ const GalleryModal = ({
   selectedImage,
   setSelectedImage,
 }) => {
-  const setIndex = current => {
+  const setIndex = (current) => {
     setSelectedImage(Math.max(0, Math.min(current, images.length - 1)));
   };
 
@@ -106,7 +106,7 @@ const GalleryModal = ({
     trackMouse: true,
   });
 
-  const handleUserKeyPress = useCallback(event => {
+  const handleUserKeyPress = useCallback((event) => {
     const { key } = event;
     switch (key) {
       case 'ArrowRight':

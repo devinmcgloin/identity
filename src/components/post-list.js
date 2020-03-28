@@ -5,7 +5,7 @@ import TagButton from './tag';
 const PostList = ({ entries }) => {
   const sections = entries.map((entry, indx) => {
     const tags = Array.isArray(entry.tags)
-      ? entry.tags.map(t => {
+      ? entry.tags.map((t) => {
           return <TagButton key={t} tag={t} />;
         })
       : [];

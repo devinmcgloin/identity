@@ -13,7 +13,7 @@ class FermatSpirals extends Component {
     count: 10000,
   };
 
-  mountDatGUI = datgui => {
+  mountDatGUI = (datgui) => {
     datgui.add(this.state, 'size', 1, 10);
     datgui.add(this.state, 'scaling_factor', 0.001, 0.02);
     datgui.add(this.state, 'angle', 0, 180);

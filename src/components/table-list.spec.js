@@ -81,7 +81,7 @@ describe('TableList', () => {
       { type: 'title', description: 'Title' },
       { type: 'excerpt', description: 'Description' },
     ],
-    rows: data.projects.edges.map(e => flatten(e.node)),
+    rows: data.projects.edges.map((e) => flatten(e.node)),
     title: 'Projects',
     link: '/projects',
   };

@@ -17,7 +17,7 @@ class Boid {
     this.vision = 50;
   }
 
-  update = function(config) {
+  update = function (config) {
     this.fillStyle = config.fillStyle;
     this.radius = config.radius;
     this.speed = config.speed;
@@ -25,7 +25,7 @@ class Boid {
     this.vision = config.vision;
   };
 
-  draw = function(ctx) {
+  draw = function (ctx) {
     var pointLen = this.radius * 2.5;
     ctx.fillStyle = this.fillStyle;
     ctx.beginPath();
@@ -47,7 +47,7 @@ class Boid {
     ctx.fill();
   };
 
-  distance = function(boid, width, height) {
+  distance = function (boid, width, height) {
     var x0 = Math.min(this.x, boid.x),
       x1 = Math.max(this.x, boid.x);
     var y0 = Math.min(this.y, boid.y),
@@ -57,7 +57,7 @@ class Boid {
     return Math.sqrt(dx * dx + dy * dy);
   };
 
-  getNeighbors = function(swarm) {
+  getNeighbors = function (swarm) {
     var w = swarm.width,
       h = swarm.height;
     var neighbors = [];
@@ -73,7 +73,7 @@ class Boid {
     return neighbors;
   };
 
-  static wrap = function(value) {
+  static wrap = function (value) {
     var min, max;
 
     if (arguments.length === 2) {
@@ -93,11 +93,11 @@ class Boid {
     return value;
   };
 
-  static clamp = function(value, limit) {
+  static clamp = function (value, limit) {
     return Math.min(limit, Math.max(-limit, value));
   };
 
-  static meanAngle = function() {
+  static meanAngle = function () {
     var sumx = 0,
       sumy = 0,
       len = arguments.length;
@@ -110,7 +110,7 @@ class Boid {
     return Math.atan2(sumy / len, sumx / len);
   };
 
-  step = function(swarm) {
+  step = function (swarm) {
     var w = swarm.width,
       h = swarm.height;
     var neighbors = this.getNeighbors(swarm);
@@ -181,7 +181,7 @@ class Boid {
     this.move(swarm);
   };
 
-  move = function(swarm) {
+  move = function (swarm) {
     var padding = swarm.padding;
     var width = swarm.width,
       height = swarm.height;
@@ -235,11 +235,11 @@ class Swarm {
     this.padding = 8;
   }
 
-  setContext = ctx => (this.ctx = ctx);
+  setContext = (ctx) => (this.ctx = ctx);
 
   animate = () => this.step();
 
-  createBoids = function(nB) {
+  createBoids = function (nB) {
     this.numBoids = nB;
     var i;
     for (i = 0; i < (nB || 1); i++) {
@@ -250,7 +250,7 @@ class Swarm {
     this.pred = new Boid(this, 'pred');
   };
 
-  adjustSize = function() {
+  adjustSize = function () {
     var nB = this.numBoids,
       l = this.boids.length,
       even = Math.abs(nB - l) % 2 === 0;
@@ -268,11 +268,11 @@ class Swarm {
     }
   };
 
-  clear = function() {
+  clear = function () {
     this.boids = [];
   };
 
-  update = function() {
+  update = function () {
     for (var i = 0; i < this.boids.length; i++) {
       if (this.boids[i].type === 'salmon')
         this.boids[i].update(this.config.salmon);
@@ -280,7 +280,7 @@ class Swarm {
     }
   };
 
-  updatePred = function() {
+  updatePred = function () {
     this.pred.update(this.config.pred);
   };
 
@@ -292,7 +292,7 @@ class Swarm {
     return this.ctx.canvas.height;
   }
 
-  step = function() {
+  step = function () {
     var ctx = this.ctx;
 
     var displayWidth = ctx.canvas.parentNode.clientWidth;

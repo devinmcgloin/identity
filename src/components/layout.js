@@ -42,7 +42,7 @@ const StandardLayout = ({ title, description, children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <BaseLayout>
         <CommonMetadata title={title} description={description} />
 
@@ -78,7 +78,7 @@ const HeaderLayout = ({ title, description, children }) => (
 
 const PostLayout = ({ title, description, publishedAt, tags, children }) => {
   const tagButtons = Array.isArray(tags)
-    ? tags.map(t => {
+    ? tags.map((t) => {
         return <TagButton key={t} tag={t} />;
       })
     : [];
@@ -172,7 +172,7 @@ class ExperimentLayout extends Component {
 
         <Measure
           bounds
-          onResize={contentRect => {
+          onResize={(contentRect) => {
             this.setState({ dimensions: contentRect.bounds });
           }}
         >

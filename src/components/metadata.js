@@ -19,7 +19,7 @@ const BaseLayout = ({ children }) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       return (
         <div className="sans-serif" id="root">
           <StandardMetadata

@@ -15,7 +15,7 @@ const TagTemplate = ({ pageContext, data }) => {
       title={header}
       description={`Various thoughts on ${tag} and other musings`}
     >
-      <PostList entries={edges.map(e => flatten(e.node))} />
+      <PostList entries={edges.map((e) => flatten(e.node))} />
       <div className="w-100 mw8 center tc pt4">
         <Link
           className={

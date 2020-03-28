@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 const IndexPage = ({ data }) => {
   let books = data.allBooksYaml.edges;
 
-  const emojiForRating = rating => {
+  const emojiForRating = (rating) => {
     if (rating === 5) return '🤩';
     if (rating === 4) return '😀';
     if (rating === 3) return '😑';
@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => {
     return '😤';
   };
   let renderedBooks = books
-    .map(edge => edge.node)
+    .map((edge) => edge.node)
     .sort((a, b) => b.rating - a.rating)
     .map((b, indx) => {
       let css = `pv3 pr3 ${

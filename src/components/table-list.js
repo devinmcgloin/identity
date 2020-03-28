@@ -32,7 +32,7 @@ const TableLink = ({ title, url, color, useBorder }) => (
 const tableList = ({ columns, rows, color, title, link }) => {
   const tableRows = rows.map((d, indx) => (
     <tr key={d.slug}>
-      {columns.map(c => {
+      {columns.map((c) => {
         switch (c.type) {
           case 'title':
             return (
@@ -60,7 +60,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
     </tr>
   ));
 
-  const columnTitles = columns.map(c => (
+  const columnTitles = columns.map((c) => (
     <th key={c.type} className={`fw6 bb ${colorMap[color].text} tl pb3 pr3`}>
       {c.description}
     </th>
@@ -75,9 +75,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
         View More
       </Link>
     </div>
-  ) : (
-    undefined
-  );
+  ) : undefined;
 
   const header = title ? (
     <div className="w-100 center mw8">
@@ -85,9 +83,7 @@ const tableList = ({ columns, rows, color, title, link }) => {
         {title}
       </h2>
     </div>
-  ) : (
-    undefined
-  );
+  ) : undefined;
 
   return (
     <div

@@ -1,6 +1,6 @@
 const p2c = (r, theta) => [r * Math.cos(theta), r * Math.sin(theta), 0];
 
-const d2r = theta => (theta * Math.PI) / 180;
+const d2r = (theta) => (theta * Math.PI) / 180;
 
 const pixeltocord = (w, h, p) => {
   var x = p[0],

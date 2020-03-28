@@ -5,7 +5,7 @@ import Gallery from '../components/gallery';
 import Img from 'gatsby-image';
 
 const IndexPage = ({ data }) => {
-  let images = data.static.edges.map(e => e.node);
+  let images = data.static.edges.map((e) => e.node);
 
   return (
     <HeaderLayout

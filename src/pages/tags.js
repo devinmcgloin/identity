@@ -13,7 +13,7 @@ const Tags = ({
     description="Want to find something specific? This will help you get there."
   >
     <ul>
-      {group.map(tag => (
+      {group.map((tag) => (
         <TagButton tag={tag.fieldValue} key={tag.fieldValue} />
       ))}
     </ul>

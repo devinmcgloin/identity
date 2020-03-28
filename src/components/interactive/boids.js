@@ -9,7 +9,7 @@ class Boids extends Component {
     this.boids = new Swarm();
   }
 
-  mountDatGUI = datgui => {
+  mountDatGUI = (datgui) => {
     datgui.addColor(this.boids, 'background');
     datgui.add(this.boids, 'numBoids', 10, 1000).step(1);
 

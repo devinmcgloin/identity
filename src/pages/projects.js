@@ -14,7 +14,7 @@ const IndexPage = ({ data }) => (
         { type: 'title', description: 'Title' },
         { type: 'excerpt', description: 'Description' },
       ]}
-      rows={data.allMdx.edges.map(e => flatten(e.node))}
+      rows={data.allMdx.edges.map((e) => flatten(e.node))}
       color="light"
     />
   </HeaderLayout>

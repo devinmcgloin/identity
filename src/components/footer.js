@@ -9,14 +9,14 @@ const FooterContainer = styled.div`
 const PureFooter = ({ data }) => {
   const { email, twitter, github, unsplash } = data.social.siteMetadata.social;
 
-  const projects = data.projects.edges.map(e => {
+  const projects = data.projects.edges.map((e) => {
     return {
       title: e.node.frontmatter.title,
       slug: e.node.fields.slug,
     };
   });
 
-  const artwork = data.artwork.edges.map(e => {
+  const artwork = data.artwork.edges.map((e) => {
     return {
       title: e.node.frontmatter.title,
       slug: e.node.fields.slug,
@@ -56,7 +56,7 @@ const PureFooter = ({ data }) => {
           </a>
         </article>
         <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
-          {projects.map(p => (
+          {projects.map((p) => (
             <a
               key={p.slug}
               className="f6 db fw5 pv1 black-70 link dim"
@@ -68,7 +68,7 @@ const PureFooter = ({ data }) => {
           ))}
         </article>
         <article className="w-100 w-auto-ns mr4-m mr5-l mb4">
-          {artwork.map(p => (
+          {artwork.map((p) => (
             <a
               key={p.slug}
               className="f6 db fw5 pv1 black-70 link dim"
@@ -133,7 +133,7 @@ const Footer = () => (
         }
       }
     `}
-    render={data => <PureFooter data={data} />}
+    render={(data) => <PureFooter data={data} />}
   />
 );
 export { PureFooter };

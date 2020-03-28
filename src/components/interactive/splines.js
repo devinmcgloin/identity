@@ -35,7 +35,7 @@ class AdditiveSplines extends Component {
     this.M = new Matrix();
   }
 
-  mountDatGUI = datgui => {
+  mountDatGUI = (datgui) => {
     datgui.addColor(this, 'color');
     datgui.add(this, 'maxIterations').step(1);
     datgui.add(this, 'cursorRadius', 0.2, 0.7);
@@ -51,7 +51,7 @@ class AdditiveSplines extends Component {
     this.canvas = canvas;
   };
 
-  vary = path => {
+  vary = (path) => {
     var newPoints = [];
     var points = path.points,
       varyPower = this.varyPower;
@@ -89,7 +89,7 @@ class AdditiveSplines extends Component {
     for (var i = 0; i < this.rings.length; i++) this.rings[i].iterations = 0;
   };
 
-  resetPoints = ring => {
+  resetPoints = (ring) => {
     ring.points = [];
     var theta = ring.theta,
       y = ring.y,

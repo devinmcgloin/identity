@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
     title="Writing"
     description="Thoughts from behind the screen, added to every so often."
   >
-    <PostList entries={data.allMdx.edges.map(e => flatten(e.node))} />
+    <PostList entries={data.allMdx.edges.map((e) => flatten(e.node))} />
   </HeaderLayout>
 );
 

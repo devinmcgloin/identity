@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => (
           { type: 'title', description: 'Title' },
           { type: 'excerpt', description: 'Description' },
         ]}
-        rows={data.projects.edges.map(e => flatten(e.node))}
+        rows={data.projects.edges.map((e) => flatten(e.node))}
         color="light"
         title="Projects"
         link="/projects"
@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
       <Carousel
         title="Artwork"
         link="/artwork"
-        cards={data.artwork.edges.map(e => e.node)}
+        cards={data.artwork.edges.map((e) => e.node)}
       />
       <Table
         columns={[
@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => (
             dateFormatter: 'dddd, MMMM Do 0YYYY',
           },
         ]}
-        rows={data.writing.edges.map(e => flatten(e.node))}
+        rows={data.writing.edges.map((e) => flatten(e.node))}
         color="light"
         title="Writing"
         link="/writing"

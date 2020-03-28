@@ -1,4 +1,4 @@
-const flatten = obj => {
+const flatten = (obj) => {
   let field = {};
 
   Object.entries(obj).forEach(([k, v]) => {

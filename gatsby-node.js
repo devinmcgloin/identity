@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       result.data.allMdx.edges.forEach(({ node }) => {
         let templatePath;
         switch (node.fields.slug.split('/')[1]) {
@@ -67,8 +67,8 @@ exports.createPages = ({ graphql, actions }) => {
       );
 
       [...new Set(tags)]
-        .filter(t => t !== null)
-        .forEach(tag => {
+        .filter((t) => t !== null)
+        .forEach((tag) => {
           createPage({
             path: `/tags/${slugify(tag)}`,
             component: path.resolve('./src/templates/tags.js'),
@@ -109,7 +109,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 exports.onPreBootstrap = () => {
   require('isomorphic-fetch');
 };
-const slugify = str =>
+const slugify = (str) =>
   str
     .toLowerCase()
     .replace(/ /g, '-')

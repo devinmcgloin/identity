@@ -15,7 +15,7 @@ const Splash = () => {
   );
 };
 
-const Lead = title => (
+const Lead = (title) => (
   <div className="mw8 center pa3 feature-bg">
     <div className="w-100 ">
       <h1 className="f1 f-headline-ns black-90 fw6 mb2 i garamond">{title}</h1>

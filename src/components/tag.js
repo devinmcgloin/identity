@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const slugify = str =>
+const slugify = (str) =>
   str
     .toLowerCase()
     .replace(/ /g, '-')
@@ -14,11 +14,7 @@ const TagButton = ({ tag }) => (
       style={{ backgroundColor: 'rgb(243, 248, 255)' }}
       className="f6 f5-ns db pa2 link dim blue br2 ba"
     >
-      #
-      {tag
-        .toLowerCase()
-        .split(' ')
-        .join('-')}
+      #{tag.toLowerCase().split(' ').join('-')}
     </Link>
   </li>
 );

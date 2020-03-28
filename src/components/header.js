@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import Logo from './logo';
 
 const Header = ({ links }) => {
-  const linkContent = links.map(l => (
+  const linkContent = links.map((l) => (
     <Link
       className={`link black-70 dim fw5 f6 f5-ns pa2 ${
         l.hide_small ? 'dn dib-ns' : 'dib'

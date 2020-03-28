@@ -78,7 +78,7 @@ class Solar extends Component {
     let { M, planets, elapsedTime, rotation_speed } = this.state;
     let m = M.identityMatrix();
 
-    planets.map(p => {
+    planets.map((p) => {
       M.save(m);
       M.translate(m, [w / 2, h / 2, 0]);
       M.rotateZ(m, rotation_speed + p.orbital_speed * elapsedTime);
