@@ -71,7 +71,7 @@
     "eslint": "^6.3.0",
     "eslint-plugin-react": "^7.14.3",
     "jest": "^25.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^2.0.2"
   },
   "resolutions": {
     "scheduler": "^0.15.0"
