@@ -2,21 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import GalleryModal from './gallery-modal';
-import styled from 'styled-components';
-
-const ImageContainer = styled.div`
-  @media screen and (min-width: 30em) {
-    column-count: 2;
-  }
-
-  @media screen and (min-width: 60em) {
-    column-count: 3;
-  }
-`;
+import Measure from 'react-measure';
+import StackGrid from 'react-stack-grid';
 
 const Gallery = ({ images }) => {
   const [modalVisible, setModalVisibility] = useState(false);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [bounds, setBounds] = useState(0);
 
   let renderedImages = images.map((image, i) => (
     <div
@@ -38,6 +30,8 @@ const Gallery = ({ images }) => {
     </div>
   ));
 
+  const { width } = bounds;
+
   return (
     <React.Fragment>
       <GalleryModal
@@ -47,7 +41,20 @@ const Gallery = ({ images }) => {
         modalVisible={modalVisible}
         setModalVisibility={setModalVisibility}
       />
-      <ImageContainer>{renderedImages}</ImageContainer>
+      <Measure
+        bounds
+        onResize={(contentRect) => {
+          setBounds(contentRect.bounds);
+        }}
+      >
+        {({ measureRef }) => (
+          <div ref={measureRef}>
+            <StackGrid columnWidth={width > 500 ? '50%' : '100%'} duration={0}>
+              {renderedImages}
+            </StackGrid>
+          </div>
+        )}
+      </Measure>
     </React.Fragment>
   );
 };

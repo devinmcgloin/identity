@@ -143,6 +143,9 @@ const GalleryModal = ({
         top: 0,
         padding: 0,
       },
+      overlay: {
+        zIndex: 100,
+      },
     };
   };
 
