@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CallToAction =
-  'I make products that help people to understand the world around them, and think of new solutions to difficult problems.';
+  'Californian slightly out of place in Dublin. Aiming for a constant state of play.';
 
 const Splash = () => {
   return (
