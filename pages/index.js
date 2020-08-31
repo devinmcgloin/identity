@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Hero from '../components/hero';
 
 export default () => (
-  <Layout>
-    <h1 className="text-purple-500 leading-normal">Next.js</h1>
-    <p className="text-gray-500 h-screen">with Tailwind CSS</p>
-  </Layout>
+  <main>
+    <Hero></Hero>
+  </main>
 );

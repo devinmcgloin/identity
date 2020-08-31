@@ -1,5 +1,10 @@
 import '../styles/base.css';
+import { MDXProvider } from '@mdx-js/react';
 
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <MDXProvider>
+      <Component {...pageProps} />
+    </MDXProvider>
+  );
 }
