@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import Transition from 'components/transition';
+import { Transition } from '@headlessui/react';
 
 const BasicNavigation = ({ isMobileOpen, setMobileOpen }) => (
   <nav className="relative flex items-center justify-between max-w-screen-xl px-4 mx-auto sm:px-6">

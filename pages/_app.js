@@ -1,10 +1,19 @@
-import '../styles/base.css';
-import { MDXProvider } from '@mdx-js/react';
+import Head from 'next/head';
+import { StandardMetadata } from 'components/metadata';
+import 'styles/base.css';
 
-export default function MyApp({ Component, pageProps }) {
+function Identity({ Component, pageProps }) {
   return (
-    <MDXProvider>
+    <body>
+      <StandardMetadata title="Devin McGloin" description="" />
+      <Head>
+        <link rel="preconnect" href="https://rsms.me" />
+        <link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
+      </Head>
+
       <Component {...pageProps} />
-    </MDXProvider>
+    </body>
   );
 }
+
+export default Identity;
