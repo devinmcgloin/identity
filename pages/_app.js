@@ -20,11 +20,7 @@ function Identity({ Component, pageProps }) {
         <StandardMetadata title="Devin McGloin" description="" />
         <Head>
           <link rel="preconnect" href="https://rsms.me" />
-          <link
-            rel="preload"
-            href="https://rsms.me/inter/inter.css"
-            as="style"
-          />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
 
         <Component {...pageProps} />

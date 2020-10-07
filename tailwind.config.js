@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: [
@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', ...fontFamily.sans],
       },
       colors: {
         peacock: '#005158',
@@ -19,7 +19,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/ui')],
+  plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
