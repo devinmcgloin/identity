@@ -4,7 +4,7 @@ import { Header } from 'components/header';
 export default ({ children }) => {
   return (
     <div>
-      <Header></Header>
+      <Header />
       {children}
     </div>
   );

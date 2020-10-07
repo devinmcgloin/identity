@@ -3,32 +3,22 @@ import hydrate from 'next-mdx-remote/hydrate';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { getAllPostIds } from 'lib/writing';
+import BaseLayout from 'layouts/base';
 
 import ReactPlayer from 'react-player';
 
-const writingDirectory = 'content/writing/';
-const getAllPostIds = () => {
-  const fileNames = fs.readdirSync(writingDirectory);
-
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.mdx$/, ''),
-      },
-    };
-  });
-};
-
 const components = { ReactPlayer };
 
-export default function PostPAge({ source, frontMatter }) {
+export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
-    <div className="prose prose-lg">
-      <h1>{frontMatter.title}</h1>
-
-      {content}
-    </div>
+    <BaseLayout>
+      <div className="py-5 mx-auto prose">
+        <h1>{frontMatter.title}</h1>
+        {content}
+      </div>
+    </BaseLayout>
   );
 }
 

@@ -3,30 +3,21 @@ import hydrate from 'next-mdx-remote/hydrate';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-
-const projectsDirectory = 'content/projects/';
-const getAllProjectIds = () => {
-  const fileNames = fs.readdirSync(projectsDirectory);
-
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.mdx$/, ''),
-      },
-    };
-  });
-};
+import { getAllProjectIds } from 'lib/projects';
+import BaseLayout from 'layouts/base';
 
 const components = {};
 
-export default function PostPAge({ source, frontMatter }) {
+export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
-    <div className="prose prose-lg">
-      <h1>{frontMatter.title}</h1>
+    <BaseLayout>
+      <div className="prose prose-lg">
+        <h1>{frontMatter.title}</h1>
 
-      {content}
-    </div>
+        {content}
+      </div>
+    </BaseLayout>
   );
 }
 
