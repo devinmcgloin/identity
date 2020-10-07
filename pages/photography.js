@@ -20,7 +20,6 @@ export async function getStaticProps(context) {
   const unsplashStats = await userStats();
   return {
     props: { ...unsplashStats },
-    revalidate: 10800,
   };
 }
 
