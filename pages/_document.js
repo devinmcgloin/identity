@@ -8,13 +8,16 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <html lang={'en'}>
-        <Head />
+      <Html lang="en">
+        <Head>
+          <link rel="preconnect" href="https://rsms.me" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        </Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
