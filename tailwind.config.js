@@ -24,4 +24,8 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
+  dark: 'class',
+  experimental: {
+    darkModeVariant: true,
+  },
 };

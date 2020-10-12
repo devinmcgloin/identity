@@ -20,9 +20,9 @@ const partition = (array, n = 4) => {
 
 const ImageList = ({ images }) => (
   <div className="flex-auto w-full sm:w-1/2 lg:w-1/4">
-    <div className="mr-2">
+    <div className="mx-1">
       {images.map((image) => (
-        <div className="mb-3 border">
+        <div key={image} className="mb-2 border">
           <img className="object-contain w-full h-full" src={image} />
         </div>
       ))}

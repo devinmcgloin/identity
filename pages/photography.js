@@ -6,8 +6,6 @@ import { userStats } from 'lib/unsplash';
 const Index = ({ views, downloads, images }) => {
   return (
     <BaseLayout>
-      {views}
-
       <GridList
         title="Photographs"
         images={images.map((image) => image.urls.regular)}
@@ -23,5 +21,7 @@ export async function getStaticProps(context) {
     revalidate: 10800,
   };
 }
+
+Index.theme = 'dark';
 
 export default Index;
