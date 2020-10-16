@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: Inter var, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  line-height: 1.5;
-}
-
 .prose-width {
   max-width: 65ch;
 }

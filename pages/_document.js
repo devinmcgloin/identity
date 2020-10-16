@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <html lang="en">
         <Head>
           <link rel="preconnect" href="https://rsms.me" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -17,7 +17,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </Html>
+      </html>
     );
   }
 }
