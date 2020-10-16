@@ -36,8 +36,8 @@ const GridList = ({ title, images }) => {
   return (
     <div>
       <div className="flex flex-row flex-wrap h-screen mt-2">
-        {partitionedImages.map((set) => (
-          <ImageList images={set} />
+        {partitionedImages.map((set, index) => (
+          <ImageList key={index} images={set} />
         ))}
       </div>
     </div>

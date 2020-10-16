@@ -2,14 +2,25 @@ import BaseLayout from 'layouts/base';
 import useSWR from 'swr';
 import GridList from 'components/grid-layout';
 import { userStats } from 'lib/unsplash';
+import { PageHeader } from 'components/page-header';
 
 const Index = ({ views, downloads, images }) => {
   return (
     <BaseLayout>
-      <GridList
-        title="Photographs"
-        images={images.map((image) => image.urls.regular)}
-      ></GridList>
+      <div className="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+        <div className="relative max-w-lg mx-auto lg:max-w-7xl">
+          <PageHeader title="Photographs">
+            Taken from all over the place, more on{' '}
+            <a href="https://unsplash.com/@devinmcgloin">Unsplash</a>
+          </PageHeader>
+        </div>
+        <div className="mt-10">
+          <GridList
+            title="Artwork"
+            images={images.map((image) => image.urls.regular)}
+          ></GridList>
+        </div>
+      </div>
     </BaseLayout>
   );
 };
@@ -21,7 +32,5 @@ export async function getStaticProps(context) {
     revalidate: 10800,
   };
 }
-
-Index.theme = 'dark';
 
 export default Index;

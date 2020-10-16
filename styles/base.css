@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.prose-width {
+  max-width: 65ch;
+}
+
 @layer components {
   .content {
     display: grid;

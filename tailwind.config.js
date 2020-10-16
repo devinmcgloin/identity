@@ -22,6 +22,8 @@ module.exports = {
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
   future: {
     removeDeprecatedGapUtilities: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
     purgeLayersByDefault: true,
   },
   dark: 'class',
