@@ -13,12 +13,12 @@ class FermatSpirals extends Component {
     count: 10000,
   };
 
-  mountDatGUI = (datgui) => {
-    datgui.add(this.state, 'size', 1, 10);
-    datgui.add(this.state, 'scaling_factor', 0.001, 0.02);
-    datgui.add(this.state, 'angle', 0, 180);
-    datgui.add(this.state, 'count', 1, 20000);
-    datgui.addColor(this.state, 'color');
+  mountEditor = (pane) => {
+    pane.addInput(this.state, 'size', { min: 1, max: 10 });
+    pane.addInput(this.state, 'scaling_factor', { min: 0.001, max: 0.02 });
+    pane.addInput(this.state, 'angle', { min: 0, max: 180 });
+    pane.addInput(this.state, 'count', { min: 1, max: 20000 });
+    pane.addInput(this.state, 'color');
   };
 
   componentDidMount = () => {
@@ -43,7 +43,7 @@ class FermatSpirals extends Component {
         title="Fermat's Spirals"
         description="See Fermat's spiral fill the screen, or tweak the angle to create your own spiral."
         color="#4499d6"
-        mountDatGUI={this.mountDatGUI}
+        mountEditor={this.mountEditor}
       />
     );
   };

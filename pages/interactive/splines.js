@@ -36,13 +36,28 @@ class AdditiveSplines extends Component {
     this.M = new Matrix();
   }
 
-  mountDatGUI = (datgui) => {
-    datgui.addColor(this, 'color');
-    datgui.add(this, 'maxIterations').step(1);
-    datgui.add(this, 'cursorRadius', 0.2, 0.7);
-    datgui.add(this, 'addRandom');
-    datgui.add(this, 'clearCanvas');
-    datgui.add(this, 'download');
+  mountEditor = (pane) => {
+    pane.addInput(this, 'color');
+
+    pane.addInput(this, 'maxIterations', { step: 1 });
+    pane.addInput(this, 'cursorRadius', { min: 0.2, max: 0.7 });
+    pane
+      .addButton({
+        title: 'Add Random',
+      })
+      .on('click', () => this.addRandom());
+
+    pane
+      .addButton({
+        title: 'Clear Canvas',
+      })
+      .on('click', () => this.clearCanvas());
+
+    pane
+      .addButton({
+        title: 'Download',
+      })
+      .on('click', () => this.download());
   };
 
   componentDidMount = () => {
@@ -188,7 +203,7 @@ class AdditiveSplines extends Component {
         title="Additive Splines"
         description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
         color="#b2b2b2"
-        mountDatGUI={this.mountDatGUI}
+        mountEditor={this.mountEditor}
       />
     );
   };

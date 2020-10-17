@@ -9,45 +9,47 @@ class Boids extends Component {
     this.boids = new Swarm();
   }
 
-  mountDatGUI = (datgui) => {
-    datgui.addColor(this.boids, 'background');
-    datgui.add(this.boids, 'numBoids', 10, 1000).step(1);
+  mountEditor = (pane) => {
+    pane.addInput(this.boids, 'background');
+    pane.addInput(this.boids, 'numBoids', { min: 10, max: 1000, step: 1 });
 
-    var yellow = datgui.addFolder('Yellow Swarm'),
-      salmon = datgui.addFolder('Salmon Swarm'),
-      pred = datgui.addFolder('Predator');
+    var yellow = pane.addFolder({ title: 'Yellow Swarm', expanded: false }),
+      salmon = pane.addFolder({ title: 'Salmon Swarm', expanded: false }),
+      pred = pane.addFolder({ title: 'Predator', expanded: false });
 
-    var controllers = [];
-    controllers.push(yellow.addColor(this.boids.config.yellow, 'fillStyle'));
-    controllers.push(yellow.add(this.boids.config.yellow, 'radius', 1, 15));
-    controllers.push(
-      yellow.add(this.boids.config.yellow, 'radialSpeed', 0.00005, 0.3)
-    );
-    controllers.push(yellow.add(this.boids.config.yellow, 'speed', 1, 10));
-    controllers.push(yellow.add(this.boids.config.yellow, 'vision', 10, 200));
-    controllers.push(salmon.addColor(this.boids.config.salmon, 'fillStyle'));
-    controllers.push(salmon.add(this.boids.config.salmon, 'radius', 1, 15));
-    controllers.push(
-      salmon.add(this.boids.config.salmon, 'radialSpeed', 0.00005, 0.3)
-    );
-    controllers.push(salmon.add(this.boids.config.salmon, 'speed', 1, 10));
-    controllers.push(salmon.add(this.boids.config.salmon, 'vision', 10, 200));
-    for (let i = 0; i < controllers.length; i++)
-      controllers[i].onChange(() => {
+    yellow.addInput(this.boids.config.yellow, 'fillStyle'),
+      yellow.addInput(this.boids.config.yellow, 'radius', { min: 1, max: 15 }),
+      yellow.addInput(this.boids.config.yellow, 'radialSpeed', {
+        min: 0.00005,
+        max: 0.3,
+      }),
+      yellow.addInput(this.boids.config.yellow, 'speed', { min: 1, max: 10 }),
+      yellow.addInput(this.boids.config.yellow, 'vision', {
+        min: 10,
+        max: 200,
+      }),
+      salmon.addInput(this.boids.config.salmon, 'fillStyle'),
+      salmon.addInput(this.boids.config.salmon, 'radius', { min: 1, max: 15 }),
+      salmon.addInput(this.boids.config.salmon, 'radialSpeed', {
+        min: 0.00005,
+        max: 0.3,
+      }),
+      salmon.addInput(this.boids.config.salmon, 'speed', { min: 1, max: 10 }),
+      salmon.addInput(this.boids.config.salmon, 'vision', {
+        min: 10,
+        max: 200,
+      }),
+      pred.addInput(this.boids, 'activePred'),
+      pred.addInput(this.boids.config.pred, 'fillStyle'),
+      pred.addInput(this.boids.config.pred, 'radius', { min: 1, max: 15 }),
+      pred.addInput(this.boids.config.pred, 'radialSpeed', {
+        min: 0.00005,
+        max: 0.3,
+      }),
+      pred.addInput(this.boids.config.pred, 'speed', { min: 1, max: 10 }),
+      pred.addInput(this.boids.config.pred, 'vision', { min: 10, max: 200 }),
+      pane.on('change', () => {
         this.boids.update();
-      });
-
-    controllers = [];
-    pred.add(this.boids, 'activePred');
-    controllers.push(pred.add(this.boids.config.pred, 'radius', 1, 15));
-    controllers.push(
-      pred.add(this.boids.config.pred, 'radialSpeed', 0.00005, 0.3)
-    );
-    controllers.push(pred.add(this.boids.config.pred, 'speed', 1, 10));
-    controllers.push(pred.add(this.boids.config.pred, 'vision', 10, 200));
-    controllers.push(pred.addColor(this.boids.config.pred, 'fillStyle'));
-    for (let i = 0; i < controllers.length; i++)
-      controllers[i].onChange(() => {
         this.boids.updatePred();
       });
   };
@@ -71,7 +73,7 @@ class Boids extends Component {
         title="Boids"
         description="These boids are based on common flocking patterns, and attempt to create a digital Koi Pond from above."
         color="#4499d6"
-        mountDatGUI={this.mountDatGUI}
+        mountEditor={this.mountEditor}
       />
     );
   };
