@@ -2,8 +2,19 @@ import Head from 'next/head';
 import { StandardMetadata } from 'components/metadata';
 import { SWRConfig } from 'swr';
 import 'styles/base.css';
+import { useEffect } from 'react';
 
 function Identity({ Component, pageProps }) {
+  useEffect(() => {
+    if (window.navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (let registration of registrations) {
+          registration.unregister();
+        }
+      });
+    }
+  }, []);
+
   return (
     <main>
       <SWRConfig
