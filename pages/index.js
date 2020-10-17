@@ -1,21 +1,20 @@
-import BaseLayout from 'layouts/base';
 import Link from 'next/link';
+import Logo from 'components/logo';
 
 const Index = () => (
-  <BaseLayout>
-    <div className="flex gap-y-10 flex-col">
-      <h2 class="text-4xl max-w-xl my-10 px-5 tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-        Californian slightly out of place in Dublin. Aiming for a constant state
-        of play.
-      </h2>
-      <div className="flex justify-around w-full">
-        <Link href="/words">Words →</Link>
-        <Link href="/work">Work →</Link>
-        <Link href="/art">Art →</Link>
-        <Link href="/photography">Photography →</Link>
-      </div>
+  <main className="max-w-screen-lg mx-auto">
+    <div className="flex items-center justify-between p-5 border-b border-gray-100">
+      <Link href="/">
+        <Logo className="cursor-pointer w-12 h-12 text-red-500" />
+      </Link>
     </div>
-  </BaseLayout>
+    <div className="flex flex-col">
+      <Link href="/words">Words →</Link>
+      <Link href="/work">Work →</Link>
+      <Link href="/art">Art →</Link>
+      <Link href="/photography">Photography →</Link>
+    </div>
+  </main>
 );
 
 export default Index;
