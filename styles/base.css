@@ -5,25 +5,3 @@
 .prose-width {
   max-width: 65ch;
 }
-
-@layer components {
-  .content {
-    display: grid;
-    grid-template-columns:
-      1fr
-      min(65ch, 100%)
-      1fr;
-  }
-
-  .content > * {
-    grid-column: 2;
-  }
-
-  .full-bleed {
-    @apply w-full col-start-1 col-end-4;
-  }
-
-  .pseudo-full-bleed {
-    @apply w-full max-w-3xl col-start-1 col-end-4 mx-auto;
-  }
-}

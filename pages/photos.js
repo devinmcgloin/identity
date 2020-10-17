@@ -11,12 +11,16 @@ const Index = ({ views, downloads, images }) => {
         <div className="relative max-w-lg lg:max-w-7xl">
           <PageHeader title="Photographs">
             Taken from all over, more on{' '}
-            <a href="https://unsplash.com/@devinmcgloin">Unsplash</a>.
+            <a
+              href="https://unsplash.com/@devinmcgloin"
+              className="text-gray-600 hover:text-gray-900 border-b border-dotted"
+            >
+              Unsplash ↗
+            </a>
           </PageHeader>
         </div>
         <div className="mt-10">
           <GridList
-            title="Artwork"
             images={images.map((image) => image.urls.regular)}
           ></GridList>
         </div>

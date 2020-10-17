@@ -1,4 +1,4 @@
-export default (props) => (
+const Logo = (props) => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
@@ -170,3 +170,5 @@ export default (props) => (
     />
   </svg>
 );
+
+export default Logo;

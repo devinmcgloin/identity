@@ -5,7 +5,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { getAllPostIds } from 'lib/words';
 import BaseLayout from 'layouts/base';
-import { PageHeader } from 'components/page-header';
+import { CommonMetadata } from 'components/metadata';
 
 import ReactPlayer from 'react-player';
 
@@ -15,6 +15,10 @@ export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
     <BaseLayout>
+      <CommonMetadata
+        title={frontMatter.title}
+        description={frontMatter.excerpt}
+      />
       <div className="pt-16 pb-20 px-4 text-base max-w-prose mx-auto">
         <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
           {frontMatter.title}

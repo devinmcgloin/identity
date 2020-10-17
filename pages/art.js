@@ -1,5 +1,4 @@
 import BaseLayout from 'layouts/base';
-import useSWR from 'swr';
 import GridList from 'components/grid-layout';
 import { getAllArtworkUris } from 'lib/art';
 import { PageHeader } from 'components/page-header';
@@ -11,11 +10,11 @@ const Index = ({ images }) => {
         <div className="relative max-w-lg lg:max-w-7xl">
           <PageHeader
             title="Artwork"
-            subtitle="Made with a bit of math and lots of tinkering."
+            subtitle="Made with a bit of math and lots of tinkering, occasionally plotted on paper"
           />
         </div>
         <div className="mt-10">
-          <GridList title="Artwork" images={images}></GridList>
+          <GridList images={images}></GridList>
         </div>
       </div>
     </BaseLayout>

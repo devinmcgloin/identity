@@ -17,6 +17,26 @@ module.exports = {
         agean: '#33355D',
       },
     },
+    typography: (theme) => ({
+      default: {
+        css: {
+          pre: {
+            backgroundColor: '#F6F8FA',
+            color: theme('colors.gray.600'),
+          },
+          a: {
+            color: theme('colors.gray.600'),
+            textDecoration: 'none',
+            borderBottomWidth: '1px',
+            borderColor: 'rgba(0, 0, 0, .3)',
+            borderStyle: 'dotted',
+            '&:hover': {
+              color: theme('colors.gray.900'),
+            },
+          },
+        },
+      },
+    }),
   },
   variants: {},
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
