@@ -26,8 +26,4 @@ module.exports = {
     standardFontWeights: true,
     purgeLayersByDefault: true,
   },
-  dark: 'class',
-  experimental: {
-    darkModeVariant: true,
-  },
 };
