@@ -127,7 +127,7 @@ const StandardMetadata = ({ title, description }) => (
 const CommonMetadata = ({ title, description }) => {
   return (
     <Head>
-      {title && <title>{title}</title>}
+      {title && <title>{title} - Devin McGloin</title>}
       {title && <meta property="og:title" content={title} key="title" />}
       {title && (
         <meta property="og:site_name" content={title} key="og-site_name" />
