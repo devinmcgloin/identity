@@ -10,6 +10,12 @@ class MyDocument extends Document {
     return (
       <html lang="en">
         <Head>
+          <script
+            async
+            defer
+            data-domain="devinmcgloin.com"
+            src="https://plausible.io/js/plausible.js"
+          ></script>
           <link rel="preconnect" href="https://rsms.me" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
