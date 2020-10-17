@@ -12,6 +12,7 @@ const Index = () => (
       <div className="prose text-lg text-gray-500">
         <p>
           I'm a Software Engineer from California, living in Ireland via NYC.
+          Aiming for a constant state of play.
         </p>
         <p>
           Working on <a href="https://quorum.chat">Quorum</a> &{' '}
