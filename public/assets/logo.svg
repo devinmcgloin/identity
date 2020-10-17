@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" version="1.1"
+  style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
+  viewBox="0 0 423 423" x="0px" y="0px" fill-rule="evenodd" clip-rule="evenodd">
+  <g>
+    <path class="fil0" d="M182 109c-25,-38 58,-64 0,-109 40,47 -32,71 0,109z" />
+    <path class="fil0" d="M209 111c-14,-43 73,-47 28,-105 26,55 -49,60 -28,105z" />
+    <path class="fil0" d="M118 160c-44,-10 -4,-86 -77,-77 61,5 28,72 77,77z" />
+    <path class="fil0" d="M138 142c-40,-20 19,-84 -54,-94 58,21 8,77 54,94z" />
+    <path class="fil0" d="M109 242c-38,24 -64,-59 -109,0 47,-40 71,31 109,0z" />
+    <path class="fil0" d="M111 215c-43,13 -47,-73 -105,-28 55,-27 60,48 105,28z" />
+    <path class="fil0" d="M160 306c-10,44 -86,3 -77,76 5,-61 72,-27 77,-76z" />
+    <path class="fil0" d="M142 285c-20,40 -84,-19 -94,55 21,-58 77,-8 94,-55z" />
+    <path class="fil0" d="M242 315c24,38 -59,63 0,108 -40,-47 31,-70 0,-108z" />
+    <path class="fil0" d="M215 313c13,43 -73,46 -28,105 -27,-56 48,-60 28,-105z" />
+    <path class="fil0" d="M306 263c44,10 3,87 76,77 -61,-5 -27,-72 -76,-77z" />
+    <path class="fil0" d="M285 281c40,21 -19,84 55,94 -58,-21 -8,-77 -55,-94z" />
+    <path class="fil0" d="M315 182c38,-25 63,58 108,0 -47,40 -70,-32 -108,0z" />
+    <path class="fil0" d="M313 209c43,-14 46,73 105,28 -56,26 -60,-49 -105,-28z" />
+    <path class="fil0" d="M263 118c10,-44 87,-4 77,-77 -5,61 -72,28 -77,77z" />
+    <path class="fil0" d="M281 138c21,-40 84,19 94,-54 -21,58 -77,8 -94,54z" />
+    <path class="fil0" d="M212 127c46,0 84,38 84,85 0,46 -38,84 -84,84 -47,0 -85,-38 -85,-84 0,-47 38,-85 85,-85z" />
+  </g>
+</svg>

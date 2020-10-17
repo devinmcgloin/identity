@@ -3,63 +3,83 @@ import Head from 'next/head';
 const StandardMetadata = ({ title, description }) => (
   <Head>
     <meta charSet="utf-8" />
-    <link rel="canonical" href="https://www.arenahq.io" />
+    <link rel="canonical" href="https://devinmcgloin.com" />
     <title key="title">{title}</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta charSet="utf-8" />
-    <link rel="icon" href="/logos/arena-logo.svg" />
-    <link rel="shortcut icon" href="/logos/arena-logo.svg" />
-    <link rel="canonical" href="https://www.arenahq.io" />
+    <link rel="icon" href="/assets/logo.svg" />
+    <link rel="shortcut icon" href="/assets/logo.svg" />
+    <link rel="canonical" href="https://devinmcgloin.com" />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="57x57"
-      href="apple-touch-icon-57x57.png"
+      href="/assets/apple-touch-icon-57x57.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="114x114"
-      href="apple-touch-icon-114x114.png"
+      href="/assets/apple-touch-icon-114x114.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="72x72"
-      href="apple-touch-icon-72x72.png"
+      href="/assets/apple-touch-icon-72x72.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="144x144"
-      href="apple-touch-icon-144x144.png"
+      href="/assets/apple-touch-icon-144x144.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="60x60"
-      href="apple-touch-icon-60x60.png"
+      href="/assets/apple-touch-icon-60x60.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="120x120"
-      href="apple-touch-icon-120x120.png"
+      href="/assets/apple-touch-icon-120x120.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="76x76"
-      href="apple-touch-icon-76x76.png"
+      href="/assets/apple-touch-icon-76x76.png"
     />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="152x152"
-      href="apple-touch-icon-152x152.png"
+      href="/assets/apple-touch-icon-152x152.png"
     />
     <link
       rel="icon"
       type="image/png"
-      href="favicon-196x196.png"
+      href="/assets/favicon-196x196.png"
       sizes="196x196"
     />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon-32x32.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon-128.png"
+      sizes="128x128"
+    />
     <meta name="application-name" content="&nbsp;" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />

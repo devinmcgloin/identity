@@ -21,8 +21,7 @@ export default function PostPage({ allProjectData }) {
           >
             <p className="mt-3 text-base leading-6 text-gray-500">
               Quorum is a way to help people build a business around chat.
-              Handling all the complications around billing, membership and
-              marketing.
+              Handling all the complications around billing and membership.
             </p>
             <p className="mt-3 text-base leading-6 text-gray-500">
               We're a small team of ~5 at the minute, owning the product end to
@@ -43,7 +42,7 @@ export default function PostPage({ allProjectData }) {
               flexible notification system to handle lots of new use cases.
             </p>
             <p className="mt-3 text-base leading-6 text-gray-500">
-              Eventual goal is to scale to 5k MRR.
+              Near term goal is scaling to 5k MRR.
             </p>
           </ContentBlock>
           <ContentBlock
