@@ -97,7 +97,7 @@ const StandardMetadata = ({ title, description }) => (
     />
     <meta property="og:image:height" content="650" />
     <meta property="og:image:width" content="650" />
-    <meta name="twitter:card" content="summary_image" />
+    <meta name="twitter:card" content="summary" />
     <meta property="og:title" content={title} key="og-title" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.devinmcgloin.com" />
