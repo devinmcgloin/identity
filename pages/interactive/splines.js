@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import dynamic from 'next/dynamic';
+import InteractiveLayout from 'layouts/interactive';
 
 import { setupCanvas } from 'lib/interactive/canvas';
 import { BSpline, cubic, drawCurves } from 'lib/interactive/shape-rendering';
 import Matrix from 'lib/interactive/matrix';
 import { randInt, pixeltocord } from 'lib/interactive/math';
-import { WithoutSSR } from 'lib/ssr';
-
-const InteractiveLayout = dynamic(() => import('layouts/interactive'));
 
 function Ring(x, y, radius, color) {
   this.x = x;
