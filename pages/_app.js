@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { StandardMetadata } from 'components/metadata';
 import { SWRConfig } from 'swr';
 import 'styles/base.css';
+import 'styles/dat-gui.css';
 import { useEffect } from 'react';
 
 function Identity({ Component, pageProps }) {

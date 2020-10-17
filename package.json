@@ -11,6 +11,7 @@
     "@headlessui/react": "^0.2.0",
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.6.2",
+    "dat.gui": "^0.7.6",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
     "next": "^9.5.5",
