@@ -22,7 +22,7 @@ const Index = ({ quotes }) => {
           {quotes.map((q) => (
             <div>
               <p className="mt-3 text-base leading-6 text-gray-500">{q.text}</p>
-              <h3 className="mt-4 text-xl leading-7 font-semibold text-gray-900">
+              <h3 className="mt-4 text-lg leading-7 font-semibold text-gray-900 float-right">
                 {q.author} · {q.year}
               </h3>
             </div>
