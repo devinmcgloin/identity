@@ -35,6 +35,11 @@ const Index = ({ images }) => {
             title="Additive Splines"
             description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
           />
+          <ContentBlock
+            slug="/interactive/bezier"
+            title="Bezier"
+            description="A simple visualization explaining how bezier curves operate."
+          />
         </div>
         <div className="mt-12 border-t-2 border-gray-100">
           <GridList images={images}></GridList>
