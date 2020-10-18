@@ -41,7 +41,6 @@ export async function getStaticPaths() {
     .map((tag) => `/tags/${tag.toLowerCase().replace(' ', '-')}`);
 
   let uniqueTags = [...new Set(tags)];
-  console.log(uniqueTags);
   return {
     paths: uniqueTags,
     fallback: false,

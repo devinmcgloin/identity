@@ -55,18 +55,22 @@ class Solar extends Component {
       },
     ],
     rotation_speed: 0.2,
-    background: '#000000',
+    background: '#4e4e4e',
     startTime: Date.now(),
     elapsedTime: 0,
+  };
+
+  mountEditor = (pane) => {
+    pane.addInput(this.state, 'background');
+    pane.addInput(this.state, 'rotation_speed', { min: 0.01, max: 10 });
   };
 
   componentDidMount = () => {
     if (typeof window !== 'undefined') {
       setInterval(
         () =>
-          this.setState({
-            elapsedTime: (Date.now() - this.state.startTime) / 1000,
-          }),
+          (this.state.elapsedTime = (Date.now() - this.state.startTime) / 1000),
+
         30
       );
     }
@@ -75,10 +79,11 @@ class Solar extends Component {
   };
 
   draw = (ctx, w, h) => {
-    ctx.fillStyle = '#4e4e4e';
+    let { M, planets, elapsedTime, rotation_speed, background } = this.state;
+
+    ctx.fillStyle = background;
     ctx.fillRect(0, 0, w, h);
 
-    let { M, planets, elapsedTime, rotation_speed } = this.state;
     let m = M.identityMatrix();
 
     planets.map((p) => {
@@ -106,7 +111,7 @@ class Solar extends Component {
   drawPlanet = (ctx, x, y, size, rotation, sides, color) => {
     ctx.beginPath();
     ctx.strokeStyle = color;
-    ctx.fillStyle = '#4e4e4e';
+    ctx.fillStyle = this.state.background;
     ctx.lineWidth = 5;
     const sampleRate = 1 / sides;
     for (let i = 0; i <= (sides + 1) * sampleRate; i += sampleRate) {
@@ -116,11 +121,13 @@ class Solar extends Component {
     ctx.stroke();
     ctx.fill();
   };
+
   render = () => {
     return (
       <InteractiveLayout
         title="Solar"
         description="A two dimensional solar system, simple rotations in 2d space."
+        mountEditor={this.mountEditor}
       />
     );
   };

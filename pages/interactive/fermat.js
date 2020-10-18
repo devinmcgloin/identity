@@ -8,6 +8,7 @@ class FermatSpirals extends Component {
   state = {
     size: 2,
     color: '#e23232',
+    background: '#4499d6',
     scaling_factor: 0.009,
     angle: 137.508,
     count: 10000,
@@ -19,6 +20,7 @@ class FermatSpirals extends Component {
     pane.addInput(this.state, 'angle', { min: 0, max: 180 });
     pane.addInput(this.state, 'count', { min: 1, max: 20000 });
     pane.addInput(this.state, 'color');
+    pane.addInput(this.state, 'background');
   };
 
   componentDidMount = () => {
@@ -28,8 +30,8 @@ class FermatSpirals extends Component {
   };
 
   draw = (ctx, w, h) => {
-    let { color, count, scaling_factor, angle, size } = this.state;
-    ctx.fillStyle = '#4499d6';
+    let { color, background, count, scaling_factor, angle, size } = this.state;
+    ctx.fillStyle = background;
     ctx.fillRect(0, 0, w, h);
 
     ctx.fillStyle = color;
