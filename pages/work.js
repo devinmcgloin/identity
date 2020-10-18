@@ -63,6 +63,7 @@ export default function PostPage({ allProjectData }) {
         <div className="mt-12 grid gap-12 border-t-2 border-gray-100 pt-12 md:grid-cols-2 lg:gap-x-5">
           {allProjectData.map((data) => (
             <ContentBlock
+              key={data.slug}
               slug={data.slug}
               title={data.title}
               description={data.excerpt}

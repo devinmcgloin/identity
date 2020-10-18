@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between p-5 border-b border-gray-100">
       <Link href="/">
-        <Logo className="cursor-pointer w-10 h-10 text-red-500" />
+        <a>
+          <Logo className="cursor-pointer w-10 h-10 text-red-500" />
+        </a>
       </Link>
       <div className="flex space-x-4">
         <Link href="/words">Words</Link>

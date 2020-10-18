@@ -42,7 +42,7 @@ class Bezier extends Component {
     pane.addInput(this.state, 'showDetails', {
       label: 'Show Details',
     });
-    pane.addInput(this.state, 'granularity', { min: 5, max: 1000 });
+    pane.addInput(this.state, 'granularity', { min: 5, max: 100 });
   };
 
   componentDidMount = () => {
@@ -58,7 +58,6 @@ class Bezier extends Component {
     let { cursor } = canvas;
     if (cursor.z && !click) {
       let new_p = [cursor.x, cursor.y, 0];
-      console.log(new_p);
 
       let norm = pixeltocord(w, h, new_p),
         exists = false,

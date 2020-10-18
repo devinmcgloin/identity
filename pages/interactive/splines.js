@@ -191,7 +191,6 @@ class Bezier extends Component {
       g.beginPath();
       g.moveTo(cv[0][0], cv[0][1]);
       for (i = 1; i < cv.length; i++) g.lineTo(cv[i][0], cv[i][1]);
-      console.log(fill, stroke);
       if (fill) g.fill();
       if (stroke) g.stroke();
     }

@@ -19,7 +19,7 @@ const partition = (array, n = 4) => {
 };
 
 const ImageList = ({ images }) => (
-  <div className="flex-auto w-full sm:w-1/2 lg:w-1/4">
+  <div className="flex-auto w-full sm:w-1/2 lg:w-1/3">
     <div className="mx-1">
       {images.map((image) => (
         <div key={image} className="mb-2 p-2 border">
@@ -31,7 +31,7 @@ const ImageList = ({ images }) => (
 );
 
 const GridList = ({ images }) => {
-  let partitionedImages = partition(images);
+  let partitionedImages = partition(images, 3);
 
   return (
     <div>
