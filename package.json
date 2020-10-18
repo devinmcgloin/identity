@@ -12,6 +12,8 @@
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.6.2",
     "date-fns": "^2.16.1",
+    "gl-react": "^4.0.1",
+    "gl-react-dom": "^4.0.1",
     "gray-matter": "^4.0.2",
     "next": "^9.5.5",
     "next-mdx-remote": "^1.0.0",
