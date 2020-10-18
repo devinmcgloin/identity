@@ -13,6 +13,7 @@ module.exports = {
         sans: ['Inter var', ...fontFamily.sans],
       },
       colors: {
+        primary: '#f05252',
         peacock: '#005158',
         agean: '#33355D',
       },
@@ -20,6 +21,13 @@ module.exports = {
     typography: (theme) => ({
       default: {
         css: {
+          img: {
+            borderRadius: '2px',
+            width: '100%',
+          },
+          code: {
+            color: theme('colors.primary'),
+          },
           pre: {
             backgroundColor: '#F6F8FA',
             color: theme('colors.gray.600'),

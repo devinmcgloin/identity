@@ -6,7 +6,7 @@ const Header = () => {
     <div className="flex items-center justify-between p-5 border-b border-gray-100">
       <Link href="/">
         <a>
-          <Logo className="cursor-pointer w-10 h-10 text-red-500" />
+          <Logo className="cursor-pointer w-10 h-10 text-primary" />
         </a>
       </Link>
       <div className="flex space-x-4">
