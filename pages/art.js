@@ -31,9 +31,9 @@ const Index = ({ images }) => {
             description="A two dimensional solar system, simple rotations in 2d space."
           />
           <ContentBlock
-            slug="/interactive/splines"
-            title="Additive Splines"
-            description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
+            slug="/interactive/rings"
+            title="Additive Rings"
+            description="Overlapping rings that vary based on configurable parameters."
           />
           <ContentBlock
             slug="/interactive/bezier"

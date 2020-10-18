@@ -1,204 +1,306 @@
 import React, { Component } from 'react';
 import InteractiveLayout from 'layouts/interactive';
-
-import { setupCanvas } from 'lib/interactive/canvas';
-import { BSpline, cubic, drawCurves } from 'lib/interactive/shape-rendering';
+import { setupCanvas, resize } from 'lib/interactive/canvas';
+import {
+  vecAdd,
+  vecMulti,
+  cubic,
+  pixeltocord,
+  dist,
+} from 'lib/interactive/math';
 import Matrix from 'lib/interactive/matrix';
-import { randInt, pixeltocord } from 'lib/interactive/math';
 
-function Ring(x, y, radius, color) {
-  this.x = x;
-  this.y = y;
-  this.radius = radius;
-  this.color = color;
-  this.points = [];
-  this.iterations = 0;
+var Bspline = [
+  -1 / 6,
+  3 / 6,
+  -3 / 6,
+  1 / 6,
+  3 / 6,
+  -6 / 6,
+  0,
+  4 / 6,
+  -3 / 6,
+  3 / 6,
+  3 / 6,
+  1 / 6,
+  1 / 6,
+  0,
+  0,
+  0,
+];
 
-  for (var theta = 0; theta < 2 * Math.PI; theta += Math.PI / 20) {
-    this.points.push([
-      x + radius * Math.cos(theta),
-      y + radius * Math.sin(theta),
-      0,
-    ]);
-  }
-}
-
-class AdditiveSplines extends Component {
+class Bezier extends Component {
   constructor(props) {
     super(props);
-    this.rings = [];
-    this.maxIterations = 100;
-    this.cursorRadius = 0.3;
     this.click = false;
-    this.color = 'rgba(100, 200, 200, 0.1)';
-    this.resolution = 60;
-    this.varyPower = 0.02;
-    this.M = new Matrix();
+    this.points = [
+      [-0.9156118143459916, 0.17580872011251758, 0],
+      [0.5921237693389592, 0.3853727144866385, 0],
+      [0.5780590717299579, -0.3361462728551336, 0],
+      [-0.12236286919831219, 0.10829817158931083, 0],
+      [-0.4641350210970464, -0.18565400843881857, 0],
+    ];
   }
 
+  state = {
+    fill: true,
+    stroke: true,
+    strokeColor: 'rgba(100, 100, 100, 100)',
+    fillColor: 'rgba(200, 100, 100, 100)',
+    openCurve: false,
+    viewKeyPoints: false,
+    pointDistance: 0.05,
+    resolution: 20,
+  };
+
   mountEditor = (pane) => {
-    pane.addInput(this, 'color');
-
-    pane.addInput(this, 'maxIterations', { step: 1 });
-    pane.addInput(this, 'cursorRadius', { min: 0.2, max: 0.7 });
-    pane
-      .addButton({
-        title: 'Add Random',
-      })
-      .on('click', () => this.addRandom());
-
-    pane
-      .addButton({
-        title: 'Clear Canvas',
-      })
-      .on('click', () => this.clearCanvas());
+    // pane.addInput(this.state, 'time', {
+    //   min: 0,
+    //   max: 1,
+    // });
   };
 
   componentDidMount = () => {
     let canvas = document.getElementById('canvas');
-    setupCanvas(
-      canvas,
-      this.draw,
-      this.resetIterations,
-      false,
-      90,
-      (ctx, w, h) => {
-        ctx.fillStyle = '#b2b2b2';
-        ctx.fillRect(0, 0, w, h);
-      }
-    );
-    this.addRandom();
     this.canvas = canvas;
+    setupCanvas(canvas, this.draw, () => {}, true);
   };
 
-  vary = (path) => {
-    var newPoints = [];
-    var points = path.points,
-      varyPower = this.varyPower;
-
-    for (var i = 0; i < points.length; i++) {
-      var p = points[i];
-      newPoints.push([
-        p[0] + path.radius * 2 * varyPower * (Math.random() * 2 - 1),
-        p[1] + path.radius * 2 * varyPower * (Math.random() * 2 - 1),
-        0,
-      ]);
+  randomPoints = () => {
+    var h = this.canvas.height,
+      w = this.canvas.width,
+      aspc = h / w;
+    var points = [];
+    for (var i = 0; i < 8; i++) {
+      var p = [Math.random() - 0.5, Math.random() - 0.5, 0];
+      points.push(p);
     }
 
-    path.points = newPoints;
-
-    return newPoints;
+    this.points = points;
   };
 
-  randomStyle = () =>
-    `rgba(${randInt(0, 255)},${randInt(0, 255)},${randInt(0, 255)},0.1)`;
+  randomStyle = () => {
+    function randColor() {
+      return Math.floor(Math.random() * 255);
+    }
+    this.setState((prev) => {
+      return {
+        ...prev,
+        strokeStyle:
+          'rgba(' +
+          randColor() +
+          ',' +
+          randColor() +
+          ',' +
+          randColor() +
+          ',' +
+          1.0 +
+          ')',
+      };
+    });
+    this.setState((prev) => {
+      return {
+        ...prev,
+        fillStyle:
+          'rgba(' +
+          randColor() +
+          ',' +
+          randColor() +
+          ',' +
+          randColor() +
+          ',' +
+          1.0 +
+          ')',
+      };
+    });
+  };
 
   handleClick = (w, h) => {
     let { canvas, click } = this;
+    let { cursor } = canvas;
+    let new_p = [cursor.x, cursor.y, 0];
+    let norm = pixeltocord(w, h, new_p);
 
-    if (canvas.cursor.z && !click) {
-      var pixel = pixeltocord(w, h, [canvas.cursor.x, canvas.cursor.y, 0]);
-      this.rings.push(
-        new Ring(pixel[0], pixel[1], this.cursorRadius, this.color)
-      );
-      this.click = true;
-    } else this.click = false;
-  };
+    if (cursor.z) {
+      if (this.n === undefined) {
+        var min = 100;
+        for (var i = 0; i < this.points.length; i++) {
+          var d = dist(norm, this.points[i]);
+          if (d < this.pointDistance && d < min) {
+            this.n = i;
+            min = d;
+          }
+        }
 
-  resetIterations = () => {
-    for (var i = 0; i < this.rings.length; i++) this.rings[i].iterations = 0;
-  };
+        if (this.n === undefined) {
+          var indx,
+            min = 100;
+          for (var i = 0; i < this.points.length; i++) {
+            var next = (i + 1) % this.points.length,
+              d = Math.abs(
+                dist(this.points[i], norm) +
+                  dist(norm, this.points[next]) -
+                  dist(this.points[i], this.points[next])
+              );
+            if (d < min) {
+              indx = i;
+              min = d;
+            }
+          }
+          this.points.splice(indx + 1, 0, norm);
+        }
+      }
+    } else delete this.n;
 
-  resetPoints = (ring) => {
-    ring.points = [];
-    var theta = ring.theta,
-      y = ring.y,
-      x = ring.x,
-      radius = ring.radius;
-    for (theta = 0; theta < 2 * Math.PI; theta += Math.PI / 20) {
-      ring.points.push([
-        x + radius * Math.cos(theta),
-        y + radius * Math.sin(theta),
-        0,
-      ]);
+    if (this.n !== undefined) {
+      this.points[this.n] = norm;
     }
   };
 
-  clearCanvas = () => {
-    var canvas = document.getElementById('canvas'),
-      ctx = canvas.getContext('2d');
-    this.rings = [];
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-  };
+  drawCurves(m, C, fill, stroke) {
+    var i,
+      n,
+      p,
+      cv,
+      x,
+      y,
+      z,
+      fl = 5,
+      w = this.canvas.width,
+      h = this.canvas.height,
+      g = this.canvas.getContext('2d');
+    let M = new Matrix();
 
-  addRandom = (n = 5) => {
-    for (var i = 0; i < n; i++) {
-      let style = this.randomStyle();
-      this.rings.push(
-        new Ring(
-          Math.random() * 2 - 1,
-          Math.random() * 2 - 1,
-          Math.random() + 0.2,
-          style
-        )
-      );
+    for (n = 0; n < C.length; n++) {
+      cv = [];
+      for (i = 0; i < C[n].length; i++) {
+        p = M.transform(m, C[n][i]);
+
+        x = p[0];
+        y = p[1];
+        z = p[2];
+
+        x *= fl / (fl - z);
+        y *= fl / (fl - z);
+
+        x = w * x * 0.5 + 0.5 * w;
+        y = -w * y * 0.5 + 0.5 * h;
+        cv.push([x, y]);
+      }
+
+      g.beginPath();
+      g.moveTo(cv[0][0], cv[0][1]);
+      for (i = 1; i < cv.length; i++) g.lineTo(cv[i][0], cv[i][1]);
+      console.log(fill, stroke);
+      if (fill) g.fill();
+      if (stroke) g.stroke();
     }
-  };
+  }
+
+  clearCanvas = () => (this.points = []);
 
   draw = (ctx, w, h) => {
-    let { rings, maxIterations, resolution, M } = this;
-
+    let M = new Matrix();
+    let m = M.identityMatrix();
     this.handleClick(w, h);
 
-    var n, i, t;
-    for (i = 0; i < rings.length; i++) {
-      var p = rings[i];
-      if (p.iterations >= maxIterations) continue;
+    ctx.fillStyle = '#F6F8FA';
+    ctx.fillRect(0, 0, w, h);
 
-      var curve = [];
-      var path = this.vary(p);
-      for (n = 0; n < path.length; n++) {
-        let nm = (n - 1 + path.length) % path.length,
-          n1 = (n + 1) % path.length,
-          n2 = (n + 2) % path.length;
-        let X = M.transform(BSpline, [
-            path[nm][0],
-            path[n][0],
-            path[n1][0],
-            path[n2][0],
-          ]),
-          Y = M.transform(BSpline, [
-            path[nm][1],
-            path[n][1],
-            path[n1][1],
-            path[n2][1],
-          ]),
-          Z = M.transform(BSpline, [
-            path[nm][2],
-            path[n][2],
-            path[n1][2],
-            path[n2][2],
-          ]);
+    if (this.points.length === 0) return;
+    M.identity(m);
+    M.save(m);
+    var curves = [],
+      curve,
+      n,
+      t;
 
-        for (t = 0; t < 1.0001; t += 1 / resolution)
-          curve.push([cubic(X, t), cubic(Y, t), cubic(Z, t)]);
-      }
-      ctx.fillStyle = p.color;
-      drawCurves(ctx, w, h, [curve]);
-      if (Math.random() < 0.2) this.resetPoints(p);
-      p.iterations += 1;
+    curve = [];
+    for (n = 0; n < this.points.length; n++) {
+      let nm = (n - 1 + this.points.length) % this.points.length,
+        n1 = (n + 1) % this.points.length,
+        n2 = (n + 2) % this.points.length,
+        X = M.transform(Bspline, [
+          this.points[nm][0],
+          this.points[n][0],
+          this.points[n1][0],
+          this.points[n2][0],
+        ]),
+        Y = M.transform(Bspline, [
+          this.points[nm][1],
+          this.points[n][1],
+          this.points[n1][1],
+          this.points[n2][1],
+        ]),
+        Z = M.transform(Bspline, [
+          this.points[nm][2],
+          this.points[n][2],
+          this.points[n1][2],
+          this.points[n2][2],
+        ]);
+
+      for (t = 0; t < 1.0001; t += 1 / this.state.resolution)
+        curve.push([cubic(X, t), cubic(Y, t), cubic(Z, t)]);
     }
+
+    ctx.strokeStyle = this.state.strokeStyle;
+    ctx.fillStyle = this.state.fillStyle;
+    this.drawCurves(m, [curve], this.state.fill, this.state.stroke);
+
+    if (this.state.viewKeyPoints) {
+      // draw key points
+      curves = [];
+      for (n = 0; n < this.points.length; n++) {
+        curve = [];
+        for (t = 0; t < 2 * Math.PI; t += 1 / 10)
+          curve.push([
+            this.points[n][0] + 0.01 * Math.cos(t),
+            this.points[n][1] + 0.01 * Math.sin(t),
+            0,
+          ]);
+        curves.push(curve);
+      }
+      ctx.fillStyle = 'rgba(165, 165, 165, 200)';
+      this.drawCurves(m, curves, true, false);
+
+      // Draw lines between successive key points.
+
+      curves = [];
+      for (n = 0; n < this.points.length; n++)
+        curves.push([
+          this.points[n],
+          this.points[(n + 1) % this.points.length],
+        ]);
+      ctx.strokeStyle = 'rgba(165, 165, 165, 200)';
+      this.drawCurves(m, curves, false, true);
+
+      // Draw the cursor
+      var c = pixeltocord(w, h, [canvas.cursor.x, canvas.cursor.y, 0]),
+        cx = c[0],
+        cy = c[1];
+      curves = [];
+      curves.push([
+        [cx - 0.05, cy],
+        [cx + 0.05, cy],
+      ]);
+      curves.push([
+        [cx, cy - 0.05],
+        [cx, cy + 0.05],
+      ]);
+      ctx.strokeStyle = 'rgba(165, 165, 165, 200)';
+      this.drawCurves(m, curves, false, true);
+    }
+    M.restore(m);
   };
 
   render = () => {
     return (
       <InteractiveLayout
-        title="Additive Splines"
-        description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
+        title="Editable Splines"
         mountEditor={this.mountEditor}
       />
     );
   };
 }
 
-export default AdditiveSplines;
+export default Bezier;
