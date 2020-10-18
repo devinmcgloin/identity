@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <html lang="en">
         <Head>
           <script
             async
@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </Html>
+      </html>
     );
   }
 }
