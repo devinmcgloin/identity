@@ -2,6 +2,7 @@ import BaseLayout from 'layouts/base';
 import GridList from 'components/grid-layout';
 import { getAllArtworkUris } from 'lib/art';
 import { PageHeader } from 'components/page-header';
+import { ContentBlock } from 'components/content';
 
 const Index = ({ images }) => {
   return (
@@ -13,7 +14,29 @@ const Index = ({ images }) => {
             subtitle="Made with a bit of math and lots of tinkering, occasionally plotted on paper"
           />
         </div>
-        <div className="mt-10">
+        <div className="mt-12 grid gap-12 border-t-2 border-gray-100 pt-12 md:grid-cols-2 lg:gap-x-5">
+          <ContentBlock
+            slug="/interactive/boids"
+            title="Boids"
+            description="These boids are based on common flocking patterns, and attempt to create a digital Koi Pond from above."
+          />
+          <ContentBlock
+            slug="/interactive/fermat"
+            title="Fermat's Spirals"
+            description="See Fermat's spiral fill the screen, or tweak the angle to create your own spiral."
+          />
+          <ContentBlock
+            slug="/interactive/solar"
+            title="Solar"
+            description="A two dimensional solar system, simple rotations in 2d space."
+          />
+          <ContentBlock
+            slug="/interactive/splines"
+            title="Additive Splines"
+            description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
+          />
+        </div>
+        <div className="mt-12 border-t-2 border-gray-100">
           <GridList images={images}></GridList>
         </div>
       </div>

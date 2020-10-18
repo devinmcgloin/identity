@@ -22,7 +22,7 @@ const ImageList = ({ images }) => (
   <div className="flex-auto w-full sm:w-1/2 lg:w-1/4">
     <div className="mx-1">
       {images.map((image) => (
-        <div key={image} className="mb-2 border">
+        <div key={image} className="mb-2 p-2 border">
           <img className="object-contain w-full h-full" src={image} />
         </div>
       ))}
@@ -30,12 +30,12 @@ const ImageList = ({ images }) => (
   </div>
 );
 
-const GridList = ({ title, images }) => {
+const GridList = ({ images }) => {
   let partitionedImages = partition(images);
 
   return (
     <div>
-      <div className="flex flex-row flex-wrap h-screen mt-2">
+      <div className="flex flex-row flex-wrap h-screen mt-4">
         {partitionedImages.map((set, index) => (
           <ImageList key={index} images={set} />
         ))}

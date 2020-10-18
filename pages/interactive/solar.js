@@ -75,6 +75,9 @@ class Solar extends Component {
   };
 
   draw = (ctx, w, h) => {
+    ctx.fillStyle = '#4e4e4e';
+    ctx.fillRect(0, 0, w, h);
+
     let { M, planets, elapsedTime, rotation_speed } = this.state;
     let m = M.identityMatrix();
 
@@ -118,7 +121,6 @@ class Solar extends Component {
       <InteractiveLayout
         title="Solar"
         description="A two dimensional solar system, simple rotations in 2d space."
-        color="#4e4e4e"
       />
     );
   };

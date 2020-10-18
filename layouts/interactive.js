@@ -2,25 +2,33 @@ import { useEffect } from 'react';
 import Tweakpane from 'tweakpane';
 import Link from 'next/link';
 
-const InteractiveLayout = ({ title, description, mountEditor, color }) => {
-  useEffect(() => {
-    if (mountEditor) {
-      const pane = new Tweakpane({
-        title: 'Parameters',
-        container: document.getElementById('tweakpane'),
-      });
+const InteractiveLayout = ({ title, description, mountEditor }) => {
+  const download = () => {
+    var canvas = document.getElementById('canvas');
 
-      mountEditor(pane);
-      // pane.hidden = true;
-      return () => pane.dispose();
-    }
+    var image = canvas.toDataURL('image/png');
+    var link = document.createElement('a');
+    link.download = `${title.split(' ').join('-').toLowerCase()}-${Math.floor(
+      new Date().getTime() / 100000
+    )}.png`;
+    link.href = image;
+    link.click();
+  };
+
+  useEffect(() => {
+    const pane = new Tweakpane({
+      title: 'Parameters',
+      container: document.getElementById('tweakpane'),
+    });
+
+    mountEditor && mountEditor(pane);
+    pane.addSeparator();
+    pane.addButton({ title: 'Download' }).on('click', () => download());
+    return () => pane.dispose();
   }, []);
 
   return (
-    <main
-      className="w-screen h-screen border-8 border-white"
-      style={{ backgroundColor: color }}
-    >
+    <main className="w-screen h-screen border-8 border-white">
       <div id="tweakpane" className="absolute top-4 right-4"></div>
       <canvas className="display-block overflow-hidden" id="canvas" />
       <div className="absolute font-serif text-white font-normal italic md:left-16 md:bottom-16 bottom-10 left-10 p-5 md:max-w-sm max-w-xs bg-opacity-25 bg-black rounded-sm">

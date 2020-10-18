@@ -29,6 +29,9 @@ class FermatSpirals extends Component {
 
   draw = (ctx, w, h) => {
     let { color, count, scaling_factor, angle, size } = this.state;
+    ctx.fillStyle = '#4499d6';
+    ctx.fillRect(0, 0, w, h);
+
     ctx.fillStyle = color;
     for (var i = 0; i < count; i++) {
       let r = scaling_factor * Math.sqrt(i);
@@ -42,7 +45,6 @@ class FermatSpirals extends Component {
       <InteractiveLayout
         title="Fermat's Spirals"
         description="See Fermat's spiral fill the screen, or tweak the angle to create your own spiral."
-        color="#4499d6"
         mountEditor={this.mountEditor}
       />
     );

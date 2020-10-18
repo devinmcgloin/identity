@@ -52,17 +52,21 @@ class AdditiveSplines extends Component {
         title: 'Clear Canvas',
       })
       .on('click', () => this.clearCanvas());
-
-    pane
-      .addButton({
-        title: 'Download',
-      })
-      .on('click', () => this.download());
   };
 
   componentDidMount = () => {
     let canvas = document.getElementById('canvas');
-    setupCanvas(canvas, this.draw, this.resetIterations, false);
+    setupCanvas(
+      canvas,
+      this.draw,
+      this.resetIterations,
+      false,
+      90,
+      (ctx, w, h) => {
+        ctx.fillStyle = '#b2b2b2';
+        ctx.fillRect(0, 0, w, h);
+      }
+    );
     this.addRandom();
     this.canvas = canvas;
   };
@@ -141,17 +145,6 @@ class AdditiveSplines extends Component {
     }
   };
 
-  download = () => {
-    var canvas = document.getElementById('canvas');
-
-    var image = canvas.toDataURL('image/png');
-    var link = document.createElement('a');
-    link.download =
-      'additive-splines-' + Math.floor(new Date().getTime() / 100000) + '.png';
-    link.href = image;
-    link.click();
-  };
-
   draw = (ctx, w, h) => {
     let { rings, maxIterations, resolution, M } = this;
 
@@ -202,7 +195,6 @@ class AdditiveSplines extends Component {
       <InteractiveLayout
         title="Additive Splines"
         description="These splines are overlapping rings that vary based on configurable parameters. It's also interactive!"
-        color="#b2b2b2"
         mountEditor={this.mountEditor}
       />
     );
