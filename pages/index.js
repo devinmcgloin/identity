@@ -9,7 +9,7 @@ const Index = () => (
       <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10">
         Hey, I'm Devin. Welcome to my corner of the internet.
       </h1>
-      <div className="prose dark:prose-dark text-lg">
+      <div className="prose dark:prose-dark lg:text-lg">
         <p>
           I'm a Software Engineer from California, living in Ireland via NYC.
           Aiming for a constant state of play.
