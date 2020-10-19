@@ -19,7 +19,7 @@ const Index = ({ views, downloads, images }) => {
             </a>
           </PageHeader>
         </div>
-        <div className="mt-10">
+        <div className="mt-12 border-t-2 border-gray-100 dark:border-gray-700 pt-12">
           <GridList
             images={images.map((image) => image.urls.regular)}
           ></GridList>
