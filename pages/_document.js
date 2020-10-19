@@ -19,7 +19,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://rsms.me" />
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
-        <body className="dark:bg-cool-gray-900">
+        <body className="dark:bg-off-black">
           <Main />
           <NextScript />
         </body>

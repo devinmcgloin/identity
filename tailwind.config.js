@@ -16,6 +16,7 @@ module.exports = {
         primary: '#f05252',
         peacock: '#005158',
         agean: '#33355D',
+        'off-black': '#282c38',
       },
     },
     typography: (theme) => ({

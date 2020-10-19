@@ -37,7 +37,7 @@ const GridList = ({ images }) => {
   let partitionedImages = partition(images, 3);
 
   return (
-    <div className="dark:bg-cool-gray-900">
+    <div>
       <div className="flex flex-row flex-wrap h-screen mt-4">
         {partitionedImages.map((set, index) => (
           <ImageList key={index} images={set} />
