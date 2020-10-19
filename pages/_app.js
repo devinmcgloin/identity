@@ -18,7 +18,7 @@ function Identity({ Component, pageProps }) {
   }, []);
 
   return (
-    <main>
+    <main className="min-h-screen h-full w-screen">
       <SWRConfig
         value={{
           fetcher: (key) =>

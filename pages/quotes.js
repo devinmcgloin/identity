@@ -10,17 +10,19 @@ import YAML from 'yaml';
 const Index = ({ quotes }) => {
   return (
     <BaseLayout>
-      <div className="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+      <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
         <div className="relative max-w-lg lg:max-w-7xl">
           <PageHeader
             title="Quotes"
             subtitle="Wisdom from other folks"
           ></PageHeader>
         </div>
-        <div className="mt-12 grid gap-12 border-t-2 border-gray-100 pt-12 md:grid-cols-2 lg:gap-x-5">
+        <div className="mt-12 grid gap-12 border-t-2 border-gray-100 dark:border-gray-700 pt-12 md:grid-cols-2 lg:gap-x-5">
           {quotes.map((q) => (
             <div>
-              <p className="mt-3 text-base leading-6 text-gray-500">{q.text}</p>
+              <p className="mt-3 text-base leading-6  text-gray-500 dark:text-gray-400">
+                {q.text}
+              </p>
               <h3 className="mt-4 text-lg leading-7 font-semibold text-gray-900 float-right">
                 {q.author} · {q.year}
               </h3>

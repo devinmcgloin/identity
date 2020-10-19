@@ -7,13 +7,13 @@ import { PageHeader } from 'components/page-header';
 const Index = ({ views, downloads, images }) => {
   return (
     <BaseLayout>
-      <div className="bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+      <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
         <div className="relative max-w-lg lg:max-w-7xl">
           <PageHeader title="Photographs">
             Taken from all over, more on{' '}
             <a
               href="https://unsplash.com/@devinmcgloin"
-              className="text-gray-600 hover:text-gray-900 border-b border-dotted"
+              className="text-gray-600 hover:text-gray-900 dark:text-gray-200 dark:hover:text-gray-400 border-b border-dotted"
             >
               Unsplash ↗
             </a>

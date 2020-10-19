@@ -18,10 +18,10 @@ export default function PostPage({ source, frontMatter }) {
         description={frontMatter.excerpt}
       />
       <div className="pt-16 pb-20 px-4 text-base max-w-prose mx-auto">
-        <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10">
           {frontMatter.title}
         </h1>
-        <div className="prose text-gray-500">{content}</div>
+        <div className="prose dark:prose-dark">{content}</div>
       </div>
     </BaseLayout>
   );

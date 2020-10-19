@@ -6,10 +6,10 @@ import { CommonMetadata } from 'components/metadata';
 const Index = () => (
   <BaseLayout>
     <div className="pt-16 pb-20 px-4 text-base max-w-prose mx-auto">
-      <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+      <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10">
         Hey, I'm Devin. Welcome to my corner of the internet.
       </h1>
-      <div className="prose text-lg text-gray-500">
+      <div className="prose dark:prose-dark text-lg">
         <p>
           I'm a Software Engineer from California, living in Ireland via NYC.
           Aiming for a constant state of play.
@@ -67,7 +67,7 @@ const Index = () => (
         </ul>
 
         <h4>Elsewhere on the web</h4>
-        <div className="prose flex space-x-3">
+        <div className="flex space-x-3">
           <a href="https://twitter.com/devinmcgloin">Twitter ↗</a>
           <a href="https://github.com/devinmcgloin">GitHub ↗</a>
           <a href="https://unsplash.com/@devinmcgloin">Unsplash ↗</a>

@@ -32,6 +32,9 @@ module.exports = {
             backgroundColor: '#F6F8FA',
             color: theme('colors.gray.600'),
           },
+          p: {
+            color: theme('colors.gray.500'),
+          },
           a: {
             color: theme('colors.gray.600'),
             textDecoration: 'none',
@@ -44,14 +47,69 @@ module.exports = {
           },
         },
       },
+      dark: {
+        css: {
+          color: theme('colors.gray.200'),
+          code: {
+            color: theme('colors.primary'),
+          },
+          pre: {
+            backgroundColor: theme('colors.gray.700'),
+            color: theme('colors.gray.100'),
+          },
+          p: {
+            color: theme('colors.gray.400'),
+          },
+          b: {
+            color: theme('colors.gray.300'),
+          },
+          ul: {
+            color: theme('colors.gray.400'),
+          },
+          li: {
+            color: theme('colors.gray.400'),
+          },
+          h1: {
+            color: theme('colors.gray.100'),
+          },
+          h2: {
+            color: theme('colors.gray.100'),
+          },
+          h3: {
+            color: theme('colors.gray.200'),
+          },
+          h4: {
+            color: theme('colors.gray.200'),
+          },
+          h5: {
+            color: theme('colors.gray.200'),
+          },
+          a: {
+            color: theme('colors.gray.200'),
+            textDecoration: 'none',
+            borderBottomWidth: '1px',
+            borderColor: 'rgba(255, 255, 255, .3)',
+            borderStyle: 'dotted',
+            '&:hover': {
+              color: theme('colors.gray.400'),
+            },
+          },
+        },
+      },
     }),
   },
-  variants: {},
+  variants: {
+    typography: ['responsive', 'dark'],
+  },
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
   future: {
     removeDeprecatedGapUtilities: true,
     defaultLineHeights: true,
     standardFontWeights: true,
     purgeLayersByDefault: true,
+  },
+  dark: 'media',
+  experimental: {
+    darkModeVariant: true,
   },
 };
