@@ -30,7 +30,10 @@ function Identity({ Component, pageProps }) {
               .catch((err) => console.log(err)),
         }}
       >
-        <StandardMetadata title="Devin McGloin" description="" />
+        <StandardMetadata
+          title="Devin McGloin"
+          description="Californian in Dublin, Software @ Quorum. Ex-Intercom."
+        />
         <Head />
 
         <Component {...pageProps} />
