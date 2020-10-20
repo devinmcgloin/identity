@@ -25,7 +25,7 @@ const Index = () => (
           game, and owning the experience end to end.
         </p>
         <p>
-          I'm an occasional backpacker, <Link href="/art">Artist</Link> and{' '}
+          I'm an occasional backpacker, <Link href="/art">artist</Link> and{' '}
           <Link href="/photos">
             <a>photographer</a>
           </Link>
