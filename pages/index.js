@@ -15,21 +15,21 @@ const Index = () => (
           Aiming for a constant state of play.
         </p>
         <p>
-          Working on <a href="https://quorum.chat">Quorum</a> &{' '}
+          Working on <a href="https://quorum.chat">Quorum</a>,{' '}
           <a href="https://www.arenahq.io">Arena</a> and{' '}
           <Link href="/work">
             <a>numerous other things</a>
           </Link>
-          , previously <a href="https://intercom.com">Intercom</a>. I'm focused
-          on working for small companies, having more skin in the game, and
-          owning the experience end to end.
+          , previously <a href="https://intercom.com">Intercom</a>. I'm
+          interested on working for small companies, having more skin in the
+          game, and owning the experience end to end.
         </p>
         <p>
-          I'm an occasional backpacker, cyclist and{' '}
+          I'm an occasional backpacker, <Link href="/art">Artist</Link> and{' '}
           <Link href="/photos">
             <a>photographer</a>
           </Link>
-          . I publish anything from short articles to deeper dives on by{' '}
+          . I sometimes write, and put it up on my{' '}
           <Link href="/words">
             <a>blog</a>
           </Link>
@@ -38,14 +38,14 @@ const Index = () => (
         <p>
           I want to spend time building / restoring physical things, but
           increasingly find myself building on computers. I have todo list items
-          for "Restore a Porsche 964", "Build a house", and "Earn a private
+          like "Restore a Porsche 964", "Build a house", and "Earn a private
           pilot license".
         </p>
 
         <h4>Interested In</h4>
         <ul>
           <li>
-            Improving Tools for Thought / Increasing our ability to understand
+            Building Tools for Thought / Increasing our ability to understand
             and influence the world around us.
           </li>
           <li>
