@@ -21,7 +21,7 @@ const Index = () => (
             <a>numerous other things</a>
           </Link>
           , previously <a href="https://intercom.com">Intercom</a>. I'm
-          interested on working for small companies, having more skin in the
+          interested in working at small companies, having more skin in the
           game, and owning the experience end to end.
         </p>
         <p>
