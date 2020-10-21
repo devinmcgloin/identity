@@ -1,5 +1,11 @@
 {
   "env": {
     "UNSPLASH_ACCESS_KEY": "@unsplash-access-key"
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/sunscope/:match*",
+      "destination": "https://sunscope.devinmcgloin.com/:match*"
+    }
+  ]
 }
