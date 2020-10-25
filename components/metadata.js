@@ -128,12 +128,26 @@ const CommonMetadata = ({ title, description }) => {
   return (
     <Head>
       {title && <title>{title} - Devin McGloin</title>}
-      {title && <meta property="og:title" content={title} key="title" />}
       {title && (
-        <meta property="og:site_name" content={title} key="og-site_name" />
+        <meta
+          property="og:title"
+          content={`${title} - Devin McGloin`}
+          key="title"
+        />
       )}
       {title && (
-        <meta name="twitter:title" content={title} key="twitter-title" />
+        <meta
+          property="og:site_name"
+          content={`${title} - Devin McGloin`}
+          key="og-site_name"
+        />
+      )}
+      {title && (
+        <meta
+          name="twitter:title"
+          content={`${title} - Devin McGloin`}
+          key="twitter-title"
+        />
       )}
       {description && (
         <meta
