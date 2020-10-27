@@ -21,7 +21,8 @@ export default function PostPage({ allProjectData }) {
           >
             <p className="mt-3 text-base leading-6  text-gray-500 dark:text-gray-400">
               Quorum is a way to help people build a business around chat.
-              Handling all the complications around billing and membership.
+              Handling all the complications around billing and membership, so
+              customers can focus on the community.
             </p>
             <p className="mt-3 text-base leading-6  text-gray-500 dark:text-gray-400">
               We're a small team of ~5 at the minute, owning the product end to
