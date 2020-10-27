@@ -16,8 +16,6 @@ class MyDocument extends Document {
             data-domain="devinmcgloin.com"
             src="https://plausible.io/js/plausible.js"
           ></script>
-          <link rel="preconnect" href="https://rsms.me" />
-          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
         <body className="dark:bg-off-black">
           <Main />
