@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 const StandardMetadata = ({ title, description }) => (
   <Head>
     <meta charSet="utf-8" />
-    <link rel="canonical" href="https://www.devinmcgloin.com" />
+    <link rel="canonical" key="canonical" href="https://www.devinmcgloin.com" />
     <title key="title">{title}</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta charSet="utf-8" />
@@ -130,6 +130,7 @@ const CommonMetadata = ({ title, description }) => {
   return (
     <Head>
       <link
+        key="canonical"
         rel="canonical"
         href={`https://www.devinmcgloin.com${router.pathname}`}
       />
