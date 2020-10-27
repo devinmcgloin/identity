@@ -1,6 +1,6 @@
 import BaseLayout from 'layouts/base';
 import GridList from 'components/grid-layout';
-import { getAllArtworkUris } from 'lib/art';
+import { getAllArtworkPaths } from 'lib/art';
 import { PageHeader } from 'components/page-header';
 import { ContentBlock } from 'components/content';
 
@@ -50,7 +50,7 @@ const Index = ({ images }) => {
 };
 
 export async function getStaticProps(context) {
-  const images = await getAllArtworkUris();
+  const images = await getAllArtworkPaths();
   return {
     props: { images },
     revalidate: 10800,

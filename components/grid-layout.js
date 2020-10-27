@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const partition = (array, n = 4) => {
   let cop = [...array];
   var container = new Array(n);
@@ -23,10 +25,15 @@ const ImageList = ({ images }) => (
     <div className="mx-1">
       {images.map((image) => (
         <div
-          key={image}
+          key={image.path}
           className="mb-2 p-2 border border-gray-300 dark:border-gray-400 dark:bg-white"
         >
-          <img className="object-contain w-full h-full" src={image} />
+          <Image
+            className="object-contain w-full h-full"
+            src={image.path}
+            width={image.width}
+            height={image.height}
+          />
         </div>
       ))}
     </div>
