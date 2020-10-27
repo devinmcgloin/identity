@@ -57,7 +57,7 @@ module.exports = {
             color: theme('colors.primary'),
           },
           pre: {
-            backgroundColor: theme('colors.gray.800'),
+            backgroundColor: '#232326',
             color: theme('colors.gray.200'),
           },
           p: {
