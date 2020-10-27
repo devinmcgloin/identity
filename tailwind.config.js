@@ -1,12 +1,14 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: [
-    './components/**/*.js',
-    './pages/**/*.js',
-    './lib/**/*.js',
-    './layouts/**/*.js',
-  ],
+  purge: {
+    content: [
+      './components/**/*.js',
+      './pages/**/*.js',
+      './lib/**/*.js',
+      './layouts/**/*.js',
+    ],
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -55,8 +57,8 @@ module.exports = {
             color: theme('colors.primary'),
           },
           pre: {
-            backgroundColor: theme('colors.gray.700'),
-            color: theme('colors.gray.100'),
+            backgroundColor: theme('colors.gray.800'),
+            color: theme('colors.gray.200'),
           },
           p: {
             color: theme('colors.gray.400'),
