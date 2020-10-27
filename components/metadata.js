@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const StandardMetadata = ({ title, description }) => (
   <Head>
@@ -9,7 +10,6 @@ const StandardMetadata = ({ title, description }) => (
     <meta charSet="utf-8" />
     <link rel="icon" href="/assets/logo.svg" />
     <link rel="shortcut icon" href="/assets/logo.svg" />
-    <link rel="canonical" href="https://www.devinmcgloin.com" />
     <link
       rel="apple-touch-icon-precomposed"
       sizes="57x57"
@@ -125,8 +125,15 @@ const StandardMetadata = ({ title, description }) => (
 );
 
 const CommonMetadata = ({ title, description }) => {
+  const router = useRouter();
+
   return (
     <Head>
+      <link
+        rel="canonical"
+        href={`https://www.devinmcgloin.com${router.pathname}`}
+      />
+
       {title && <title>{title} - Devin McGloin</title>}
       {title && (
         <meta
