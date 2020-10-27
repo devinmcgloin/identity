@@ -6,8 +6,9 @@ import matter from 'gray-matter';
 import { getAllProjectIds } from 'lib/projects';
 import BaseLayout from 'layouts/base';
 import { CommonMetadata } from 'components/metadata';
+import Image from 'next/image';
 
-const components = {};
+const components = { Image };
 
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });

@@ -29,6 +29,8 @@ module.exports = {
               'ol',
               'code',
               'pre',
+              'small',
+              'blockquote',
             ],
             defaultExtractor: (content) =>
               content.match(/[\w-/.:]+(?<!:)/g) || [],

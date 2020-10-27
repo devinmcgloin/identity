@@ -8,8 +8,9 @@ import BaseLayout from 'layouts/base';
 import { CommonMetadata } from 'components/metadata';
 
 import ReactPlayer from 'react-player';
+import Image from 'next/image';
 
-const components = { ReactPlayer };
+const components = { ReactPlayer, Image };
 
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });

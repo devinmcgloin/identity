@@ -27,6 +27,7 @@ module.exports = {
           img: {
             borderRadius: '2px',
             width: '100%',
+            margin: '0px',
           },
           code: {
             color: theme('colors.primary'),
