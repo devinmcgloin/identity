@@ -31,6 +31,11 @@ module.exports = {
               'pre',
               'small',
               'blockquote',
+              'td',
+              'tr',
+              'th',
+              'table',
+              'thead',
             ],
             defaultExtractor: (content) =>
               content.match(/[\w-/.:]+(?<!:)/g) || [],
