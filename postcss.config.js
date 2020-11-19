@@ -12,7 +12,7 @@ module.exports = {
               './layouts/**/*.{js,jsx,ts,tsx}',
               './content/**/*.{js,jsx,ts,tsx}',
             ],
-            allowlist: [
+            safelist: [
               'html',
               'body',
               'h1',
