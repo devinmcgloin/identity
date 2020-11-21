@@ -106,14 +106,5 @@ module.exports = {
     typography: ['responsive', 'dark'],
   },
   plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
-  future: {
-    removeDeprecatedGapUtilities: true,
-    defaultLineHeights: true,
-    standardFontWeights: true,
-    purgeLayersByDefault: true,
-  },
-  dark: 'media',
-  experimental: {
-    darkModeVariant: true,
-  },
+  darkMode: 'media',
 };
