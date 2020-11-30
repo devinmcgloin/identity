@@ -6002,10 +6002,10 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tweakpane@^1.5.6:
-  version "1.5.6"
-  resolved "https://registry.yarnpkg.com/tweakpane/-/tweakpane-1.5.6.tgz#52a8279ceb80e1abe6a7f29a25883921ac79ecbe"
-  integrity sha512-RKo1kIGqLP/M8xXnNhmtVQtUSgT+ZGQo7LfgP9nEt3d2ZVjeeycpiDffnUNeX1RvB2of+gbWAKeZolOXpVfjTQ==
+tweakpane@^1.5.7:
+  version "1.5.7"
+  resolved "https://registry.yarnpkg.com/tweakpane/-/tweakpane-1.5.7.tgz#b627b284b61e49d41daab9628c75b278d7ac77f9"
+  integrity sha512-9CsPb/afoS6xowCKMh+lvSvuUSKebPUTNHDAkfnbkrdt8DRhIrN+WoARGt9V7fEcLTHEB/JnXToX+sKDbb3Hww==
 
 type-fest@^0.7.1:
   version "0.7.1"
