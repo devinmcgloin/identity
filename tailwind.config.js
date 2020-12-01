@@ -39,6 +39,12 @@ module.exports = {
           p: {
             color: theme('colors.gray.500'),
           },
+          ul: {
+            color: theme('colors.gray.500'),
+          },
+          li: {
+            color: theme('colors.gray.500'),
+          },
           a: {
             color: theme('colors.gray.600'),
             textDecoration: 'none',
