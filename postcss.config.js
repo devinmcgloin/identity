@@ -37,6 +37,7 @@ module.exports = {
               'table',
               'thead',
               'tbody',
+              'img',
             ],
             defaultExtractor: (content) =>
               content.match(/[\w-/.:]+(?<!:)/g) || [],
