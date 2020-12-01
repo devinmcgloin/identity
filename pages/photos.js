@@ -1,10 +1,10 @@
 import BaseLayout from 'layouts/base';
 import useSWR from 'swr';
 import GridList from 'components/grid-layout';
-import { userStats } from 'lib/unsplash';
+import { userPhotos } from 'lib/unsplash';
 import { PageHeader } from 'components/page-header';
 
-const Index = ({ views, downloads, images }) => {
+const Index = ({ images }) => {
   return (
     <BaseLayout>
       <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
@@ -36,9 +36,9 @@ const Index = ({ views, downloads, images }) => {
 };
 
 export async function getStaticProps(context) {
-  const unsplashStats = await userStats();
+  const unsplashData = await userPhotos();
   return {
-    props: { ...unsplashStats },
+    props: { ...unsplashData },
     revalidate: 10800,
   };
 }
