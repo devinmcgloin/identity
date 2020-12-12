@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import InteractiveLayout from 'layouts/interactive';
-import { setupCanvas, resize } from 'lib/interactive/canvas';
+import { setupCanvas } from 'lib/interactive/canvas';
 import SimplexNoise from 'simplex-noise';
 
 class Sunset extends Component {
@@ -24,21 +24,17 @@ class Sunset extends Component {
     ],
   };
 
-  componentDidMount = () => {
-    let canvas = document.getElementById('canvas');
-    this.canvas = canvas;
-    setupCanvas(canvas, this.draw, (ctx, w, h) => {
-      ctx.fillStyle = '#002F40';
-      ctx.fillRect(0, 0, w, h);
-    });
-  };
-
   mountEditor = (pane) => {
     pane.addInput(this.state, 'frequency', { min: 1, max: 10 });
     pane.addInput(this.state, 'magnitude', { min: 0.01, max: 1 });
     pane.addInput(this.state, 'independence', { min: 0, max: 1 });
     pane.addInput(this.state, 'spacing', { min: 0, max: 1 });
     pane.addInput(this.state, 'count', { min: 1, max: 200 });
+  };
+
+  componentDidMount = () => {
+    let canvas = document.getElementById('canvas');
+    setupCanvas(canvas, this.draw);
   };
 
   drawDeformedCircle = (ctx, circle, seed, color) => {
@@ -76,7 +72,7 @@ class Sunset extends Component {
   };
 
   draw = (ctx, w, h) => {
-    console.log('RENDERNG', this.state);
+    ctx.clearRect(0, 0, w, h);
     ctx.scale(2, 2);
 
     let radius = (1.1 * h) / 2;
@@ -86,18 +82,17 @@ class Sunset extends Component {
     ctx.fillRect(0, 0, w, h);
 
     ctx.translate(w / 2, h / 2);
-    let current = { ...circle };
-    current.radius /= this.state.magnitude + 1;
+    circle.radius /= this.state.magnitude + 1;
 
     for (let i = 0; i < this.state.count; i++) {
       this.drawDeformedCircle(
         ctx,
-        current,
+        circle,
         i * this.state.independence,
         this.state.colors[i % this.state.colors.length]
       );
 
-      current.radius *= 1 - this.state.spacing;
+      circle.radius *= 1 - this.state.spacing;
     }
   };
 
