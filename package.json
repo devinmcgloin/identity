@@ -20,6 +20,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-player": "^2.7.0",
+    "simplex-noise": "^2.4.0",
     "swr": "^0.3.9",
     "tailwindcss": "^2.0.1",
     "tweakpane": "^1.5.7",
