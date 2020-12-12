@@ -53,7 +53,6 @@ export async function getStaticProps(context) {
   const images = await getAllArtworkPaths();
   return {
     props: { images },
-    revalidate: 10800,
   };
 }
 
