@@ -13,7 +13,7 @@ const components = { Image };
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
-    <BaseLayout>
+    <BaseLayout includeFooter>
       <CommonMetadata
         title={frontMatter.title}
         description={frontMatter.excerpt}

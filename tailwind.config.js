@@ -111,6 +111,10 @@ module.exports = {
   variants: {
     typography: ['responsive', 'dark'],
   },
-  plugins: [require('@tailwindcss/ui'), require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/ui'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
   darkMode: 'media',
 };

@@ -22,7 +22,7 @@ const partition = (array, n = 4) => {
 
 const ImageList = ({ images }) => (
   <div className="flex-auto w-full sm:w-1/2 lg:w-1/3">
-    <div className="mx-1">
+    <div className="mx-1 pb-10">
       {images.map((image) => (
         <div
           key={image.path}

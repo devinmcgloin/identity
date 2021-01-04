@@ -5,7 +5,7 @@ import { CommonMetadata } from 'components/metadata';
 
 const Index = () => (
   <BaseLayout>
-    <div className="pt-16 pb-20 px-4 text-base max-w-prose mx-auto">
+    <div className="pt-16 pb-16 px-4 text-base max-w-prose mx-auto">
       <h1 className="mt-2 mb-8 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10">
         Hey, I'm Devin. Welcome to my corner of the internet.
       </h1>
