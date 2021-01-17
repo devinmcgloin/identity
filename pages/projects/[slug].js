@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 import { getAllProjectIds } from 'lib/projects';
 import BaseLayout from 'layouts/base';
 import { CommonMetadata } from 'components/metadata';
-import Image from 'next/image';
+import Image from 'components/zoomable-image';
 
 const components = { Image };
 
@@ -26,11 +26,11 @@ export default function PostPage({ source, frontMatter }) {
 
           <a
             href={`https://github.com/${frontMatter.repo}`}
-            class="text-gray-400 hover:text-gray-300"
+            className="text-gray-400 hover:text-gray-300"
           >
-            <span class="sr-only">GitHub</span>
+            <span className="sr-only">GitHub</span>
             <svg
-              class="h-7 w-7"
+              className="h-7 w-7"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"

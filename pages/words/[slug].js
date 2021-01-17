@@ -8,7 +8,7 @@ import BaseLayout from 'layouts/base';
 import { CommonMetadata } from 'components/metadata';
 
 import ReactPlayer from 'react-player';
-import Image from 'next/image';
+import Image from 'components/zoomable-image';
 
 const components = { ReactPlayer, Image };
 

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'components/zoomable-image';
 
 const partition = (array, n = 4) => {
   let cop = [...array];

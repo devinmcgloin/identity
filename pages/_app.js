@@ -3,6 +3,7 @@ import { StandardMetadata } from 'components/metadata';
 import { SWRConfig } from 'swr';
 import 'styles/base.css';
 import 'styles/tweakpane.css';
+import 'react-medium-image-zoom/dist/styles.css';
 import { useEffect } from 'react';
 
 function Identity({ Component, pageProps }) {

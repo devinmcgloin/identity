@@ -1,18 +1,18 @@
 const Footer = () => (
   <footer aria-labelledby="footerHeading">
-    <h2 id="footerHeading" class="sr-only">
+    <h2 id="footerHeading" className="sr-only">
       Footer
     </h2>
-    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="mt-8 border-t border-gray-100 dark:border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-        <div class="flex space-x-6 md:order-2">
+    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div className="mt-8 border-t border-gray-100 dark:border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+        <div className="flex space-x-6 md:order-2">
           <a
             href="https://twitter.com/devinmcgloin"
-            class="text-gray-400 hover:text-gray-300"
+            className="text-gray-400 hover:text-gray-300"
           >
-            <span class="sr-only">Twitter</span>
+            <span className="sr-only">Twitter</span>
             <svg
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -23,11 +23,11 @@ const Footer = () => (
 
           <a
             href="https://github.com/devinmcgloin"
-            class="text-gray-400 hover:text-gray-300"
+            className="text-gray-400 hover:text-gray-300"
           >
-            <span class="sr-only">GitHub</span>
+            <span className="sr-only">GitHub</span>
             <svg
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -40,7 +40,7 @@ const Footer = () => (
             </svg>
           </a>
         </div>
-        <p class="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
+        <p className="mt-8 text-base text-gray-400 md:mt-0 md:order-1">
           &copy; {new Date().getFullYear()} Devin McGloin. All rights reserved.
         </p>
       </div>
