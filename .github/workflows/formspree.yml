@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 14.x
       - run: yarn
-      - run: yarn add @formspree/cli
+      - run: yarn global add @formspree/cli
       - run: formspree deploy
         env:
           FORMSPREE_DEPLOY_KEY: ${{ secrets.FORMSPREE_DEPLOY_KEY }}
