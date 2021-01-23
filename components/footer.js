@@ -32,12 +32,12 @@ const Footer = () => {
               id="email"
               autocomplete="email"
               required
-              class="appearance-none min-w-0 w-full bg-white border border-gray-300 py-2 px-4 text-base rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:placeholder-gray-400 sm:max-w-xs"
+              class="appearance-none min-w-0 w-full bg-white border border-gray-300 py-2 px-4 text-base rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-sunset-500 focus:border-sunset-500 focus:placeholder-gray-400 sm:max-w-xs"
               placeholder="Enter your email"
             />
             <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
               {state.succeeded ? (
-                <div class="w-full bg-indigo-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <div class="w-full bg-sunset-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-sunset-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sunset-500">
                   <svg
                     className="w-6 h-6 mx-7"
                     xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const Footer = () => {
                 <button
                   disabled={state.submitting}
                   type="submit"
-                  class="w-full bg-indigo-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                  class="w-full bg-sunset-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-sunset-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sunset-500"
                 >
                   Subscribe
                 </button>

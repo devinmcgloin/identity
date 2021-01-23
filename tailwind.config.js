@@ -15,7 +15,18 @@ module.exports = {
         sans: ['Inter var', ...fontFamily.sans],
       },
       colors: {
-        primary: '#f05252',
+        sunset: {
+          50: '#fcf8f6',
+          100: '#fceeed',
+          200: '#fad3da',
+          300: '#f9afb8',
+          400: '#fa7a84',
+          500: '#f05252',
+          600: '#f4303a',
+          700: '#d92534',
+          800: '#af1e2e',
+          900: '#8c1a27',
+        },
         peacock: '#005158',
         agean: '#33355D',
         'off-black': '#1b1b1f',
@@ -30,7 +41,7 @@ module.exports = {
             margin: '0px',
           },
           code: {
-            color: theme('colors.primary'),
+            color: theme('colors.primary.500'),
           },
           pre: {
             backgroundColor: '#F6F8FA',
@@ -61,7 +72,7 @@ module.exports = {
         css: {
           color: theme('colors.gray.200'),
           code: {
-            color: theme('colors.primary'),
+            color: theme('colors.primary.500'),
           },
           pre: {
             backgroundColor: '#232326',
