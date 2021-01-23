@@ -1,6 +1,6 @@
 import { useForm } from '@formspree/react';
 
-const Footer = () => {
+const Footer = ({ includeNewsletter = true }) => {
   const [state, handleSubmit] = useForm('subscribe');
 
   return (
@@ -9,62 +9,64 @@ const Footer = () => {
         Footer
       </h2>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-        <div class="border-t border-gray-100 dark:border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
-          <div>
-            <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-              Subscribe to my newsletter
-            </h3>
-            <p class="mt-2 text-base text-gray-500">
-              I'll send any posts on this site, and occasional updates straight
-              to your inbox.
-            </p>
-          </div>
-          <form
-            onSubmit={handleSubmit}
-            class="mt-4 sm:flex sm:max-w-md lg:mt-0"
-          >
-            <label htmlFor="email" class="sr-only">
-              Email address
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              autocomplete="email"
-              required
-              class="appearance-none min-w-0 w-full bg-white border border-gray-300 py-2 px-4 text-base rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-sunset-500 focus:border-sunset-500 focus:placeholder-gray-400 sm:max-w-xs"
-              placeholder="Enter your email"
-            />
-            <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-              {state.succeeded ? (
-                <div class="w-full bg-sunset-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-sunset-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sunset-500">
-                  <svg
-                    className="w-6 h-6 mx-7"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-              ) : (
-                <button
-                  disabled={state.submitting}
-                  type="submit"
-                  class="w-full bg-sunset-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-sunset-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sunset-500"
-                >
-                  Subscribe
-                </button>
-              )}
+        {includeNewsletter && (
+          <div class="border-t border-gray-100 dark:border-gray-700 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-0">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                Subscribe to my newsletter
+              </h3>
+              <p class="mt-2 text-base text-gray-500">
+                I'll send any posts on this site, and occasional updates
+                straight to your inbox.
+              </p>
             </div>
-          </form>
-        </div>
+            <form
+              onSubmit={handleSubmit}
+              class="mt-4 sm:flex sm:max-w-md lg:mt-0"
+            >
+              <label htmlFor="email" class="sr-only">
+                Email address
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                required
+                class="appearance-none min-w-0 w-full bg-white border border-gray-300 py-2 px-4 text-base rounded-md text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-sunset-500 focus:border-sunset-500 focus:placeholder-gray-400 sm:max-w-xs"
+                placeholder="Enter your email"
+              />
+              <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                {state.succeeded ? (
+                  <div class="w-full bg-sunset-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-sunset-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sunset-500">
+                    <svg
+                      className="w-6 h-6 mx-7"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                ) : (
+                  <button
+                    disabled={state.submitting}
+                    type="submit"
+                    class="w-full bg-sunset-600 border border-transparent rounded-md py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-sunset-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sunset-500"
+                  >
+                    Subscribe
+                  </button>
+                )}
+              </div>
+            </form>
+          </div>
+        )}
         <div className="mt-8 border-t border-gray-100 dark:border-gray-700 pt-8 md:flex md:items-center md:justify-between">
           <div className="flex space-x-6 md:order-2">
             <a
