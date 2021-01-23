@@ -4,6 +4,7 @@ import { SWRConfig } from 'swr';
 import 'styles/base.css';
 import 'styles/tweakpane.css';
 import { useEffect } from 'react';
+import { FormspreeProvider } from '@formspree/react';
 
 function Identity({ Component, pageProps }) {
   useEffect(() => {
@@ -35,8 +36,9 @@ function Identity({ Component, pageProps }) {
           description="Californian in Dublin, Software @ Quorum. Ex-Intercom."
         />
         <Head />
-
-        <Component {...pageProps} />
+        <FormspreeProvider project={'1597253424540285963'}>
+          <Component {...pageProps} />
+        </FormspreeProvider>
       </SWRConfig>
     </main>
   );

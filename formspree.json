@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "subscribe": {
+      "name": "Subscribe Form",
+      "actions": [
+        {
+          "type": "email",
+          "to": "devin@devinmcgloin.com"
+        }
+      ]
+    }
+  }
+}

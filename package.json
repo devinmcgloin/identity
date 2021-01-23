@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "@headlessui/react": "^0.2.0",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.4.0",
