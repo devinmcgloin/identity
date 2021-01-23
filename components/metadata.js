@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 const StandardMetadata = ({ title, description }) => (
   <Head>
     <meta charSet="utf-8" />
-    <link rel="canonical" key="canonical" href="https://www.devinmcgloin.com" />
+    <link rel="canonical" key="canonical" href="https://devin.website" />
     <title key="title">{title}</title>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta charSet="utf-8" />
@@ -89,18 +89,15 @@ const StandardMetadata = ({ title, description }) => (
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <meta
       name="twitter:image"
-      content="https://www.devinmcgloin.com/assets/logo.png"
+      content="https://devin.website/assets/logo.png"
     />
-    <meta
-      property="og:image"
-      content="https://www.devinmcgloin.com/assets/logo.png"
-    />
+    <meta property="og:image" content="https://devin.website/assets/logo.png" />
     <meta property="og:image:height" content="650" />
     <meta property="og:image:width" content="650" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:title" content={title} key="og-title" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.devinmcgloin.com" />
+    <meta property="og:url" content="https://devin.website" />
     <meta
       property="og:description"
       content={description}
@@ -132,7 +129,7 @@ const CommonMetadata = ({ title, description }) => {
       <link
         key="canonical"
         rel="canonical"
-        href={`https://www.devinmcgloin.com${router.pathname}`}
+        href={`https://devin.website${router.pathname}`}
       />
 
       {title && <title>{title} - Devin McGloin</title>}
