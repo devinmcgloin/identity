@@ -1,11 +1,19 @@
 import BaseLayout from 'layouts/base';
 import { useForm } from '@formspree/react';
+import { CommonMetadata } from 'components/metadata';
 
 const Index = ({}) => {
   const [state, handleSubmit] = useForm('subscribe');
 
   return (
     <BaseLayout includeFooter>
+      <CommonMetadata
+        title={'Newsletter'}
+        description={
+          "I'll send any posts on this site, and occasional updates straight to your inbox."
+        }
+      />
+
       <div class="bg-white py-16 sm:py-24">
         <div class="relative sm:py-16">
           <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
