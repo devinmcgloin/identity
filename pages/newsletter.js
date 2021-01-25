@@ -14,10 +14,10 @@ const Index = ({}) => {
         }
       />
 
-      <div class="bg-white py-16 sm:py-24">
+      <div class="py-16 sm:py-24">
         <div class="relative sm:py-16">
           <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-            <div class="relative rounded-2xl px-6 py-10 bg-sunset-600 overflow-hidden shadow-xl sm:px-12 sm:py-20">
+            <div class="relative rounded-2xl px-6 py-10 bg-sunset-600 dark:bg-sunset-300 overflow-hidden shadow-xl sm:px-12 sm:py-20">
               <div
                 aria-hidden="true"
                 class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0"
@@ -43,10 +43,10 @@ const Index = ({}) => {
               </div>
               <div class="relative">
                 <div class="sm:text-center">
-                  <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+                  <h2 class="text-3xl font-extrabold text-white dark:text-gray-900 tracking-tight sm:text-4xl">
                     Subscribe to my newsletter
                   </h2>
-                  <p class="mt-6 mx-auto max-w-2xl text-lg text-sunset-200">
+                  <p class="mt-6 mx-auto max-w-2xl text-lg text-sunset-200 dark:text-sunset-700">
                     I'll send any posts on this site, and occasional updates
                     straight to your inbox.
                   </p>
