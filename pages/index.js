@@ -71,7 +71,7 @@ const Index = () => (
           <a href="https://twitter.com/devinmcgloin">Twitter ↗</a>
           <a href="https://github.com/devinmcgloin">GitHub ↗</a>
           <a href="https://unsplash.com/@devinmcgloin">Unsplash ↗</a>
-          <a href="mailto:devin@devinmcgloin.com">Email ↗</a>
+          <a href="mailto:devin@mcgloin.email">Email ↗</a>
         </div>
       </div>
     </div>
