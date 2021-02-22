@@ -41,7 +41,7 @@ module.exports = {
             margin: '0px',
           },
           code: {
-            color: theme('colors.primary.500'),
+            color: theme('colors.sunset.500'),
           },
           pre: {
             backgroundColor: '#F6F8FA',
@@ -72,7 +72,7 @@ module.exports = {
         css: {
           color: theme('colors.gray.200'),
           code: {
-            color: theme('colors.primary.500'),
+            color: theme('colors.sunset.500'),
           },
           pre: {
             backgroundColor: '#232326',
