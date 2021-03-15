@@ -8,8 +8,9 @@ export const PageHeader = ({ title, subtitle, className, children }) => (
     </h2>
     <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
       <p className="text-xl leading-7  text-gray-500 dark:text-gray-400 ">
-        {children || subtitle}
+        {subtitle}
       </p>
     </div>
+    {children}
   </div>
 );

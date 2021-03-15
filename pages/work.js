@@ -9,20 +9,21 @@ export default function PostPage({ allProjectData }) {
     <BaseLayout includeFooter includeNewsletter>
       <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
         <div className="relative max-w-lg lg:max-w-7xl">
-          <PageHeader title="Work">
-            Things I've been up to over the past little while
-          </PageHeader>
+          <PageHeader
+            title="Work"
+            subtitle="Things I've been up to over the past little while"
+          ></PageHeader>
         </div>
         <div className="mt-12 grid gap-12 border-t-2 border-gray-100 dark:border-gray-700 pt-12">
           <ContentBlock
-            externalLink={'https://quorum.chat'}
-            title="Quorum (2020 - Now)"
+            externalLink={'https://mo.na'}
+            title="Mona (2020 - Now)"
             description=""
           >
             <p className="mt-3 text-base leading-6  text-gray-500 dark:text-gray-400">
-              Quorum is a way to help people build a business around chat.
-              Handling all the complications around billing and membership, so
-              customers can focus on the community.
+              Mona is one stop shop for content creators to monetize their
+              followings, create digital products and route traffic to various
+              platforms.
             </p>
             <p className="mt-3 text-base leading-6  text-gray-500 dark:text-gray-400">
               We're a small team of ~5 at the minute, owning the product end to
