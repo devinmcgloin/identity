@@ -18,15 +18,21 @@ const Index = ({ books }) => {
             subtitle="Books I've enjoyed reading."
           />
         </div>
-        <div className="mt-12 grid gap-12 border-t-2 border-gray-100 dark:border-gray-700 pt-12 md:grid-cols-2 lg:gap-x-5">
+        <div className="mt-12 grid gap-6 border-t-2 border-gray-100 dark:border-gray-700 pt-12 md:grid-cols-2 lg:gap-x-5">
           {books
             .sort((a, b) => b.rating - a.rating)
             .map((b) => (
-              <ContentBlock
-                key={b.url}
-                externalLink={b.url}
-                title={`${b.title} · ${b.author}`}
-              />
+              <a
+                className="bg-gray-100 rounded-md shadow-sm p-4 transform hover:scale-105 duration-200"
+                href={b.url}
+              >
+                <div className="text-center flex-content-end">
+                  <h3 className={`text-xl leading-7 font-semibold`}>
+                    {b.title}
+                  </h3>
+                  <h3 className={`text-md`}>by {b.author}</h3>
+                </div>
+              </a>
             ))}
         </div>
       </div>
