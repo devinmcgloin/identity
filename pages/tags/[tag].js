@@ -12,9 +12,13 @@ export default function PostPage({ tag, taggedPosts }) {
       <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
         <div className="relative max-w-lg lg:max-w-7xl">
           <PageHeader className="capitalize" title={tag}>
-            <span className="normal-case">
-              Posts related to <span className="capitalize">{tag}</span>
-            </span>
+            <div className="mt-3 sm:mt-4 lg:grid lg:grid-cols-2 lg:gap-5 lg:items-center">
+              <p className="text-xl leading-7  text-gray-500 dark:text-gray-400 ">
+                <span className="normal-case">
+                  Posts related to <span className="capitalize">{tag}</span>
+                </span>
+              </p>
+            </div>
           </PageHeader>
         </div>
 
