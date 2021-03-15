@@ -1,14 +1,14 @@
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: {
-    content: [
-      './components/**/*.js',
-      './pages/**/*.js',
-      './lib/**/*.js',
-      './layouts/**/*.js',
-    ],
-  },
+  purge: [
+    './pages/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './lib/**/*.{js,jsx,ts,tsx}',
+    './layouts/**/*.{js,jsx,ts,tsx}',
+    './content/**/*.{js,jsx,ts,tsx}',
+  ],
+
   theme: {
     extend: {
       fontFamily: {
@@ -33,12 +33,13 @@ module.exports = {
       },
     },
     typography: (theme) => ({
-      default: {
+      DEFAULT: {
         css: {
           img: {
             borderRadius: '2px',
             width: '100%',
             margin: '0px',
+            display: 'block',
           },
           code: {
             color: theme('colors.sunset.500'),
@@ -48,9 +49,6 @@ module.exports = {
             color: theme('colors.gray.600'),
           },
           p: {
-            color: theme('colors.gray.500'),
-          },
-          ul: {
             color: theme('colors.gray.500'),
           },
           li: {
@@ -65,6 +63,9 @@ module.exports = {
             '&:hover': {
               color: theme('colors.gray.900'),
             },
+          },
+          hr: {
+            borderColor: theme('colors.gray.100'),
           },
         },
       },
@@ -83,9 +84,6 @@ module.exports = {
           },
           b: {
             color: theme('colors.gray.300'),
-          },
-          ul: {
-            color: theme('colors.gray.400'),
           },
           li: {
             color: theme('colors.gray.400'),
@@ -114,6 +112,10 @@ module.exports = {
             '&:hover': {
               color: theme('colors.gray.400'),
             },
+          },
+          hr: {
+            borderColor: theme('colors.gray.700'),
+            borderStyle: 'dotted',
           },
         },
       },
