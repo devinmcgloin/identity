@@ -34,6 +34,14 @@ const Index = ({ things, tags }) => {
           </PageHeader>
         </div>
         {Object.entries(groupBy(things, 'type')).map(([section, values]) => {
+          let filteredValues = values.filter((thing) => {
+            if (!selectedTag) return true;
+            if (!thing.tags || thing.tags.length === 0) return false;
+            let normalizedTags = thing.tags.map((t) => t.toLowerCase());
+            return normalizedTags.includes(
+              selectedTag.toLowerCase().replace('-', ' ')
+            );
+          });
           return (
             <div className="mt-12">
               <div class="relative">
@@ -44,33 +52,24 @@ const Index = ({ things, tags }) => {
                   <div class="w-full border-t-2 border-gray-100 dark:border-gray-700"></div>
                 </div>
                 <div class="relative flex justify-center">
-                  <span class="capitalize px-3 bg-white text-lg font-medium text-gray-900">
+                  <span class="capitalize px-3 bg-white dark:bg-off-black text-lg font-medium text-gray-900 dark:text-gray-200">
                     {section}s
                   </span>
                 </div>
               </div>
-
-              <div className="mt-3 grid gap-6 md:grid-cols-2 lg:gap-x-5">
-                {values
-                  .filter((thing) => {
-                    if (!selectedTag) return true;
-                    if (!thing.tags || thing.tags.length === 0) return false;
-                    let normalizedTags = thing.tags.map((t) => t.toLowerCase());
-                    return normalizedTags.includes(
-                      selectedTag.toLowerCase().replace('-', ' ')
-                    );
-                  })
-                  .map((l) => (
+              {filteredValues.length > 0 ? (
+                <div className="mt-3 grid gap-6 md:grid-cols-2 lg:gap-x-5">
+                  {filteredValues.map((l) => (
                     <a
                       href={l.url}
-                      className={`bg-gray-100 rounded-md shadow-sm p-6 ${
+                      className={`bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200 rounded-md shadow-sm p-6 ${
                         l.url && 'transform hover:scale-105 duration-200'
                       }`}
                     >
                       <div className="text-center text-md font-semibold">
                         {l.title}
                       </div>
-                      <div className="font-serif pb-2 text-xl leading-7 font-medium text-gray-900">
+                      <div className="font-serif pb-2 text-xl leading-7 font-medium">
                         {l.text}
                       </div>
                       <div className="text-center text-base text-gray-400">
@@ -78,7 +77,12 @@ const Index = ({ things, tags }) => {
                       </div>
                     </a>
                   ))}
-              </div>
+                </div>
+              ) : (
+                <div
+                  className={`flex justify-center content-evenly mt-3 bg-gray-100 dark:bg-gray-700 dark:border-gray-600 rounded-md shadow-sm w-full h-32 p-6 border-dashed border-2`}
+                ></div>
+              )}
             </div>
           );
         })}
