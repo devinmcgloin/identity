@@ -29,7 +29,7 @@
     "simplex-noise": "^2.4.0",
     "swr": "^0.4.0",
     "tailwindcss": "^2.0.3",
-    "tweakpane": "^1.5.7",
+    "tweakpane": "^2.1.1",
     "unsplash-js": "^7.0.2",
     "yaml": "^1.10.0"
   },
