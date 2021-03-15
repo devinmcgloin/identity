@@ -1,2 +1,18 @@
-- title: The Pattern in the Stone
-  url: https://beta.readng.co/book/the-pattern-on-the-stone-by-w-daniel-hillis-XNH9H
+- title: Peter Norvig's Pytudes
+  url: https://github.com/norvig/pytudes
+  tags:
+    - Computational Thinking
+    - Programming
+- title: Bret Victor's Personal References
+  url: https://worrydream.com/refs
+  tags:
+    - Humane Software
+    - History of Computing
+- title: Sriram Krishnan's Memos Collection
+  url: https://sriramk.com/strategy
+  tags:
+    - Strategy
+- title: Magic Ink
+  url: https://worrydream.com/magicink
+  tags:
+    - Humane Software

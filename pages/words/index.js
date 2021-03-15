@@ -6,6 +6,7 @@ import formatRelative from 'date-fns/formatRelative';
 import { PageHeader } from 'components/page-header';
 import { ContentBlock } from 'components/content';
 import { useState } from 'react';
+import Badge from 'components/badge';
 
 export default function PostPage({ allPostData, tags }) {
   const [selectedTag, setTag] = useState();
@@ -13,24 +14,21 @@ export default function PostPage({ allPostData, tags }) {
   return (
     <BaseLayout includeFooter includeNewsletter>
       <div className=" pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-        <div className="relative max-w-lg lg:max-w-7xl">
+        <div className="relative lg:max-w-7xl">
           <PageHeader
             title="Words"
             subtitle="Occasional thoughts commited to the internet"
           >
-            <div className="mt-2">
+            <div className="line-clamp-4 mt-2">
               {tags.map((tag) => (
-                <span
+                <Badge
                   key={tag}
-                  onClick={() => setTag(tag)}
-                  className={`cursor-pointer inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium ${
-                    tag == selectedTag
-                      ? 'bg-sunset-100 text-gray-800 dark:bg-sunset-700 dark:text-gray-200'
-                      : 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
-                  } mr-2 mb-2`}
+                  handleClick={() => setTag(tag)}
+                  handleDismiss={() => setTag()}
+                  selected={tag == selectedTag}
                 >
                   {tag}
-                </span>
+                </Badge>
               ))}
             </div>
           </PageHeader>
